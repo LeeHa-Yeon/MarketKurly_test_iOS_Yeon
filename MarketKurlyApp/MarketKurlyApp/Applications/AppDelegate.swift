@@ -28,9 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appearanceNV.configureWithOpaqueBackground()
             appearanceNV.backgroundColor = UIColor.mainKurlyPurple
             NavigationBar.standardAppearance = appearanceNV;
+            NavigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
             UINavigationBar.appearance().scrollEdgeAppearance = appearanceNV
         }
-        
+
         return true
     }
     
