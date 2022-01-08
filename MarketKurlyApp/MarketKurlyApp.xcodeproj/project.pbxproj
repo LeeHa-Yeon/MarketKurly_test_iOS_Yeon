@@ -34,6 +34,14 @@
 		9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5E1D278A102200CC63FA /* SignUpDataManager.swift */; };
 		9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5E20278A103A00CC63FA /* SignUpRequest.swift */; };
 		9F9D5E23278A104500CC63FA /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5E22278A104500CC63FA /* SignUpResponse.swift */; };
+		9FCC942C278A1A9F000493AD /* MyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC942B278A1A9F000493AD /* MyKurlyViewController.swift */; };
+		9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC942D278A1AD4000493AD /* MyKurly.storyboard */; };
+		9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9431278A1C8D000493AD /* Category.storyboard */; };
+		9FCC9434278A1C93000493AD /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9433278A1C93000493AD /* Search.storyboard */; };
+		9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9435278A1C9E000493AD /* CategoryViewController.swift */; };
+		9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9437278A1CA5000493AD /* SearchViewController.swift */; };
+		9FCC943A278A1DED000493AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9439278A1DED000493AD /* Home.storyboard */; };
+		9FCC943C278A1DF5000493AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC943B278A1DF5000493AD /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +76,14 @@
 		9F9D5E1D278A102200CC63FA /* SignUpDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataManager.swift; sourceTree = "<group>"; };
 		9F9D5E20278A103A00CC63FA /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		9F9D5E22278A104500CC63FA /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		9FCC942B278A1A9F000493AD /* MyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyViewController.swift; sourceTree = "<group>"; };
+		9FCC942D278A1AD4000493AD /* MyKurly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyKurly.storyboard; sourceTree = "<group>"; };
+		9FCC9431278A1C8D000493AD /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
+		9FCC9433278A1C93000493AD /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		9FCC9435278A1C9E000493AD /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		9FCC9437278A1CA5000493AD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9FCC9439278A1DED000493AD /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		9FCC943B278A1DF5000493AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +147,8 @@
 		9F9D5DE3278A043400CC63FA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9F9D5DD427895F3D00CC63FA /* Main.storyboard */,
+				9F9D5DD227895F3D00CC63FA /* ViewController.swift */,
 				9F9D5DE5278A046600CC63FA /* Network */,
 				9F9D5DEF278A06F300CC63FA /* Models */,
 				9F9D5DEA278A057300CC63FA /* Views */,
@@ -182,12 +200,12 @@
 		9F9D5DEA278A057300CC63FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9F9D5DEE278A067F00CC63FA /* Home */,
 				9F9D5DEC278A05EA00CC63FA /* SignUp */,
 				9F9D5DEB278A05DB00CC63FA /* Login */,
+				9F9D5DEE278A067F00CC63FA /* Home */,
+				9FCC942F278A1C6D000493AD /* Category */,
+				9FCC9430278A1C78000493AD /* Search */,
 				9F9D5DED278A05F600CC63FA /* MyKurly */,
-				9F9D5DD227895F3D00CC63FA /* ViewController.swift */,
-				9F9D5DD427895F3D00CC63FA /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +227,8 @@
 		9F9D5DED278A05F600CC63FA /* MyKurly */ = {
 			isa = PBXGroup;
 			children = (
+				9FCC942D278A1AD4000493AD /* MyKurly.storyboard */,
+				9FCC942B278A1A9F000493AD /* MyKurlyViewController.swift */,
 			);
 			path = MyKurly;
 			sourceTree = "<group>";
@@ -216,6 +236,8 @@
 		9F9D5DEE278A067F00CC63FA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9FCC9439278A1DED000493AD /* Home.storyboard */,
+				9FCC943B278A1DF5000493AD /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -279,6 +301,24 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		9FCC942F278A1C6D000493AD /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9FCC9431278A1C8D000493AD /* Category.storyboard */,
+				9FCC9435278A1C9E000493AD /* CategoryViewController.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		9FCC9430278A1C78000493AD /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9FCC9433278A1C93000493AD /* Search.storyboard */,
+				9FCC9437278A1CA5000493AD /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,8 +379,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */,
+				9FCC943A278A1DED000493AD /* Home.storyboard in Resources */,
+				9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */,
 				9F9D5DDB27895F4000CC63FA /* LaunchScreen.storyboard in Resources */,
 				9F9D5DFC278A09FE00CC63FA /* NotoSansCJKkr-Regular.otf in Resources */,
+				9FCC9434278A1C93000493AD /* Search.storyboard in Resources */,
 				9F9D5DD827895F4000CC63FA /* Assets.xcassets in Resources */,
 				9F9D5DD627895F3D00CC63FA /* Main.storyboard in Resources */,
 				9F9D5DFD278A09FE00CC63FA /* NotoSansCJKkr-Medium.otf in Resources */,
@@ -402,13 +446,16 @@
 				9F9D5E11278A0D4400CC63FA /* UINavigationBar.swift in Sources */,
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
+				9FCC942C278A1A9F000493AD /* MyKurlyViewController.swift in Sources */,
 				9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */,
 				9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */,
 				9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */,
 				9F9D5E0D278A0D0C00CC63FA /* UIFont.swift in Sources */,
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
+				9FCC943C278A1DF5000493AD /* HomeViewController.swift in Sources */,
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
 				9F9D5E00278A0A1A00CC63FA /* IndicatorView.swift in Sources */,
+				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9F9D5E23278A104500CC63FA /* SignUpResponse.swift in Sources */,
 				9F9D5DF3278A095700CC63FA /* Constant.swift in Sources */,
 				9F9D5E08278A0C0200CC63FA /* Date.swift in Sources */,
@@ -416,6 +463,7 @@
 				9F9D5E15278A0F7500CC63FA /* LoginDataManager.swift in Sources */,
 				9F9D5E0F278A0D2700CC63FA /* UIButton.swift in Sources */,
 				9F9D5E1B278A100100CC63FA /* LoginResponse.swift in Sources */,
+				9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */,
 				9F9D5E19278A0FF700CC63FA /* LoginRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

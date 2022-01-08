@@ -16,7 +16,7 @@ extension String {
     var isExists: Bool {
         return self.count > 0
     }
-    // 앞 뒤 공백 있는지 
+    // 앞 뒤 공백 있는지
     var trim: String? {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
