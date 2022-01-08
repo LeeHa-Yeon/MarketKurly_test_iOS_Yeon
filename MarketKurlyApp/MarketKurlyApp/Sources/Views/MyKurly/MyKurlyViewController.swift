@@ -7,12 +7,20 @@
 
 import UIKit
 
-class MyKurlyViewController: UIViewController {
+class MyKurlyViewController: BaseViewController {
     
     let dummyData: [String] = ["비회원 주문 조회","알림 설정"]
     let dummyData2:[String] = ["컬리 소개","배송 안내","공지사항","자주하는 질문","고객센터","이용안내"]
     
+    //MARK: - UIComponents
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func LoginBtnTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let LoginVC = storyboard.instantiateViewController(identifier: "LoginSB")
+        LoginVC.modalPresentationStyle = .fullScreen
+        LoginVC.modalTransitionStyle = .coverVertical
+        self.present(LoginVC, animated: true, completion: nil)
+    }
     
     
     // MARK: - LifeCycle

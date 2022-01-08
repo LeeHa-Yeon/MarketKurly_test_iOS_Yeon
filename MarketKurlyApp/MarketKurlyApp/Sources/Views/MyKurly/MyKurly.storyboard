@@ -58,6 +58,9 @@
                                                             <state key="normal" title="로그인/회원가입">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="LoginBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Tbb-JU-6pD"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

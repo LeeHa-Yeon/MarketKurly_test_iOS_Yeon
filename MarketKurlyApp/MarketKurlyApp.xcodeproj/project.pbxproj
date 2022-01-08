@@ -42,6 +42,8 @@
 		9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9437278A1CA5000493AD /* SearchViewController.swift */; };
 		9FCC943A278A1DED000493AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9439278A1DED000493AD /* Home.storyboard */; };
 		9FCC943C278A1DF5000493AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC943B278A1DF5000493AD /* HomeViewController.swift */; };
+		9FCC943E278A357F000493AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC943D278A357F000493AD /* Login.storyboard */; };
+		9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC943F278A358A000493AD /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,8 @@
 		9FCC9437278A1CA5000493AD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9FCC9439278A1DED000493AD /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9FCC943B278A1DF5000493AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9FCC943D278A357F000493AD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		9FCC943F278A358A000493AD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,8 @@
 		9F9D5DEB278A05DB00CC63FA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				9FCC943D278A357F000493AD /* Login.storyboard */,
+				9FCC943F278A358A000493AD /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 				9F9D5DD627895F3D00CC63FA /* Main.storyboard in Resources */,
 				9F9D5DFD278A09FE00CC63FA /* NotoSansCJKkr-Medium.otf in Resources */,
 				9F9D5DFE278A09FE00CC63FA /* NotoSansCJKkr-Bold.otf in Resources */,
+				9FCC943E278A357F000493AD /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +461,7 @@
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
 				9FCC943C278A1DF5000493AD /* HomeViewController.swift in Sources */,
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
+				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,
 				9F9D5E00278A0A1A00CC63FA /* IndicatorView.swift in Sources */,
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9F9D5E23278A104500CC63FA /* SignUpResponse.swift in Sources */,
