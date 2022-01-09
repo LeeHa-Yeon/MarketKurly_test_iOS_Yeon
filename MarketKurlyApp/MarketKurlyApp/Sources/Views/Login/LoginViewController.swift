@@ -33,6 +33,20 @@ class LoginViewController: UIViewController {
         self.present(FindVC, animated: true, completion: nil)
     }
     
+    @IBAction func loginBtnTapped(_ sender: Any) {
+        
+        // TODO: - 로그인 동작 구현
+    }
+    
+    @IBAction func signUpBtnTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+        let SignUpVC = storyboard.instantiateViewController(identifier: "SignUpSB")
+        self.navigationController?.pushViewController(SignUpVC, animated: true)
+//        self.present(SignUpVC, animated: true, completion: nil)
+        
+    }
+    
+    
     
     //MARK: - LifeCycle
     override func viewDidLoad() {

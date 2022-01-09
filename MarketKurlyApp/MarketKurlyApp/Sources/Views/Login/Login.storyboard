@@ -49,6 +49,9 @@
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" red="0.96731410600000001" green="0.9718387289" blue="0.9854125977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ae3-zt-0Ru"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Ol-gn-No5">
                                 <rect key="frame" x="136" y="308" width="142" height="28"/>
@@ -88,6 +91,9 @@
                                 <state key="normal" title="회원가입">
                                     <color key="titleColor" red="0.33846250179999998" green="0.048356711859999998" blue="0.48238134379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0eQ-Ol-ga8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

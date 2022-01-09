@@ -8,4 +8,5 @@ target 'MarketKurlyApp' do
   # Pods for MarketKurlyApp
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'DLRadioButton'
 end

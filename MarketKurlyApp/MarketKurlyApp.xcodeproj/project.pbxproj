@@ -47,6 +47,8 @@
 		9FCC944B278A4C09000493AD /* FindUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC944A278A4C09000493AD /* FindUserViewController.swift */; };
 		9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC944C278A5484000493AD /* PhoneCertifyViewController.swift */; };
 		9FCC944F278A5498000493AD /* EmailCertifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC944E278A5498000493AD /* EmailCertifyViewController.swift */; };
+		9FCC9451278A6D97000493AD /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9450278A6D97000493AD /* SignUp.storyboard */; };
+		9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9452278A6DA6000493AD /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		9FCC944A278A4C09000493AD /* FindUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUserViewController.swift; sourceTree = "<group>"; };
 		9FCC944C278A5484000493AD /* PhoneCertifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCertifyViewController.swift; sourceTree = "<group>"; };
 		9FCC944E278A5498000493AD /* EmailCertifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCertifyViewController.swift; sourceTree = "<group>"; };
+		9FCC9450278A6D97000493AD /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		9FCC9452278A6DA6000493AD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,8 @@
 		9F9D5DEC278A05EA00CC63FA /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				9FCC9450278A6D97000493AD /* SignUp.storyboard */,
+				9FCC9452278A6DA6000493AD /* SignUpViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 			files = (
 				9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */,
 				9FCC943A278A1DED000493AD /* Home.storyboard in Resources */,
+				9FCC9451278A6D97000493AD /* SignUp.storyboard in Resources */,
 				9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */,
 				9F9D5DDB27895F4000CC63FA /* LaunchScreen.storyboard in Resources */,
 				9F9D5DFC278A09FE00CC63FA /* NotoSansCJKkr-Regular.otf in Resources */,
@@ -481,6 +488,7 @@
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
 				9FCC943C278A1DF5000493AD /* HomeViewController.swift in Sources */,
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
+				9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */,
 				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,
 				9F9D5E00278A0A1A00CC63FA /* IndicatorView.swift in Sources */,
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
