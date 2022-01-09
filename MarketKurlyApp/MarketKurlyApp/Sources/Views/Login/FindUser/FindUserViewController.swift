@@ -39,8 +39,10 @@ class FindUserViewController: UIViewController {
     func setInit(){
         if "idFindStatus" == UserDefaults.standard.string(forKey: Constant.findStatusName) {
             self.title = "아이디 찾기"
+            self.removeLine(self.navigationController!)
         }else {
             self.title = "비밀번호 찾기"
+            self.removeLine(self.navigationController!)
         }
     }
     

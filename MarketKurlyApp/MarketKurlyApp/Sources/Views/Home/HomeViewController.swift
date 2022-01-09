@@ -9,10 +9,16 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUI()
+    }
+    
+    // MARK: - Function
+    func setUI(){
+        self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "마켓컬리")
+        
     }
     
 }

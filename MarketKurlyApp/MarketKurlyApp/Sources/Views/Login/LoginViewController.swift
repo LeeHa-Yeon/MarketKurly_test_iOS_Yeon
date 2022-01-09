@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     //MARK: - UIComponents
     
     @IBOutlet weak var LoginBtn: UIButton!
@@ -37,8 +37,9 @@ class LoginViewController: UIViewController {
         // TODO: - 로그인 동작 구현
         let storyboard = UIStoryboard(name: "MyKurly", bundle: nil)
         let MyKurlyOnVC = storyboard.instantiateViewController(identifier: "MyKurlyOnSB")
-        MyKurlyOnVC.modalPresentationStyle = .fullScreen
-        self.present(MyKurlyOnVC, animated: true, completion: nil)
+//        MyKurlyOnVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(MyKurlyOnVC, animated: true)
+//        self.present(MyKurlyOnVC, animated: true, completion: nil)
         
         
     }
@@ -58,13 +59,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setUI()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.layoutIfNeeded()
-    }
 
     //MARK: - Functions
     func setUI(){
@@ -72,5 +66,7 @@ class LoginViewController: UIViewController {
         SignUpBtn.layer.cornerRadius = 3
         SignUpBtn.layer.borderWidth = 1
         SignUpBtn.layer.borderColor = UIColor.mainKurlyPurple.cgColor
+        self.removeLine(self.navigationController!)
+        
     }
 }

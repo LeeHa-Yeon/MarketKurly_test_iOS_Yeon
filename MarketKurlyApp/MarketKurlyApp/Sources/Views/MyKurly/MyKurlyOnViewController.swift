@@ -30,8 +30,7 @@ class MyKurlyOnViewController: BaseViewController {
     
     // MARK: - Function
     func setUI(){
-        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        self.title = "마이컬리"
+        self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "마이컬리")
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -135,9 +134,9 @@ extension MyKurlyOnViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0 :
-            return 165
+            return 170
         case 1 :
-            return 80
+            return 70
         default :
             return 50
         }
@@ -180,7 +179,7 @@ class BannerCell: UITableViewCell {
     // MARK: - 생명주기
     override func awakeFromNib() {
         super.awakeFromNib()
-        bannerBtn.contentMode = .scaleAspectFit
+        bannerBtn.imageView?.contentMode = .scaleToFill
         bannerBtn.clipsToBounds = true
     }
     

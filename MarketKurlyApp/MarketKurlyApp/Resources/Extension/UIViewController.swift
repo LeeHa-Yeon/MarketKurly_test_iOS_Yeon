@@ -113,4 +113,18 @@ extension UIViewController {
     @objc func dismissIndicator() {
         IndicatorView.shared.dismiss()
     }
+    
+    // MARK: 네비게이션바 마켓컬리 색상으로 변경
+    func bgKurlyColor(_ navi: UINavigationController,_ naviItem: UINavigationItem , title: String){
+        navi.navigationBar.barTintColor = UIColor.mainKurlyPurple
+        navi.navigationBar.isTranslucent = false
+        navi.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        naviItem.title = title
+    }
+    
+    // MARK: 네비게이션 바의 하단 그림자 제거
+    func removeLine(_ navi: UINavigationController) {
+        navi.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navi.navigationBar.shadowImage = UIImage()
+    }
 }

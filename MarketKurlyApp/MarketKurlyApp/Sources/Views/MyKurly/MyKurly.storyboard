@@ -161,12 +161,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g20-eK-Dvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="130.58035714285714"/>
+            <point key="canvasLocation" x="-52" y="131"/>
         </scene>
         <!--마이컬리(회원)-->
         <scene sceneID="ujV-p6-35O">
             <objects>
-                <viewController id="XR5-hF-rdb" customClass="MyKurlyOnViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyKurlyOnSB" id="XR5-hF-rdb" customClass="MyKurlyOnViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Icu-8Q-TSe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,10 +192,11 @@
                                                                 <constraint firstAttribute="width" constant="50" id="f2m-8e-PX6"/>
                                                                 <constraint firstAttribute="width" secondItem="Vnx-N0-cYa" secondAttribute="height" id="r1w-B7-O3Y"/>
                                                             </constraints>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="일반">
-                                                                <color key="baseForegroundColor" red="0.33846250179999998" green="0.048356711859999998" blue="0.48238134379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            </buttonConfiguration>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="일반">
+                                                                <color key="titleColor" red="0.33846250179999998" green="0.048356711859999998" blue="0.48238134379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </state>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이하연님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1G-V2-Hd3">
                                                             <rect key="frame" x="65" y="10" width="59" height="20.5"/>
@@ -214,29 +215,31 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="적립 0.5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3J-RS-PVN">
-                                                    <rect key="frame" x="20" y="71" width="53" height="23"/>
+                                                    <rect key="frame" x="20" y="71" width="53" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pkY-WF-7lV">
-                                                    <rect key="frame" x="30" y="104" width="354" height="40"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pkY-WF-7lV">
+                                                    <rect key="frame" x="30" y="99" width="354" height="40"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyt-0x-vzD">
                                                             <rect key="frame" x="0.0" y="0.0" width="167" height="40"/>
                                                             <color key="backgroundColor" red="0.90020720491704254" green="0.90020720491704254" blue="0.90020720491704254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="전체등급 보기">
-                                                                <color key="baseForegroundColor" red="0.020791757540000001" green="0.020889011230000001" blue="0.02118077229" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            </buttonConfiguration>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="전체등급 보기">
+                                                                <color key="titleColor" red="0.020791757540000001" green="0.020889011230000001" blue="0.02118077229" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-Xz-sbr">
                                                             <rect key="frame" x="187" y="0.0" width="167" height="40"/>
                                                             <color key="backgroundColor" red="0.90020720489999995" green="0.90020720489999995" blue="0.90020720489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="다음 달 예상등급 보기">
-                                                                <color key="baseForegroundColor" red="0.020791757540000001" green="0.020889011230000001" blue="0.02118077229" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            </buttonConfiguration>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="다음 달 예상등급 보기">
+                                                                <color key="titleColor" red="0.020791757540000001" green="0.020889011230000001" blue="0.02118077229" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </state>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -249,7 +252,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="pn8-aS-Av7" secondAttribute="trailing" id="IRD-K9-Ldf"/>
                                                 <constraint firstItem="pn8-aS-Av7" firstAttribute="leading" secondItem="woA-pH-WRu" secondAttribute="leadingMargin" id="J4p-IK-ojr"/>
                                                 <constraint firstAttribute="trailing" secondItem="pkY-WF-7lV" secondAttribute="trailing" constant="30" id="JKh-xV-db3"/>
-                                                <constraint firstAttribute="bottom" secondItem="pkY-WF-7lV" secondAttribute="bottom" constant="10" id="Jkj-h2-G4Q"/>
+                                                <constraint firstAttribute="bottom" secondItem="pkY-WF-7lV" secondAttribute="bottom" constant="15" id="Jkj-h2-G4Q"/>
                                                 <constraint firstItem="V3J-RS-PVN" firstAttribute="leading" secondItem="woA-pH-WRu" secondAttribute="leadingMargin" id="Pen-P0-0GA"/>
                                                 <constraint firstItem="V3J-RS-PVN" firstAttribute="top" secondItem="pn8-aS-Av7" secondAttribute="bottom" constant="10" id="WbP-H4-kKt"/>
                                                 <constraint firstItem="pn8-aS-Av7" firstAttribute="top" secondItem="woA-pH-WRu" secondAttribute="topMargin" constant="10" id="jNt-Yw-PuB"/>
@@ -265,14 +268,13 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bannerCell" rowHeight="43" id="L88-Ov-Ro0" customClass="BannerCell" customModule="MarketKurlyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="198.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L88-Ov-Ro0" id="kcW-TH-S74">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L88-Ov-Ro0" id="kcW-TH-S74">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0m-C6-Noo">
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0m-C6-Noo">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="banner" title="" imagePadding="0.0"/>
+                                                    <state key="normal" title="" image="banner"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -360,27 +362,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuM-8e-pg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886.95652173913049" y="843.75"/>
+            <point key="canvasLocation" x="857" y="836"/>
         </scene>
         <!--마이컬리-->
-        <scene sceneID="d9T-Y4-923">
+        <scene sceneID="bRq-IJ-aTc">
             <objects>
-                <navigationController storyboardIdentifier="MyKurlyOnSB" automaticallyAdjustsScrollViewInsets="NO" id="Jgo-LY-ZeG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="마이컬리" image="person" catalog="system" selectedImage="person.fill" id="rsw-KF-oxe"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ea4-zV-Tx2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="마이컬리" image="person" catalog="system" selectedImage="person.fill" id="TPy-fg-w1v"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vFB-7A-2az">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Tl-xi-07w">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="XR5-hF-rdb" kind="relationship" relationship="rootViewController" id="VAY-2U-Y6J"/>
+                        <segue destination="XR5-hF-rdb" kind="relationship" relationship="rootViewController" id="UsQ-sn-P5Z"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CaK-nb-LbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UxE-WA-t9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-20.289855072463769" y="843.75"/>
+            <point key="canvasLocation" x="-51" y="836"/>
         </scene>
     </scenes>
     <resources>

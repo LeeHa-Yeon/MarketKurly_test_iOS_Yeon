@@ -31,8 +31,7 @@ class MyKurlyViewController: BaseViewController {
     
     // MARK: - Function
     func setUI(){
-        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        self.title = "마이컬리"
+        self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "마이컬리")
         tableView.dataSource = self
         tableView.delegate = self
         

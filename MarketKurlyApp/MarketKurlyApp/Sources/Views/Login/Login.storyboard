@@ -139,7 +139,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="361-da-rez">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="361-da-rez">
                                 <rect key="frame" x="0.0" y="88" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHK-9M-TqC">
@@ -186,8 +186,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="raQ-n0-gl7" firstAttribute="trailing" secondItem="gbg-Mq-T44" secondAttribute="trailing" id="867-dW-oyT"/>
-                            <constraint firstItem="raQ-n0-gl7" firstAttribute="trailing" secondItem="361-da-rez" secondAttribute="trailing" id="DoN-4x-My7"/>
                             <constraint firstItem="qhd-lq-sZe" firstAttribute="leading" secondItem="raQ-n0-gl7" secondAttribute="leading" id="H9k-zx-dXH"/>
+                            <constraint firstItem="raQ-n0-gl7" firstAttribute="trailing" secondItem="361-da-rez" secondAttribute="trailing" id="K65-Zv-jSy"/>
                             <constraint firstItem="raQ-n0-gl7" firstAttribute="bottom" secondItem="qhd-lq-sZe" secondAttribute="bottom" id="O1K-87-Z1T"/>
                             <constraint firstItem="raQ-n0-gl7" firstAttribute="trailing" secondItem="qhd-lq-sZe" secondAttribute="trailing" id="OMc-gp-hNP"/>
                             <constraint firstItem="qhd-lq-sZe" firstAttribute="top" secondItem="361-da-rez" secondAttribute="bottom" id="SKA-px-eqI"/>
@@ -275,6 +275,7 @@
                                 </buttonConfiguration>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="kch-OO-MJL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="mnb-Ke-cZU" secondAttribute="trailing" constant="10" id="2cI-uX-PS9"/>
@@ -357,6 +358,7 @@
                                 </buttonConfiguration>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="2rZ-Ma-djr"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uI5-3i-Xjx" firstAttribute="leading" secondItem="bbo-Nj-uXU" secondAttribute="leadingMargin" constant="10" id="IVF-Sr-A1m"/>
