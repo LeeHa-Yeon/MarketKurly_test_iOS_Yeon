@@ -13,6 +13,10 @@
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
 		9F9C58DF278B3F5D005D164C /* ThriftyShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DE278B3F5D005D164C /* ThriftyShoppingViewController.swift */; };
 		9F9C58E1278B3F72005D164C /* SpecialPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58E0278B3F72005D164C /* SpecialPriceViewController.swift */; };
+		9F9C58E9278B5B75005D164C /* BannersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58E7278B5B75005D164C /* BannersCell.swift */; };
+		9F9C58EA278B5B75005D164C /* BannersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C58E8278B5B75005D164C /* BannersCell.xib */; };
+		9F9C58ED278B5CF1005D164C /* BannerImgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58EB278B5CF1005D164C /* BannerImgCell.swift */; };
+		9F9C58EE278B5CF1005D164C /* BannerImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C58EC278B5CF1005D164C /* BannerImgCell.xib */; };
 		9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */; };
 		9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */; };
 		9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD227895F3D00CC63FA /* ViewController.swift */; };
@@ -66,6 +70,10 @@
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
 		9F9C58DE278B3F5D005D164C /* ThriftyShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftyShoppingViewController.swift; sourceTree = "<group>"; };
 		9F9C58E0278B3F72005D164C /* SpecialPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialPriceViewController.swift; sourceTree = "<group>"; };
+		9F9C58E7278B5B75005D164C /* BannersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersCell.swift; sourceTree = "<group>"; };
+		9F9C58E8278B5B75005D164C /* BannersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannersCell.xib; sourceTree = "<group>"; };
+		9F9C58EB278B5CF1005D164C /* BannerImgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerImgCell.swift; sourceTree = "<group>"; };
+		9F9C58EC278B5CF1005D164C /* BannerImgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerImgCell.xib; sourceTree = "<group>"; };
 		9F9D5DCB27895F3D00CC63FA /* MarketKurlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +147,17 @@
 				28CEC3B8AC1A89EBF4782086 /* Pods-MarketKurlyApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9F9C58E2278B5333005D164C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F9C58E8278B5B75005D164C /* BannersCell.xib */,
+				9F9C58E7278B5B75005D164C /* BannersCell.swift */,
+				9F9C58EC278B5CF1005D164C /* BannerImgCell.xib */,
+				9F9C58EB278B5CF1005D164C /* BannerImgCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9F9D5DC227895F3D00CC63FA = {
@@ -268,6 +287,7 @@
 		9F9D5DEE278A067F00CC63FA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9F9C58E2278B5333005D164C /* Cells */,
 				9FCC943B278A1DF5000493AD /* ParentViewController.swift */,
 				9FCC9439278A1DED000493AD /* Home.storyboard */,
 				9F9C58D8278B3F28005D164C /* RecommendViewController.swift */,
@@ -432,8 +452,10 @@
 				9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */,
 				9F9D5DDB27895F4000CC63FA /* LaunchScreen.storyboard in Resources */,
 				9F9D5DFC278A09FE00CC63FA /* NotoSansCJKkr-Regular.otf in Resources */,
+				9F9C58EA278B5B75005D164C /* BannersCell.xib in Resources */,
 				9FCC9434278A1C93000493AD /* Search.storyboard in Resources */,
 				9F9D5DD827895F4000CC63FA /* Assets.xcassets in Resources */,
+				9F9C58EE278B5CF1005D164C /* BannerImgCell.xib in Resources */,
 				9F9D5DD627895F3D00CC63FA /* Main.storyboard in Resources */,
 				9F9D5DFD278A09FE00CC63FA /* NotoSansCJKkr-Medium.otf in Resources */,
 				9F9D5DFE278A09FE00CC63FA /* NotoSansCJKkr-Bold.otf in Resources */,
@@ -495,10 +517,12 @@
 				9F9D5DF6278A09B200CC63FA /* BaseViewController.swift in Sources */,
 				9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */,
 				9F9D5E11278A0D4400CC63FA /* UINavigationBar.swift in Sources */,
+				9F9C58ED278B5CF1005D164C /* BannerImgCell.swift in Sources */,
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
 				9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */,
 				9FCC942C278A1A9F000493AD /* MyKurlyViewController.swift in Sources */,
+				9F9C58E9278B5B75005D164C /* BannersCell.swift in Sources */,
 				9FCC944F278A5498000493AD /* EmailCertifyViewController.swift in Sources */,
 				9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */,
 				9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */,
