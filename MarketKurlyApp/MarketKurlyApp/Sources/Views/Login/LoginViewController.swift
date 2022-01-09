@@ -34,8 +34,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnTapped(_ sender: Any) {
-        
         // TODO: - 로그인 동작 구현
+        let storyboard = UIStoryboard(name: "MyKurly", bundle: nil)
+        let MyKurlyOnVC = storyboard.instantiateViewController(identifier: "MyKurlyOnSB")
+        MyKurlyOnVC.modalPresentationStyle = .fullScreen
+        self.present(MyKurlyOnVC, animated: true, completion: nil)
+        
+        
     }
     
     @IBAction func signUpBtnTapped(_ sender: Any) {

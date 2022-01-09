@@ -9,4 +9,5 @@ import Foundation
 
 struct Constant {
     static let findStatusName: String = "findStatus"
+    static let loginStatusName: String = "loginStatus"
 }

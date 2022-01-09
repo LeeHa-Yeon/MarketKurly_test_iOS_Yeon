@@ -49,6 +49,7 @@
 		9FCC944F278A5498000493AD /* EmailCertifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC944E278A5498000493AD /* EmailCertifyViewController.swift */; };
 		9FCC9451278A6D97000493AD /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9450278A6D97000493AD /* SignUp.storyboard */; };
 		9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9452278A6DA6000493AD /* SignUpViewController.swift */; };
+		9FCC9455278AA585000493AD /* MyKurlyOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9454278AA585000493AD /* MyKurlyOnViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		9FCC944E278A5498000493AD /* EmailCertifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCertifyViewController.swift; sourceTree = "<group>"; };
 		9FCC9450278A6D97000493AD /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		9FCC9452278A6DA6000493AD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9FCC9454278AA585000493AD /* MyKurlyOnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyOnViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 			children = (
 				9FCC942D278A1AD4000493AD /* MyKurly.storyboard */,
 				9FCC942B278A1A9F000493AD /* MyKurlyViewController.swift */,
+				9FCC9454278AA585000493AD /* MyKurlyOnViewController.swift */,
 			);
 			path = MyKurly;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				9F9D5E08278A0C0200CC63FA /* Date.swift in Sources */,
 				9F9D5E05278A0B0A00CC63FA /* Device.swift in Sources */,
 				9F9D5E15278A0F7500CC63FA /* LoginDataManager.swift in Sources */,
+				9FCC9455278AA585000493AD /* MyKurlyOnViewController.swift in Sources */,
 				9F9D5E0F278A0D2700CC63FA /* UIButton.swift in Sources */,
 				9F9D5E1B278A100100CC63FA /* LoginResponse.swift in Sources */,
 				9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */,
