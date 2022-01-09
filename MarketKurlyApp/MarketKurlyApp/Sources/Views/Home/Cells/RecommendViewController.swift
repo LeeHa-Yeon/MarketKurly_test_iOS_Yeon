@@ -31,6 +31,8 @@ class RecommendViewController: UIViewController, IndicatorInfoProvider {
         registerNib(cellNibName: "ProductsCell", cellIdentifier: "productsCell")
         registerNib(cellNibName: "OnlyBannerCell", cellIdentifier: "onlyBannerCell")
         registerNib(cellNibName: "OtherProductsCell", cellIdentifier: "otherProductsCell")
+        registerNib(cellNibName: "RecipeListCell", cellIdentifier: "recipeListCell")
+        registerNib(cellNibName: "SpecialProductCell", cellIdentifier: "specialProductCell")
     }
     
     func registerNib(cellNibName: String, cellIdentifier: String){
@@ -47,7 +49,7 @@ class RecommendViewController: UIViewController, IndicatorInfoProvider {
 extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 21
+        return 22
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,10 +77,18 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             }
             return cell
         case 3 :
-            // TODO: - 나중에 설날특가로 바뀔 예정
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "onlyBannerCell", for: indexPath) as? OnlyBannerCell else {
+            // TODO: - 나중에 타이머 만들어야징
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "specialProductCell", for: indexPath) as? SpecialProductCell else {
                 return UITableViewCell()
             }
+            cell.specialTitleLabel.text  = "설날특가"
+            cell.productPointLabel.text = "바삭함 쑥 쫄깃한 단맛"
+            cell.productLabel.text = "[우리밀] 찹쌀 모나카 세트"
+            cell.discountLabel.text = "30%"
+            cell.salePriceLabel.text = "11,900원"
+            cell.originPriceLabel.text = "17,000원"
+            cell.originPriceLabel.text?.strikeThrough()
+            
             return cell
         case 4 :
             // 이건 할인된 상품만
@@ -182,9 +192,10 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         case 20 :
             // TODO: - 컬리의 레시피
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "onlyBannerCell", for: indexPath) as? OnlyBannerCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "recipeListCell", for: indexPath) as? RecipeListCell else {
                 return UITableViewCell()
             }
+            cell.titleLabel.text = "컬리의 레시피"
             return cell
             
         default :
@@ -201,8 +212,12 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             return 350
         case 2,6,21 :
             return 80
-        case 3,9,20 :
+        case 3 :
+            return 400
+        case 9 :
             return 80
+        case 20 :
+            return 300
         default :
             return 390
         }

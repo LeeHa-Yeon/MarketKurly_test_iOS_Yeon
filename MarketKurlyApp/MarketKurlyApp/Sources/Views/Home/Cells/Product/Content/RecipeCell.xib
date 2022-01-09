@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recipeCell" id="gTV-IL-0wX" customClass="RecipeCell" customModule="MarketKurlyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="139"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="205" height="139"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfx-6k-eWN">
+                        <rect key="frame" x="0.0" y="5" width="205" height="104"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="testRecipe"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요리제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Em-em-9AC">
+                        <rect key="frame" x="0.0" y="114" width="48.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="lfx-6k-eWN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="M27-nT-Obq"/>
+                <constraint firstAttribute="bottom" secondItem="lfx-6k-eWN" secondAttribute="bottom" constant="30" id="aaR-cj-i6Z"/>
+                <constraint firstItem="lfx-6k-eWN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="d2R-f9-7X1"/>
+                <constraint firstItem="1Em-em-9AC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ff3-Jq-mhe"/>
+                <constraint firstAttribute="trailing" secondItem="lfx-6k-eWN" secondAttribute="trailing" id="xTk-Su-2Nv"/>
+                <constraint firstItem="1Em-em-9AC" firstAttribute="top" secondItem="lfx-6k-eWN" secondAttribute="bottom" constant="5" id="y9X-HO-avU"/>
+            </constraints>
+            <size key="customSize" width="205" height="139"/>
+            <connections>
+                <outlet property="RecipeBtn" destination="lfx-6k-eWN" id="aq3-Rb-KW8"/>
+                <outlet property="cookTitleLabel" destination="1Em-em-9AC" id="02K-G1-IXe"/>
+            </connections>
+            <point key="canvasLocation" x="318.11594202898556" y="176.45089285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="testRecipe" width="723" height="475"/>
+    </resources>
+</document>
