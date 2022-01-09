@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		02854E657B040DB293D6ACB4 /* Pods_MarketKurlyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3212111AD5AEB906D21F7 /* Pods_MarketKurlyApp.framework */; };
+		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
+		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
+		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
+		9F9C58DF278B3F5D005D164C /* ThriftyShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DE278B3F5D005D164C /* ThriftyShoppingViewController.swift */; };
+		9F9C58E1278B3F72005D164C /* SpecialPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58E0278B3F72005D164C /* SpecialPriceViewController.swift */; };
 		9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */; };
 		9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */; };
 		9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD227895F3D00CC63FA /* ViewController.swift */; };
@@ -41,7 +46,7 @@
 		9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9435278A1C9E000493AD /* CategoryViewController.swift */; };
 		9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9437278A1CA5000493AD /* SearchViewController.swift */; };
 		9FCC943A278A1DED000493AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9439278A1DED000493AD /* Home.storyboard */; };
-		9FCC943C278A1DF5000493AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC943B278A1DF5000493AD /* HomeViewController.swift */; };
+		9FCC943C278A1DF5000493AD /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC943B278A1DF5000493AD /* ParentViewController.swift */; };
 		9FCC943E278A357F000493AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC943D278A357F000493AD /* Login.storyboard */; };
 		9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC943F278A358A000493AD /* LoginViewController.swift */; };
 		9FCC944B278A4C09000493AD /* FindUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC944A278A4C09000493AD /* FindUserViewController.swift */; };
@@ -56,6 +61,11 @@
 		28CEC3B8AC1A89EBF4782086 /* Pods-MarketKurlyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketKurlyApp.release.xcconfig"; path = "Target Support Files/Pods-MarketKurlyApp/Pods-MarketKurlyApp.release.xcconfig"; sourceTree = "<group>"; };
 		3F850245D35A1970A08FBB7E /* Pods-MarketKurlyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketKurlyApp.debug.xcconfig"; path = "Target Support Files/Pods-MarketKurlyApp/Pods-MarketKurlyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		77D3212111AD5AEB906D21F7 /* Pods_MarketKurlyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketKurlyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
+		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
+		9F9C58DE278B3F5D005D164C /* ThriftyShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftyShoppingViewController.swift; sourceTree = "<group>"; };
+		9F9C58E0278B3F72005D164C /* SpecialPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialPriceViewController.swift; sourceTree = "<group>"; };
 		9F9D5DCB27895F3D00CC63FA /* MarketKurlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +101,7 @@
 		9FCC9435278A1C9E000493AD /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		9FCC9437278A1CA5000493AD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9FCC9439278A1DED000493AD /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		9FCC943B278A1DF5000493AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9FCC943B278A1DF5000493AD /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		9FCC943D278A357F000493AD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		9FCC943F278A358A000493AD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9FCC944A278A4C09000493AD /* FindUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUserViewController.swift; sourceTree = "<group>"; };
@@ -258,8 +268,13 @@
 		9F9D5DEE278A067F00CC63FA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9FCC943B278A1DF5000493AD /* ParentViewController.swift */,
 				9FCC9439278A1DED000493AD /* Home.storyboard */,
-				9FCC943B278A1DF5000493AD /* HomeViewController.swift */,
+				9F9C58D8278B3F28005D164C /* RecommendViewController.swift */,
+				9F9C58DA278B3F42005D164C /* NewProductViewController.swift */,
+				9F9C58DC278B3F48005D164C /* BestViewController.swift */,
+				9F9C58DE278B3F5D005D164C /* ThriftyShoppingViewController.swift */,
+				9F9C58E0278B3F72005D164C /* SpecialPriceViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -478,6 +493,7 @@
 				9FCC944B278A4C09000493AD /* FindUserViewController.swift in Sources */,
 				9F9D5E13278A0D5B00CC63FA /* UIViewController.swift in Sources */,
 				9F9D5DF6278A09B200CC63FA /* BaseViewController.swift in Sources */,
+				9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */,
 				9F9D5E11278A0D4400CC63FA /* UINavigationBar.swift in Sources */,
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
@@ -487,20 +503,24 @@
 				9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */,
 				9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */,
 				9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */,
+				9F9C58E1278B3F72005D164C /* SpecialPriceViewController.swift in Sources */,
 				9F9D5E0D278A0D0C00CC63FA /* UIFont.swift in Sources */,
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
-				9FCC943C278A1DF5000493AD /* HomeViewController.swift in Sources */,
+				9FCC943C278A1DF5000493AD /* ParentViewController.swift in Sources */,
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
 				9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */,
 				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,
+				9F9C58DF278B3F5D005D164C /* ThriftyShoppingViewController.swift in Sources */,
 				9F9D5E00278A0A1A00CC63FA /* IndicatorView.swift in Sources */,
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9F9D5E23278A104500CC63FA /* SignUpResponse.swift in Sources */,
+				9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */,
 				9F9D5DF3278A095700CC63FA /* Constant.swift in Sources */,
 				9F9D5E08278A0C0200CC63FA /* Date.swift in Sources */,
 				9F9D5E05278A0B0A00CC63FA /* Device.swift in Sources */,
 				9F9D5E15278A0F7500CC63FA /* LoginDataManager.swift in Sources */,
 				9FCC9455278AA585000493AD /* MyKurlyOnViewController.swift in Sources */,
+				9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */,
 				9F9D5E0F278A0D2700CC63FA /* UIButton.swift in Sources */,
 				9F9D5E1B278A100100CC63FA /* LoginResponse.swift in Sources */,
 				9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */,

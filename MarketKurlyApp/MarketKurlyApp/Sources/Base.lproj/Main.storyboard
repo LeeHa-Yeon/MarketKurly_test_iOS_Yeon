@@ -31,10 +31,10 @@
             </objects>
             <point key="canvasLocation" x="-846" y="1217"/>
         </scene>
-        <!--HomeSB-->
+        <!--ParentSB-->
         <scene sceneID="Vpt-mv-Ljx">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeSB" id="jim-Vk-U8h" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="ParentSB" id="jim-Vk-U8h" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="홈" image="house" catalog="system" selectedImage="house.fill" id="xA7-yO-H88"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56F-E9-LDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

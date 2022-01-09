@@ -6,18 +6,76 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Parent View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="HomeViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ParentViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VVR-JL-7Bv" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="88" width="414" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="XCu-mc-a2G"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kTu-9r-sGA">
+                                    <size key="itemSize" width="128" height="71"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="a1Z-2c-fxG">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ewb-xu-pza">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="71"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.85645632400000005" green="0.85645632400000005" blue="0.85645632400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <size key="customSize" width="128" height="71"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DB6-oL-Hp0">
+                                <rect key="frame" x="0.0" y="158" width="414" height="655"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v03-Jt-Ypy">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="s7R-nP-i1L"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="v03-Jt-Ypy" firstAttribute="top" secondItem="jDh-de-Mqs" secondAttribute="top" id="0IW-8h-6Gf"/>
+                                    <constraint firstItem="v03-Jt-Ypy" firstAttribute="bottom" secondItem="jDh-de-Mqs" secondAttribute="bottom" id="2kF-Gb-G2S"/>
+                                    <constraint firstItem="v03-Jt-Ypy" firstAttribute="leading" secondItem="jDh-de-Mqs" secondAttribute="leading" id="Irm-O7-SYS"/>
+                                    <constraint firstItem="v03-Jt-Ypy" firstAttribute="trailing" secondItem="jDh-de-Mqs" secondAttribute="trailing" id="Moz-lA-rJr"/>
+                                    <constraint firstItem="v03-Jt-Ypy" firstAttribute="width" secondItem="Bo8-O6-La1" secondAttribute="width" id="a6t-WM-ZA8"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="jDh-de-Mqs"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Bo8-O6-La1"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VVR-JL-7Bv" secondAttribute="trailing" id="51r-Wy-TT1"/>
+                            <constraint firstItem="DB6-oL-Hp0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="OIW-jl-GaU"/>
+                            <constraint firstItem="VVR-JL-7Bv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YHG-Iy-8aO"/>
+                            <constraint firstItem="DB6-oL-Hp0" firstAttribute="top" secondItem="VVR-JL-7Bv" secondAttribute="bottom" id="nfT-U1-5q6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DB6-oL-Hp0" secondAttribute="bottom" id="sgz-GZ-KiP"/>
+                            <constraint firstItem="VVR-JL-7Bv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="t7E-MV-g4y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DB6-oL-Hp0" secondAttribute="trailing" id="uZD-Vp-x3B"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cBb-cN-cqO"/>
                 </viewController>
@@ -28,7 +86,7 @@
         <!--홈-->
         <scene sceneID="qRn-GZ-rJ6">
             <objects>
-                <navigationController storyboardIdentifier="HomeSB" automaticallyAdjustsScrollViewInsets="NO" id="eUm-nh-3Hs" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ParentSB" automaticallyAdjustsScrollViewInsets="NO" id="eUm-nh-3Hs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="홈" image="house" catalog="system" selectedImage="house.fill" id="te2-bP-TvZ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -45,12 +103,102 @@
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="130.58035714285714"/>
         </scene>
+        <!--Recommend View Controller-->
+        <scene sceneID="8pr-hH-yBa">
+            <objects>
+                <viewController storyboardIdentifier="RecommendSB" id="nA4-ur-V0k" customClass="RecommendViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="een-FB-2qf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NTl-MP-HsO"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Orz-J9-Dor" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="894"/>
+        </scene>
+        <!--New Product View Controller-->
+        <scene sceneID="qNK-fe-inm">
+            <objects>
+                <viewController storyboardIdentifier="NewProductSB" id="DeA-JJ-HHM" customClass="NewProductViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wQt-NY-5t9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ejl-6Q-eOi"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGC-kX-elB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="894"/>
+        </scene>
+        <!--Best View Controller-->
+        <scene sceneID="J4A-BL-SLC">
+            <objects>
+                <viewController storyboardIdentifier="BestSB" id="Rg2-qh-8rM" customClass="BestViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZyB-Wg-hyu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Yhn-ks-ddl"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uY8-DE-uAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010" y="894"/>
+        </scene>
+        <!--Thrifty Shopping View Controller-->
+        <scene sceneID="NL9-n6-9t4">
+            <objects>
+                <viewController storyboardIdentifier="ThriftyShoppingSB" id="aBz-8u-A08" customClass="ThriftyShoppingViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G9p-St-h3c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SCB-Te-W2Z"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cab-ak-tMb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="894"/>
+        </scene>
+        <!--Special Price View Controller-->
+        <scene sceneID="toA-sa-6lP">
+            <objects>
+                <viewController storyboardIdentifier="SpecialPriceSB" id="Wl9-KL-PfK" customClass="SpecialPriceViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2VI-zz-sBX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4xk-Wn-Fcq"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKI-Ga-gnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2375" y="894"/>
+        </scene>
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
