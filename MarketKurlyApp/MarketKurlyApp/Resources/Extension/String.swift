@@ -71,7 +71,7 @@ extension String {
                     numberString = "0"
                 }
                 guard let doubleValue = Double(numberString)
-                    else { return self }
+                else { return self }
                 return numberFormatter.string(from: NSNumber(value: doubleValue)) ?? self
             } else if numberArray.count == 2 {
                 var numberString = numberArray[0]
@@ -79,19 +79,27 @@ extension String {
                     numberString = "0"
                 }
                 guard let doubleValue = Double(numberString)
-                    else {
-                        return self
+                else {
+                    return self
                 }
                 return (numberFormatter.string(from: NSNumber(value: doubleValue)) ?? numberString) + ".\(numberArray[1])"
             }
         }
         else {
             guard let doubleValue = Double(self)
-                else {
-                    return self
+            else {
+                return self
             }
             return numberFormatter.string(from: NSNumber(value: doubleValue)) ?? self
         }
         return self
+    }
+    
+    // 취소선 긋기
+    func strikeThrough() -> NSAttributedString {
+        let attributeString = NSMutableAttributedString(string: self)
+        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0,attributeString.length))
+        return attributeString
+        
     }
 }
