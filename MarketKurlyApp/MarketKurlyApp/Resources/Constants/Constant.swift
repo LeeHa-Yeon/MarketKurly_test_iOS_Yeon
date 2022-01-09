@@ -8,5 +8,5 @@
 import Foundation
 
 struct Constant {
-    
+    static let findStatusName: String = "findStatus"
 }
