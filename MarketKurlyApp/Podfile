@@ -9,4 +9,5 @@ target 'MarketKurlyApp' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'DLRadioButton'
+  pod 'XLPagerTabStrip'
 end
