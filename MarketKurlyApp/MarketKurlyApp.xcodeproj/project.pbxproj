@@ -191,6 +191,9 @@
 				9FCC9439278A1DED000493AD /* Home.storyboard */,
 				9FCC943B278A1DF5000493AD /* ParentViewController.swift */,
 				9F9C58D8278B3F28005D164C /* RecommendViewController.swift */,
+				9F9C58DA278B3F42005D164C /* NewProductViewController.swift */,
+				9F9C58DC278B3F48005D164C /* BestViewController.swift */,
+				9F9C58DE278B3F5D005D164C /* ThriftyShoppingViewController.swift */,
 				9F9C58EF278B6425005D164C /* Banner */,
 				9F9C58F0278B644C005D164C /* Product */,
 			);
@@ -337,6 +340,7 @@
 				9F9D5DEC278A05EA00CC63FA /* SignUp */,
 				9F9D5DEB278A05DB00CC63FA /* Login */,
 				9F9D5DEE278A067F00CC63FA /* Home */,
+				9F9C58E0278B3F72005D164C /* SpecialPriceViewController.swift */,
 				9FCC942F278A1C6D000493AD /* Category */,
 				9FCC9430278A1C78000493AD /* Search */,
 				9F9D5DED278A05F600CC63FA /* MyKurly */,
@@ -377,10 +381,6 @@
 			isa = PBXGroup;
 			children = (
 				9F9C58E2278B5333005D164C /* Cells */,
-				9F9C58DA278B3F42005D164C /* NewProductViewController.swift */,
-				9F9C58DC278B3F48005D164C /* BestViewController.swift */,
-				9F9C58DE278B3F5D005D164C /* ThriftyShoppingViewController.swift */,
-				9F9C58E0278B3F72005D164C /* SpecialPriceViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";

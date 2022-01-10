@@ -26,7 +26,6 @@ class BannersCell: UITableViewCell {
         super.awakeFromNib()
         bannerTimer()
         setUI()
-        print(dataArray)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
