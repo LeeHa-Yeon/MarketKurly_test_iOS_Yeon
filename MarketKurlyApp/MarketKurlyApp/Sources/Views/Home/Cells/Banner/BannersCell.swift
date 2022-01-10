@@ -26,6 +26,7 @@ class BannersCell: UITableViewCell {
         super.awakeFromNib()
         bannerTimer()
         setUI()
+        print(dataArray)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -70,7 +71,7 @@ extension BannersCell : UICollectionViewDataSource, UICollectionViewDelegate, UI
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerImgCell", for: indexPath) as? BannerImgCell else {
             return UICollectionViewCell()
         }
-        cell.bannerImg.image = dataArray[indexPath.row]
+        cell.bannerImgView.image = dataArray[indexPath.row]
         return cell
     }
     

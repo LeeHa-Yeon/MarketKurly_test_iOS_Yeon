@@ -17,21 +17,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="224" height="145"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ubz-gq-nun">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P8B-Ld-8oC">
                         <rect key="frame" x="0.0" y="0.0" width="224" height="145"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDx-bO-UnK">
+                        <rect key="frame" x="0.0" y="0.0" width="224" height="145"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="Ubz-gq-nun" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5Ug-XB-kib"/>
-                <constraint firstItem="Ubz-gq-nun" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="STX-j1-KCH"/>
-                <constraint firstAttribute="trailing" secondItem="Ubz-gq-nun" secondAttribute="trailing" id="YjJ-RD-Nfe"/>
-                <constraint firstAttribute="bottom" secondItem="Ubz-gq-nun" secondAttribute="bottom" id="niO-QC-DJe"/>
+                <constraint firstItem="kDx-bO-UnK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2l6-mc-sb2"/>
+                <constraint firstItem="P8B-Ld-8oC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ilg-hN-Itx"/>
+                <constraint firstAttribute="bottom" secondItem="kDx-bO-UnK" secondAttribute="bottom" id="OV9-9g-CvO"/>
+                <constraint firstAttribute="bottom" secondItem="P8B-Ld-8oC" secondAttribute="bottom" id="RYT-yu-LzC"/>
+                <constraint firstAttribute="trailing" secondItem="P8B-Ld-8oC" secondAttribute="trailing" id="ZaA-4W-14l"/>
+                <constraint firstItem="P8B-Ld-8oC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cCs-UK-cyL"/>
+                <constraint firstAttribute="trailing" secondItem="kDx-bO-UnK" secondAttribute="trailing" id="fIK-wy-fbV"/>
+                <constraint firstItem="kDx-bO-UnK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hn1-A3-7hq"/>
             </constraints>
             <size key="customSize" width="224" height="145"/>
             <connections>
-                <outlet property="bannerImg" destination="Ubz-gq-nun" id="Swg-sG-xBN"/>
+                <outlet property="bannerImgView" destination="P8B-Ld-8oC" id="pMI-so-9CK"/>
+                <outlet property="clieckBtn" destination="kDx-bO-UnK" id="FSl-Sj-6YE"/>
             </connections>
             <point key="canvasLocation" x="263.768115942029" y="178.45982142857142"/>
         </collectionViewCell>
