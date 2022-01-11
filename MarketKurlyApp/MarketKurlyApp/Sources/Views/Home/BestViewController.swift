@@ -49,12 +49,23 @@ extension BestViewController : UICollectionViewDelegate, UICollectionViewDataSou
         return 50
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader :
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "bestHeaderView", for: indexPath)
+            return headerView
+        default :
+            assert(false,"No")
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product2Cell", for: indexPath) as? Product2Cell else {
             return UICollectionViewCell()
         }
         return cell
     }
+    
     
     //컬렉션뷰 사이즈 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -67,3 +78,4 @@ extension BestViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
 }
+

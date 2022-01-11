@@ -134,7 +134,6 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 7 {
             UserDefaults.standard.set(false, forKey: Constant.loginStatusName)
-            tableView.reloadData()
         }
     }
     
