@@ -11,17 +11,21 @@ import XLPagerTabStrip
 class SpecialPriceViewController: UIViewController, IndicatorInfoProvider {
 
     var tabName: String = ""
+    
+    // MARK: - UIComponents
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Functions
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "\(tabName)")
     }
@@ -34,6 +38,7 @@ class SpecialPriceViewController: UIViewController, IndicatorInfoProvider {
 }
 
 extension SpecialPriceViewController : UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }
@@ -50,20 +55,4 @@ extension SpecialPriceViewController : UITableViewDataSource, UITableViewDelegat
         return 160
     }
     
-    
-}
-
-
-class EventCell: UITableViewCell {
-    @IBOutlet weak var eventBanner: UIButton!
-    
-    @IBAction func bannerTapped(_ sender: Any) {
-        print("탭했어요~~~")
-    }
-    // MARK: - 생명주기
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        eventBanner.imageView?.contentMode = .scaleToFill
-        eventBanner.clipsToBounds = true
-    }
 }

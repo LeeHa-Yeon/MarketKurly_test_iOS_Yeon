@@ -10,11 +10,12 @@ import XLPagerTabStrip
 
 class RecommendViewController: UIViewController, IndicatorInfoProvider {
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    
     var tabName: String = ""
     
+    // MARK: - UIComponents
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -24,6 +25,7 @@ class RecommendViewController: UIViewController, IndicatorInfoProvider {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Functions
     func setUI(){
         tableView.dataSource = self
         tableView.delegate = self

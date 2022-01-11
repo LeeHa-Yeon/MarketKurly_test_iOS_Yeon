@@ -9,17 +9,19 @@ import UIKit
 
 class EmailCertifyViewController: UIViewController {
     
+    // MARK: - UIComponents
     @IBOutlet weak var idNameLabel: UILabel!
     @IBOutlet weak var idNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var doneBtn: UIButton!
 
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setInit()
     }
     
+    // MARK: - Functions
     func setInit(){
         doneBtn.isEnabled = false
         if "idFindStatus" == UserDefaults.standard.string(forKey: Constant.findStatusName) {
@@ -30,7 +32,5 @@ class EmailCertifyViewController: UIViewController {
             idNameTextField.placeholder = " 아이디를 입력해 주세요"
         }
     }
-    
-
 
 }

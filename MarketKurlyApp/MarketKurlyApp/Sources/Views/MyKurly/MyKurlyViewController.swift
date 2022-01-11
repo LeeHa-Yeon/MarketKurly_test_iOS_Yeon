@@ -37,7 +37,6 @@ class MyKurlyViewController: BaseViewController {
         
     }
     
-    
 }
 
 extension MyKurlyViewController: UITableViewDataSource, UITableViewDelegate {
@@ -100,36 +99,4 @@ extension MyKurlyViewController: UITableViewDataSource, UITableViewDelegate {
         return 0
     }
     
-}
-
-class MyKurlyCell: UITableViewCell {
-    
-    @IBOutlet weak var loginBtn: UIButton!
-    
-    // MARK: - 생명주기
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    // MARK: - 함수
-    func setUI(){
-        loginBtn.layer.cornerRadius = 3
-    }
-    
-}
-
-class MyKurlyListCell: UITableViewCell {
-    @IBOutlet weak var listNameLabel: UILabel!
-    
-    // MARK: - 생명주기
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    // MARK: - 함수
-    func setUI(){
-        listNameLabel.text = ""
-    }
 }

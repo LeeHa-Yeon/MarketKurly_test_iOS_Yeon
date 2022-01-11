@@ -1,5 +1,5 @@
 //
-//  BestViewController.swift
+//  ThriftyShoppingViewController.swift
 //  MarketKurlyApp
 //
 //  Created by 이하연 on 2022/01/10.
@@ -8,13 +8,14 @@
 import UIKit
 import XLPagerTabStrip
 
-
-class BestViewController: UIViewController, IndicatorInfoProvider {
-    
-    @IBOutlet weak var collectionView: UICollectionView!
+class ThriftyShoppingViewController: UIViewController, IndicatorInfoProvider {
     
     var tabName: String = ""
     
+    // MARK: - UIComponents
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -24,9 +25,11 @@ class BestViewController: UIViewController, IndicatorInfoProvider {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Functions
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "\(tabName)")
     }
+    
     
     func setUI(){
         collectionView.dataSource = self
@@ -41,7 +44,7 @@ class BestViewController: UIViewController, IndicatorInfoProvider {
     
 }
 
-extension BestViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ThriftyShoppingViewController : UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 50
     }
@@ -52,7 +55,7 @@ extension BestViewController : UICollectionViewDelegate, UICollectionViewDataSou
         }
         return cell
     }
-    // UICollectionViewDelegateFlowLayout 상속
+
     //컬렉션뷰 사이즈 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let margin:CGFloat = 25

@@ -11,8 +11,8 @@ extension UIViewController {
     // MARK: 빈 화면을 눌렀을 때 키보드가 내려가도록 처리
     func dismissKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer =
-            UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-//        tap.cancelsTouchesInView = false
+        UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        //        tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
     }
     
@@ -74,7 +74,7 @@ extension UIViewController {
         alertSuperview.layer.cornerRadius = 10
         alertSuperview.isHidden = true
         alertSuperview.translatesAutoresizingMaskIntoConstraints = false
-    
+        
         let alertLabel = UILabel()
         alertLabel.font = .NotoSans(.regular, size: 15)
         alertLabel.textColor = .white
@@ -126,5 +126,16 @@ extension UIViewController {
     func removeLine(_ navi: UINavigationController) {
         navi.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navi.navigationBar.shadowImage = UIImage()
+    }
+    
+    // MARK: 네비게이션바 색상 커스텀
+    func customNavigationBarAttribute(_ backgroundColor: UIColor,
+                                      _ titleColor: UIColor) {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = backgroundColor
+        appearance.titleTextAttributes = [.foregroundColor: titleColor]
+        self.navigationController?.navigationBar.standardAppearance = appearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 }

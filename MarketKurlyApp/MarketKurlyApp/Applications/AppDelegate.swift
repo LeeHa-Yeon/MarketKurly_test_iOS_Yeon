@@ -24,12 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UITabBar.appearance().scrollEdgeAppearance = appearanceTB
             
             let appearanceNV = UINavigationBarAppearance()
-            let NavigationBar = UINavigationBar()
             appearanceNV.configureWithOpaqueBackground()
             appearanceNV.backgroundColor = UIColor.mainKurlyPurple
-            NavigationBar.standardAppearance = appearanceNV;
-            NavigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearanceNV.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearanceNV.shadowColor = .clear
+            
+            UINavigationBar.appearance().standardAppearance = appearanceNV
             UINavigationBar.appearance().scrollEdgeAppearance = appearanceNV
+            
         }
 
         return true

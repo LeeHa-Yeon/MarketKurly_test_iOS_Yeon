@@ -10,20 +10,19 @@ import DLRadioButton
 
 class SignUpViewController: UIViewController {
     
-//    let backItem = UIBarButtonItem(image: UIImage(systemName: "arrow.left"), style: .plain, target: .none , action: .none)
-//    backItem.action = #selector(backBtn)
+    //    let backItem = UIBarButtonItem(image: UIImage(systemName: "arrow.left"), style: .plain, target: .none , action: .none)
+    //    backItem.action = #selector(backBtn)
     
+    // MARK: - UIComponents
     @IBOutlet weak var idExplanationView: UIView!
-    @IBOutlet weak var idConfirmBtn: UIButton!
-    
     @IBOutlet weak var smsExplanationView: UIView!
+    @IBOutlet weak var idConfirmBtn: UIButton!
+    @IBOutlet weak var phoneNumConfirmBtn: UIButton!
+    @IBOutlet weak var SignUpBtn: UIButton!
+    
     @IBAction func confirmBtnTapped(_ sender: Any) {
         // TODO: - 알림창 띄우기
     }
-    
-    @IBOutlet weak var phoneNumConfirmBtn: UIButton!
-
-    @IBOutlet weak var SignUpBtn: UIButton!
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -50,3 +49,4 @@ class SignUpViewController: UIViewController {
     }
     
 }
+

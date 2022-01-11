@@ -1,5 +1,5 @@
 //
-//  ThriftyShoppingViewController.swift
+//  NewProductViewController.swift
 //  MarketKurlyApp
 //
 //  Created by 이하연 on 2022/01/10.
@@ -8,12 +8,14 @@
 import UIKit
 import XLPagerTabStrip
 
-class ThriftyShoppingViewController: UIViewController, IndicatorInfoProvider {
-    
-    @IBOutlet weak var collectionView: UICollectionView!
+class NewProductViewController: UIViewController, IndicatorInfoProvider {
 
     var tabName: String = ""
     
+    // MARK: - UIComponents
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -23,10 +25,10 @@ class ThriftyShoppingViewController: UIViewController, IndicatorInfoProvider {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Functions
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "\(tabName)")
     }
-    
     
     func setUI(){
         collectionView.dataSource = self
@@ -38,10 +40,9 @@ class ThriftyShoppingViewController: UIViewController, IndicatorInfoProvider {
         let newCellNib = UINib(nibName: cellNibName, bundle: nil)
         self.collectionView.register(newCellNib, forCellWithReuseIdentifier: cellIdentifier)
     }
-    
 }
 
-extension ThriftyShoppingViewController : UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout {
+extension NewProductViewController : UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 50
     }
@@ -52,7 +53,7 @@ extension ThriftyShoppingViewController : UICollectionViewDelegate, UICollection
         }
         return cell
     }
-    // UICollectionViewDelegateFlowLayout 상속
+    
     //컬렉션뷰 사이즈 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let margin:CGFloat = 25

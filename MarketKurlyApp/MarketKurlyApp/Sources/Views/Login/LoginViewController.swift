@@ -8,15 +8,15 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
-    //MARK: - UIComponents
     
+    // MARK: - UIComponents
     @IBOutlet weak var LoginBtn: UIButton!
     @IBOutlet weak var SignUpBtn: UIButton!
-    
     
     @IBAction func backBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func findIdTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let FindVC = storyboard.instantiateViewController(identifier: "FindSB")
@@ -25,6 +25,7 @@ class LoginViewController: BaseViewController {
         self.present(FindVC, animated: true, completion: nil)
         
     }
+    
     @IBAction func findPwdTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let FindVC = storyboard.instantiateViewController(identifier: "FindSB")
@@ -40,8 +41,6 @@ class LoginViewController: BaseViewController {
 //        MyKurlyOnVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(MyKurlyOnVC, animated: true)
 //        self.present(MyKurlyOnVC, animated: true, completion: nil)
-        
-        
     }
     
     @IBAction func signUpBtnTapped(_ sender: Any) {
@@ -49,9 +48,7 @@ class LoginViewController: BaseViewController {
         let SignUpVC = storyboard.instantiateViewController(identifier: "SignUpSB")
         self.navigationController?.pushViewController(SignUpVC, animated: true)
 //        self.present(SignUpVC, animated: true, completion: nil)
-        
     }
-    
     
     
     //MARK: - LifeCycle
