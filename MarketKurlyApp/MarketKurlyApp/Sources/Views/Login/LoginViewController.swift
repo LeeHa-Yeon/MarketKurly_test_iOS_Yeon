@@ -56,6 +56,11 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
         setUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        customNavigationBarAttribute(.white, .black)
+    }
 
     //MARK: - Functions
     func setUI(){

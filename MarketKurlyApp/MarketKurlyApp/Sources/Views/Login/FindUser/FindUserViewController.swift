@@ -39,15 +39,17 @@ class FindUserViewController: UIViewController {
         setInit()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        customNavigationBarAttribute(.white, .black)
+    }
     
     // MARK: - Functions
     func setInit(){
         if "idFindStatus" == UserDefaults.standard.string(forKey: Constant.findStatusName) {
             self.title = "아이디 찾기"
-            self.removeLine(self.navigationController!)
         }else {
             self.title = "비밀번호 찾기"
-            self.removeLine(self.navigationController!)
         }
     }
 }
