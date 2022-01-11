@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,10 +17,81 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FB9-Ke-myh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="65"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="검색어를 입력해주세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MFu-U7-Rer" customClass="BaseTextField" customModule="MarketKurlyApp" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="10" width="384" height="45"/>
+                                        <color key="backgroundColor" red="0.95687562230000001" green="0.95683962109999998" blue="0.95686405900000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftimage">
+                                                <imageReference key="value" image="magnifyingglass" catalog="system" symbolScale="medium"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
+                                                <color key="value" red="0.69622016198856307" green="0.69622016198856307" blue="0.69622016198856307" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewWidth">
+                                                <real key="value" value="21"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewHeight">
+                                                <real key="value" value="21"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MFu-U7-Rer" secondAttribute="bottom" constant="10" id="Jt6-D1-4Ad"/>
+                                    <constraint firstAttribute="trailing" secondItem="MFu-U7-Rer" secondAttribute="trailing" constant="15" id="LPr-EE-7LM"/>
+                                    <constraint firstItem="MFu-U7-Rer" firstAttribute="top" secondItem="FB9-Ke-myh" secondAttribute="top" constant="10" id="Yym-rr-OcA"/>
+                                    <constraint firstItem="MFu-U7-Rer" firstAttribute="leading" secondItem="FB9-Ke-myh" secondAttribute="leading" constant="15" id="i8t-vc-Zxi"/>
+                                    <constraint firstAttribute="height" constant="65" id="sVu-wJ-gVa"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IO0-VV-saV">
+                                <rect key="frame" x="0.0" y="153" width="414" height="660"/>
+                                <connections>
+                                    <segue destination="YES-15-d9U" kind="embed" id="CL1-0B-qGE"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4e-JZ-xqz">
+                                <rect key="frame" x="0.0" y="153" width="414" height="660"/>
+                                <connections>
+                                    <segue destination="b2K-fj-cel" kind="embed" id="eaM-aU-yJ5"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N4e-JZ-xqz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="98h-Me-eij"/>
+                            <constraint firstItem="IO0-VV-saV" firstAttribute="top" secondItem="FB9-Ke-myh" secondAttribute="bottom" id="DVd-sD-jqH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FB9-Ke-myh" secondAttribute="trailing" id="Dgk-LG-zYG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="N4e-JZ-xqz" secondAttribute="trailing" id="ESv-bd-aPq"/>
+                            <constraint firstItem="N4e-JZ-xqz" firstAttribute="top" secondItem="FB9-Ke-myh" secondAttribute="bottom" id="G6f-Fj-7VL"/>
+                            <constraint firstAttribute="trailing" secondItem="IO0-VV-saV" secondAttribute="trailing" id="KXg-6k-anA"/>
+                            <constraint firstItem="FB9-Ke-myh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="UNp-iK-SVw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="N4e-JZ-xqz" secondAttribute="bottom" id="aau-qG-hX6"/>
+                            <constraint firstItem="IO0-VV-saV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cqZ-HQ-UiM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="IO0-VV-saV" secondAttribute="bottom" id="dbi-YI-GDr"/>
+                            <constraint firstItem="FB9-Ke-myh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fct-eL-6cU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o3b-4U-EFC"/>
+                    <connections>
+                        <outlet property="afterSearchView" destination="IO0-VV-saV" id="21b-Q7-lsX"/>
+                        <outlet property="beforeSearchView" destination="N4e-JZ-xqz" id="04f-PW-96Q"/>
+                        <outlet property="searchTextField" destination="MFu-U7-Rer" id="tj8-K7-f3C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,7 +117,52 @@
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="130.58035714285714"/>
         </scene>
+        <!--Before Search View Controller-->
+        <scene sceneID="qGR-hj-afk">
+            <objects>
+                <viewController storyboardIdentifier="BeforeSearchSB" id="b2K-fj-cel" customClass="BeforeSearchViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oZ0-Mj-OEx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bKm-3x-ApS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bKm-3x-ApS" firstAttribute="leading" secondItem="oZ0-Mj-OEx" secondAttribute="leading" id="7JE-fH-5h8"/>
+                            <constraint firstItem="bKm-3x-ApS" firstAttribute="top" secondItem="oZ0-Mj-OEx" secondAttribute="top" id="Dmg-wH-uRV"/>
+                            <constraint firstAttribute="trailing" secondItem="bKm-3x-ApS" secondAttribute="trailing" id="dtf-SZ-7RN"/>
+                            <constraint firstAttribute="bottom" secondItem="bKm-3x-ApS" secondAttribute="bottom" id="uWm-IG-eXK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSz-cJ-mU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="853"/>
+        </scene>
+        <!--After Search View Controller-->
+        <scene sceneID="BG0-tE-Qdl">
+            <objects>
+                <viewController storyboardIdentifier="AfterSearchSB" id="YES-15-d9U" customClass="AfterSearchViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2mV-n4-d63">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ag0-Zb-ZV5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="852"/>
+        </scene>
     </scenes>
+    <designables>
+        <designable name="MFu-U7-Rer">
+            <size key="intrinsicContentSize" width="138" height="19.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">

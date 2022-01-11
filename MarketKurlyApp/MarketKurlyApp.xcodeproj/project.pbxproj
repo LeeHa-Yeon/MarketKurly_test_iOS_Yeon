@@ -69,6 +69,12 @@
 		9FA04380278D12BF00FCD2FE /* MyKurlyListPlusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0437F278D12BF00FCD2FE /* MyKurlyListPlusCell.swift */; };
 		9FA04382278D12F900FCD2FE /* MyKurlyOnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA04381278D12F900FCD2FE /* MyKurlyOnCell.swift */; };
 		9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA04383278D5E4E00FCD2FE /* MyKurlyViewController.swift */; };
+		9FB51FA7278D8D8400DEF835 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FA6278D8D8400DEF835 /* BaseTextField.swift */; };
+		9FB51FA9278D904A00DEF835 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FA8278D904A00DEF835 /* UITextField.swift */; };
+		9FB51FAB278D9ABE00DEF835 /* BeforeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FAA278D9ABE00DEF835 /* BeforeSearchViewController.swift */; };
+		9FB51FAD278D9AC900DEF835 /* AfterSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FAC278D9AC900DEF835 /* AfterSearchViewController.swift */; };
+		9FB51FB1278DB09100DEF835 /* SearchSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FAF278DB09100DEF835 /* SearchSubjectCell.swift */; };
+		9FB51FB2278DB09100DEF835 /* SearchSubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FB0278DB09100DEF835 /* SearchSubjectCell.xib */; };
 		9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */; };
 		9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC942D278A1AD4000493AD /* MyKurly.storyboard */; };
 		9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9431278A1C8D000493AD /* Category.storyboard */; };
@@ -154,6 +160,12 @@
 		9FA0437F278D12BF00FCD2FE /* MyKurlyListPlusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyListPlusCell.swift; sourceTree = "<group>"; };
 		9FA04381278D12F900FCD2FE /* MyKurlyOnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyOnCell.swift; sourceTree = "<group>"; };
 		9FA04383278D5E4E00FCD2FE /* MyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyViewController.swift; sourceTree = "<group>"; };
+		9FB51FA6278D8D8400DEF835 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		9FB51FA8278D904A00DEF835 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		9FB51FAA278D9ABE00DEF835 /* BeforeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeSearchViewController.swift; sourceTree = "<group>"; };
+		9FB51FAC278D9AC900DEF835 /* AfterSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSearchViewController.swift; sourceTree = "<group>"; };
+		9FB51FAF278DB09100DEF835 /* SearchSubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSubjectCell.swift; sourceTree = "<group>"; };
+		9FB51FB0278DB09100DEF835 /* SearchSubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSubjectCell.xib; sourceTree = "<group>"; };
 		9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMemberMyKurlyViewController.swift; sourceTree = "<group>"; };
 		9FCC942D278A1AD4000493AD /* MyKurly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyKurly.storyboard; sourceTree = "<group>"; };
 		9FCC9431278A1C8D000493AD /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
@@ -325,12 +337,11 @@
 		9F9D5DE6278A048B00CC63FA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F9D5DF1278A094100CC63FA /* Constants */,
 				9F9D5DF8278A09E800CC63FA /* Util */,
 				9F9D5DF7278A09DA00CC63FA /* Extension */,
-				9F9D5DF1278A094100CC63FA /* Constants */,
 				9F9D5DF0278A074300CC63FA /* Font */,
 				9F9D5DD727895F4000CC63FA /* Assets.xcassets */,
-				9F9D5DD427895F3D00CC63FA /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -348,6 +359,7 @@
 		9F9D5DEA278A057300CC63FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F9D5DD427895F3D00CC63FA /* Main.storyboard */,
 				9F9D5DEC278A05EA00CC63FA /* SignUp */,
 				9F9D5DEB278A05DB00CC63FA /* Login */,
 				9F9D5DEE278A067F00CC63FA /* Home */,
@@ -439,6 +451,7 @@
 				9F9D5E0E278A0D2700CC63FA /* UIButton.swift */,
 				9F9D5E10278A0D4400CC63FA /* UINavigationBar.swift */,
 				9F9D5E12278A0D5B00CC63FA /* UIViewController.swift */,
+				9FB51FA8278D904A00DEF835 /* UITextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -446,6 +459,7 @@
 		9F9D5DF8278A09E800CC63FA /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				9FB51FA1278D847E00DEF835 /* Custom */,
 				9F9D5DF5278A09B200CC63FA /* BaseViewController.swift */,
 				9F9D5DFF278A0A1A00CC63FA /* IndicatorView.swift */,
 				9F9D5E04278A0B0A00CC63FA /* Device.swift */,
@@ -500,6 +514,23 @@
 			path = Members;
 			sourceTree = "<group>";
 		};
+		9FB51FA1278D847E00DEF835 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				9FB51FA6278D8D8400DEF835 /* BaseTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		9FB51FAE278DB04600DEF835 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9FB51FB0278DB09100DEF835 /* SearchSubjectCell.xib */,
+				9FB51FAF278DB09100DEF835 /* SearchSubjectCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9FCC942F278A1C6D000493AD /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,8 +543,11 @@
 		9FCC9430278A1C78000493AD /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				9FB51FAE278DB04600DEF835 /* Cells */,
 				9FCC9433278A1C93000493AD /* Search.storyboard */,
 				9FCC9437278A1CA5000493AD /* SearchViewController.swift */,
+				9FB51FAA278D9ABE00DEF835 /* BeforeSearchViewController.swift */,
+				9FB51FAC278D9AC900DEF835 /* AfterSearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -592,6 +626,7 @@
 				9F9C58F8278B64C2005D164C /* ProductCell.xib in Resources */,
 				9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */,
 				9FCC943A278A1DED000493AD /* Home.storyboard in Resources */,
+				9FB51FB2278DB09100DEF835 /* SearchSubjectCell.xib in Resources */,
 				9FCC9451278A6D97000493AD /* SignUp.storyboard in Resources */,
 				9F9C591E278B9DB6005D164C /* SpecialProductCell.xib in Resources */,
 				9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */,
@@ -669,6 +704,7 @@
 				9F9C58FF278B88CB005D164C /* OnlyBannerCell.swift in Sources */,
 				9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */,
 				9F9D5E11278A0D4400CC63FA /* UINavigationBar.swift in Sources */,
+				9FB51FA7278D8D8400DEF835 /* BaseTextField.swift in Sources */,
 				9F9C58FB278B7440005D164C /* NoSaleProductCell.swift in Sources */,
 				9F9C591D278B9DB6005D164C /* SpecialProductCell.swift in Sources */,
 				9F9C58ED278B5CF1005D164C /* BannerImgCell.swift in Sources */,
@@ -678,6 +714,7 @@
 				9FA04372278D10A000FCD2FE /* EventCell.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
 				9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */,
+				9FB51FB1278DB09100DEF835 /* SearchSubjectCell.swift in Sources */,
 				9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */,
 				9F9C58E9278B5B75005D164C /* BannersCell.swift in Sources */,
 				9FCC944F278A5498000493AD /* EmailCertifyViewController.swift in Sources */,
@@ -687,6 +724,7 @@
 				9FA04382278D12F900FCD2FE /* MyKurlyOnCell.swift in Sources */,
 				9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */,
 				9F9C58E1278B3F72005D164C /* SpecialPriceViewController.swift in Sources */,
+				9FB51FAB278D9ABE00DEF835 /* BeforeSearchViewController.swift in Sources */,
 				9F9D5E0D278A0D0C00CC63FA /* UIFont.swift in Sources */,
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
 				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
@@ -712,7 +750,9 @@
 				9FCC9455278AA585000493AD /* MemberMyKurlyViewController.swift in Sources */,
 				9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */,
 				9F9D5E0F278A0D2700CC63FA /* UIButton.swift in Sources */,
+				9FB51FAD278D9AC900DEF835 /* AfterSearchViewController.swift in Sources */,
 				9F9D5E1B278A100100CC63FA /* LoginResponse.swift in Sources */,
+				9FB51FA9278D904A00DEF835 /* UITextField.swift in Sources */,
 				9F9C58F3278B64AC005D164C /* ProductsCell.swift in Sources */,
 				9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */,
 				9F9C5925278BB126005D164C /* Product2Cell.swift in Sources */,
