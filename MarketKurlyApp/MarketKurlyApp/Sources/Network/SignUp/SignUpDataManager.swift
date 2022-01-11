@@ -7,13 +7,26 @@
 
 import Alamofire
 
+protocol APIDataSource {
+    var HTTP_HEADERS: HTTPHeaders { get }
+}
+
 class SignUpDataManager {
+    
     static let shared = SignUpDataManager()
     private init() {}
     
-    func requestSignUp(){
+    func requestSignUp(parameter: SignUpRequest, completion: @escaping (SignUpResponse)->(Void)){
         
+        let URL = Constant.BasicURL + "users/v2"
+        
+        AF.request(URL, method: .post, parameters: parameter,encoder: JSONParameterEncoder() ).validate().responseDecodable(of:SignUpResponse.self) { response in
+            switch response.result {
+            case .success(let response) :
+                completion(response)
+            case .failure(let error) :
+                print(error.localizedDescription)
+            }
+        }
     }
-    
-    
 }

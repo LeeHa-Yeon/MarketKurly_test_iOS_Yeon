@@ -10,4 +10,6 @@ import Foundation
 struct Constant {
     static let findStatusName: String = "findStatus"
     static let loginStatusName: String = "loginStatus"
+    
+    static let BasicURL: String = "http://13.125.230.111:8081/app/"
 }

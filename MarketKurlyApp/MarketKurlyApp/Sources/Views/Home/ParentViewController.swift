@@ -10,6 +10,7 @@ import XLPagerTabStrip
 
 class ParentViewController: ButtonBarPagerTabStripViewController {
     
+    let signUpManager = SignUpDataManager.shared
     let purpleInspireColor = UIColor.mainKurlyPurple
     
     // MARK: - LifeCycle
@@ -70,3 +71,6 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
     
     
 }
+
+// 다른 API -> jwt 로그인할때 uerDefault저장해두고
+// keychain 라이브러리 
