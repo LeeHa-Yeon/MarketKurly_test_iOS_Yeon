@@ -9,14 +9,17 @@ import UIKit
 
 class RecipeListCell: UITableViewCell {
 
+    // MARK: - UIComponents
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var moreBtn: UIButton!
+    
     @IBAction func moreProductsBtnTapped(_ sender: Any) {
         //TODO: - 전체보기 페이지 구현
         print("전체보기 탭함")
     }
     
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
@@ -26,6 +29,7 @@ class RecipeListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - Functions
     private func setUI(){
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -49,10 +53,9 @@ extension RecipeListCell : UICollectionViewDataSource, UICollectionViewDelegate,
         return cell
         
     }
-    // UICollectionViewDelegateFlowLayout 상속
+    
     //컬렉션뷰 사이즈 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
         return CGSize(width: 300  , height:  collectionView.frame.height)
     }
     

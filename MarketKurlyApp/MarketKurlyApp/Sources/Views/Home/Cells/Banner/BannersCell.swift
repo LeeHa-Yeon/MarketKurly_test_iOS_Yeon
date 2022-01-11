@@ -15,10 +15,10 @@ class BannersCell: UITableViewCell {
     // 데이터 배열
     var dataArray: Array<UIImage> = []
     
-    
+    // MARK: - UIComponents
     @IBOutlet weak var collecionView: UICollectionView!
     
-    
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         for i in 1...11 {
             dataArray.append(UIImage(named: "R_f_banner\(i).png")!)
@@ -32,6 +32,7 @@ class BannersCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - Functions
     private func setUI(){
         collecionView.dataSource = self
         collecionView.delegate = self

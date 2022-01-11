@@ -9,8 +9,10 @@ import UIKit
 
 class OnlyBannerCell: UITableViewCell {
     
+    // MARK: - UIComponents
     @IBOutlet weak var bannerBtn: UIButton!
 
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         bannerBtn.imageView?.contentMode = .scaleToFill
@@ -19,7 +21,6 @@ class OnlyBannerCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
 }

@@ -9,14 +9,13 @@ import UIKit
 
 class RecipeCell: UICollectionViewCell {
 
+    // MARK: - UIComponents
     @IBOutlet weak var RecipeBtn: UIButton!
     @IBOutlet weak var cookTitleLabel: UILabel!
     
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         RecipeBtn.imageView?.contentMode = .scaleToFill
-        // Initialization code
     }
-
-    
 }

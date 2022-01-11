@@ -9,12 +9,13 @@ import UIKit
 
 class BannerImgCell: UICollectionViewCell {
     
-    
+    // MARK: - UIComponents
     @IBOutlet weak var clieckBtn: UIButton!
     @IBOutlet weak var bannerImgView: UIImageView!
+    
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }

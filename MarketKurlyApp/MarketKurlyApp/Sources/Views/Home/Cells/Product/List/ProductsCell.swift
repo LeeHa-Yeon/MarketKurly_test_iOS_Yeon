@@ -9,15 +9,17 @@ import UIKit
 
 class ProductsCell: UITableViewCell {
     
-    
+    // MARK: - UIComponents
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var moreBtn: UIButton!
+    
     @IBAction func moreProductsBtnTapped(_ sender: Any) {
         //TODO: - 전체보기 페이지 구현
         print("전체보기 탭함")
     }
     
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
@@ -27,6 +29,7 @@ class ProductsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - Functions
     private func setUI(){
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -35,14 +38,12 @@ class ProductsCell: UITableViewCell {
         
         let NoSaleProductCellNib = UINib(nibName: "NoSaleProductCell", bundle: nil)
         self.collectionView.register(NoSaleProductCellNib, forCellWithReuseIdentifier: "noSaleProductCell")
-        
-
-        
     }
     
 }
 
 extension ProductsCell : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
@@ -60,15 +61,11 @@ extension ProductsCell : UICollectionViewDataSource, UICollectionViewDelegate, U
             }
             return cell
         }
-        
-        
     }
-    // UICollectionViewDelegateFlowLayout 상속
+    
     //컬렉션뷰 사이즈 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150  , height:  collectionView.frame.height)
     }
-    
-    
-    
+
 }

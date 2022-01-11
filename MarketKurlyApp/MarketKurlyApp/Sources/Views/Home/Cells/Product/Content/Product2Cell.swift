@@ -9,9 +9,9 @@ import UIKit
 
 class Product2Cell: UICollectionViewCell {
 
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }

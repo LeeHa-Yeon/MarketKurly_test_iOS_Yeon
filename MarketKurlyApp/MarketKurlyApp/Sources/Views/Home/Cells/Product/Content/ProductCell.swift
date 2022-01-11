@@ -8,11 +8,10 @@
 import UIKit
 
 class ProductCell: UICollectionViewCell {
-    
 
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }

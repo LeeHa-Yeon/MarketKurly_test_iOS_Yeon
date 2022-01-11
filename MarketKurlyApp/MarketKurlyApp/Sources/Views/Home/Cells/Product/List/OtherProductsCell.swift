@@ -9,6 +9,7 @@ import UIKit
 
 class OtherProductsCell: UITableViewCell {
     
+    // MARK: - UIComponents
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subExplanationLabel: UILabel!
     @IBOutlet weak var moreBtn: UIButton!
@@ -16,6 +17,8 @@ class OtherProductsCell: UITableViewCell {
     
     @IBAction func moreBtnTapped(_ sender: Any) {
     }
+    
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         setUI()
@@ -25,6 +28,7 @@ class OtherProductsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - Functions
     private func setUI(){
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -59,12 +63,10 @@ extension OtherProductsCell : UICollectionViewDataSource, UICollectionViewDelega
         
         
     }
-    // UICollectionViewDelegateFlowLayout 상속
+    
     //컬렉션뷰 사이즈 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150  , height:  collectionView.frame.height)
     }
-    
-    
-    
+
 }
