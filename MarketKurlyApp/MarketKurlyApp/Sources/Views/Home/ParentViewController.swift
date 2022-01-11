@@ -15,6 +15,7 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         setUI()
+        UserDefaults.standard.set(false, forKey: Constant.loginStatusName)
         super.viewDidLoad()
     }
     

@@ -68,7 +68,8 @@
 		9FA0437D278D126200FCD2FE /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0437C278D126200FCD2FE /* BannerCell.swift */; };
 		9FA04380278D12BF00FCD2FE /* MyKurlyListPlusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0437F278D12BF00FCD2FE /* MyKurlyListPlusCell.swift */; };
 		9FA04382278D12F900FCD2FE /* MyKurlyOnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA04381278D12F900FCD2FE /* MyKurlyOnCell.swift */; };
-		9FCC942C278A1A9F000493AD /* MyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC942B278A1A9F000493AD /* MyKurlyViewController.swift */; };
+		9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA04383278D5E4E00FCD2FE /* MyKurlyViewController.swift */; };
+		9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */; };
 		9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC942D278A1AD4000493AD /* MyKurly.storyboard */; };
 		9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9431278A1C8D000493AD /* Category.storyboard */; };
 		9FCC9434278A1C93000493AD /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9433278A1C93000493AD /* Search.storyboard */; };
@@ -83,7 +84,7 @@
 		9FCC944F278A5498000493AD /* EmailCertifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC944E278A5498000493AD /* EmailCertifyViewController.swift */; };
 		9FCC9451278A6D97000493AD /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9450278A6D97000493AD /* SignUp.storyboard */; };
 		9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9452278A6DA6000493AD /* SignUpViewController.swift */; };
-		9FCC9455278AA585000493AD /* MyKurlyOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9454278AA585000493AD /* MyKurlyOnViewController.swift */; };
+		9FCC9455278AA585000493AD /* MemberMyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9454278AA585000493AD /* MemberMyKurlyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,7 +153,8 @@
 		9FA0437C278D126200FCD2FE /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		9FA0437F278D12BF00FCD2FE /* MyKurlyListPlusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyListPlusCell.swift; sourceTree = "<group>"; };
 		9FA04381278D12F900FCD2FE /* MyKurlyOnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyOnCell.swift; sourceTree = "<group>"; };
-		9FCC942B278A1A9F000493AD /* MyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyViewController.swift; sourceTree = "<group>"; };
+		9FA04383278D5E4E00FCD2FE /* MyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyViewController.swift; sourceTree = "<group>"; };
+		9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMemberMyKurlyViewController.swift; sourceTree = "<group>"; };
 		9FCC942D278A1AD4000493AD /* MyKurly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyKurly.storyboard; sourceTree = "<group>"; };
 		9FCC9431278A1C8D000493AD /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
 		9FCC9433278A1C93000493AD /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -167,7 +169,7 @@
 		9FCC944E278A5498000493AD /* EmailCertifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCertifyViewController.swift; sourceTree = "<group>"; };
 		9FCC9450278A6D97000493AD /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		9FCC9452278A6DA6000493AD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		9FCC9454278AA585000493AD /* MyKurlyOnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyOnViewController.swift; sourceTree = "<group>"; };
+		9FCC9454278AA585000493AD /* MemberMyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberMyKurlyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,8 +382,9 @@
 			children = (
 				9FA04373278D112000FCD2FE /* Cells */,
 				9FCC942D278A1AD4000493AD /* MyKurly.storyboard */,
-				9FCC942B278A1A9F000493AD /* MyKurlyViewController.swift */,
-				9FCC9454278AA585000493AD /* MyKurlyOnViewController.swift */,
+				9FA04383278D5E4E00FCD2FE /* MyKurlyViewController.swift */,
+				9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */,
+				9FCC9454278AA585000493AD /* MemberMyKurlyViewController.swift */,
 			);
 			path = MyKurly;
 			sourceTree = "<group>";
@@ -675,7 +678,7 @@
 				9FA04372278D10A000FCD2FE /* EventCell.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
 				9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */,
-				9FCC942C278A1A9F000493AD /* MyKurlyViewController.swift in Sources */,
+				9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */,
 				9F9C58E9278B5B75005D164C /* BannersCell.swift in Sources */,
 				9FCC944F278A5498000493AD /* EmailCertifyViewController.swift in Sources */,
 				9F9C5915278B97BF005D164C /* RecipeListCell.swift in Sources */,
@@ -686,6 +689,7 @@
 				9F9C58E1278B3F72005D164C /* SpecialPriceViewController.swift in Sources */,
 				9F9D5E0D278A0D0C00CC63FA /* UIFont.swift in Sources */,
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
+				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
 				9FA0437B278D11E800FCD2FE /* MyKurlyInfoCell.swift in Sources */,
 				9FCC943C278A1DF5000493AD /* ParentViewController.swift in Sources */,
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
@@ -705,7 +709,7 @@
 				9F9C58F7278B64C2005D164C /* ProductCell.swift in Sources */,
 				9FA0437D278D126200FCD2FE /* BannerCell.swift in Sources */,
 				9F9D5E15278A0F7500CC63FA /* LoginDataManager.swift in Sources */,
-				9FCC9455278AA585000493AD /* MyKurlyOnViewController.swift in Sources */,
+				9FCC9455278AA585000493AD /* MemberMyKurlyViewController.swift in Sources */,
 				9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */,
 				9F9D5E0F278A0D2700CC63FA /* UIButton.swift in Sources */,
 				9F9D5E1B278A100100CC63FA /* LoginResponse.swift in Sources */,

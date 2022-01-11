@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyKurlyOnViewController: BaseViewController {
+class MemberMyKurlyViewController: BaseViewController {
 
     let dummyData: [String] = ["적립금","쿠폰","친구초대"]
     let dummyData2: [String] = ["주문 내역","선물 내역","찜한 상품","상품 후기"]
@@ -30,7 +30,6 @@ class MyKurlyOnViewController: BaseViewController {
     
     // MARK: - Function
     func setUI(){
-        self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "마이컬리")
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -38,7 +37,7 @@ class MyKurlyOnViewController: BaseViewController {
 
 }
 
-extension MyKurlyOnViewController: UITableViewDataSource, UITableViewDelegate {
+extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 8
     }
@@ -128,6 +127,14 @@ extension MyKurlyOnViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         default:
             return UITableViewCell()
+        }
+    
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 7 {
+            UserDefaults.standard.set(false, forKey: Constant.loginStatusName)
+            tableView.reloadData()
         }
     }
     
