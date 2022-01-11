@@ -11,9 +11,16 @@ class LoginDataManager {
     static let shared = LoginDataManager()
     private init() {}
     
-    func requestLogin(){
+    func requestLogin(parameter: LoginRequest, completion: @escaping (LoginResponse)->(Void)){
+        let URL = Constant.BasicURL + "users/v2/login"
         
+        AF.request(URL, method: .post, parameters: parameter,encoder: JSONParameterEncoder() ).validate().responseDecodable(of:LoginResponse.self) { response in
+            switch response.result {
+            case .success(let response) :
+                completion(response)
+            case .failure(let error) :
+                print(error.localizedDescription)
+            }
+        }
     }
-    
-    
 }

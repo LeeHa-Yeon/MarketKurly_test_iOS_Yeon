@@ -10,7 +10,6 @@ import XLPagerTabStrip
 
 class ParentViewController: ButtonBarPagerTabStripViewController {
     
-    let signUpManager = SignUpDataManager.shared
     let purpleInspireColor = UIColor.mainKurlyPurple
     
     // MARK: - LifeCycle
