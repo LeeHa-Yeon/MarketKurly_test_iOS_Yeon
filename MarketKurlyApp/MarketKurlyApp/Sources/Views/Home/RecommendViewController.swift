@@ -89,7 +89,6 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             cell.discountLabel.text = "30%"
             cell.salePriceLabel.text = "11,900원"
             cell.originPriceLabel.text = "17,000원"
-            cell.originPriceLabel.text?.strikeThrough()
             
             return cell
         case 4 :

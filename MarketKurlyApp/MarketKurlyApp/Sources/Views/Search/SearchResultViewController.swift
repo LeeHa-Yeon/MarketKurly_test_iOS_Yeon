@@ -9,9 +9,11 @@ import UIKit
 
 class SearchResultViewController: UIViewController {
     
+    // MARK: - Components
     @IBOutlet weak var noSearchView: UIView!
     @IBOutlet weak var resultSearchView: UIView!
     
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()

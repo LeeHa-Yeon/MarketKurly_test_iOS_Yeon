@@ -19,7 +19,6 @@ class ExistSearchViewController: UIViewController {
     }
     
     // MARK: - Functions
-
     func setUI(){
         collectionView.dataSource = self
         collectionView.delegate = self

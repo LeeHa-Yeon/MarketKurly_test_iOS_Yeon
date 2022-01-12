@@ -63,10 +63,11 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="80" id="5M5-jQ-iaI"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="중복확인">
-                                                                    <color key="baseForegroundColor" red="0.33846250179999998" green="0.048356711859999998" blue="0.48238134379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                </buttonConfiguration>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="중복확인">
+                                                                    <color key="titleColor" red="0.33846250179999998" green="0.048356711859999998" blue="0.48238134379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </state>
                                                                 <connections>
                                                                     <action selector="confirmBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xce-Rd-lIK"/>
                                                                 </connections>
@@ -321,10 +322,11 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="120" id="0yc-lK-SJ0"/>
                                                                 </constraints>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="인증번호 받기">
-                                                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </buttonConfiguration>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="인증번호 받기">
+                                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                                 <connections>
                                                                     <action selector="confirmBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5Fe-Va-eqp"/>
                                                                     <action selector="phoneConfirmBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="D3Y-nS-v15"/>
@@ -624,18 +626,19 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2J-Ie-Odx">
-                                                <rect key="frame" x="5" y="1272.5" width="160.5" height="31"/>
+                                                <rect key="frame" x="5" y="1272.5" width="136.5" height="20.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FM-RG-uQl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="31"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="20.5"/>
+                                                        <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title=" ">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="large"/>
-                                                            <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
+                                                        </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체 동의합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp4-9o-C5u">
-                                                        <rect key="frame" x="48" y="0.0" width="112.5" height="31"/>
+                                                        <rect key="frame" x="24" y="0.0" width="112.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -643,33 +646,34 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택 항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-4m-nZo">
-                                                <rect key="frame" x="15" y="1308.5" width="384" height="33.5"/>
+                                                <rect key="frame" x="15" y="1298" width="384" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="AkC-bl-ojf">
-                                                <rect key="frame" x="5" y="1362" width="319.5" height="133"/>
+                                                <rect key="frame" x="5" y="1351.5" width="295.5" height="81"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xW3-b3-KO7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="146.5" height="18"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3M-Wy-iso">
-                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="31"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                                                                <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title=" ">
+                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </buttonConfiguration>
+                                                                </state>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용 약관 동의 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3Q-8f-izN">
-                                                                <rect key="frame" x="44" y="0.0" width="84" height="31"/>
+                                                                <rect key="frame" x="20" y="0.0" width="84" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 필수 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDe-R5-Eys">
-                                                                <rect key="frame" x="128" y="0.0" width="42.5" height="31"/>
+                                                                <rect key="frame" x="104" y="0.0" width="42.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -677,24 +681,25 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Aq-k5-kaR">
-                                                        <rect key="frame" x="0.0" y="34" width="219.5" height="31"/>
+                                                        <rect key="frame" x="0.0" y="21" width="195.5" height="18"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGh-9G-fJP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="31"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDY-r2-Yua">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                                                                <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title=" ">
+                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </buttonConfiguration>
+                                                                </state>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 수집・이용 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gT-XU-qWf">
-                                                                <rect key="frame" x="44" y="0.0" width="133" height="31"/>
+                                                                <rect key="frame" x="20" y="0.0" width="133" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 필수 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJj-PS-rEc">
-                                                                <rect key="frame" x="177" y="0.0" width="42.5" height="31"/>
+                                                                <rect key="frame" x="153" y="0.0" width="42.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -702,24 +707,25 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNA-9W-B7h">
-                                                        <rect key="frame" x="0.0" y="68" width="219.5" height="31"/>
+                                                        <rect key="frame" x="0.0" y="42" width="195.5" height="18"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yum-d0-fkI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="31"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                                                                <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title=" ">
+                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </buttonConfiguration>
+                                                                </state>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 수집・이용 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEb-6e-win">
-                                                                <rect key="frame" x="44" y="0.0" width="133" height="31"/>
+                                                                <rect key="frame" x="20" y="0.0" width="133" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 선택 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JU-OY-Flq">
-                                                                <rect key="frame" x="177" y="0.0" width="42.5" height="31"/>
+                                                                <rect key="frame" x="153" y="0.0" width="42.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -727,24 +733,25 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZ5-lW-Ydb">
-                                                        <rect key="frame" x="0.0" y="102" width="319.5" height="31"/>
+                                                        <rect key="frame" x="0.0" y="63" width="295.5" height="18"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owu-rf-vUo">
-                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="31"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                                                                <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title=" ">
+                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </buttonConfiguration>
+                                                                </state>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무료배송, 할인쿠폰 등 혜택/정보 수신 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2M-cv-4e6">
-                                                                <rect key="frame" x="44" y="0.0" width="233" height="31"/>
+                                                                <rect key="frame" x="20" y="0.0" width="233" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 선택 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMa-Qk-IAp">
-                                                                <rect key="frame" x="277" y="0.0" width="42.5" height="31"/>
+                                                                <rect key="frame" x="253" y="0.0" width="42.5" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -754,7 +761,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d05-Gi-8A9">
-                                                <rect key="frame" x="379" y="1362" width="30" height="100"/>
+                                                <rect key="frame" x="379" y="1351.5" width="30" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q49-74-idL">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -780,18 +787,19 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wG-1Q-7gO">
-                                                <rect key="frame" x="50" y="1505" width="74.5" height="31"/>
+                                                <rect key="frame" x="50" y="1442.5" width="50.5" height="18"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKF-DW-Oey">
-                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="31"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzL-VB-XjJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                                                        <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title=" ">
+                                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                            <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
+                                                        </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCO-rv-4yA">
-                                                        <rect key="frame" x="44" y="0.0" width="30.5" height="31"/>
+                                                        <rect key="frame" x="20" y="0.0" width="30.5" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -799,18 +807,19 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gu7-M0-Pgw">
-                                                <rect key="frame" x="224.5" y="1505" width="80.5" height="31"/>
+                                                <rect key="frame" x="200.5" y="1442.5" width="56.5" height="18"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLr-U2-Riq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="31"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfW-6Z-lSG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                                                        <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title=" ">
+                                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                            <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
+                                                        </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2t-Xv-KZD">
-                                                        <rect key="frame" x="44" y="0.0" width="36.5" height="31"/>
+                                                        <rect key="frame" x="20" y="0.0" width="36.5" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -818,7 +827,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETX-8h-Bre">
-                                                <rect key="frame" x="65" y="1546" width="190" height="50"/>
+                                                <rect key="frame" x="65" y="1470.5" width="190" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동의 시 한 달 간 [5% 적립] + [무제한 무료배송] ( 첫 주문 후 적용 )" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvf-dF-Y9M">
                                                         <rect key="frame" x="10" y="10" width="170" height="30"/>
@@ -839,24 +848,25 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnu-Z4-RWq">
-                                                <rect key="frame" x="5" y="1616" width="239" height="31"/>
+                                                <rect key="frame" x="5" y="1540.5" width="215" height="18"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6z-Bf-1fm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="31"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title=" ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lw-sC-6tz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                                                        <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title=" ">
+                                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                            <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
+                                                        </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본인은 만 14세 이상입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkV-DS-Dt1">
-                                                        <rect key="frame" x="44" y="0.0" width="152.5" height="31"/>
+                                                        <rect key="frame" x="20" y="0.0" width="152.5" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 필수 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivZ-9d-ZeR">
-                                                        <rect key="frame" x="196.5" y="0.0" width="42.5" height="31"/>
+                                                        <rect key="frame" x="172.5" y="0.0" width="42.5" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -864,7 +874,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhD-2D-M0B">
-                                                <rect key="frame" x="20" y="1662" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="1573.5" width="374" height="50"/>
                                                 <color key="backgroundColor" red="0.33846250179999998" green="0.048356711859999998" blue="0.48238134379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="T8D-7O-8vK"/>

@@ -7,7 +7,6 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -142,6 +141,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jeb-1y-z7T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bKm-3x-ApS" firstAttribute="leading" secondItem="oZ0-Mj-OEx" secondAttribute="leading" id="7JE-fH-5h8"/>
@@ -213,6 +213,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Oah-oJ-e0y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="F9y-v9-gei" firstAttribute="leading" secondItem="2mV-n4-d63" secondAttribute="leading" id="5Zp-QH-cJP"/>
@@ -253,6 +254,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="hLH-8E-pcI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dhn-vC-eMe" firstAttribute="top" secondItem="0d2-7M-pBK" secondAttribute="top" id="8v0-ru-5gi"/>
@@ -302,6 +304,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zfx-aK-4Jq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Y88-Q7-OKk" firstAttribute="top" secondItem="quI-ff-Yak" secondAttribute="bottom" constant="20" id="hbi-aC-aAb"/>
@@ -335,18 +338,10 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NWz-aF-TzH">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pmp-hN-3vD">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="gLJ-l7-LsV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="5xf-mB-rtN" secondAttribute="trailing" id="93u-1d-ooW"/>
@@ -366,7 +361,10 @@
     </scenes>
     <designables>
         <designable name="MFu-U7-Rer">
-            <size key="intrinsicContentSize" width="138" height="19.5"/>
+            <size key="intrinsicContentSize" width="176" height="19.5"/>
+        </designable>
+        <designable name="quI-ff-Yak">
+            <size key="intrinsicContentSize" width="512" height="512"/>
         </designable>
     </designables>
     <resources>
