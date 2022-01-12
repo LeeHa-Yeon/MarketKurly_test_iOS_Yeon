@@ -24,6 +24,8 @@ class BeforeSearchViewController: UIViewController {
         tableView.delegate = self
         registerNib(cellNibName: "SearchSubjectCell", cellIdentifier: "searchSubjectCell")
         registerNib(cellNibName: "SearchEventFrameCell", cellIdentifier: "searchEventFrameCell")
+        registerNib(cellNibName: "SearchSubject3Cell", cellIdentifier: "searchSubject3Cell")
+        registerNib(cellNibName: "SearchSubject4Cell", cellIdentifier: "searchSubject4Cell")
     }
     
     func registerNib(cellNibName: String, cellIdentifier: String){
@@ -36,7 +38,7 @@ class BeforeSearchViewController: UIViewController {
 extension BeforeSearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,7 +58,16 @@ extension BeforeSearchViewController: UITableViewDataSource, UITableViewDelegate
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "searchEventFrameCell", for: indexPath) as? SearchEventFrameCell else {
                 return UITableViewCell()
             }
-            print("dd?")
+            return cell
+        case 2 :
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "searchSubject3Cell", for: indexPath) as? SearchSubject3Cell else {
+                return UITableViewCell()
+            }
+            return cell
+        case 3 :
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "searchSubject4Cell", for: indexPath) as? SearchSubject4Cell else {
+                return UITableViewCell()
+            }
             return cell
         default :
             return UITableViewCell()
@@ -68,8 +79,10 @@ extension BeforeSearchViewController: UITableViewDataSource, UITableViewDelegate
         switch indexPath.section {
         case 0 :
             return 100
-        case 1 :
+        case 1,2 :
             return 150
+        case 3 :
+            return 530
         default :
             return 0
         }

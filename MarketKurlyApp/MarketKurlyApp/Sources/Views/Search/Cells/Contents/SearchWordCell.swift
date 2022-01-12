@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MySearchWord: UICollectionViewCell {
+class SearchWordCell: UICollectionViewCell {
     
     // MARK: - Components
     @IBOutlet weak var searchView: UIView!

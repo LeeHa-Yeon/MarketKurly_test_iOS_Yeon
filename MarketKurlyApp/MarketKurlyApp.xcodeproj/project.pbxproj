@@ -75,10 +75,17 @@
 		9FB51FAD278D9AC900DEF835 /* AfterSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FAC278D9AC900DEF835 /* AfterSearchViewController.swift */; };
 		9FB51FB1278DB09100DEF835 /* SearchSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FAF278DB09100DEF835 /* SearchSubjectCell.swift */; };
 		9FB51FB2278DB09100DEF835 /* SearchSubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FB0278DB09100DEF835 /* SearchSubjectCell.xib */; };
-		9FB51FB7278DB73900DEF835 /* MySearchWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FB5278DB73900DEF835 /* MySearchWord.swift */; };
-		9FB51FB8278DB73900DEF835 /* MySearchWord.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FB6278DB73900DEF835 /* MySearchWord.xib */; };
+		9FB51FB7278DB73900DEF835 /* SearchWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FB5278DB73900DEF835 /* SearchWordCell.swift */; };
+		9FB51FB8278DB73900DEF835 /* SearchWordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FB6278DB73900DEF835 /* SearchWordCell.xib */; };
 		9FB51FBB278E744B00DEF835 /* SearchEventFrameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FB9278E744B00DEF835 /* SearchEventFrameCell.swift */; };
 		9FB51FBC278E744B00DEF835 /* SearchEventFrameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FBA278E744B00DEF835 /* SearchEventFrameCell.xib */; };
+		9FB51FBF278E82A700DEF835 /* SearchSubject3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FBD278E82A700DEF835 /* SearchSubject3Cell.swift */; };
+		9FB51FC0278E82A700DEF835 /* SearchSubject3Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FBE278E82A700DEF835 /* SearchSubject3Cell.xib */; };
+		9FB51FC7278E898B00DEF835 /* SearchSubject4Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FC5278E898B00DEF835 /* SearchSubject4Cell.swift */; };
+		9FB51FC8278E898B00DEF835 /* SearchSubject4Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FC6278E898B00DEF835 /* SearchSubject4Cell.xib */; };
+		9FB51FCB278E8B9100DEF835 /* VogueSearchWorldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FC9278E8B9100DEF835 /* VogueSearchWorldCell.swift */; };
+		9FB51FCC278E8B9100DEF835 /* VogueSearchWorldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FCA278E8B9100DEF835 /* VogueSearchWorldCell.xib */; };
+		9FB51FCE278E979100DEF835 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FCD278E979100DEF835 /* SearchResultViewController.swift */; };
 		9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */; };
 		9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC942D278A1AD4000493AD /* MyKurly.storyboard */; };
 		9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9431278A1C8D000493AD /* Category.storyboard */; };
@@ -170,10 +177,17 @@
 		9FB51FAC278D9AC900DEF835 /* AfterSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSearchViewController.swift; sourceTree = "<group>"; };
 		9FB51FAF278DB09100DEF835 /* SearchSubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSubjectCell.swift; sourceTree = "<group>"; };
 		9FB51FB0278DB09100DEF835 /* SearchSubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSubjectCell.xib; sourceTree = "<group>"; };
-		9FB51FB5278DB73900DEF835 /* MySearchWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchWord.swift; sourceTree = "<group>"; };
-		9FB51FB6278DB73900DEF835 /* MySearchWord.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySearchWord.xib; sourceTree = "<group>"; };
+		9FB51FB5278DB73900DEF835 /* SearchWordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWordCell.swift; sourceTree = "<group>"; };
+		9FB51FB6278DB73900DEF835 /* SearchWordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchWordCell.xib; sourceTree = "<group>"; };
 		9FB51FB9278E744B00DEF835 /* SearchEventFrameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventFrameCell.swift; sourceTree = "<group>"; };
 		9FB51FBA278E744B00DEF835 /* SearchEventFrameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchEventFrameCell.xib; sourceTree = "<group>"; };
+		9FB51FBD278E82A700DEF835 /* SearchSubject3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSubject3Cell.swift; sourceTree = "<group>"; };
+		9FB51FBE278E82A700DEF835 /* SearchSubject3Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSubject3Cell.xib; sourceTree = "<group>"; };
+		9FB51FC5278E898B00DEF835 /* SearchSubject4Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSubject4Cell.swift; sourceTree = "<group>"; };
+		9FB51FC6278E898B00DEF835 /* SearchSubject4Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSubject4Cell.xib; sourceTree = "<group>"; };
+		9FB51FC9278E8B9100DEF835 /* VogueSearchWorldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VogueSearchWorldCell.swift; sourceTree = "<group>"; };
+		9FB51FCA278E8B9100DEF835 /* VogueSearchWorldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VogueSearchWorldCell.xib; sourceTree = "<group>"; };
+		9FB51FCD278E979100DEF835 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMemberMyKurlyViewController.swift; sourceTree = "<group>"; };
 		9FCC942D278A1AD4000493AD /* MyKurly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyKurly.storyboard; sourceTree = "<group>"; };
 		9FCC9431278A1C8D000493AD /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
@@ -535,8 +549,6 @@
 			children = (
 				9FB51FB3278DB6E600DEF835 /* List */,
 				9FB51FB4278DB6EC00DEF835 /* Contents */,
-				9FB51FBA278E744B00DEF835 /* SearchEventFrameCell.xib */,
-				9FB51FB9278E744B00DEF835 /* SearchEventFrameCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -546,6 +558,12 @@
 			children = (
 				9FB51FB0278DB09100DEF835 /* SearchSubjectCell.xib */,
 				9FB51FAF278DB09100DEF835 /* SearchSubjectCell.swift */,
+				9FB51FBA278E744B00DEF835 /* SearchEventFrameCell.xib */,
+				9FB51FB9278E744B00DEF835 /* SearchEventFrameCell.swift */,
+				9FB51FBE278E82A700DEF835 /* SearchSubject3Cell.xib */,
+				9FB51FBD278E82A700DEF835 /* SearchSubject3Cell.swift */,
+				9FB51FC6278E898B00DEF835 /* SearchSubject4Cell.xib */,
+				9FB51FC5278E898B00DEF835 /* SearchSubject4Cell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -553,8 +571,10 @@
 		9FB51FB4278DB6EC00DEF835 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
-				9FB51FB6278DB73900DEF835 /* MySearchWord.xib */,
-				9FB51FB5278DB73900DEF835 /* MySearchWord.swift */,
+				9FB51FB6278DB73900DEF835 /* SearchWordCell.xib */,
+				9FB51FB5278DB73900DEF835 /* SearchWordCell.swift */,
+				9FB51FCA278E8B9100DEF835 /* VogueSearchWorldCell.xib */,
+				9FB51FC9278E8B9100DEF835 /* VogueSearchWorldCell.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -576,6 +596,7 @@
 				9FCC9437278A1CA5000493AD /* SearchViewController.swift */,
 				9FB51FAA278D9ABE00DEF835 /* BeforeSearchViewController.swift */,
 				9FB51FAC278D9AC900DEF835 /* AfterSearchViewController.swift */,
+				9FB51FCD278E979100DEF835 /* SearchResultViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -660,13 +681,14 @@
 				9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */,
 				9F9C5916278B97BF005D164C /* RecipeListCell.xib in Resources */,
 				9F9D5DDB27895F4000CC63FA /* LaunchScreen.storyboard in Resources */,
-				9FB51FB8278DB73900DEF835 /* MySearchWord.xib in Resources */,
+				9FB51FB8278DB73900DEF835 /* SearchWordCell.xib in Resources */,
 				9F9D5DFC278A09FE00CC63FA /* NotoSansCJKkr-Regular.otf in Resources */,
 				9F9C58EA278B5B75005D164C /* BannersCell.xib in Resources */,
 				9F9C5900278B88CB005D164C /* OnlyBannerCell.xib in Resources */,
 				9FCC9434278A1C93000493AD /* Search.storyboard in Resources */,
 				9F9D5DD827895F4000CC63FA /* Assets.xcassets in Resources */,
 				9FB51FBC278E744B00DEF835 /* SearchEventFrameCell.xib in Resources */,
+				9FB51FC8278E898B00DEF835 /* SearchSubject4Cell.xib in Resources */,
 				9F9C58EE278B5CF1005D164C /* BannerImgCell.xib in Resources */,
 				9F9C5926278BB126005D164C /* Product2Cell.xib in Resources */,
 				9F9C5908278B8B9F005D164C /* OtherProductsCell.xib in Resources */,
@@ -676,6 +698,8 @@
 				9F9D5DFD278A09FE00CC63FA /* NotoSansCJKkr-Medium.otf in Resources */,
 				9F9D5DFE278A09FE00CC63FA /* NotoSansCJKkr-Bold.otf in Resources */,
 				9FCC943E278A357F000493AD /* Login.storyboard in Resources */,
+				9FB51FC0278E82A700DEF835 /* SearchSubject3Cell.xib in Resources */,
+				9FB51FCC278E8B9100DEF835 /* VogueSearchWorldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +752,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB51FC7278E898B00DEF835 /* SearchSubject4Cell.swift in Sources */,
 				9FCC944B278A4C09000493AD /* FindUserViewController.swift in Sources */,
 				9F9D5E13278A0D5B00CC63FA /* UIViewController.swift in Sources */,
 				9F9D5DF6278A09B200CC63FA /* BaseViewController.swift in Sources */,
@@ -741,7 +766,7 @@
 				9FA04375278D113000FCD2FE /* MyKurlyCell.swift in Sources */,
 				9F9C5907278B8B9F005D164C /* OtherProductsCell.swift in Sources */,
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
-				9FB51FB7278DB73900DEF835 /* MySearchWord.swift in Sources */,
+				9FB51FB7278DB73900DEF835 /* SearchWordCell.swift in Sources */,
 				9FA04372278D10A000FCD2FE /* EventCell.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
 				9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */,
@@ -764,6 +789,8 @@
 				9FCC943C278A1DF5000493AD /* ParentViewController.swift in Sources */,
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
 				9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */,
+				9FB51FCE278E979100DEF835 /* SearchResultViewController.swift in Sources */,
+				9FB51FBF278E82A700DEF835 /* SearchSubject3Cell.swift in Sources */,
 				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,
 				9F9C58DF278B3F5D005D164C /* ThriftyShoppingViewController.swift in Sources */,
 				9F9D5E00278A0A1A00CC63FA /* IndicatorView.swift in Sources */,
@@ -783,6 +810,7 @@
 				9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */,
 				9F9D5E0F278A0D2700CC63FA /* UIButton.swift in Sources */,
 				9FB51FAD278D9AC900DEF835 /* AfterSearchViewController.swift in Sources */,
+				9FB51FCB278E8B9100DEF835 /* VogueSearchWorldCell.swift in Sources */,
 				9F9D5E1B278A100100CC63FA /* LoginResponse.swift in Sources */,
 				9FB51FA9278D904A00DEF835 /* UITextField.swift in Sources */,
 				9F9C58F3278B64AC005D164C /* ProductsCell.swift in Sources */,
