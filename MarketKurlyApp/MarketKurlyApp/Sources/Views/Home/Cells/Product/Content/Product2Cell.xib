@@ -108,6 +108,9 @@
                 <constraint firstItem="ipk-dA-TYq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="xdm-Jm-OMI"/>
             </constraints>
             <size key="customSize" width="222" height="344"/>
+            <connections>
+                <outlet property="couponImg" destination="2Ib-Py-cRE" id="HGD-QT-sUg"/>
+            </connections>
             <point key="canvasLocation" x="260.86956521739131" y="244.41964285714283"/>
         </collectionViewCell>
     </objects>

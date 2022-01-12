@@ -8,6 +8,10 @@
 import UIKit
 
 class Product2Cell: UICollectionViewCell {
+    
+    // MARK: - Components
+    @IBOutlet weak var couponImg: UIImageView!
+    
 
     // MARK: - LifeCycle
     override func awakeFromNib() {

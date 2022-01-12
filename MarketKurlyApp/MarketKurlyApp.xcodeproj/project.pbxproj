@@ -86,6 +86,9 @@
 		9FB51FCB278E8B9100DEF835 /* VogueSearchWorldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FC9278E8B9100DEF835 /* VogueSearchWorldCell.swift */; };
 		9FB51FCC278E8B9100DEF835 /* VogueSearchWorldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FCA278E8B9100DEF835 /* VogueSearchWorldCell.xib */; };
 		9FB51FCE278E979100DEF835 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FCD278E979100DEF835 /* SearchResultViewController.swift */; };
+		9FB51FD0278E996100DEF835 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FCF278E996100DEF835 /* BaseImageView.swift */; };
+		9FB51FD2278E9A0500DEF835 /* NoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FD1278E9A0500DEF835 /* NoSearchViewController.swift */; };
+		9FB51FD4278E9A2400DEF835 /* ExistSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FD3278E9A2400DEF835 /* ExistSearchViewController.swift */; };
 		9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */; };
 		9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC942D278A1AD4000493AD /* MyKurly.storyboard */; };
 		9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9431278A1C8D000493AD /* Category.storyboard */; };
@@ -188,6 +191,9 @@
 		9FB51FC9278E8B9100DEF835 /* VogueSearchWorldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VogueSearchWorldCell.swift; sourceTree = "<group>"; };
 		9FB51FCA278E8B9100DEF835 /* VogueSearchWorldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VogueSearchWorldCell.xib; sourceTree = "<group>"; };
 		9FB51FCD278E979100DEF835 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		9FB51FCF278E996100DEF835 /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
+		9FB51FD1278E9A0500DEF835 /* NoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSearchViewController.swift; sourceTree = "<group>"; };
+		9FB51FD3278E9A2400DEF835 /* ExistSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistSearchViewController.swift; sourceTree = "<group>"; };
 		9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMemberMyKurlyViewController.swift; sourceTree = "<group>"; };
 		9FCC942D278A1AD4000493AD /* MyKurly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyKurly.storyboard; sourceTree = "<group>"; };
 		9FCC9431278A1C8D000493AD /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
@@ -540,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				9FB51FA6278D8D8400DEF835 /* BaseTextField.swift */,
+				9FB51FCF278E996100DEF835 /* BaseImageView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -597,6 +604,8 @@
 				9FB51FAA278D9ABE00DEF835 /* BeforeSearchViewController.swift */,
 				9FB51FAC278D9AC900DEF835 /* AfterSearchViewController.swift */,
 				9FB51FCD278E979100DEF835 /* SearchResultViewController.swift */,
+				9FB51FD1278E9A0500DEF835 /* NoSearchViewController.swift */,
+				9FB51FD3278E9A2400DEF835 /* ExistSearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -771,6 +780,7 @@
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
 				9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */,
 				9FB51FB1278DB09100DEF835 /* SearchSubjectCell.swift in Sources */,
+				9FB51FD0278E996100DEF835 /* BaseImageView.swift in Sources */,
 				9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */,
 				9F9C58E9278B5B75005D164C /* BannersCell.swift in Sources */,
 				9FB51FBB278E744B00DEF835 /* SearchEventFrameCell.swift in Sources */,
@@ -783,6 +793,7 @@
 				9F9C58E1278B3F72005D164C /* SpecialPriceViewController.swift in Sources */,
 				9FB51FAB278D9ABE00DEF835 /* BeforeSearchViewController.swift in Sources */,
 				9F9D5E0D278A0D0C00CC63FA /* UIFont.swift in Sources */,
+				9FB51FD4278E9A2400DEF835 /* ExistSearchViewController.swift in Sources */,
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
 				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
 				9FA0437B278D11E800FCD2FE /* MyKurlyInfoCell.swift in Sources */,
@@ -796,6 +807,7 @@
 				9F9D5E00278A0A1A00CC63FA /* IndicatorView.swift in Sources */,
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */,
+				9FB51FD2278E9A0500DEF835 /* NoSearchViewController.swift in Sources */,
 				9F9D5E23278A104500CC63FA /* SignUpResponse.swift in Sources */,
 				9F9C5919278B99A1005D164C /* RecipeCell.swift in Sources */,
 				9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */,

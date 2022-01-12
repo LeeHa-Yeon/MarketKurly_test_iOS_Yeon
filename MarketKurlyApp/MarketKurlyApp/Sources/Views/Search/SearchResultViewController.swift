@@ -8,10 +8,19 @@
 import UIKit
 
 class SearchResultViewController: UIViewController {
-
+    
+    @IBOutlet weak var noSearchView: UIView!
+    @IBOutlet weak var resultSearchView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUI()
+    }
+    
+    func setUI(){
+        // MARK: - delegate으로 나중에 구현하기
+        noSearchView.alpha = 0
+        resultSearchView.alpha = 1
     }
 
 }
