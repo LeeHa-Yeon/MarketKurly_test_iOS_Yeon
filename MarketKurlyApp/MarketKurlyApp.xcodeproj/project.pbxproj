@@ -75,6 +75,10 @@
 		9FB51FAD278D9AC900DEF835 /* AfterSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FAC278D9AC900DEF835 /* AfterSearchViewController.swift */; };
 		9FB51FB1278DB09100DEF835 /* SearchSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FAF278DB09100DEF835 /* SearchSubjectCell.swift */; };
 		9FB51FB2278DB09100DEF835 /* SearchSubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FB0278DB09100DEF835 /* SearchSubjectCell.xib */; };
+		9FB51FB7278DB73900DEF835 /* MySearchWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FB5278DB73900DEF835 /* MySearchWord.swift */; };
+		9FB51FB8278DB73900DEF835 /* MySearchWord.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FB6278DB73900DEF835 /* MySearchWord.xib */; };
+		9FB51FBB278E744B00DEF835 /* SearchEventFrameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FB9278E744B00DEF835 /* SearchEventFrameCell.swift */; };
+		9FB51FBC278E744B00DEF835 /* SearchEventFrameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB51FBA278E744B00DEF835 /* SearchEventFrameCell.xib */; };
 		9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */; };
 		9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC942D278A1AD4000493AD /* MyKurly.storyboard */; };
 		9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9431278A1C8D000493AD /* Category.storyboard */; };
@@ -166,6 +170,10 @@
 		9FB51FAC278D9AC900DEF835 /* AfterSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSearchViewController.swift; sourceTree = "<group>"; };
 		9FB51FAF278DB09100DEF835 /* SearchSubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSubjectCell.swift; sourceTree = "<group>"; };
 		9FB51FB0278DB09100DEF835 /* SearchSubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSubjectCell.xib; sourceTree = "<group>"; };
+		9FB51FB5278DB73900DEF835 /* MySearchWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchWord.swift; sourceTree = "<group>"; };
+		9FB51FB6278DB73900DEF835 /* MySearchWord.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySearchWord.xib; sourceTree = "<group>"; };
+		9FB51FB9278E744B00DEF835 /* SearchEventFrameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventFrameCell.swift; sourceTree = "<group>"; };
+		9FB51FBA278E744B00DEF835 /* SearchEventFrameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchEventFrameCell.xib; sourceTree = "<group>"; };
 		9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMemberMyKurlyViewController.swift; sourceTree = "<group>"; };
 		9FCC942D278A1AD4000493AD /* MyKurly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyKurly.storyboard; sourceTree = "<group>"; };
 		9FCC9431278A1C8D000493AD /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
@@ -525,10 +533,30 @@
 		9FB51FAE278DB04600DEF835 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				9FB51FB3278DB6E600DEF835 /* List */,
+				9FB51FB4278DB6EC00DEF835 /* Contents */,
+				9FB51FBA278E744B00DEF835 /* SearchEventFrameCell.xib */,
+				9FB51FB9278E744B00DEF835 /* SearchEventFrameCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9FB51FB3278DB6E600DEF835 /* List */ = {
+			isa = PBXGroup;
+			children = (
 				9FB51FB0278DB09100DEF835 /* SearchSubjectCell.xib */,
 				9FB51FAF278DB09100DEF835 /* SearchSubjectCell.swift */,
 			);
-			path = Cells;
+			path = List;
+			sourceTree = "<group>";
+		};
+		9FB51FB4278DB6EC00DEF835 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				9FB51FB6278DB73900DEF835 /* MySearchWord.xib */,
+				9FB51FB5278DB73900DEF835 /* MySearchWord.swift */,
+			);
+			path = Contents;
 			sourceTree = "<group>";
 		};
 		9FCC942F278A1C6D000493AD /* Category */ = {
@@ -632,11 +660,13 @@
 				9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */,
 				9F9C5916278B97BF005D164C /* RecipeListCell.xib in Resources */,
 				9F9D5DDB27895F4000CC63FA /* LaunchScreen.storyboard in Resources */,
+				9FB51FB8278DB73900DEF835 /* MySearchWord.xib in Resources */,
 				9F9D5DFC278A09FE00CC63FA /* NotoSansCJKkr-Regular.otf in Resources */,
 				9F9C58EA278B5B75005D164C /* BannersCell.xib in Resources */,
 				9F9C5900278B88CB005D164C /* OnlyBannerCell.xib in Resources */,
 				9FCC9434278A1C93000493AD /* Search.storyboard in Resources */,
 				9F9D5DD827895F4000CC63FA /* Assets.xcassets in Resources */,
+				9FB51FBC278E744B00DEF835 /* SearchEventFrameCell.xib in Resources */,
 				9F9C58EE278B5CF1005D164C /* BannerImgCell.xib in Resources */,
 				9F9C5926278BB126005D164C /* Product2Cell.xib in Resources */,
 				9F9C5908278B8B9F005D164C /* OtherProductsCell.xib in Resources */,
@@ -711,12 +741,14 @@
 				9FA04375278D113000FCD2FE /* MyKurlyCell.swift in Sources */,
 				9F9C5907278B8B9F005D164C /* OtherProductsCell.swift in Sources */,
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
+				9FB51FB7278DB73900DEF835 /* MySearchWord.swift in Sources */,
 				9FA04372278D10A000FCD2FE /* EventCell.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
 				9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */,
 				9FB51FB1278DB09100DEF835 /* SearchSubjectCell.swift in Sources */,
 				9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */,
 				9F9C58E9278B5B75005D164C /* BannersCell.swift in Sources */,
+				9FB51FBB278E744B00DEF835 /* SearchEventFrameCell.swift in Sources */,
 				9FCC944F278A5498000493AD /* EmailCertifyViewController.swift in Sources */,
 				9F9C5915278B97BF005D164C /* RecipeListCell.swift in Sources */,
 				9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */,
