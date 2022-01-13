@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		02854E657B040DB293D6ACB4 /* Pods_MarketKurlyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D3212111AD5AEB906D21F7 /* Pods_MarketKurlyApp.framework */; };
+		9F272195278F958500F85FA9 /* CategoryGiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F272194278F958500F85FA9 /* CategoryGiftCell.swift */; };
+		9F272197278F95A100F85FA9 /* CategoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F272196278F95A100F85FA9 /* CategoryListCell.swift */; };
+		9F272199278F95C800F85FA9 /* CategoryRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F272198278F95C800F85FA9 /* CategoryRecommendCell.swift */; };
+		9F27219B278FAB7D00F85FA9 /* CategoryParentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27219A278FAB7D00F85FA9 /* CategoryParentCell.swift */; };
+		9F27219E278FB25600F85FA9 /* CategoryChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27219C278FB25600F85FA9 /* CategoryChildCell.swift */; };
+		9F27219F278FB25600F85FA9 /* CategoryChildCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F27219D278FB25600F85FA9 /* CategoryChildCell.xib */; };
+		9F2721A2278FC25D00F85FA9 /* KurlyRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721A1278FC25D00F85FA9 /* KurlyRecommendCell.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -111,6 +118,13 @@
 		28CEC3B8AC1A89EBF4782086 /* Pods-MarketKurlyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketKurlyApp.release.xcconfig"; path = "Target Support Files/Pods-MarketKurlyApp/Pods-MarketKurlyApp.release.xcconfig"; sourceTree = "<group>"; };
 		3F850245D35A1970A08FBB7E /* Pods-MarketKurlyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketKurlyApp.debug.xcconfig"; path = "Target Support Files/Pods-MarketKurlyApp/Pods-MarketKurlyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		77D3212111AD5AEB906D21F7 /* Pods_MarketKurlyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketKurlyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F272194278F958500F85FA9 /* CategoryGiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGiftCell.swift; sourceTree = "<group>"; };
+		9F272196278F95A100F85FA9 /* CategoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCell.swift; sourceTree = "<group>"; };
+		9F272198278F95C800F85FA9 /* CategoryRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRecommendCell.swift; sourceTree = "<group>"; };
+		9F27219A278FAB7D00F85FA9 /* CategoryParentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryParentCell.swift; sourceTree = "<group>"; };
+		9F27219C278FB25600F85FA9 /* CategoryChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryChildCell.swift; sourceTree = "<group>"; };
+		9F27219D278FB25600F85FA9 /* CategoryChildCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryChildCell.xib; sourceTree = "<group>"; };
+		9F2721A1278FC25D00F85FA9 /* KurlyRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurlyRecommendCell.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +253,44 @@
 				28CEC3B8AC1A89EBF4782086 /* Pods-MarketKurlyApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9F2721A0278FBFAB00F85FA9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F2721A3278FC2B800F85FA9 /* First */,
+				9F2721A4278FC2BD00F85FA9 /* Second */,
+				9F2721A5278FC2C800F85FA9 /* Third */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9F2721A3278FC2B800F85FA9 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				9F272194278F958500F85FA9 /* CategoryGiftCell.swift */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		9F2721A4278FC2BD00F85FA9 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				9F272196278F95A100F85FA9 /* CategoryListCell.swift */,
+				9F27219A278FAB7D00F85FA9 /* CategoryParentCell.swift */,
+				9F27219C278FB25600F85FA9 /* CategoryChildCell.swift */,
+				9F27219D278FB25600F85FA9 /* CategoryChildCell.xib */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		9F2721A5278FC2C800F85FA9 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				9F272198278F95C800F85FA9 /* CategoryRecommendCell.swift */,
+				9F2721A1278FC25D00F85FA9 /* KurlyRecommendCell.swift */,
+			);
+			path = Third;
 			sourceTree = "<group>";
 		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
@@ -589,6 +641,7 @@
 		9FCC942F278A1C6D000493AD /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9F2721A0278FBFAB00F85FA9 /* Cells */,
 				9FCC9431278A1C8D000493AD /* Category.storyboard */,
 				9FCC9435278A1C9E000493AD /* CategoryViewController.swift */,
 			);
@@ -680,6 +733,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F27219F278FB25600F85FA9 /* CategoryChildCell.xib in Resources */,
 				9F9C58F4278B64AC005D164C /* ProductsCell.xib in Resources */,
 				9F9C58F8278B64C2005D164C /* ProductCell.xib in Resources */,
 				9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */,
@@ -765,6 +819,7 @@
 				9FCC944B278A4C09000493AD /* FindUserViewController.swift in Sources */,
 				9F9D5E13278A0D5B00CC63FA /* UIViewController.swift in Sources */,
 				9F9D5DF6278A09B200CC63FA /* BaseViewController.swift in Sources */,
+				9F27219E278FB25600F85FA9 /* CategoryChildCell.swift in Sources */,
 				9F9C58FF278B88CB005D164C /* OnlyBannerCell.swift in Sources */,
 				9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */,
 				9F9D5E11278A0D4400CC63FA /* UINavigationBar.swift in Sources */,
@@ -791,6 +846,8 @@
 				9FA04382278D12F900FCD2FE /* MyKurlyOnCell.swift in Sources */,
 				9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */,
 				9F9C58E1278B3F72005D164C /* SpecialPriceViewController.swift in Sources */,
+				9F27219B278FAB7D00F85FA9 /* CategoryParentCell.swift in Sources */,
+				9F272199278F95C800F85FA9 /* CategoryRecommendCell.swift in Sources */,
 				9FB51FAB278D9ABE00DEF835 /* BeforeSearchViewController.swift in Sources */,
 				9F9D5E0D278A0D0C00CC63FA /* UIFont.swift in Sources */,
 				9FB51FD4278E9A2400DEF835 /* ExistSearchViewController.swift in Sources */,
@@ -800,6 +857,7 @@
 				9FCC943C278A1DF5000493AD /* ParentViewController.swift in Sources */,
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
 				9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */,
+				9F272197278F95A100F85FA9 /* CategoryListCell.swift in Sources */,
 				9FB51FCE278E979100DEF835 /* SearchResultViewController.swift in Sources */,
 				9FB51FBF278E82A700DEF835 /* SearchSubject3Cell.swift in Sources */,
 				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,
@@ -808,6 +866,7 @@
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */,
 				9FB51FD2278E9A0500DEF835 /* NoSearchViewController.swift in Sources */,
+				9F272195278F958500F85FA9 /* CategoryGiftCell.swift in Sources */,
 				9F9D5E23278A104500CC63FA /* SignUpResponse.swift in Sources */,
 				9F9C5919278B99A1005D164C /* RecipeCell.swift in Sources */,
 				9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */,
@@ -828,6 +887,7 @@
 				9F9C58F3278B64AC005D164C /* ProductsCell.swift in Sources */,
 				9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */,
 				9F9C5925278BB126005D164C /* Product2Cell.swift in Sources */,
+				9F2721A2278FC25D00F85FA9 /* KurlyRecommendCell.swift in Sources */,
 				9F9D5E19278A0FF700CC63FA /* LoginRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
