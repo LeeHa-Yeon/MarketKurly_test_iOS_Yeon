@@ -50,6 +50,9 @@
                                                 <constraint firstItem="yBq-la-Awk" firstAttribute="centerY" secondItem="ZWu-6S-Fqf" secondAttribute="centerY" id="kuB-BY-zJt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="FnE-z7-7tL" kind="show" id="rv9-HO-thc"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryListCell" rowHeight="400" id="Rk9-K4-aue" customClass="CategoryListCell" customModule="MarketKurlyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="93" width="414" height="400"/>
@@ -188,6 +191,7 @@
                                                                 <outlet property="cateImg" destination="O2v-aH-Bad" id="uG1-2L-FPh"/>
                                                                 <outlet property="cateName" destination="vg8-aI-K2h" id="TV0-O3-oKN"/>
                                                                 <outlet property="nameView" destination="Kei-m3-yzC" id="SfI-cH-ATU"/>
+                                                                <segue destination="FnE-z7-7tL" kind="show" id="c7i-yf-qor"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -228,6 +232,22 @@
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="130.58035714285714"/>
         </scene>
+        <!--제목-->
+        <scene sceneID="kvD-uM-2t4">
+            <objects>
+                <viewController id="FnE-z7-7tL" customClass="CategoryDetailViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Pv-pa-bQh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ksO-i2-k4p"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="제목" id="6YU-3P-OGW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKI-v3-BJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1733" y="138"/>
+        </scene>
         <!--카테고리-->
         <scene sceneID="hVN-GD-qg6">
             <objects>
@@ -249,6 +269,9 @@
             <point key="canvasLocation" x="-23.188405797101453" y="130.58035714285714"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rv9-HO-thc"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="R_f_banner10" width="1170" height="1060"/>
         <image name="giftTest" width="453" height="449"/>

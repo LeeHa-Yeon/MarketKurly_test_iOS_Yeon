@@ -18,6 +18,11 @@ class CategoryViewController: UIViewController {
         setUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        customNavigationBarAttribute(.mainKurlyPurple, .white)
+    }
+    
     // MARK: - Function
     func setUI(){
         self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "카테고리")
