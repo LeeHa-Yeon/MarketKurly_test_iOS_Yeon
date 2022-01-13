@@ -11,4 +11,5 @@ target 'MarketKurlyApp' do
   pod 'DLRadioButton'  # 회원가입때 라디오버튼
   pod 'XLPagerTabStrip'  # 홈화면 카테고리별 스와이프
   pod 'ExpyTableView'  # 카테고리화면 테이블 확장
+  pod "GSMessages"  # 로그인 팝업알림창
 end
