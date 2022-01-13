@@ -12,7 +12,11 @@ class SearchViewController: UIViewController {
     // MARK: - Components
     @IBOutlet weak var searchTextField: BaseTextField! {
         didSet{
+            print("id TextField didSet")
             searchTextField.delegate = self
+        }
+        willSet {
+            print("id TextField willSet")
         }
     }
     @IBOutlet weak var beforeSearchView: UIView!

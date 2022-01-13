@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 extension UIViewController {
     // MARK: 빈 화면을 눌렀을 때 키보드가 내려가도록 처리
@@ -140,5 +141,25 @@ extension UIViewController {
         self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
+    // MARK: - 버튼 커스텀
+    func customButton(_ customBtn: UIButton, cornerValue: CGFloat?, btnBorderColor: UIColor?, btnBorderWidth: CGFloat?){
+        customBtn.layer.cornerRadius = cornerValue ?? 0
+        customBtn.layer.borderColor = btnBorderColor?.cgColor
+        customBtn.layer.borderWidth = btnBorderWidth ?? 0
+    }
+    
+    // MARK: - 텍스트필드 커스텀
+    func customTextField(_ customTF: UITextField, cornerValue: CGFloat?, tFBorderColor: UIColor?, tFBorderWidth: CGFloat?){
+        customTF.layer.cornerRadius = cornerValue ?? 0
+        customTF.layer.borderColor = tFBorderColor?.cgColor
+        customTF.layer.borderWidth = tFBorderWidth ?? 0
+    }
+    
+    // MARK: - 뷰 커스텀
+    func customView(_ customView: UIView, cornerValue: CGFloat?, viewBorderColor: UIColor?, viewBorderWidth: CGFloat?){
+        customView.layer.cornerRadius = cornerValue ?? 0
+        customView.layer.borderColor = viewBorderColor?.cgColor
+        customView.layer.borderWidth = viewBorderWidth ?? 0
+    }
     
 }

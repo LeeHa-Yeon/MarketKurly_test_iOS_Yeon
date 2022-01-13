@@ -25,6 +25,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="3ji-de-cus"/>
                                         </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -51,6 +52,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ae3-zt-0Ru"/>
+                                    <action selector="loginTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ti6-zj-xmG"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Ol-gn-No5">
@@ -125,6 +127,8 @@
                     <connections>
                         <outlet property="LoginBtn" destination="gQH-N5-b2F" id="ZgR-ie-hha"/>
                         <outlet property="SignUpBtn" destination="a1N-Da-yDf" id="BkN-fQ-Or1"/>
+                        <outlet property="idTextField" destination="H41-3k-N0q" id="9fb-KZ-VE1"/>
+                        <outlet property="pwdTextField" destination="kMV-PB-DjO" id="On2-jB-Cwt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

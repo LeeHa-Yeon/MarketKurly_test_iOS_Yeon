@@ -10,7 +10,8 @@ struct SignUpRequest: Encodable {
     let username:  String
     let email: String
     let password: String
-    let phone_number: String
+    let phoneNumber: String
+    let name: String
     let birth: String?
     let gender: String?
 }
