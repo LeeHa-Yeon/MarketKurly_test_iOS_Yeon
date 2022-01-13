@@ -133,7 +133,9 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 7 {
-            UserDefaults.standard.set(false, forKey: Constant.loginStatusName)
+            print("뭐야")
+            UserDefaults.standard.set("", forKey: Constant.jwtName)
+            UserDefaults.standard.set(0, forKey: Constant.userIdxName)
         }
     }
     

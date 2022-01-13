@@ -9,7 +9,7 @@ import UIKit
 import XLPagerTabStrip
 
 class ParentViewController: ButtonBarPagerTabStripViewController {
-    let test = AllUserDataManager.shared
+    
     let purpleInspireColor = UIColor.mainKurlyPurple
     
     // MARK: - LifeCycle
@@ -17,9 +17,6 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
         setUI()
         UserDefaults.standard.set(false, forKey: Constant.loginStatusName)
         super.viewDidLoad()
-        test.requestAllUser { response in
-            print("\(response)")
-        }
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

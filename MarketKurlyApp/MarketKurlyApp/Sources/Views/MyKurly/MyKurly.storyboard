@@ -171,16 +171,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GD2-rZ-iSB">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <connections>
-                                    <segue destination="fKe-YD-rmz" kind="embed" id="dyU-Ck-ydk"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnW-k1-GEV">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <connections>
                                     <segue destination="FMy-gY-N3Y" kind="embed" id="fCN-qL-mYc"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GD2-rZ-iSB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <connections>
+                                    <segue destination="fKe-YD-rmz" kind="embed" id="dyU-Ck-ydk"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -199,8 +199,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="마이컬리" id="9cs-tT-g79"/>
                     <connections>
-                        <outlet property="memberView" destination="GD2-rZ-iSB" id="xVz-yi-XMn"/>
-                        <outlet property="noMemberView" destination="nnW-k1-GEV" id="N8D-4z-Ro6"/>
+                        <outlet property="memberView" destination="nnW-k1-GEV" id="ulA-cW-nRY"/>
+                        <outlet property="noMemberView" destination="GD2-rZ-iSB" id="Wss-gv-t6e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ZF-8s-RGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,7 +9,7 @@ import UIKit
 
 class MyKurlyViewController: UIViewController {
     
-    var isJwt: Bool = false
+    var isJwt: String?
     
     //MARK: - UIComponents
     @IBOutlet weak var noMemberView: UIView!
@@ -29,9 +29,8 @@ class MyKurlyViewController: UIViewController {
     
     //MARK: - Functions
     func setUI(){
-        
-        isJwt = UserDefaults.standard.bool(forKey: Constant.loginStatusName)
-        if isJwt {
+        isJwt = UserDefaults.standard.string(forKey: Constant.jwtName)!
+        if isJwt == nil || isJwt == "" {
             noMemberView.alpha = 1
             memberView.alpha = 0
         } else {

@@ -9,7 +9,7 @@ struct LoginResponse: Decodable {
     let isSuccess: Bool
     let code: Int
     let message: String
-    let result: LoginDocument
+    let result: LoginDocument?
 }
 
 struct LoginDocument: Decodable {

@@ -14,13 +14,14 @@ struct AllUserResponse: Decodable {
 
 struct AllUserDocument: Decodable {
     let userId: Int
-    let name: String?
+    let name: String
     let level: Int?
     let point: Int?
-    let email: String?
-    let password: String?
-    let phoneNumber: String?
+    let email: String
+    let password: String
+    let phoneNumber: String
     let birthDay: String?
+    let birthString: String
     let gender: String?
     let status: String?
 }

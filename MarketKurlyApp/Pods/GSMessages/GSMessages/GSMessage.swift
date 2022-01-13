@@ -308,7 +308,7 @@ public class GSMessage: NSObject {
 
         switch type {
         case .success:
-            messageView.backgroundColor = GSMessage.successBackgroundColor
+            messageView.backgroundColor = #colorLiteral(red: 0.9859235883, green: 0.8786633611, blue: 0.8761239648, alpha: 1)
         case .warning:
             messageView.backgroundColor = GSMessage.warningBackgroundColor
         case .error:
