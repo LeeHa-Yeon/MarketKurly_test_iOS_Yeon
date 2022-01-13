@@ -36,11 +36,12 @@ class FindUserViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setInit()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setInit()
         customNavigationBarAttribute(.white, .black)
     }
     
@@ -51,5 +52,6 @@ class FindUserViewController: UIViewController {
         }else {
             self.title = "비밀번호 찾기"
         }
+        
     }
 }

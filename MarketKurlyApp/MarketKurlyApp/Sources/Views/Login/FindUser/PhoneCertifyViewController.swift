@@ -46,6 +46,10 @@ class PhoneCertifyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dismissKeyboardWhenTappedAround()
+
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         setInit()
         setUI()
     }
@@ -58,6 +62,8 @@ class PhoneCertifyViewController: UIViewController {
     }
     
     func setInit(){
+        idNameTextField.text = ""
+        phoneTextField.text = ""
         if "idFindStatus" == UserDefaults.standard.string(forKey: Constant.findStatusName) {
             idNameLabel.text = "이름"
             idNameTextField.placeholder = " 이름을 입력해 주세요"

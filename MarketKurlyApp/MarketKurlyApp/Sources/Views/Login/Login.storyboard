@@ -334,13 +334,13 @@
                                 <state key="normal" image="user"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sheril0284" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfk-ZE-V73">
-                                <rect key="frame" x="75" y="134.5" width="76.5" height="18"/>
+                                <rect key="frame" x="80" y="134.5" width="76.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입일 2021.01.30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snf-iU-opv">
-                                <rect key="frame" x="75" y="158.5" width="97" height="15"/>
+                                <rect key="frame" x="80" y="158.5" width="97" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -382,10 +382,10 @@
                             <constraint firstItem="H6u-It-9Dd" firstAttribute="top" secondItem="Jej-cc-QaL" secondAttribute="top" constant="20" id="5oM-R1-Xiu"/>
                             <constraint firstItem="1Py-3V-IdG" firstAttribute="leading" secondItem="Jej-cc-QaL" secondAttribute="leading" constant="25" id="C4T-zr-3qq"/>
                             <constraint firstItem="rS9-sE-A3h" firstAttribute="leading" secondItem="Jej-cc-QaL" secondAttribute="leading" constant="20" id="DtH-uf-6Bn"/>
-                            <constraint firstItem="snf-iU-opv" firstAttribute="leading" secondItem="1Py-3V-IdG" secondAttribute="trailing" constant="10" id="EeH-qH-pOx"/>
+                            <constraint firstItem="snf-iU-opv" firstAttribute="leading" secondItem="1Py-3V-IdG" secondAttribute="trailing" constant="15" id="EeH-qH-pOx"/>
                             <constraint firstItem="Jej-cc-QaL" firstAttribute="bottom" secondItem="rS9-sE-A3h" secondAttribute="bottom" constant="30" id="J0U-ln-Wxv"/>
                             <constraint firstItem="vfk-ZE-V73" firstAttribute="top" secondItem="VdX-26-ko3" secondAttribute="bottom" constant="30" id="JE6-48-3sy"/>
-                            <constraint firstItem="vfk-ZE-V73" firstAttribute="leading" secondItem="1Py-3V-IdG" secondAttribute="trailing" constant="10" id="MQ7-Fa-uab"/>
+                            <constraint firstItem="vfk-ZE-V73" firstAttribute="leading" secondItem="1Py-3V-IdG" secondAttribute="trailing" constant="15" id="MQ7-Fa-uab"/>
                             <constraint firstItem="Jej-cc-QaL" firstAttribute="trailing" secondItem="rS9-sE-A3h" secondAttribute="trailing" constant="20" id="PYO-Hq-fuw"/>
                             <constraint firstItem="H6u-It-9Dd" firstAttribute="leading" secondItem="Jej-cc-QaL" secondAttribute="leading" constant="25" id="TpW-7T-2Rt"/>
                             <constraint firstItem="aCm-tN-nSF" firstAttribute="leading" secondItem="Jej-cc-QaL" secondAttribute="leading" constant="20" id="eCa-eB-V3I"/>
