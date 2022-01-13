@@ -10,6 +10,8 @@ import UIKit
 class PhoneCertifyViewController: UIViewController {
     
     let allUserManager = AllUserDataManager.shared
+    var isFind: Bool = false
+    var findUserIdx: Int?
 
     // MARK: - UIComponents
     @IBOutlet weak var idNameLabel: UILabel!
@@ -24,9 +26,18 @@ class PhoneCertifyViewController: UIViewController {
                 guard let idNameText = self.idNameTextField.text else { return }
                 guard let phoneText = self.phoneTextField.text else { return }
                 if idNameText == response.result[idx].name && phoneText == response.result[idx].phoneNumber {
-                    print(idx)
-                    print(response.result[idx])
+                    self.isFind = true
+                    self.findUserIdx = response.result[idx].userId
                 }
+            }
+            if self.isFind {
+                // 화면전환
+                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                guard let IdResultVC = storyboard.instantiateViewController(identifier: "IdResultSB") as? IdResultViewController else { return }
+                IdResultVC.userId = self.findUserIdx!
+                self.navigationController?.pushViewController(IdResultVC, animated: true)
+            } else {
+                self.presentAlert(title: "가입시 입력하신 회원 정보가 맞는지 다시 한번 확인해 주세요.")
             }
         }
         

@@ -20,6 +20,8 @@
 		9F2721AC2790066F00F85FA9 /* AllUserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721AB2790066F00F85FA9 /* AllUserDataManager.swift */; };
 		9F2721B42790DE7F00F85FA9 /* IdResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721B32790DE7F00F85FA9 /* IdResultViewController.swift */; };
 		9F2721B62790DEAC00F85FA9 /* PwdResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721B52790DEAC00F85FA9 /* PwdResultViewController.swift */; };
+		9F2721B82790EAED00F85FA9 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721B72790EAED00F85FA9 /* UserDataManager.swift */; };
+		9F2721BA2790EAFB00F85FA9 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721B92790EAFB00F85FA9 /* UserResponse.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -135,6 +137,8 @@
 		9F2721AB2790066F00F85FA9 /* AllUserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUserDataManager.swift; sourceTree = "<group>"; };
 		9F2721B32790DE7F00F85FA9 /* IdResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdResultViewController.swift; sourceTree = "<group>"; };
 		9F2721B52790DEAC00F85FA9 /* PwdResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwdResultViewController.swift; sourceTree = "<group>"; };
+		9F2721B72790EAED00F85FA9 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		9F2721B92790EAFB00F85FA9 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -312,11 +316,13 @@
 			path = AllUser;
 			sourceTree = "<group>";
 		};
-		9F2721B22790CAB500F85FA9 /* FindUser */ = {
+		9F2721B22790CAB500F85FA9 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				9F2721B72790EAED00F85FA9 /* UserDataManager.swift */,
+				9F2721B92790EAFB00F85FA9 /* UserResponse.swift */,
 			);
-			path = FindUser;
+			path = User;
 			sourceTree = "<group>";
 		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
@@ -434,8 +440,8 @@
 		9F9D5DE5278A046600CC63FA /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				9F2721B22790CAB500F85FA9 /* FindUser */,
 				9F2721A82790043600F85FA9 /* AllUser */,
+				9F2721B22790CAB500F85FA9 /* User */,
 				9F9D5E1C278A100F00CC63FA /* SignUp */,
 				9F9D5DE9278A052E00CC63FA /* Login */,
 			);
@@ -863,6 +869,7 @@
 				9F9C5907278B8B9F005D164C /* OtherProductsCell.swift in Sources */,
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
 				9F2721AA2790045700F85FA9 /* AllUserResponse.swift in Sources */,
+				9F2721BA2790EAFB00F85FA9 /* UserResponse.swift in Sources */,
 				9FB51FB7278DB73900DEF835 /* SearchWordCell.swift in Sources */,
 				9FA04372278D10A000FCD2FE /* EventCell.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
@@ -898,6 +905,7 @@
 				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,
 				9F9C58DF278B3F5D005D164C /* ThriftyShoppingViewController.swift in Sources */,
 				9F9D5E00278A0A1A00CC63FA /* IndicatorView.swift in Sources */,
+				9F2721B82790EAED00F85FA9 /* UserDataManager.swift in Sources */,
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */,
 				9FB51FD2278E9A0500DEF835 /* NoSearchViewController.swift in Sources */,
