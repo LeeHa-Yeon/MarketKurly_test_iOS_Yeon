@@ -277,6 +277,9 @@
                                 <state key="normal" title="확인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneTapped:" destination="vov-MQ-lgi" eventType="touchUpInside" id="Yf5-RF-ovb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kch-OO-MJL"/>
@@ -465,6 +468,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="doneBtnTapped:" destination="8Xb-il-nUE" eventType="touchUpInside" id="Mom-ep-X9H"/>
                                     <action selector="doneBtnTapped:" destination="QOy-Li-172" eventType="touchUpInside" id="Ny5-IP-czv"/>
                                 </connections>
                             </button>
@@ -483,6 +487,11 @@
                             <constraint firstItem="mPe-zZ-Qbz" firstAttribute="trailing" secondItem="gji-B0-l8S" secondAttribute="trailing" constant="20" id="w38-RO-QXr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="doneBtn" destination="gji-B0-l8S" id="sEQ-5x-7nl"/>
+                        <outlet property="newPasswordCheckTextField" destination="u6B-Oh-3F2" id="GJ0-Sk-1Ob"/>
+                        <outlet property="newPasswordTextField" destination="kBe-LM-6VM" id="bYd-DS-UvP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAP-wn-m9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

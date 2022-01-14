@@ -7,9 +7,6 @@
 
 import Alamofire
 
-protocol APIDataSource {
-    var HTTP_HEADERS: HTTPHeaders { get }
-}
 
 class SignUpDataManager {
     

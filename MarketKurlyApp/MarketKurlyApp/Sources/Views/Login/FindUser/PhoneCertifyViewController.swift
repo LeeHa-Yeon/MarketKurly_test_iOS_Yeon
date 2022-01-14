@@ -22,20 +22,44 @@ class PhoneCertifyViewController: UIViewController {
     @IBAction func doneBtnTapped(_ sender: Any) {
 
         allUserManager.requestAllUser { response in
+            
+            
             for idx in 0..<response.result.count {
                 guard let idNameText = self.idNameTextField.text else { return }
                 guard let phoneText = self.phoneTextField.text else { return }
-                if idNameText == response.result[idx].name && phoneText == response.result[idx].phoneNumber {
-                    self.isFind = true
-                    self.findUserIdx = response.result[idx].userId
+                
+                if "idFindStatus" == UserDefaults.standard.string(forKey: Constant.findStatusName) {
+                    // 아이디찾기 - 핸드폰
+                    if idNameText == response.result[idx].name && phoneText == response.result[idx].phoneNumber {
+                        self.isFind = true
+                        self.findUserIdx = response.result[idx].userId
+                    }
+                } else {
+                    // 비밀번호찾기 - 핸드폰
+                    // TODO: - name을 Id로 변경하기
+                    if idNameText == response.result[idx].name && phoneText == response.result[idx].phoneNumber {
+                        self.isFind = true
+                        self.findUserIdx = response.result[idx].userId
+                    }
                 }
             }
+
             if self.isFind {
                 // 화면전환
-                let storyboard = UIStoryboard(name: "Login", bundle: nil)
-                guard let IdResultVC = storyboard.instantiateViewController(identifier: "IdResultSB") as? IdResultViewController else { return }
-                IdResultVC.userId = self.findUserIdx!
-                self.navigationController?.pushViewController(IdResultVC, animated: true)
+                if "idFindStatus" == UserDefaults.standard.string(forKey: Constant.findStatusName) {
+                    // 아이디찾기 - 핸드폰
+                    let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                    guard let IdResultVC = storyboard.instantiateViewController(identifier: "IdResultSB") as? IdResultViewController else { return }
+                    IdResultVC.userId = self.findUserIdx!
+                    self.navigationController?.pushViewController(IdResultVC, animated: true)
+                } else {
+                    // 비밀번호찾기 - 핸드폰
+                    let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                    guard let PwdResultVC = storyboard.instantiateViewController(identifier: "PwdResultSB") as? PwdResultViewController else { return }
+                    PwdResultVC.userId = self.findUserIdx!
+                    self.navigationController?.pushViewController(PwdResultVC, animated: true)
+                }
+                
             } else {
                 self.presentAlert(title: "가입시 입력하신 회원 정보가 맞는지 다시 한번 확인해 주세요.")
             }

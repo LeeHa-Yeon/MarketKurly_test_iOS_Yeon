@@ -22,6 +22,8 @@
 		9F2721B62790DEAC00F85FA9 /* PwdResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721B52790DEAC00F85FA9 /* PwdResultViewController.swift */; };
 		9F2721B82790EAED00F85FA9 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721B72790EAED00F85FA9 /* UserDataManager.swift */; };
 		9F2721BA2790EAFB00F85FA9 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721B92790EAFB00F85FA9 /* UserResponse.swift */; };
+		9F2721BC2790FEEE00F85FA9 /* NewUserReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721BB2790FEEE00F85FA9 /* NewUserReponse.swift */; };
+		9F2721C02790FF7C00F85FA9 /* NewUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2721BF2790FF7C00F85FA9 /* NewUserRequest.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -139,6 +141,8 @@
 		9F2721B52790DEAC00F85FA9 /* PwdResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwdResultViewController.swift; sourceTree = "<group>"; };
 		9F2721B72790EAED00F85FA9 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		9F2721B92790EAFB00F85FA9 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		9F2721BB2790FEEE00F85FA9 /* NewUserReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserReponse.swift; sourceTree = "<group>"; };
+		9F2721BF2790FF7C00F85FA9 /* NewUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserRequest.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -320,9 +324,27 @@
 			isa = PBXGroup;
 			children = (
 				9F2721B72790EAED00F85FA9 /* UserDataManager.swift */,
-				9F2721B92790EAFB00F85FA9 /* UserResponse.swift */,
+				9F2721BE2790FF6800F85FA9 /* GET */,
+				9F2721BD2790FF4E00F85FA9 /* PETCH */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		9F2721BD2790FF4E00F85FA9 /* PETCH */ = {
+			isa = PBXGroup;
+			children = (
+				9F2721BF2790FF7C00F85FA9 /* NewUserRequest.swift */,
+				9F2721BB2790FEEE00F85FA9 /* NewUserReponse.swift */,
+			);
+			path = PETCH;
+			sourceTree = "<group>";
+		};
+		9F2721BE2790FF6800F85FA9 /* GET */ = {
+			isa = PBXGroup;
+			children = (
+				9F2721B92790EAFB00F85FA9 /* UserResponse.swift */,
+			);
+			path = GET;
 			sourceTree = "<group>";
 		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
@@ -894,6 +916,7 @@
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
 				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
 				9FA0437B278D11E800FCD2FE /* MyKurlyInfoCell.swift in Sources */,
+				9F2721BC2790FEEE00F85FA9 /* NewUserReponse.swift in Sources */,
 				9F2721A7278FCADE00F85FA9 /* CategoryDetailViewController.swift in Sources */,
 				9F2721AC2790066F00F85FA9 /* AllUserDataManager.swift in Sources */,
 				9FCC943C278A1DF5000493AD /* ParentViewController.swift in Sources */,
@@ -910,6 +933,7 @@
 				9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */,
 				9FB51FD2278E9A0500DEF835 /* NoSearchViewController.swift in Sources */,
 				9F272195278F958500F85FA9 /* CategoryGiftCell.swift in Sources */,
+				9F2721C02790FF7C00F85FA9 /* NewUserRequest.swift in Sources */,
 				9F9D5E23278A104500CC63FA /* SignUpResponse.swift in Sources */,
 				9F9C5919278B99A1005D164C /* RecipeCell.swift in Sources */,
 				9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */,
