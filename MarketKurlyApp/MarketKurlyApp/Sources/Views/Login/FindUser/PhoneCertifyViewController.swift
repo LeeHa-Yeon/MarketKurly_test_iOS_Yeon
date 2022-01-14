@@ -36,8 +36,7 @@ class PhoneCertifyViewController: UIViewController {
                     }
                 } else {
                     // 비밀번호찾기 - 핸드폰
-                    // TODO: - name을 Id로 변경하기
-                    if idNameText == response.result[idx].name && phoneText == response.result[idx].phoneNumber {
+                    if idNameText == response.result[idx].username && phoneText == response.result[idx].phoneNumber {
                         self.isFind = true
                         self.findUserIdx = response.result[idx].userId
                     }

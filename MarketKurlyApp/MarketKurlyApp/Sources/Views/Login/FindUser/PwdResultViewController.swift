@@ -18,6 +18,16 @@ class PwdResultViewController: UIViewController {
     @IBOutlet weak var doneBtn: UIButton!
     
     @IBAction func doneBtnTapped(_ sender: Any) {
+        guard let newPwdText = newPasswordTextField.text else { return }
+        guard let newPwdCheckText = newPasswordCheckTextField.text else { return }
+        
+        // TODO: - API로 비밀번호 변경하는 부분 구현해야됨
+//        let para = NewUserRequest(password "", newPassword: " ")
+//        userManager.requestChangeUserInfo(userIdx: userId, token: tempToken, parameter: ) { response in
+//            <#code#>
+//        }
+        
+        
         presentAlert(title: "비밀번호 변경이 완료되었습니다.")
         self.dismiss(animated: true, completion: nil)
     }

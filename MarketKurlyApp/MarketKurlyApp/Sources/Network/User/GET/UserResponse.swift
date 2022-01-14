@@ -15,6 +15,7 @@ struct UserResponse: Decodable {
 struct UserDocument: Decodable {
     let userId: Int
     let name: String
+    let username: String
     let level: Int
     let point: Int
     let email: String
@@ -22,6 +23,7 @@ struct UserDocument: Decodable {
     let phoneNumber: String
     let birthDay: String?
     let birthString: String
+    let createdAt: String
     let gender: String?
     let status: String?
 }

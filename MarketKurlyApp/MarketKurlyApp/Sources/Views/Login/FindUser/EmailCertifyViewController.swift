@@ -34,8 +34,7 @@ class EmailCertifyViewController: UIViewController {
                     }
                 } else {
                     // 비밀번호찾기 - 핸드폰
-                    // TODO: - name을 Id로 변경하기
-                    if idNameText == response.result[idx].name && emailText == response.result[idx].email {
+                    if idNameText == response.result[idx].username && emailText == response.result[idx].email {
                         self.isFind = true
                         self.findUserIdx = response.result[idx].userId
                     }

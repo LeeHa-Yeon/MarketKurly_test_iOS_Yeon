@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lt-Fj-0GB">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1730"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1760"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GCK-lf-c9t">
                                                 <rect key="frame" x="20" y="20" width="374" height="75.5"/>
@@ -326,6 +325,9 @@
                                                                 <state key="normal" title="인증번호 받기">
                                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="phoneConfirmBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a9K-r0-7Ft"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -396,7 +398,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-fB-mCu">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-fB-mCu">
                                                                 <rect key="frame" x="50" y="0.0" width="324" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.91980725529999996" green="0.01140651755" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -404,13 +406,13 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" YYYY / MM / DD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHt-uW-bek">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" YYYY - MM - DD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHt-uW-bek">
                                                         <rect key="frame" x="0.0" y="30.5" width="374" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="6xO-4j-3cb"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -449,6 +451,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="genderMan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ukf-sX-c8b"/>
                                                                     <outletCollection property="otherButtons" destination="1hK-bJ-zQ9" id="YPH-G8-dyJ"/>
                                                                     <outletCollection property="otherButtons" destination="5DY-Tw-nlM" id="jcr-zh-63l"/>
                                                                 </connections>
@@ -472,6 +475,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="generWoman:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JJR-UH-kKd"/>
                                                                     <outletCollection property="otherButtons" destination="bVM-Cm-TSM" id="Pdn-t1-YNR"/>
                                                                     <outletCollection property="otherButtons" destination="5DY-Tw-nlM" id="Dw7-5K-c7U"/>
                                                                 </connections>
@@ -495,6 +499,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
+                                                                    <action selector="generNil:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6bK-Ov-aZY"/>
                                                                     <outletCollection property="otherButtons" destination="bVM-Cm-TSM" id="mAv-kh-4hh"/>
                                                                     <outletCollection property="otherButtons" destination="1hK-bJ-zQ9" id="zyx-qY-2Hq"/>
                                                                 </connections>
@@ -620,20 +625,24 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2J-Ie-Odx">
-                                                <rect key="frame" x="20" y="1312.5" width="136.5" height="20.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D2J-Ie-Odx">
+                                                <rect key="frame" x="20" y="1312.5" width="152.5" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FM-RG-uQl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="20.5"/>
-                                                        <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8B-49-OVn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="4BB-Op-AfP"/>
+                                                            <constraint firstAttribute="height" constant="30" id="7V7-uK-OFZ"/>
+                                                        </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title=" ">
-                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="large"/>
-                                                        </state>
+                                                        <state key="normal" image="uncheck"/>
+                                                        <state key="selected" image="check"/>
+                                                        <connections>
+                                                            <action selector="allAgreementBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dHH-Ja-doJ"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체 동의합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp4-9o-C5u">
-                                                        <rect key="frame" x="24" y="0.0" width="112.5" height="20.5"/>
+                                                        <rect key="frame" x="40" y="0.0" width="112.5" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -641,34 +650,38 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택 항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-4m-nZo">
-                                                <rect key="frame" x="25" y="1343" width="374" height="33.5"/>
+                                                <rect key="frame" x="25" y="1352.5" width="374" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AkC-bl-ojf">
-                                                <rect key="frame" x="20" y="1396.5" width="295.5" height="132"/>
+                                                <rect key="frame" x="20" y="1406" width="295.5" height="140"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xW3-b3-KO7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="146.5" height="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="146.5" height="20"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3M-Wy-iso">
-                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
-                                                                <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wam-aV-Ef1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="cMv-Nw-0Ue"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="nmw-cZ-WlS"/>
+                                                                </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title=" ">
-                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                                </state>
+                                                                <state key="normal" image="uncheck"/>
+                                                                <state key="selected" image="check"/>
+                                                                <connections>
+                                                                    <action selector="agreementBtn2:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ult-OZ-nb8"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용 약관 동의 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3Q-8f-izN">
-                                                                <rect key="frame" x="20" y="0.0" width="84" height="18"/>
+                                                                <rect key="frame" x="20" y="0.0" width="84" height="20"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 필수 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDe-R5-Eys">
-                                                                <rect key="frame" x="104" y="0.0" width="42.5" height="18"/>
+                                                                <rect key="frame" x="104" y="0.0" width="42.5" height="20"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -676,25 +689,29 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Aq-k5-kaR">
-                                                        <rect key="frame" x="0.0" y="38" width="195.5" height="18"/>
+                                                        <rect key="frame" x="0.0" y="40" width="195.5" height="20"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDY-r2-Yua">
-                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
-                                                                <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmY-eF-0KV">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="GqW-oA-dh1"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="awZ-hC-kJB"/>
+                                                                </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title=" ">
-                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                                </state>
+                                                                <state key="normal" image="uncheck"/>
+                                                                <state key="selected" image="check"/>
+                                                                <connections>
+                                                                    <action selector="agreementBtn3:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Va0-Kk-oGP"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 수집・이용 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gT-XU-qWf">
-                                                                <rect key="frame" x="20" y="0.0" width="133" height="18"/>
+                                                                <rect key="frame" x="20" y="0.0" width="133" height="20"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 필수 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJj-PS-rEc">
-                                                                <rect key="frame" x="153" y="0.0" width="42.5" height="18"/>
+                                                                <rect key="frame" x="153" y="0.0" width="42.5" height="20"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -702,25 +719,29 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNA-9W-B7h">
-                                                        <rect key="frame" x="0.0" y="76" width="195.5" height="18"/>
+                                                        <rect key="frame" x="0.0" y="80" width="195.5" height="20"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yum-d0-fkI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
-                                                                <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9S-ZS-OUX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="Z54-7z-m1C"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="wLK-tk-14N"/>
+                                                                </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title=" ">
-                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                                </state>
+                                                                <state key="normal" image="uncheck"/>
+                                                                <state key="selected" image="check"/>
+                                                                <connections>
+                                                                    <action selector="agreementBtn4:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OPD-PO-Jgf"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 수집・이용 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEb-6e-win">
-                                                                <rect key="frame" x="20" y="0.0" width="133" height="18"/>
+                                                                <rect key="frame" x="20" y="0.0" width="133" height="20"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 선택 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JU-OY-Flq">
-                                                                <rect key="frame" x="153" y="0.0" width="42.5" height="18"/>
+                                                                <rect key="frame" x="153" y="0.0" width="42.5" height="20"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -728,25 +749,29 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZ5-lW-Ydb">
-                                                        <rect key="frame" x="0.0" y="114" width="295.5" height="18"/>
+                                                        <rect key="frame" x="0.0" y="120" width="295.5" height="20"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owu-rf-vUo">
-                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
-                                                                <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pa-5w-RfG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="BZV-XA-xtk"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="fUB-6A-Iz9"/>
+                                                                </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title=" ">
-                                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                                </state>
+                                                                <state key="normal" image="uncheck"/>
+                                                                <state key="selected" image="check"/>
+                                                                <connections>
+                                                                    <action selector="agreementBtn5:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ml2-JB-dVR"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무료배송, 할인쿠폰 등 혜택/정보 수신 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2M-cv-4e6">
-                                                                <rect key="frame" x="20" y="0.0" width="233" height="18"/>
+                                                                <rect key="frame" x="20" y="0.0" width="233" height="20"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 선택 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMa-Qk-IAp">
-                                                                <rect key="frame" x="253" y="0.0" width="42.5" height="18"/>
+                                                                <rect key="frame" x="253" y="0.0" width="42.5" height="20"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -756,7 +781,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d05-Gi-8A9">
-                                                <rect key="frame" x="379" y="1396.5" width="30" height="100"/>
+                                                <rect key="frame" x="379" y="1406" width="30" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q49-74-idL">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -782,19 +807,20 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wG-1Q-7gO">
-                                                <rect key="frame" x="50" y="1538.5" width="50.5" height="18"/>
+                                                <rect key="frame" x="50" y="1556" width="50.5" height="20"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzL-VB-XjJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
-                                                        <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dk-8t-18l">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="23X-x9-7dA"/>
+                                                            <constraint firstAttribute="width" constant="20" id="gzM-dB-Dca"/>
+                                                        </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title=" ">
-                                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                        </state>
+                                                        <state key="normal" image="uncheck"/>
+                                                        <state key="selected" image="check"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCO-rv-4yA">
-                                                        <rect key="frame" x="20" y="0.0" width="30.5" height="18"/>
+                                                        <rect key="frame" x="20" y="0.0" width="30.5" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -802,19 +828,20 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gu7-M0-Pgw">
-                                                <rect key="frame" x="200.5" y="1538.5" width="56.5" height="18"/>
+                                                <rect key="frame" x="200.5" y="1556" width="56.5" height="20"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfW-6Z-lSG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
-                                                        <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvL-we-fea">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="LQM-EW-PGH"/>
+                                                            <constraint firstAttribute="height" constant="20" id="dIo-km-Arj"/>
+                                                        </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title=" ">
-                                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                        </state>
+                                                        <state key="normal" image="uncheck"/>
+                                                        <state key="selected" image="check"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2t-Xv-KZD">
-                                                        <rect key="frame" x="20" y="0.0" width="36.5" height="18"/>
+                                                        <rect key="frame" x="20" y="0.0" width="36.5" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -822,7 +849,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETX-8h-Bre">
-                                                <rect key="frame" x="65" y="1566.5" width="190" height="50"/>
+                                                <rect key="frame" x="65" y="1586" width="190" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동의 시 한 달 간 [5% 적립] + [무제한 무료배송] ( 첫 주문 후 적용 )" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvf-dF-Y9M">
                                                         <rect key="frame" x="10" y="10" width="170" height="30"/>
@@ -843,25 +870,29 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnu-Z4-RWq">
-                                                <rect key="frame" x="20" y="1636.5" width="215" height="18"/>
+                                                <rect key="frame" x="20" y="1656" width="215" height="20"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lw-sC-6tz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
-                                                        <color key="tintColor" red="0.52293002730000004" green="0.52293002730000004" blue="0.52293002730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAi-aD-FVQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="BtL-2y-TkV"/>
+                                                            <constraint firstAttribute="height" constant="20" id="HVv-e2-qxc"/>
+                                                        </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title=" ">
-                                                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="medium"/>
-                                                        </state>
+                                                        <state key="normal" image="uncheck"/>
+                                                        <state key="selected" image="check"/>
+                                                        <connections>
+                                                            <action selector="agreementBtn6:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ajr-gN-cVi"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본인은 만 14세 이상입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkV-DS-Dt1">
-                                                        <rect key="frame" x="20" y="0.0" width="152.5" height="18"/>
+                                                        <rect key="frame" x="20" y="0.0" width="152.5" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 필수 )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivZ-9d-ZeR">
-                                                        <rect key="frame" x="172.5" y="0.0" width="42.5" height="18"/>
+                                                        <rect key="frame" x="172.5" y="0.0" width="42.5" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -869,7 +900,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhD-2D-M0B">
-                                                <rect key="frame" x="20" y="1679.5" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="1701" width="374" height="50"/>
                                                 <color key="backgroundColor" red="0.33846250179999998" green="0.048356711859999998" blue="0.48238134379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="T8D-7O-8vK"/>
@@ -878,6 +909,9 @@
                                                 <state key="normal" title="가입하기">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="singUpBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PTR-GD-EVK"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -940,7 +974,7 @@
                                             <constraint firstItem="ArN-v0-Jj4" firstAttribute="leading" secondItem="7Lt-Fj-0GB" secondAttribute="leading" constant="20" id="lhE-FZ-t1J"/>
                                             <constraint firstItem="yhk-lu-6Pj" firstAttribute="leading" secondItem="7Lt-Fj-0GB" secondAttribute="leading" constant="20" id="llh-je-Qsg"/>
                                             <constraint firstAttribute="trailing" secondItem="QHb-FS-n0H" secondAttribute="trailing" constant="20" id="mJM-qb-COR"/>
-                                            <constraint firstAttribute="height" constant="1730" id="njA-DQ-5Vh"/>
+                                            <constraint firstAttribute="height" constant="1760" id="njA-DQ-5Vh"/>
                                             <constraint firstItem="ArN-v0-Jj4" firstAttribute="centerX" secondItem="7Lt-Fj-0GB" secondAttribute="centerX" id="owh-WO-WDY"/>
                                             <constraint firstAttribute="trailing" secondItem="y0f-8E-MnN" secondAttribute="trailing" constant="20" id="r3k-ch-gV7"/>
                                             <constraint firstAttribute="trailing" secondItem="d05-Gi-8A9" secondAttribute="trailing" constant="5" id="rCN-eE-T3W"/>
@@ -1011,7 +1045,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="check" width="768" height="768"/>
+        <image name="uncheck" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
