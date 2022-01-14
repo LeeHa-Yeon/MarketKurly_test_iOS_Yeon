@@ -31,8 +31,12 @@ class IdResultViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         userManager.requestAllUser(userIdx: userId) { response in
+            let registerDate: String = response.result.createdAt
+            
             self.userIdLabel.text = response.result.name
-            self.userRegisterDateLabel.text = "가입일 " + response.result.birthString
+            
+            self.userRegisterDateLabel.text = "가입일 " + registerDate.prefix(10)
+            
         }
     }
     
