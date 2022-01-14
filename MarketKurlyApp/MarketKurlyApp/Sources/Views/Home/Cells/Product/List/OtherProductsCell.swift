@@ -9,6 +9,8 @@ import UIKit
 
 class OtherProductsCell: UITableViewCell {
     
+    var delegate: ItemDetailViewControllerDelegate?
+    
     // MARK: - UIComponents
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subExplanationLabel: UILabel!
@@ -60,9 +62,13 @@ extension OtherProductsCell : UICollectionViewDataSource, UICollectionViewDelega
             }
             return cell
         }
-        
-        
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("ProductsCell 동작합니다.")
+        self.delegate?.moveToVC()
+    }
+    
     
     //컬렉션뷰 사이즈 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

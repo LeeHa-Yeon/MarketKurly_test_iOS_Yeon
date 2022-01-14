@@ -8,6 +8,20 @@
 import UIKit
 import XLPagerTabStrip
 
+protocol ItemDetailViewControllerDelegate {
+    func moveToVC()
+}
+
+/* 서버에서 받아오는 데이터 (임시 구조체) */
+struct TempProductListData {
+    let name: String
+    let price: String
+    let created_at: String
+    let item_img_url: String
+    let discount_rate: String
+    let member_discount: Int
+}
+
 class RecommendViewController: UIViewController, IndicatorInfoProvider {
     
     var tabName: String = ""
@@ -72,6 +86,7 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             }
             cell.titleLabel.text = "이 상품 어때요?"
             cell.moreBtn.alpha = 0
+            cell.delegate = self
             return cell
         case 2,6,21 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "onlyBannerCell", for: indexPath) as? OnlyBannerCell else {
@@ -96,24 +111,28 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "productsCell", for: indexPath) as? ProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "놓치면 후회할 가격"
             return cell
         case 5 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "productsCell", for: indexPath) as? ProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "후기 1,000개 돌파 상품"
             return cell
         case 7 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "productsCell", for: indexPath) as? ProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "지금 가장 핫한 상품"
             return cell
         case 8 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "otherProductsCell", for: indexPath) as? OtherProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "인기 신상품 랭킹"
             cell.subExplanationLabel.text = "가장 먼저 만나보는 인기 신상품"
             return cell
@@ -127,6 +146,7 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "otherProductsCell", for: indexPath) as? OtherProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "공유가 많은 상품 랭킹"
             cell.subExplanationLabel.text = "최근 2주간 공유가 가장 많았어요"
             return cell
@@ -134,6 +154,7 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "otherProductsCell", for: indexPath) as? OtherProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "후기 수로 검증된 신상품"
             cell.subExplanationLabel.text = "최근 한달 간 많은 후기가 달렸어요"
             return cell
@@ -141,12 +162,14 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "productsCell", for: indexPath) as? ProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "국 반찬 인기 급상승 랭킹"
             return cell
         case 13 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "otherProductsCell", for: indexPath) as? OtherProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "5만원대 구매가 많은 인기상품"
             cell.subExplanationLabel.text = "최근 2주간 판매량이 가장 많았어요"
             return cell
@@ -154,6 +177,7 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "otherProductsCell", for: indexPath) as? OtherProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "할매 입맛 사로잡은 간식"
             cell.subExplanationLabel.text = "인절미부터 흑임자까지, 취향 저격 간식"
             return cell
@@ -161,12 +185,14 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "productsCell", for: indexPath) as? ProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "Kurly Only 추천 상품"
             return cell
         case 16 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "otherProductsCell", for: indexPath) as? OtherProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "리빙 & 청소 아이템 특가"
             cell.subExplanationLabel.text = "새해를 맞아 우리집을 새롭게 꾸며보세요!"
             return cell
@@ -174,6 +200,7 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "otherProductsCell", for: indexPath) as? OtherProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "일본 미식 여행"
             cell.subExplanationLabel.text = "간편하게 조리할 수 있는 일식 요리부터 향신료까지"
             return cell
@@ -181,6 +208,7 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "otherProductsCell", for: indexPath) as? OtherProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "컬리의 기준, Kurly's"
             cell.subExplanationLabel.text = "퀄리티는 높게, 가격은 합리적으로"
             return cell
@@ -188,6 +216,7 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "otherProductsCell", for: indexPath) as? OtherProductsCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.titleLabel.text = "한국인의 소울푸드, 치킨"
             cell.subExplanationLabel.text = "바삭바삭한 치킨과 맥주 한 잔으로 기분 전환"
             return cell
@@ -230,4 +259,13 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     
+}
+
+extension RecommendViewController: ItemDetailViewControllerDelegate {
+    func moveToVC() {
+        print("동작하니?")
+        let ItemDetailVC = UIStoryboard.init(name: "Item", bundle: nil).instantiateViewController(withIdentifier: "ItemDetailSB") as! ItemDetailViewController
+        ItemDetailVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(ItemDetailVC, animated: true)
+    }
 }

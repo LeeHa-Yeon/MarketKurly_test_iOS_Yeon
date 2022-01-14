@@ -1,50 +1,59 @@
 //
-//  HomeViewController.swift
+//  ItemDetailViewController.swift
 //  MarketKurlyApp
 //
-//  Created by 이하연 on 2022/01/09.
+//  Created by 이하연 on 2022/01/14.
 //
 
 import UIKit
 import XLPagerTabStrip
 
-class ParentViewController: ButtonBarPagerTabStripViewController {
+class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     
     let purpleInspireColor = UIColor.mainKurlyPurple
+    let reviewCnt: Int? = nil
     
+    // MARK: - Components
+
     // MARK: - LifeCycle
     override func viewDidLoad() {
         setUI()
-        UserDefaults.standard.set(false, forKey: Constant.loginStatusName)
+        
         super.viewDidLoad()
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let RecommendVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "RecommendSB") as! RecommendViewController
-        RecommendVC.tabName = "컬리추천"
+        let ExplanationVC = self.storyboard?.instantiateViewController(withIdentifier: "ItemExplanationSB") as! ItemExplanationViewController
+        ExplanationVC.tabName = "상품설명"
+        
+        let DetailInfoVC = self.storyboard?.instantiateViewController(withIdentifier: "ItemDetailInfoSB") as! ItemDetailInfoViewController
+        DetailInfoVC.tabName = "상세정보"
         
         
-        let NewProductVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "NewProductSB") as! NewProductViewController
-        NewProductVC.tabName = "신상품"
+        let ReviewVC = self.storyboard?.instantiateViewController(withIdentifier: "ItemReviewSB") as! ItemReviewViewController
+        ReviewVC.tabName = reviewCnt != nil ? "후기" + "\(String(describing: reviewCnt))" : "후기"
+
         
-        let BestVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BestSB") as! BestViewController
-        BestVC.tabName = "베스트"
-        
-        let ThriftyShoppingVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "ThriftyShoppingSB") as! ThriftyShoppingViewController
-        ThriftyShoppingVC.tabName = "알뜰쇼핑"
-        
-        let SpecialPriceVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SpecialPriceSB") as! SpecialPriceViewController
-        SpecialPriceVC.tabName = "특가/혜택"
+        let QuestionVC = self.storyboard?.instantiateViewController(withIdentifier: "ItemQuestionSB") as! ItemQuestionViewController
+        QuestionVC.tabName = "문의"
         
         
-        return [RecommendVC, NewProductVC, BestVC, ThriftyShoppingVC, SpecialPriceVC]
+        
+        return [ExplanationVC, DetailInfoVC, ReviewVC, QuestionVC]
     }
     
     
     // MARK: - Function
     func setUI(){
-        self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "마켓컬리")
+        customNavigationBarAttribute(.white, .black)
+        self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "아이템이름")
         customBtnBar()
+    }
+    
+    /* API 해당 부분 */
+    // TODO: 이 상품에 해당하는 후기 API를 받아와서 후기의 개수를 출력해야될듯
+    func setData(){
+        
     }
     
     func customBtnBar(){
@@ -67,10 +76,5 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
         newCell?.label.textColor = self?.purpleInspireColor
         }
     }
-    
-    
-    
 }
 
-// 다른 API -> jwt 로그인할때 uerDefault저장해두고
-// keychain 라이브러리 

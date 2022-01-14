@@ -9,136 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--마이컬리(비회원)-->
-        <scene sceneID="s0d-6b-0kx">
-            <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aIs-QR-DPT">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" red="0.96731410600000001" green="0.9718387289" blue="0.9854125977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="separatorColor" red="0.95371691173349005" green="0.95817793362267523" blue="0.97156099929023032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mykurlyCell" rowHeight="201" id="1x3-Bw-yaT" customClass="MyKurlyCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="201"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1x3-Bw-yaT" id="ZZn-2g-ex2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bQ-h0-xd3">
-                                                    <rect key="frame" x="160.5" y="41" width="93" height="20.5"/>
-                                                    <string key="text">회원 가입하고
-</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9e-DJ-cSh">
-                                                    <rect key="frame" x="160.5" y="92.5" width="93" height="29"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="가입 혜택 보기 &gt;">
-                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                </button>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xar-NU-ySF">
-                                                    <rect key="frame" x="20" y="121.5" width="374" height="68.5"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HES-EZ-51f">
-                                                            <rect key="frame" x="5" y="9.5" width="364" height="50"/>
-                                                            <color key="backgroundColor" red="0.33846250179999998" green="0.048356711859999998" blue="0.48238134379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="e70-0b-bdG"/>
-                                                            </constraints>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="로그인/회원가입">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="LoginBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Tbb-JU-6pD"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="HES-EZ-51f" firstAttribute="centerX" secondItem="Xar-NU-ySF" secondAttribute="centerX" id="H8Q-XG-8iq"/>
-                                                        <constraint firstItem="HES-EZ-51f" firstAttribute="leading" secondItem="Xar-NU-ySF" secondAttribute="leading" constant="5" id="IA4-RG-o6X"/>
-                                                        <constraint firstAttribute="trailing" secondItem="HES-EZ-51f" secondAttribute="trailing" constant="5" id="evW-EF-PoH"/>
-                                                        <constraint firstItem="HES-EZ-51f" firstAttribute="centerY" secondItem="Xar-NU-ySF" secondAttribute="centerY" id="f0N-s4-W6e"/>
-                                                    </constraints>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다양한 혜택을 받아보세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAy-ca-6eB">
-                                                    <rect key="frame" x="119" y="66.5" width="176" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Xar-NU-ySF" secondAttribute="trailing" id="25v-wd-w86"/>
-                                                <constraint firstItem="Xar-NU-ySF" firstAttribute="top" secondItem="Z9e-DJ-cSh" secondAttribute="bottom" id="I9P-oB-Nfz"/>
-                                                <constraint firstItem="tAy-ca-6eB" firstAttribute="top" secondItem="4bQ-h0-xd3" secondAttribute="bottom" constant="5" id="JZJ-fj-jDH"/>
-                                                <constraint firstItem="Xar-NU-ySF" firstAttribute="leading" secondItem="ZZn-2g-ex2" secondAttribute="leadingMargin" id="Rkf-Cn-eI1"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Xar-NU-ySF" secondAttribute="bottom" id="Wxh-uo-CWR"/>
-                                                <constraint firstItem="Z9e-DJ-cSh" firstAttribute="top" secondItem="tAy-ca-6eB" secondAttribute="bottom" constant="5" id="k1c-fi-3ZJ"/>
-                                                <constraint firstItem="4bQ-h0-xd3" firstAttribute="centerX" secondItem="ZZn-2g-ex2" secondAttribute="centerX" id="sbJ-Xo-kvo"/>
-                                                <constraint firstItem="Z9e-DJ-cSh" firstAttribute="centerX" secondItem="ZZn-2g-ex2" secondAttribute="centerX" id="zG2-xD-0OO"/>
-                                                <constraint firstItem="tAy-ca-6eB" firstAttribute="centerX" secondItem="ZZn-2g-ex2" secondAttribute="centerX" id="zdu-Da-xeJ"/>
-                                                <constraint firstItem="4bQ-h0-xd3" firstAttribute="top" secondItem="ZZn-2g-ex2" secondAttribute="topMargin" constant="30" id="zeN-u4-RQf"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="loginBtn" destination="HES-EZ-51f" id="BII-Jd-YMB"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myKurlyListCell" rowHeight="50" id="lXx-6j-VGh" customClass="MyKurlyListCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="245.5" width="414" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lXx-6j-VGh" id="fZH-EG-E48">
-                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리스트명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjn-fg-J06">
-                                                    <rect key="frame" x="20" y="16" width="52" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="xjn-fg-J06" firstAttribute="leading" secondItem="fZH-EG-E48" secondAttribute="leadingMargin" id="ei3-db-Old"/>
-                                                <constraint firstItem="xjn-fg-J06" firstAttribute="centerY" secondItem="fZH-EG-E48" secondAttribute="centerY" id="jcG-Xo-iF2"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="listNameLabel" destination="xjn-fg-J06" id="SX4-sn-hg5"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="aIs-QR-DPT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0Ze-Cu-mFw"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aIs-QR-DPT" secondAttribute="bottom" id="Dpb-Oz-mJQ"/>
-                            <constraint firstItem="aIs-QR-DPT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Xsm-V3-lI1"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aIs-QR-DPT" secondAttribute="trailing" id="yBe-SI-Mwl"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="마이컬리(비회원)" id="hph-sB-J2W"/>
-                    <connections>
-                        <outlet property="tableView" destination="aIs-QR-DPT" id="Uuo-22-yqz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-274" y="2018"/>
-        </scene>
         <!--마이컬리-->
         <scene sceneID="IUb-d2-PUK">
             <objects>
@@ -207,207 +77,6 @@
             </objects>
             <point key="canvasLocation" x="121" y="130"/>
         </scene>
-        <!--마이컬리(회원)-->
-        <scene sceneID="ujV-p6-35O">
-            <objects>
-                <viewController id="XR5-hF-rdb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Icu-8Q-TSe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2lx-bn-Aan">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" red="0.96731410600000001" green="0.9718387289" blue="0.9854125977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="separatorColor" red="0.85645632400000005" green="0.85645632400000005" blue="0.85645632400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myKurlyInfoCell" rowHeight="154" id="jgv-Lx-4qA" customClass="MyKurlyInfoCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="154"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jgv-Lx-4qA" id="woA-pH-WRu">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="154"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pn8-aS-Av7">
-                                                    <rect key="frame" x="20" y="21" width="374" height="40"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnx-N0-cYa">
-                                                            <rect key="frame" x="0.0" y="-5" width="50" height="50"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="f2m-8e-PX6"/>
-                                                                <constraint firstAttribute="width" secondItem="Vnx-N0-cYa" secondAttribute="height" id="r1w-B7-O3Y"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="일반">
-                                                                <color key="titleColor" red="0.33846250179999998" green="0.048356711859999998" blue="0.48238134379999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            </state>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이하연님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1G-V2-Hd3">
-                                                            <rect key="frame" x="65" y="10" width="59" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="8eA-pz-Zp8"/>
-                                                        <constraint firstItem="E1G-V2-Hd3" firstAttribute="centerY" secondItem="pn8-aS-Av7" secondAttribute="centerY" id="9hv-8w-69v"/>
-                                                        <constraint firstItem="Vnx-N0-cYa" firstAttribute="centerY" secondItem="pn8-aS-Av7" secondAttribute="centerY" id="CD7-HP-0ua"/>
-                                                        <constraint firstItem="Vnx-N0-cYa" firstAttribute="leading" secondItem="pn8-aS-Av7" secondAttribute="leading" id="dYD-3W-PT4"/>
-                                                        <constraint firstItem="E1G-V2-Hd3" firstAttribute="leading" secondItem="Vnx-N0-cYa" secondAttribute="trailing" constant="15" id="k5U-8N-Dqw"/>
-                                                    </constraints>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="적립 0.5%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3J-RS-PVN">
-                                                    <rect key="frame" x="20" y="71" width="53" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pkY-WF-7lV">
-                                                    <rect key="frame" x="30" y="99" width="354" height="40"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyt-0x-vzD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="167" height="40"/>
-                                                            <color key="backgroundColor" red="0.90020720491704254" green="0.90020720491704254" blue="0.90020720491704254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="전체등급 보기">
-                                                                <color key="titleColor" red="0.020791757540000001" green="0.020889011230000001" blue="0.02118077229" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            </state>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpd-Xz-sbr">
-                                                            <rect key="frame" x="187" y="0.0" width="167" height="40"/>
-                                                            <color key="backgroundColor" red="0.90020720489999995" green="0.90020720489999995" blue="0.90020720489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="다음 달 예상등급 보기">
-                                                                <color key="titleColor" red="0.020791757540000001" green="0.020889011230000001" blue="0.02118077229" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            </state>
-                                                        </button>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="cTg-M1-zFe"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="pkY-WF-7lV" firstAttribute="leading" secondItem="woA-pH-WRu" secondAttribute="leading" constant="30" id="AGA-NZ-RDu"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="pn8-aS-Av7" secondAttribute="trailing" id="IRD-K9-Ldf"/>
-                                                <constraint firstItem="pn8-aS-Av7" firstAttribute="leading" secondItem="woA-pH-WRu" secondAttribute="leadingMargin" id="J4p-IK-ojr"/>
-                                                <constraint firstAttribute="trailing" secondItem="pkY-WF-7lV" secondAttribute="trailing" constant="30" id="JKh-xV-db3"/>
-                                                <constraint firstAttribute="bottom" secondItem="pkY-WF-7lV" secondAttribute="bottom" constant="15" id="Jkj-h2-G4Q"/>
-                                                <constraint firstItem="V3J-RS-PVN" firstAttribute="leading" secondItem="woA-pH-WRu" secondAttribute="leadingMargin" id="Pen-P0-0GA"/>
-                                                <constraint firstItem="V3J-RS-PVN" firstAttribute="top" secondItem="pn8-aS-Av7" secondAttribute="bottom" constant="10" id="WbP-H4-kKt"/>
-                                                <constraint firstItem="pn8-aS-Av7" firstAttribute="top" secondItem="woA-pH-WRu" secondAttribute="topMargin" constant="10" id="jNt-Yw-PuB"/>
-                                                <constraint firstItem="pkY-WF-7lV" firstAttribute="top" secondItem="V3J-RS-PVN" secondAttribute="bottom" constant="10" id="nNh-k9-hjD"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="allRankBtn" destination="xyt-0x-vzD" id="FqY-XO-Imn"/>
-                                            <outlet property="nextRankBtn" destination="Zpd-Xz-sbr" id="aYo-gw-vPo"/>
-                                            <outlet property="rankBtn" destination="Vnx-N0-cYa" id="X2c-WD-xP4"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bannerCell" rowHeight="43" id="L88-Ov-Ro0" customClass="BannerCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="198.5" width="414" height="43"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L88-Ov-Ro0" id="kcW-TH-S74">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0m-C6-Noo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
-                                                    <state key="normal" title="" image="banner"/>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="c0m-C6-Noo" firstAttribute="top" secondItem="kcW-TH-S74" secondAttribute="top" id="Kcc-g0-2ve"/>
-                                                <constraint firstItem="c0m-C6-Noo" firstAttribute="leading" secondItem="kcW-TH-S74" secondAttribute="leading" id="Mas-gC-VbU"/>
-                                                <constraint firstAttribute="bottom" secondItem="c0m-C6-Noo" secondAttribute="bottom" id="NjS-x4-8hY"/>
-                                                <constraint firstAttribute="trailing" secondItem="c0m-C6-Noo" secondAttribute="trailing" id="Xcf-4O-Zje"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="bannerBtn" destination="c0m-C6-Noo" id="mTI-WL-hiV"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myKurlyListPlusCell" id="cUN-5a-W51" customClass="MyKurlyListPlusCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="241.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cUN-5a-W51" id="K19-Qo-iPF">
-                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리스트명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPU-Ff-7dv">
-                                                    <rect key="frame" x="20" y="13" width="52" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMa-74-x0L">
-                                                    <rect key="frame" x="337" y="13.5" width="24.5" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.24766979817108481" green="0.032241231700361715" blue="0.35647181874697975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="UMa-74-x0L" firstAttribute="centerY" secondItem="K19-Qo-iPF" secondAttribute="centerY" id="ERd-KW-gLP"/>
-                                                <constraint firstItem="XPU-Ff-7dv" firstAttribute="centerY" secondItem="K19-Qo-iPF" secondAttribute="centerY" id="X3q-Wx-0un"/>
-                                                <constraint firstItem="XPU-Ff-7dv" firstAttribute="leading" secondItem="K19-Qo-iPF" secondAttribute="leadingMargin" id="fvd-WZ-muD"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="UMa-74-x0L" secondAttribute="trailing" constant="15" id="q8X-d9-wCb"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="listNameLable" destination="XPU-Ff-7dv" id="8qh-bT-t4Q"/>
-                                            <outlet property="subStrLabel" destination="UMa-74-x0L" id="b5t-5s-Ruc"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myKurlyOnCell" id="wzd-Yt-3NK" customClass="MyKurlyOnCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="285" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wzd-Yt-3NK" id="SE1-4f-b2n">
-                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리스트명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5b-WI-XLp">
-                                                    <rect key="frame" x="20" y="13.5" width="48.5" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="d5b-WI-XLp" firstAttribute="centerY" secondItem="SE1-4f-b2n" secondAttribute="centerY" id="7aO-Zr-Zcg"/>
-                                                <constraint firstItem="d5b-WI-XLp" firstAttribute="leading" secondItem="SE1-4f-b2n" secondAttribute="leadingMargin" id="nGl-9G-oDZ"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="listNameLabel" destination="d5b-WI-XLp" id="oxH-Ma-Nkm"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="nhj-TE-MZB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="nhj-TE-MZB" firstAttribute="bottom" secondItem="2lx-bn-Aan" secondAttribute="bottom" id="PVa-WH-ziL"/>
-                            <constraint firstItem="2lx-bn-Aan" firstAttribute="leading" secondItem="nhj-TE-MZB" secondAttribute="leading" id="aBI-UB-k4X"/>
-                            <constraint firstItem="2lx-bn-Aan" firstAttribute="top" secondItem="nhj-TE-MZB" secondAttribute="top" id="fZu-ox-Vp6"/>
-                            <constraint firstItem="nhj-TE-MZB" firstAttribute="trailing" secondItem="2lx-bn-Aan" secondAttribute="trailing" id="yYx-37-LDM"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="마이컬리(회원)" id="JK6-fu-Dgl"/>
-                    <connections>
-                        <outlet property="tableView" destination="2lx-bn-Aan" id="HSE-xM-Mm2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DuM-8e-pg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="509" y="2018"/>
-        </scene>
         <!--No Member My Kurly View Controller-->
         <scene sceneID="PMU-8U-Q89">
             <objects>
@@ -421,7 +90,7 @@
                                 <color key="backgroundColor" red="0.96731410600000001" green="0.9718387289" blue="0.9854125977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.95371691169999995" green="0.95817793360000003" blue="0.97156099929999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mykurlyCell" rowHeight="201" id="PTP-e6-rKj" customClass="MyKurlyCell" customModule="MarketKurlyApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="mykurlyCell" rowHeight="201" id="PTP-e6-rKj" customClass="MyKurlyCell" customModule="MarketKurlyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="201"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PTP-e6-rKj" id="qMK-ua-Iz3">
@@ -459,7 +128,6 @@
                                                             </state>
                                                             <connections>
                                                                 <action selector="LoginBtnTapped:" destination="fKe-YD-rmz" eventType="touchUpInside" id="qzs-Uo-eQm"/>
-                                                                <action selector="LoginBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sg3-yr-9rB"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -551,7 +219,7 @@
                                 <color key="backgroundColor" red="0.96731410600000001" green="0.9718387289" blue="0.9854125977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="separatorColor" red="0.85645632400000005" green="0.85645632400000005" blue="0.85645632400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myKurlyInfoCell" rowHeight="154" id="Jh2-mC-Aev" customClass="MyKurlyInfoCell" customModule="MarketKurlyApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="myKurlyInfoCell" rowHeight="154" id="Jh2-mC-Aev" customClass="MyKurlyInfoCell" customModule="MarketKurlyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="154"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jh2-mC-Aev" id="E3W-3h-tjc">
@@ -665,7 +333,7 @@
                                             <outlet property="bannerBtn" destination="V1N-hD-og9" id="RFv-zB-UgT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myKurlyListPlusCell" id="VO7-aR-hkf" customClass="MyKurlyListPlusCell" customModule="MarketKurlyApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myKurlyListPlusCell" id="VO7-aR-hkf" customClass="MyKurlyListPlusCell" customModule="MarketKurlyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="241.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VO7-aR-hkf" id="429-ZZ-8eF">
@@ -697,7 +365,7 @@
                                             <outlet property="subStrLabel" destination="5rb-be-ube" id="cPQ-6U-XMx"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myKurlyOnCell" id="ivR-T7-eg2" customClass="MyKurlyOnCell" customModule="MarketKurlyApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myKurlyOnCell" id="ivR-T7-eg2" customClass="MyKurlyOnCell" customModule="MarketKurlyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="285" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ivR-T7-eg2" id="irO-WD-Oxq">

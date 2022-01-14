@@ -7,7 +7,11 @@
 
 import UIKit
 
+
+
 class ProductsCell: UITableViewCell {
+    
+    var delegate: ItemDetailViewControllerDelegate?
     
     // MARK: - UIComponents
     @IBOutlet weak var titleLabel: UILabel!
@@ -61,6 +65,11 @@ extension ProductsCell : UICollectionViewDataSource, UICollectionViewDelegate, U
             }
             return cell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("ProductsCell 동작합니다.")
+        self.delegate?.moveToVC()
     }
     
     //컬렉션뷰 사이즈 설정
