@@ -31,6 +31,13 @@
 		9F309DE82791F4DF00EBF5E0 /* ItemDetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DE72791F4DF00EBF5E0 /* ItemDetailInfoViewController.swift */; };
 		9F309DEA2791F50100EBF5E0 /* ItemReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DE92791F50100EBF5E0 /* ItemReviewViewController.swift */; };
 		9F309DEC2791F51600EBF5E0 /* ItemQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DEB2791F51600EBF5E0 /* ItemQuestionViewController.swift */; };
+		9F309DF027920D3200EBF5E0 /* ItemMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DEE27920D3200EBF5E0 /* ItemMainCell.swift */; };
+		9F309DF127920D3200EBF5E0 /* ItemMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F309DEF27920D3200EBF5E0 /* ItemMainCell.xib */; };
+		9F309DF327921E9A00EBF5E0 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DF227921E9A00EBF5E0 /* ShareViewController.swift */; };
+		9F309DF6279222FD00EBF5E0 /* ItemInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DF4279222FD00EBF5E0 /* ItemInfoCell.swift */; };
+		9F309DF7279222FD00EBF5E0 /* ItemInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F309DF5279222FD00EBF5E0 /* ItemInfoCell.xib */; };
+		9F309DFA2792231300EBF5E0 /* ItemImgUrlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DF82792231300EBF5E0 /* ItemImgUrlCell.swift */; };
+		9F309DFB2792231300EBF5E0 /* ItemImgUrlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F309DF92792231300EBF5E0 /* ItemImgUrlCell.xib */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -157,6 +164,13 @@
 		9F309DE72791F4DF00EBF5E0 /* ItemDetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailInfoViewController.swift; sourceTree = "<group>"; };
 		9F309DE92791F50100EBF5E0 /* ItemReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemReviewViewController.swift; sourceTree = "<group>"; };
 		9F309DEB2791F51600EBF5E0 /* ItemQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemQuestionViewController.swift; sourceTree = "<group>"; };
+		9F309DEE27920D3200EBF5E0 /* ItemMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMainCell.swift; sourceTree = "<group>"; };
+		9F309DEF27920D3200EBF5E0 /* ItemMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemMainCell.xib; sourceTree = "<group>"; };
+		9F309DF227921E9A00EBF5E0 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		9F309DF4279222FD00EBF5E0 /* ItemInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoCell.swift; sourceTree = "<group>"; };
+		9F309DF5279222FD00EBF5E0 /* ItemInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInfoCell.xib; sourceTree = "<group>"; };
+		9F309DF82792231300EBF5E0 /* ItemImgUrlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImgUrlCell.swift; sourceTree = "<group>"; };
+		9F309DF92792231300EBF5E0 /* ItemImgUrlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemImgUrlCell.xib; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -384,6 +398,20 @@
 				9F309DE72791F4DF00EBF5E0 /* ItemDetailInfoViewController.swift */,
 				9F309DE92791F50100EBF5E0 /* ItemReviewViewController.swift */,
 				9F309DEB2791F51600EBF5E0 /* ItemQuestionViewController.swift */,
+				9F309DF227921E9A00EBF5E0 /* ShareViewController.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		9F309DED279206DE00EBF5E0 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				9F309DEE27920D3200EBF5E0 /* ItemMainCell.swift */,
+				9F309DEF27920D3200EBF5E0 /* ItemMainCell.xib */,
+				9F309DF4279222FD00EBF5E0 /* ItemInfoCell.swift */,
+				9F309DF5279222FD00EBF5E0 /* ItemInfoCell.xib */,
+				9F309DF82792231300EBF5E0 /* ItemImgUrlCell.swift */,
+				9F309DF92792231300EBF5E0 /* ItemImgUrlCell.xib */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -393,6 +421,7 @@
 			children = (
 				9F9C58EF278B6425005D164C /* Banner */,
 				9F9C58F0278B644C005D164C /* Product */,
+				9F309DED279206DE00EBF5E0 /* Item */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -837,6 +866,7 @@
 				9FB51FB2278DB09100DEF835 /* SearchSubjectCell.xib in Resources */,
 				9FCC9451278A6D97000493AD /* SignUp.storyboard in Resources */,
 				9F9C591E278B9DB6005D164C /* SpecialProductCell.xib in Resources */,
+				9F309DFB2792231300EBF5E0 /* ItemImgUrlCell.xib in Resources */,
 				9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */,
 				9F9C5916278B97BF005D164C /* RecipeListCell.xib in Resources */,
 				9F9D5DDB27895F4000CC63FA /* LaunchScreen.storyboard in Resources */,
@@ -850,6 +880,7 @@
 				9FB51FBC278E744B00DEF835 /* SearchEventFrameCell.xib in Resources */,
 				9FB51FC8278E898B00DEF835 /* SearchSubject4Cell.xib in Resources */,
 				9F9C58EE278B5CF1005D164C /* BannerImgCell.xib in Resources */,
+				9F309DF127920D3200EBF5E0 /* ItemMainCell.xib in Resources */,
 				9F9C5926278BB126005D164C /* Product2Cell.xib in Resources */,
 				9F9C5908278B8B9F005D164C /* OtherProductsCell.xib in Resources */,
 				9F9C58FC278B7440005D164C /* NoSaleProductCell.xib in Resources */,
@@ -860,6 +891,7 @@
 				9FCC943E278A357F000493AD /* Login.storyboard in Resources */,
 				9FB51FC0278E82A700DEF835 /* SearchSubject3Cell.xib in Resources */,
 				9FB51FCC278E8B9100DEF835 /* VogueSearchWorldCell.xib in Resources */,
+				9F309DF7279222FD00EBF5E0 /* ItemInfoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,6 +949,7 @@
 				9F2721B62790DEAC00F85FA9 /* PwdResultViewController.swift in Sources */,
 				9F9D5E13278A0D5B00CC63FA /* UIViewController.swift in Sources */,
 				9F9D5DF6278A09B200CC63FA /* BaseViewController.swift in Sources */,
+				9F309DFA2792231300EBF5E0 /* ItemImgUrlCell.swift in Sources */,
 				9F27219E278FB25600F85FA9 /* CategoryChildCell.swift in Sources */,
 				9F9C58FF278B88CB005D164C /* OnlyBannerCell.swift in Sources */,
 				9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */,
@@ -948,6 +981,7 @@
 				9FA04382278D12F900FCD2FE /* MyKurlyOnCell.swift in Sources */,
 				9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */,
 				9F9C58E1278B3F72005D164C /* SpecialPriceViewController.swift in Sources */,
+				9F309DF6279222FD00EBF5E0 /* ItemInfoCell.swift in Sources */,
 				9F27219B278FAB7D00F85FA9 /* CategoryParentCell.swift in Sources */,
 				9F272199278F95C800F85FA9 /* CategoryRecommendCell.swift in Sources */,
 				9FB51FAB278D9ABE00DEF835 /* BeforeSearchViewController.swift in Sources */,
@@ -968,6 +1002,7 @@
 				9F309DE82791F4DF00EBF5E0 /* ItemDetailInfoViewController.swift in Sources */,
 				9FB51FBF278E82A700DEF835 /* SearchSubject3Cell.swift in Sources */,
 				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,
+				9F309DF327921E9A00EBF5E0 /* ShareViewController.swift in Sources */,
 				9F9C58DF278B3F5D005D164C /* ThriftyShoppingViewController.swift in Sources */,
 				9F9D5E00278A0A1A00CC63FA /* IndicatorView.swift in Sources */,
 				9F2721B82790EAED00F85FA9 /* UserDataManager.swift in Sources */,
@@ -1001,6 +1036,7 @@
 				9F9C5925278BB126005D164C /* Product2Cell.swift in Sources */,
 				9F2721A2278FC25D00F85FA9 /* KurlyRecommendCell.swift in Sources */,
 				9F9D5E19278A0FF700CC63FA /* LoginRequest.swift in Sources */,
+				9F309DF027920D3200EBF5E0 /* ItemMainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
