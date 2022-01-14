@@ -29,6 +29,10 @@ class NoMemberMyKurlyViewController: BaseViewController {
         setUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
     // MARK: - Function
     func setUI(){
         tableView.dataSource = self

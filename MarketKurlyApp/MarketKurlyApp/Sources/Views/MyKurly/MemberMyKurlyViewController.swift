@@ -28,6 +28,10 @@ class MemberMyKurlyViewController: BaseViewController {
         setUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
     // MARK: - Function
     func setUI(){
         tableView.dataSource = self
@@ -133,9 +137,12 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 7 {
-            print("뭐야")
             UserDefaults.standard.set("", forKey: Constant.jwtName)
             UserDefaults.standard.set(0, forKey: Constant.userIdxName)
+            let storyboard = UIStoryboard(name: "MyKurly", bundle: nil)
+            let TempVC = storyboard.instantiateViewController(identifier: "TempSB")
+            TempVC.modalPresentationStyle = .fullScreen
+            self.present(TempVC, animated: true, completion: nil)
         }
     }
     

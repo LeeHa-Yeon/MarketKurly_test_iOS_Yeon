@@ -636,7 +636,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="allRankBtn" destination="h7t-NW-qpj" id="XgR-FL-8OE"/>
+                                            <outlet property="nameLabel" destination="4to-eb-tT4" id="XqX-3i-6qO"/>
                                             <outlet property="nextRankBtn" destination="Vps-3g-vBV" id="cHo-KS-YQB"/>
+                                            <outlet property="pointRate" destination="6Ee-xl-dS1" id="q33-Oz-Vwg"/>
                                             <outlet property="rankBtn" destination="xIa-de-95U" id="giP-Q6-anq"/>
                                         </connections>
                                     </tableViewCell>
@@ -737,6 +739,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNV-Ey-70U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="680" y="805"/>
+        </scene>
+        <!--Temp View Controller-->
+        <scene sceneID="ymt-vv-z4f">
+            <objects>
+                <viewController storyboardIdentifier="TempSB" id="s6d-XC-0Nh" customClass="TempViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RdN-2b-KK1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yox-Y2-MWK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVI-xR-7T9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1385" y="823"/>
         </scene>
     </scenes>
     <resources>

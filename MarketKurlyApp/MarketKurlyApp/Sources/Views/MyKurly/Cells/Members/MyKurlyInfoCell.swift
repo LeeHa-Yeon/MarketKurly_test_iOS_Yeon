@@ -14,6 +14,9 @@ class MyKurlyInfoCell: UITableViewCell {
     @IBOutlet weak var allRankBtn: UIButton!
     @IBOutlet weak var nextRankBtn: UIButton!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var pointRate: UILabel!
+    
     // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
