@@ -40,7 +40,7 @@
 		9F309DFB2792231300EBF5E0 /* ItemImgUrlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F309DF92792231300EBF5E0 /* ItemImgUrlCell.xib */; };
 		9F309DFD27925D4700EBF5E0 /* ItemBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DFC27925D4700EBF5E0 /* ItemBuyViewController.swift */; };
 		9F309DFF2792658500EBF5E0 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DFE2792658500EBF5E0 /* CALayer.swift */; };
-		9F309E0227927CC600EBF5E0 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F309E0127927CC600EBF5E0 /* User.storyboard */; };
+		9F309E0227927CC600EBF5E0 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F309E0127927CC600EBF5E0 /* Address.storyboard */; };
 		9F309E0427927D4000EBF5E0 /* AddressManagmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E0327927D4000EBF5E0 /* AddressManagmentViewController.swift */; };
 		9F309E0A27928FDD00EBF5E0 /* FindPwdEmailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E0927928FDD00EBF5E0 /* FindPwdEmailResponse.swift */; };
 		9F309E0C27928FEC00EBF5E0 /* FindPwdEmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E0B27928FEC00EBF5E0 /* FindPwdEmailRequest.swift */; };
@@ -183,7 +183,7 @@
 		9F309DF92792231300EBF5E0 /* ItemImgUrlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemImgUrlCell.xib; sourceTree = "<group>"; };
 		9F309DFC27925D4700EBF5E0 /* ItemBuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBuyViewController.swift; sourceTree = "<group>"; };
 		9F309DFE2792658500EBF5E0 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
-		9F309E0127927CC600EBF5E0 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		9F309E0127927CC600EBF5E0 /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
 		9F309E0327927D4000EBF5E0 /* AddressManagmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressManagmentViewController.swift; sourceTree = "<group>"; };
 		9F309E0927928FDD00EBF5E0 /* FindPwdEmailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdEmailResponse.swift; sourceTree = "<group>"; };
 		9F309E0B27928FEC00EBF5E0 /* FindPwdEmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdEmailRequest.swift; sourceTree = "<group>"; };
@@ -443,7 +443,7 @@
 		9F309E0027927C8100EBF5E0 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
-				9F309E0127927CC600EBF5E0 /* User.storyboard */,
+				9F309E0127927CC600EBF5E0 /* Address.storyboard */,
 				9F309E0327927D4000EBF5E0 /* AddressManagmentViewController.swift */,
 			);
 			path = UserInfo;
@@ -930,7 +930,7 @@
 				9F9C5926278BB126005D164C /* Product2Cell.xib in Resources */,
 				9F9C5908278B8B9F005D164C /* OtherProductsCell.xib in Resources */,
 				9F9C58FC278B7440005D164C /* NoSaleProductCell.xib in Resources */,
-				9F309E0227927CC600EBF5E0 /* User.storyboard in Resources */,
+				9F309E0227927CC600EBF5E0 /* Address.storyboard in Resources */,
 				9F9C591A278B99A1005D164C /* RecipeCell.xib in Resources */,
 				9F9D5DD627895F3D00CC63FA /* Main.storyboard in Resources */,
 				9F9D5DFD278A09FE00CC63FA /* NotoSansCJKkr-Medium.otf in Resources */,
