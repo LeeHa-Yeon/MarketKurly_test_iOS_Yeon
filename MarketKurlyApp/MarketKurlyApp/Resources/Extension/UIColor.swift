@@ -22,5 +22,7 @@ extension UIColor {
     // MARK: 메인 테마 색 또는 자주 쓰는 색을 정의
     // ex. label.textColor = .mainOrange
     class var mainKurlyPurple: UIColor { UIColor(hex: 0x5f0080) }
+    
+    class var lineColor: UIColor { UIColor(hex: 0xe1e1e2) }
 }
 

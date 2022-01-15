@@ -338,23 +338,24 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="구매하기">
+                                <state key="normal" title="2,990원 장바구니 담기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="buyBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OC3-JT-Gdi"/>
+                                    <action selector="buyBtnTapped:" destination="R5c-5J-agL" eventType="touchUpInside" id="PX8-hz-cfv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 후, 적립해택 제공" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EY-QE-cIR">
-                                <rect key="frame" x="253" y="175" width="146" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="267" y="175" width="132" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13.5"/>
                                 <color key="textColor" red="0.43285220429999999" green="0.43285220429999999" blue="0.43285220429999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCD-Kq-z4Z">
-                                <rect key="frame" x="225" y="175" width="20" height="20"/>
+                                <rect key="frame" x="242" y="175" width="17" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="DsS-Lo-1DW"/>
+                                    <constraint firstAttribute="width" constant="17" id="DsS-Lo-1DW"/>
                                     <constraint firstAttribute="width" secondItem="lCD-Kq-z4Z" secondAttribute="height" id="bdp-s9-ZPP"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -381,6 +382,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="BFN-Cm-3Ht"/>
                     <connections>
+                        <outlet property="buyBtn" destination="qQI-iZ-nql" id="b81-aU-3xW"/>
+                        <outlet property="contentView" destination="v5d-8k-Exf" id="jX6-H1-Mhn"/>
                         <outlet property="itemNameLabel" destination="Uc0-Vj-ngE" id="G3w-fU-HCh"/>
                         <outlet property="pointLabel" destination="5EY-QE-cIR" id="Das-eZ-qiT"/>
                         <outlet property="priceLabel" destination="Y4O-pW-XMq" id="iPy-tt-Jfh"/>
