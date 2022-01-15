@@ -129,6 +129,10 @@
 		9FB51FD0278E996100DEF835 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FCF278E996100DEF835 /* BaseImageView.swift */; };
 		9FB51FD2278E9A0500DEF835 /* NoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FD1278E9A0500DEF835 /* NoSearchViewController.swift */; };
 		9FB51FD4278E9A2400DEF835 /* ExistSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB51FD3278E9A2400DEF835 /* ExistSearchViewController.swift */; };
+		9FC61BED2792AB63007AC4A7 /* ModifyAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC61BEC2792AB63007AC4A7 /* ModifyAddressViewController.swift */; };
+		9FC61BEF2792AB8F007AC4A7 /* NewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC61BEE2792AB8F007AC4A7 /* NewAddressViewController.swift */; };
+		9FC61BF12792AB9D007AC4A7 /* NewDetailAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC61BF02792AB9D007AC4A7 /* NewDetailAddressViewController.swift */; };
+		9FC61BF52792BB3D007AC4A7 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC61BF42792BB3D007AC4A7 /* Cart.storyboard */; };
 		9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */; };
 		9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC942D278A1AD4000493AD /* MyKurly.storyboard */; };
 		9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9431278A1C8D000493AD /* Category.storyboard */; };
@@ -274,6 +278,10 @@
 		9FB51FCF278E996100DEF835 /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
 		9FB51FD1278E9A0500DEF835 /* NoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSearchViewController.swift; sourceTree = "<group>"; };
 		9FB51FD3278E9A2400DEF835 /* ExistSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistSearchViewController.swift; sourceTree = "<group>"; };
+		9FC61BEC2792AB63007AC4A7 /* ModifyAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyAddressViewController.swift; sourceTree = "<group>"; };
+		9FC61BEE2792AB8F007AC4A7 /* NewAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAddressViewController.swift; sourceTree = "<group>"; };
+		9FC61BF02792AB9D007AC4A7 /* NewDetailAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailAddressViewController.swift; sourceTree = "<group>"; };
+		9FC61BF42792BB3D007AC4A7 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMemberMyKurlyViewController.swift; sourceTree = "<group>"; };
 		9FCC942D278A1AD4000493AD /* MyKurly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyKurly.storyboard; sourceTree = "<group>"; };
 		9FCC9431278A1C8D000493AD /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
@@ -443,8 +451,8 @@
 		9F309E0027927C8100EBF5E0 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
-				9F309E0127927CC600EBF5E0 /* Address.storyboard */,
-				9F309E0327927D4000EBF5E0 /* AddressManagmentViewController.swift */,
+				9FC61BF32792BB2A007AC4A7 /* Cart */,
+				9FC61BF22792BB1C007AC4A7 /* Address */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -806,6 +814,26 @@
 			path = Contents;
 			sourceTree = "<group>";
 		};
+		9FC61BF22792BB1C007AC4A7 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				9F309E0127927CC600EBF5E0 /* Address.storyboard */,
+				9F309E0327927D4000EBF5E0 /* AddressManagmentViewController.swift */,
+				9FC61BEC2792AB63007AC4A7 /* ModifyAddressViewController.swift */,
+				9FC61BEE2792AB8F007AC4A7 /* NewAddressViewController.swift */,
+				9FC61BF02792AB9D007AC4A7 /* NewDetailAddressViewController.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		9FC61BF32792BB2A007AC4A7 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				9FC61BF42792BB3D007AC4A7 /* Cart.storyboard */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		9FCC942F278A1C6D000493AD /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -932,6 +960,7 @@
 				9F9C58FC278B7440005D164C /* NoSaleProductCell.xib in Resources */,
 				9F309E0227927CC600EBF5E0 /* Address.storyboard in Resources */,
 				9F9C591A278B99A1005D164C /* RecipeCell.xib in Resources */,
+				9FC61BF52792BB3D007AC4A7 /* Cart.storyboard in Resources */,
 				9F9D5DD627895F3D00CC63FA /* Main.storyboard in Resources */,
 				9F9D5DFD278A09FE00CC63FA /* NotoSansCJKkr-Medium.otf in Resources */,
 				9F9D5DFE278A09FE00CC63FA /* NotoSansCJKkr-Bold.otf in Resources */,
@@ -1042,7 +1071,9 @@
 				9F309E0C27928FEC00EBF5E0 /* FindPwdEmailRequest.swift in Sources */,
 				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
 				9FA0437B278D11E800FCD2FE /* MyKurlyInfoCell.swift in Sources */,
+				9FC61BED2792AB63007AC4A7 /* ModifyAddressViewController.swift in Sources */,
 				9F2721BC2790FEEE00F85FA9 /* NewUserReponse.swift in Sources */,
+				9FC61BF12792AB9D007AC4A7 /* NewDetailAddressViewController.swift in Sources */,
 				9F2721A7278FCADE00F85FA9 /* CategoryDetailViewController.swift in Sources */,
 				9F309DDE27914D1100EBF5E0 /* TempViewController.swift in Sources */,
 				9F2721AC2790066F00F85FA9 /* AllUserDataManager.swift in Sources */,
@@ -1054,6 +1085,7 @@
 				9FB51FCE278E979100DEF835 /* SearchResultViewController.swift in Sources */,
 				9F309DE82791F4DF00EBF5E0 /* ItemDetailInfoViewController.swift in Sources */,
 				9FB51FBF278E82A700DEF835 /* SearchSubject3Cell.swift in Sources */,
+				9FC61BEF2792AB8F007AC4A7 /* NewAddressViewController.swift in Sources */,
 				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,
 				9F309DF327921E9A00EBF5E0 /* ShareViewController.swift in Sources */,
 				9F309E0427927D4000EBF5E0 /* AddressManagmentViewController.swift in Sources */,
