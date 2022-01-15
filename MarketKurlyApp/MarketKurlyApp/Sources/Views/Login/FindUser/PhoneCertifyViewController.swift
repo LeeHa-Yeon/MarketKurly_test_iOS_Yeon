@@ -10,6 +10,7 @@ import UIKit
 class PhoneCertifyViewController: UIViewController {
     
     let allUserManager = AllUserDataManager.shared
+    let userManager = UserDataManager.shared
     var isFind: Bool = false
     var findUserIdx: Int?
 
@@ -20,51 +21,49 @@ class PhoneCertifyViewController: UIViewController {
     @IBOutlet weak var doneBtn: UIButton!
     
     @IBAction func doneBtnTapped(_ sender: Any) {
-
-        allUserManager.requestAllUser { response in
-            
-            
-            for idx in 0..<response.result.count {
-                guard let idNameText = self.idNameTextField.text else { return }
-                guard let phoneText = self.phoneTextField.text else { return }
-                
-                if "idFindStatus" == UserDefaults.standard.string(forKey: Constant.findStatusName) {
-                    // 아이디찾기 - 핸드폰
+        guard let idNameText = self.idNameTextField.text else { return }
+        guard let phoneText = self.phoneTextField.text else { return }
+        
+        if "idFindStatus" == UserDefaults.standard.string(forKey: Constant.findStatusName) {
+            // 아이디찾기 - 전화번호
+            allUserManager.requestAllUser { response in
+                for idx in 0..<response.result.count {
                     if idNameText == response.result[idx].name && phoneText == response.result[idx].phoneNumber {
                         self.isFind = true
                         self.findUserIdx = response.result[idx].userId
                     }
-                } else {
-                    // 비밀번호찾기 - 핸드폰
-                    if idNameText == response.result[idx].username && phoneText == response.result[idx].phoneNumber {
-                        self.isFind = true
-                        self.findUserIdx = response.result[idx].userId
-                    }
                 }
             }
-
             if self.isFind {
-                // 화면전환
-                if "idFindStatus" == UserDefaults.standard.string(forKey: Constant.findStatusName) {
-                    // 아이디찾기 - 핸드폰
-                    let storyboard = UIStoryboard(name: "Login", bundle: nil)
-                    guard let IdResultVC = storyboard.instantiateViewController(identifier: "IdResultSB") as? IdResultViewController else { return }
-                    IdResultVC.userId = self.findUserIdx!
-                    self.navigationController?.pushViewController(IdResultVC, animated: true)
-                } else {
-                    // 비밀번호찾기 - 핸드폰
-                    let storyboard = UIStoryboard(name: "Login", bundle: nil)
-                    guard let PwdResultVC = storyboard.instantiateViewController(identifier: "PwdResultSB") as? PwdResultViewController else { return }
-                    PwdResultVC.userId = self.findUserIdx!
-                    self.navigationController?.pushViewController(PwdResultVC, animated: true)
-                }
-                
-            } else {
+                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                guard let IdResultVC = storyboard.instantiateViewController(identifier: "IdResultSB") as? IdResultViewController else { return }
+                IdResultVC.userId = self.findUserIdx!
+                self.navigationController?.pushViewController(IdResultVC, animated: true)
+            }else {
                 self.presentAlert(title: "가입시 입력하신 회원 정보가 맞는지 다시 한번 확인해 주세요.")
             }
+            
         }
-        
+        else {
+            // 비밀번호 찾기 - 전화번호
+            let para: FindPwdPhoneRequest = FindPwdPhoneRequest(username: idNameText, phoneNumber: phoneText)
+            userManager.requestFindPwdPhone(parameter: para) { response in
+                if response.isSuccess{
+                    // 성공했으므로 화면 이동
+                    let storyboard = UIStoryboard(name: "Login", bundle: nil)
+                    guard let PwdResultVC = storyboard.instantiateViewController(identifier: "PwdResultSB") as? PwdResultViewController else { return }
+                    PwdResultVC.userId = response.result.userIdx
+                    PwdResultVC.userToken = response.result.jwt
+                    self.navigationController?.pushViewController(PwdResultVC, animated: true)
+                } else {
+                    // 실패했으므로 알림창 띄우기
+                    self.presentAlert(title: "가입시 입력하신 회원 정보가 맞는지 다시 한번 확인해 주세요.")
+                }
+                
+            }
+        }
     }
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

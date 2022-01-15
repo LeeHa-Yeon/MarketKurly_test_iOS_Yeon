@@ -11,6 +11,7 @@ class PwdResultViewController: UIViewController {
 
     let userManager = UserDataManager.shared
     var userId: Int = 0
+    var userToken: String = ""
     
     // MARK: - UIComponents
     @IBOutlet weak var newPasswordTextField: UITextField!
@@ -18,17 +19,7 @@ class PwdResultViewController: UIViewController {
     @IBOutlet weak var doneBtn: UIButton!
     
     @IBAction func doneBtnTapped(_ sender: Any) {
-        guard let newPwdText = newPasswordTextField.text else { return }
-        guard let newPwdCheckText = newPasswordCheckTextField.text else { return }
-        
-        // TODO: - API로 비밀번호 변경하는 부분 구현해야됨
-//        let para = NewUserRequest(password "", newPassword: " ")
-//        userManager.requestChangeUserInfo(userIdx: userId, token: tempToken, parameter: ) { response in
-//            <#code#>
-//        }
-        
-        
-        presentAlert(title: "비밀번호 변경이 완료되었습니다.")
+        setData()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -41,8 +32,19 @@ class PwdResultViewController: UIViewController {
     
     // MARK: - Functions
     func setUI(){
+        self.title = "새 비밀번호 변경"
         doneBtn.isEnabled = false
         editTextField()
+    }
+    
+    /* API 통신 부분 */
+    func setData(){
+        print("확인->\(userId) \(userToken)")
+        guard let newPwdText = newPasswordTextField.text else { return }
+        
+        userManager.requestChangePwd(userIdx: userId, token: userToken, parameter: ChangePwdRequest(newPassword: newPwdText)) { response in
+            self.presentAlert(title: "비밀번호 변경이 완료되었습니다.")
+        }
     }
     
     func editTextField(){

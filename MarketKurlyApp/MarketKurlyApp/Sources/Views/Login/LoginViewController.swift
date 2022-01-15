@@ -47,20 +47,7 @@ class LoginViewController: BaseViewController {
         } else if pwdContent == "" {
             alertMessage(message: "비밀번호를 입력해주세요.")
         } else {
-            
-            let para = LoginRequest(username:idContent, password: pwdContent)
-            loginManager.requestLogin(parameter: para) { response in
-                if response.isSuccess {
-                    // 로그인 성공시
-                    UserDefaults.standard.set(response.result!.userIdx, forKey: Constant.userIdxName)
-                    UserDefaults.standard.set(response.result!.jwt,forKey: Constant.jwtName)
-                    self.dismiss(animated: true, completion: nil)
-                } else {
-                    // 로그인 실패시
-                    print("asdf")
-                    self.alertMessage(message: response.message)
-                }
-            }
+            setData()
         }
     }
     
@@ -111,6 +98,29 @@ class LoginViewController: BaseViewController {
         SignUpBtn.layer.borderWidth = 1
         SignUpBtn.layer.borderColor = UIColor.mainKurlyPurple.cgColor
         self.removeLine(self.navigationController!)
+    }
+    
+    /* API 부분 구현 */
+    func setData(){
+        guard let idContent = idTextField.text else {
+            return
+        }
+        guard let pwdContent = pwdTextField.text else {
+            return
+        }
+        let para = LoginRequest(username:idContent, password: pwdContent)
+        loginManager.requestLogin(parameter: para) { response in
+            if response.isSuccess {
+                // 로그인 성공시
+                UserDefaults.standard.set(response.result!.userIdx, forKey: Constant.userIdxName)
+                UserDefaults.standard.set(response.result!.jwt,forKey: Constant.jwtName)
+                print("\(response.result!.jwt)")
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                // 로그인 실패시
+                self.alertMessage(message: "아이디, 비밀번호를 확인해주세요.")
+            }
+        }
     }
     
     func KeyboardDismiss(){

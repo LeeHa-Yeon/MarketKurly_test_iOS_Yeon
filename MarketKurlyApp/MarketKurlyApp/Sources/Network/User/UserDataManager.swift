@@ -77,7 +77,7 @@ class UserDataManager {
     
     
     // MARK: - 새 비밀번호로 변경
-    func requestChangePwd(userIdx: Int ,newPwd: String,token: String ,parameter: ChangePwdRequest,completion: @escaping (ChangePwdResponse)->(Void)){
+    func requestChangePwd(userIdx: Int ,token: String ,parameter: ChangePwdRequest,completion: @escaping (ChangePwdResponse)->(Void)){
         
         let URL = Constant.BasicURL + "users/v2/\(userIdx)/new-password"
         let HTTP_HEADERS: HTTPHeaders = ["X-ACCESS-TOKEN":token]
