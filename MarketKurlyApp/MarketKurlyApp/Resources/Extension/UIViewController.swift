@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import Kingfisher
 
 extension UIViewController {
     // MARK: 빈 화면을 눌렀을 때 키보드가 내려가도록 처리
@@ -160,6 +161,14 @@ extension UIViewController {
         customView.layer.cornerRadius = cornerValue ?? 0
         customView.layer.borderColor = viewBorderColor?.cgColor
         customView.layer.borderWidth = viewBorderWidth ?? 0
+    }
+    
+    // MARK: - url -> img
+    func urlToImg(urlStr: String, img: UIImageView){
+        if let url: URL = URL(string: urlStr ){
+            img.kf.indicatorType = .activity
+            img.kf.setImage(with:url)
+        }
     }
     
 }

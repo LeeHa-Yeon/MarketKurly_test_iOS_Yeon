@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.5.0)
   - DLRadioButton (1.4.12)
   - ExpyTableView (1.2.1)
+  - GMStepper (2.2)
   - GSMessages (1.7.5)
   - Kingfisher (7.1.2)
   - XLPagerTabStrip (9.0.0)
@@ -10,6 +11,7 @@ DEPENDENCIES:
   - Alamofire
   - DLRadioButton
   - ExpyTableView
+  - GMStepper
   - GSMessages
   - Kingfisher
   - XLPagerTabStrip
@@ -19,6 +21,7 @@ SPEC REPOS:
     - Alamofire
     - DLRadioButton
     - ExpyTableView
+    - GMStepper
     - GSMessages
     - Kingfisher
     - XLPagerTabStrip
@@ -27,10 +30,11 @@ SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   ExpyTableView: 19cf224c2ff04b1ec215ec52bc4ba6f81fa809ed
+  GMStepper: 89fb106944dfcc3aa3add7164e3ebd463ea2104b
   GSMessages: ff0397d30b804fa38c6026fb080b8ad6f7454ab6
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: eca705c9d698518eae07f62348b2ef1c7b0c0d2d
+PODFILE CHECKSUM: 8d87fcf246f9125777038405915c2e8317c12e86
 
 COCOAPODS: 1.11.2

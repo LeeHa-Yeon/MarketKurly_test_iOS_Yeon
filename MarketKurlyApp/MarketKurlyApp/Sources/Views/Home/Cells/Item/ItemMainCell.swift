@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ItemMainCell: UITableViewCell {
     
@@ -26,10 +27,19 @@ class ItemMainCell: UITableViewCell {
     // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        urlToImg()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    // MARK: - Functions
+    func urlToImg(){
+        if let url: URL = URL(string: "https://i.postimg.cc/zvtZm349/1.png" ){
+            itemImg.kf.indicatorType = .activity
+            itemImg.kf.setImage(with:url)
+        }
     }
     
 }

@@ -19,7 +19,7 @@ class ItemExplanationViewController: UIViewController, IndicatorInfoProvider {
     
     // MARK: - Components
     @IBOutlet weak var tableView: UITableView!
-
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +87,16 @@ extension ItemExplanationViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 700
+        switch indexPath.section {
+        case 0 :
+            return 700
+        case 1 :
+            return 300
+        case 2 :
+            return 1500
+        default :
+            return 0
+        }
     }
 }
 
