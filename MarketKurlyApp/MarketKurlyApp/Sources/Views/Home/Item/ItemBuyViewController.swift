@@ -9,6 +9,8 @@ import UIKit
 import GMStepper
 
 class ItemBuyViewController: UIViewController {
+    
+    var totalPrice: Int = 0
 
     // MARK: - Components
     @IBOutlet weak var contentView: UIView!
@@ -19,7 +21,16 @@ class ItemBuyViewController: UIViewController {
     @IBOutlet weak var buyBtn: UIButton!
     
     @IBAction func buyBtnTapped(_ sender: Any) {
+        presentAlert(title: "장바구니에 상품을 담았습니다.")
     }
+    
+
+    @IBAction func changeCntTapped(_ sender: Any) {
+        totalPrice = Int(stepper.value * 2990)
+        buyBtn.setTitle("\(totalPrice)원 장바구니 담기", for: .normal)
+    }
+    
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

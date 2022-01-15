@@ -40,6 +40,14 @@
 		9F309DFB2792231300EBF5E0 /* ItemImgUrlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F309DF92792231300EBF5E0 /* ItemImgUrlCell.xib */; };
 		9F309DFD27925D4700EBF5E0 /* ItemBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DFC27925D4700EBF5E0 /* ItemBuyViewController.swift */; };
 		9F309DFF2792658500EBF5E0 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309DFE2792658500EBF5E0 /* CALayer.swift */; };
+		9F309E0227927CC600EBF5E0 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F309E0127927CC600EBF5E0 /* User.storyboard */; };
+		9F309E0427927D4000EBF5E0 /* AddressManagmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E0327927D4000EBF5E0 /* AddressManagmentViewController.swift */; };
+		9F309E0A27928FDD00EBF5E0 /* FindPwdEmailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E0927928FDD00EBF5E0 /* FindPwdEmailResponse.swift */; };
+		9F309E0C27928FEC00EBF5E0 /* FindPwdEmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E0B27928FEC00EBF5E0 /* FindPwdEmailRequest.swift */; };
+		9F309E0E279290B700EBF5E0 /* FindPwdPhoneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E0D279290B700EBF5E0 /* FindPwdPhoneRequest.swift */; };
+		9F309E10279290D300EBF5E0 /* FindPwdPhoneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E0F279290D300EBF5E0 /* FindPwdPhoneResponse.swift */; };
+		9F309E122792914300EBF5E0 /* ChangePwdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E112792914300EBF5E0 /* ChangePwdRequest.swift */; };
+		9F309E142792914E00EBF5E0 /* ChangePwdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E132792914E00EBF5E0 /* ChangePwdResponse.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -175,6 +183,14 @@
 		9F309DF92792231300EBF5E0 /* ItemImgUrlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemImgUrlCell.xib; sourceTree = "<group>"; };
 		9F309DFC27925D4700EBF5E0 /* ItemBuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBuyViewController.swift; sourceTree = "<group>"; };
 		9F309DFE2792658500EBF5E0 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		9F309E0127927CC600EBF5E0 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		9F309E0327927D4000EBF5E0 /* AddressManagmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressManagmentViewController.swift; sourceTree = "<group>"; };
+		9F309E0927928FDD00EBF5E0 /* FindPwdEmailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdEmailResponse.swift; sourceTree = "<group>"; };
+		9F309E0B27928FEC00EBF5E0 /* FindPwdEmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdEmailRequest.swift; sourceTree = "<group>"; };
+		9F309E0D279290B700EBF5E0 /* FindPwdPhoneRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdPhoneRequest.swift; sourceTree = "<group>"; };
+		9F309E0F279290D300EBF5E0 /* FindPwdPhoneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdPhoneResponse.swift; sourceTree = "<group>"; };
+		9F309E112792914300EBF5E0 /* ChangePwdRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwdRequest.swift; sourceTree = "<group>"; };
+		9F309E132792914E00EBF5E0 /* ChangePwdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwdResponse.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -356,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				9F2721B72790EAED00F85FA9 /* UserDataManager.swift */,
+				9F309E0627928F7E00EBF5E0 /* POST */,
 				9F2721BE2790FF6800F85FA9 /* GET */,
 				9F2721BD2790FF4E00F85FA9 /* PETCH */,
 			);
@@ -367,6 +384,8 @@
 			children = (
 				9F2721BF2790FF7C00F85FA9 /* NewUserRequest.swift */,
 				9F2721BB2790FEEE00F85FA9 /* NewUserReponse.swift */,
+				9F309E112792914300EBF5E0 /* ChangePwdRequest.swift */,
+				9F309E132792914E00EBF5E0 /* ChangePwdResponse.swift */,
 			);
 			path = PETCH;
 			sourceTree = "<group>";
@@ -419,6 +438,26 @@
 				9F309DF92792231300EBF5E0 /* ItemImgUrlCell.xib */,
 			);
 			path = Item;
+			sourceTree = "<group>";
+		};
+		9F309E0027927C8100EBF5E0 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9F309E0127927CC600EBF5E0 /* User.storyboard */,
+				9F309E0327927D4000EBF5E0 /* AddressManagmentViewController.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		9F309E0627928F7E00EBF5E0 /* POST */ = {
+			isa = PBXGroup;
+			children = (
+				9F309E0B27928FEC00EBF5E0 /* FindPwdEmailRequest.swift */,
+				9F309E0927928FDD00EBF5E0 /* FindPwdEmailResponse.swift */,
+				9F309E0D279290B700EBF5E0 /* FindPwdPhoneRequest.swift */,
+				9F309E0F279290D300EBF5E0 /* FindPwdPhoneResponse.swift */,
+			);
+			path = POST;
 			sourceTree = "<group>";
 		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
@@ -603,6 +642,7 @@
 		9F9D5DED278A05F600CC63FA /* MyKurly */ = {
 			isa = PBXGroup;
 			children = (
+				9F309E0027927C8100EBF5E0 /* UserInfo */,
 				9FA04373278D112000FCD2FE /* Cells */,
 				9FCC942D278A1AD4000493AD /* MyKurly.storyboard */,
 				9FA04383278D5E4E00FCD2FE /* MyKurlyViewController.swift */,
@@ -890,6 +930,7 @@
 				9F9C5926278BB126005D164C /* Product2Cell.xib in Resources */,
 				9F9C5908278B8B9F005D164C /* OtherProductsCell.xib in Resources */,
 				9F9C58FC278B7440005D164C /* NoSaleProductCell.xib in Resources */,
+				9F309E0227927CC600EBF5E0 /* User.storyboard in Resources */,
 				9F9C591A278B99A1005D164C /* RecipeCell.xib in Resources */,
 				9F9D5DD627895F3D00CC63FA /* Main.storyboard in Resources */,
 				9F9D5DFD278A09FE00CC63FA /* NotoSansCJKkr-Medium.otf in Resources */,
@@ -956,6 +997,7 @@
 				9F9D5E13278A0D5B00CC63FA /* UIViewController.swift in Sources */,
 				9F9D5DF6278A09B200CC63FA /* BaseViewController.swift in Sources */,
 				9F309DFA2792231300EBF5E0 /* ItemImgUrlCell.swift in Sources */,
+				9F309E0A27928FDD00EBF5E0 /* FindPwdEmailResponse.swift in Sources */,
 				9F27219E278FB25600F85FA9 /* CategoryChildCell.swift in Sources */,
 				9F9C58FF278B88CB005D164C /* OnlyBannerCell.swift in Sources */,
 				9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */,
@@ -967,6 +1009,7 @@
 				9F9C58ED278B5CF1005D164C /* BannerImgCell.swift in Sources */,
 				9FA04375278D113000FCD2FE /* MyKurlyCell.swift in Sources */,
 				9F9C5907278B8B9F005D164C /* OtherProductsCell.swift in Sources */,
+				9F309E142792914E00EBF5E0 /* ChangePwdResponse.swift in Sources */,
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
 				9F2721AA2790045700F85FA9 /* AllUserResponse.swift in Sources */,
 				9F2721BA2790EAFB00F85FA9 /* UserResponse.swift in Sources */,
@@ -988,6 +1031,7 @@
 				9FA04382278D12F900FCD2FE /* MyKurlyOnCell.swift in Sources */,
 				9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */,
 				9F9C58E1278B3F72005D164C /* SpecialPriceViewController.swift in Sources */,
+				9F309E0E279290B700EBF5E0 /* FindPwdPhoneRequest.swift in Sources */,
 				9F309DF6279222FD00EBF5E0 /* ItemInfoCell.swift in Sources */,
 				9F27219B278FAB7D00F85FA9 /* CategoryParentCell.swift in Sources */,
 				9F272199278F95C800F85FA9 /* CategoryRecommendCell.swift in Sources */,
@@ -995,12 +1039,14 @@
 				9F9D5E0D278A0D0C00CC63FA /* UIFont.swift in Sources */,
 				9FB51FD4278E9A2400DEF835 /* ExistSearchViewController.swift in Sources */,
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
+				9F309E0C27928FEC00EBF5E0 /* FindPwdEmailRequest.swift in Sources */,
 				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
 				9FA0437B278D11E800FCD2FE /* MyKurlyInfoCell.swift in Sources */,
 				9F2721BC2790FEEE00F85FA9 /* NewUserReponse.swift in Sources */,
 				9F2721A7278FCADE00F85FA9 /* CategoryDetailViewController.swift in Sources */,
 				9F309DDE27914D1100EBF5E0 /* TempViewController.swift in Sources */,
 				9F2721AC2790066F00F85FA9 /* AllUserDataManager.swift in Sources */,
+				9F309E10279290D300EBF5E0 /* FindPwdPhoneResponse.swift in Sources */,
 				9FCC943C278A1DF5000493AD /* ParentViewController.swift in Sources */,
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
 				9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */,
@@ -1010,6 +1056,7 @@
 				9FB51FBF278E82A700DEF835 /* SearchSubject3Cell.swift in Sources */,
 				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,
 				9F309DF327921E9A00EBF5E0 /* ShareViewController.swift in Sources */,
+				9F309E0427927D4000EBF5E0 /* AddressManagmentViewController.swift in Sources */,
 				9F9C58DF278B3F5D005D164C /* ThriftyShoppingViewController.swift in Sources */,
 				9F9D5E00278A0A1A00CC63FA /* IndicatorView.swift in Sources */,
 				9F2721B82790EAED00F85FA9 /* UserDataManager.swift in Sources */,
@@ -1027,6 +1074,7 @@
 				9F9D5E08278A0C0200CC63FA /* Date.swift in Sources */,
 				9F9D5E05278A0B0A00CC63FA /* Device.swift in Sources */,
 				9F9C58F7278B64C2005D164C /* ProductCell.swift in Sources */,
+				9F309E122792914300EBF5E0 /* ChangePwdRequest.swift in Sources */,
 				9FA0437D278D126200FCD2FE /* BannerCell.swift in Sources */,
 				9F9D5E15278A0F7500CC63FA /* LoginDataManager.swift in Sources */,
 				9F309DFF2792658500EBF5E0 /* CALayer.swift in Sources */,
