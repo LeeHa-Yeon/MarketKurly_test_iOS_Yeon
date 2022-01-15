@@ -14,12 +14,32 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     let reviewCnt: Int? = nil
     
     // MARK: - Components
-
+    @IBOutlet weak var fixView: UIView!
+    @IBOutlet weak var heartBtn: UIButton!
+    @IBOutlet weak var buyBtn: UIButton!
+    
+    @IBAction func backBtnTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func heartBtnTapped(_ sender: UIButton!) {
+        sender.isSelected.toggle()
+    }
+    @IBAction func buyBtnTapped(_ sender: Any) {
+        // TODO: 구매하기 
+    }
+    
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         setUI()
         
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.view.bringSubviewToFront(self.fixView)
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -48,6 +68,8 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
         customNavigationBarAttribute(.white, .black)
         self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "아이템이름")
         customBtnBar()
+        customButton(heartBtn, cornerValue: 5, btnBorderColor: UIColor.lightGray, btnBorderWidth: 1)
+        customButton(buyBtn, cornerValue: 5, btnBorderColor: nil, btnBorderWidth: nil)
     }
     
     /* API 해당 부분 */
@@ -55,6 +77,7 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     func setData(){
         
     }
+    
     
     func customBtnBar(){
         

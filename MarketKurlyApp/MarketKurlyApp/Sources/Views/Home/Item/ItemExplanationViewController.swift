@@ -66,17 +66,20 @@ extension ItemExplanationViewController: UITableViewDataSource, UITableViewDeleg
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemMainCell", for: indexPath) as? ItemMainCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             cell.delegate = self
             return cell
         case 1 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemInfoCell", for: indexPath) as? ItemInfoCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         case 2 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemImgUrlCell", for: indexPath) as? ItemImgUrlCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         default :
             return UITableViewCell()
