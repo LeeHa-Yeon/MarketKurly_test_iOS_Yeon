@@ -87,16 +87,7 @@ extension ItemExplanationViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0 :
-            return 700
-        case 1 :
-            return 300
-        case 2 :
-            return 1500
-        default :
-            return 0
-        }
+        return UITableView.automaticDimension
     }
 }
 

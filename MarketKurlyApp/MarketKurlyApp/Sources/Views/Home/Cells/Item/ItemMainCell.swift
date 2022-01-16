@@ -20,6 +20,8 @@ class ItemMainCell: UITableViewCell {
     @IBOutlet weak var userLevelLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
     
+    @IBOutlet weak var couponButton: UIButton!
+    
     @IBAction func shareBtnTapped(_ sender: Any) {
         self.delegate?.moveToVC()
     }
@@ -28,6 +30,7 @@ class ItemMainCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         urlToImg()
+        setUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,6 +38,13 @@ class ItemMainCell: UITableViewCell {
     }
     
     // MARK: - Functions
+    
+    func setUI(){
+        couponButton.layer.borderWidth = 1
+        couponButton.layer.borderColor = UIColor.mainKurlyPurple.cgColor
+        couponButton.layer.cornerRadius = 5
+    }
+    
     func urlToImg(){
         if let url: URL = URL(string: "https://i.postimg.cc/zvtZm349/1.png" ){
             itemImg.kf.indicatorType = .activity

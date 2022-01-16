@@ -19,7 +19,8 @@ class NewAddressViewController: UIViewController {
     
     // MARK: - Functions
     func setUI(){
-        
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
 
 }

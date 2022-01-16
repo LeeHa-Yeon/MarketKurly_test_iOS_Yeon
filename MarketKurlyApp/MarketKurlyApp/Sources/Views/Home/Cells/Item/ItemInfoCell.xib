@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemInfoCell" rowHeight="379" id="KGk-i7-Jjw" customClass="ItemInfoCell" customModule="MarketKurlyApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="391" height="379"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemInfoCell" rowHeight="405" id="KGk-i7-Jjw" customClass="ItemInfoCell" customModule="MarketKurlyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="405"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="391" height="379"/>
+                <rect key="frame" x="0.0" y="0.0" width="391" height="405"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0Xz-RM-gbk">
-                        <rect key="frame" x="20" y="70" width="351" height="298"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Xz-RM-gbk">
+                        <rect key="frame" x="20" y="65" width="351" height="329"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kgw-qe-cOx">
                                 <rect key="frame" x="0.0" y="0.0" width="351" height="17"/>
@@ -42,7 +42,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c4u-I8-c6C">
-                                <rect key="frame" x="0.0" y="30" width="351" height="17"/>
+                                <rect key="frame" x="0.0" y="35.5" width="351" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중량/용량" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="api-Tf-CCE">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="17"/>
@@ -62,7 +62,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WeW-SX-Z8F">
-                                <rect key="frame" x="0.0" y="60.5" width="351" height="17"/>
+                                <rect key="frame" x="0.0" y="70.5" width="351" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배송구분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcj-dg-QMD">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="17"/>
@@ -82,7 +82,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qTF-BE-eq6">
-                                <rect key="frame" x="0.0" y="90.5" width="351" height="17"/>
+                                <rect key="frame" x="0.0" y="106" width="351" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원산지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dt-dR-SR2">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="17"/>
@@ -102,7 +102,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GFz-8w-4rB">
-                                <rect key="frame" x="0.0" y="120.5" width="351" height="17"/>
+                                <rect key="frame" x="0.0" y="141.5" width="351" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포장타입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKD-EK-WCh">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="17"/>
@@ -122,7 +122,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nUu-0n-jFv">
-                                <rect key="frame" x="0.0" y="151" width="351" height="33.5"/>
+                                <rect key="frame" x="0.0" y="176.5" width="351" height="33.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="유통기한" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tET-f1-tpn">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="33.5"/>
@@ -142,9 +142,9 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ac6-uV-UC0">
-                                <rect key="frame" x="0.0" y="197.5" width="351" height="100.5"/>
+                                <rect key="frame" x="0.0" y="228.5" width="351" height="100.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안내사항" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agf-Uk-4gl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안내사항" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agf-Uk-4gl">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="100.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="nNp-Dz-s8s"/>
@@ -183,7 +183,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="0Xz-RM-gbk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="5Sr-7j-jhw"/>
-                    <constraint firstItem="0Xz-RM-gbk" firstAttribute="top" secondItem="XVx-FA-IpU" secondAttribute="bottom" constant="20" id="ADd-cP-48a"/>
+                    <constraint firstItem="0Xz-RM-gbk" firstAttribute="top" secondItem="XVx-FA-IpU" secondAttribute="bottom" constant="15" id="ADd-cP-48a"/>
                     <constraint firstAttribute="trailing" secondItem="XVx-FA-IpU" secondAttribute="trailing" id="AXX-Ya-R5c"/>
                     <constraint firstAttribute="trailingMargin" secondItem="0Xz-RM-gbk" secondAttribute="trailing" id="WNL-a0-8Vn"/>
                     <constraint firstAttribute="bottomMargin" secondItem="0Xz-RM-gbk" secondAttribute="bottom" id="WzM-ch-MN8"/>
@@ -192,7 +192,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="189.13043478260872" y="228.68303571428569"/>
+            <point key="canvasLocation" x="189.13043478260872" y="237.38839285714283"/>
         </tableViewCell>
     </objects>
     <resources>

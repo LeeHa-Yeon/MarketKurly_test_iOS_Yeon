@@ -115,13 +115,14 @@ class SignUpViewController: UIViewController {
         setUI()
         dismissKeyboardWhenTappedAround()
         editTextField()
-        self.navigationController?.navigationItem.hidesBackButton = false
-        self.navigationController?.navigationItem.backButtonTitle = ""
+        
     }
     
     
     // MARK: - Functions
     func setUI(){
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
         self.title = "회원가입"
         customButton(idConfirmBtn, cornerValue: 5, btnBorderColor: UIColor.mainKurlyPurple, btnBorderWidth: 1)
         customButton(phoneNumConfirmBtn, cornerValue: 5, btnBorderColor: UIColor.lightGray, btnBorderWidth: 1)

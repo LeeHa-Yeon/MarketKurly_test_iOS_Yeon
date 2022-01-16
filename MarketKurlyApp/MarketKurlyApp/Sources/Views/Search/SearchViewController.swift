@@ -32,6 +32,7 @@ class SearchViewController: UIViewController {
     func setUI(){
         searchTextField.layer.cornerRadius = 5
         self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "검색")
+        customNaviBarItem(btnColor: .white, naviItem: self.navigationItem)
         
     }
     

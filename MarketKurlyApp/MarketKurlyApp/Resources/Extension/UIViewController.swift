@@ -119,6 +119,7 @@ extension UIViewController {
     
     // MARK: 네비게이션바 마켓컬리 색상으로 변경
     func bgKurlyColor(_ navi: UINavigationController,_ naviItem: UINavigationItem , title: String){
+        print("색상이변경이왜안되는데..")
         navi.navigationBar.barTintColor = UIColor.mainKurlyPurple
         navi.navigationBar.isTranslucent = false
         navi.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -194,6 +195,44 @@ extension UIViewController {
     }
     
     
+    func customNaviBarItem2(btnColor: UIColor, naviItem: UINavigationItem){
+
+        lazy var cartRightBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 10)).then {
+            $0.setImage(UIImage(systemName: "cart"), for: .normal)
+            $0.tintColor = btnColor
+            $0.addTarget(self, action: #selector(self.cartBarBtnTapped(_:)), for: .touchUpInside)
+        }
+        let rightBarBtnItem = UIBarButtonItem(customView: cartRightBtn)
+        naviItem.rightBarButtonItems = [rightBarBtnItem]
+    }
+    
+    func dismissArrowBtn(btnColor: UIColor, naviItem: UINavigationItem){
+        let icon = UIImage(named: "arrow")
+        let iconSize = CGRect(origin: CGPoint.zero, size: CGSize(width: 5, height: 5))
+        let iconButton = UIButton(type: .system)
+        iconButton.frame = iconSize
+        iconButton.setBackgroundImage(icon, for: .normal)
+        let barButton = UIBarButtonItem(customView: iconButton)
+        iconButton.addTarget(self, action: #selector(addressBarBtnTapped(_:)), for: .touchUpInside)
+
+        navigationItem.leftBarButtonItem = barButton
+        
+        
+//        lazy var arrowLeftBtn = UIButton().then {
+//            $0.setImage(UIImage(named: "arrow"), for: .normal)
+//            $0.tintColor = btnColor
+//            $0.imageView?.contentMode = .scaleAspectFit
+//            $0.addTarget(self, action: #selector(self.cartBarBtnTapped(_:)), for: .touchUpInside)
+//            $0.frame = CGRect(x: 0, y: 0, width: 5, height: 5)
+//        }
+//        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: self, action: nil)
+//        space.width = 15
+//        let leftBarBtnItem = UIBarButtonItem(customView: arrowLeftBtn)
+//        naviItem.leftBarButtonItems = [leftBarBtnItem]
+    }
+    
+    
+    
     @objc func addressBarBtnTapped(_ sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Address", bundle: nil)
         let ModalAddressVC = storyboard.instantiateViewController(identifier: "ModalAddressSB")
@@ -202,7 +241,18 @@ extension UIViewController {
     }
     
     @objc func cartBarBtnTapped(_ sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Cart", bundle: nil)
+        let ModalAddressVC = storyboard.instantiateViewController(identifier: "CartSB")
+        ModalAddressVC.modalPresentationStyle = .fullScreen
+        present(ModalAddressVC, animated: true, completion: nil)
         
     }
+    
+    // MARK: - 네비게이션 타이틀 없애기
+    func naviTitleDelete(navi: UINavigationController){
+        navi.navigationBar.tintColor = .black
+        navi.navigationBar.topItem?.title = ""
+    }
+    
     
 }

@@ -24,7 +24,9 @@ class MyKurlyViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         customNavigationBarAttribute(UIColor.mainKurlyPurple, .white)
+        customNaviBarItem(btnColor: .white, naviItem: self.navigationItem)
         setUI()
+        
     }
     
     //MARK: - Functions

@@ -136,6 +136,16 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.section == 4 {
+            if indexPath.row == 0 {
+                let storyboard = UIStoryboard(name: "Address", bundle: nil)
+                let AddressVC = storyboard.instantiateViewController(identifier: "AddressManagmentSB")
+                AddressVC.modalPresentationStyle = .fullScreen
+                self.present(AddressVC, animated: true, completion: nil)
+            }
+        }
+        
         if indexPath.section == 7 {
             UserDefaults.standard.set("", forKey: Constant.jwtName)
             UserDefaults.standard.set(0, forKey: Constant.userIdxName)

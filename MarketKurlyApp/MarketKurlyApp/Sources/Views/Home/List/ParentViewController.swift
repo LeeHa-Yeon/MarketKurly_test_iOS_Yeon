@@ -14,9 +14,15 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
-        setUI()
         UserDefaults.standard.set(false, forKey: Constant.loginStatusName)
+        customBtnBar()
+        setUI()
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        setUI()
+        super.viewWillAppear(true)
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -43,8 +49,8 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
     
     // MARK: - Function
     func setUI(){
+        print("왜안먹는뎅...")
         self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "마켓컬리")
-        customBtnBar()
         customNaviBarItem(btnColor: .white, naviItem: self.navigationItem)
     }
     

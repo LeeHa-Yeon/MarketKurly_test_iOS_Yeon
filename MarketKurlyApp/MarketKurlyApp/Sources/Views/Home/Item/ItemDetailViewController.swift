@@ -18,28 +18,37 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     @IBOutlet weak var heartBtn: UIButton!
     @IBOutlet weak var buyBtn: UIButton!
     
-    @IBAction func backBtnTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func heartBtnTapped(_ sender: UIButton!) {
         sender.isSelected.toggle()
     }
     @IBAction func buyBtnTapped(_ sender: Any) {
         // TODO: 구매하기 
     }
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+//        self.navigationController?.popViewController(animated: true)
+    }
     
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         setUI()
-        
+        customNaviBarItem2(btnColor: .black, naviItem: self.navigationItem)
         super.viewDidLoad()
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.view.bringSubviewToFront(self.fixView)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+        super.viewWillDisappear(true)
+
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -65,6 +74,8 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     
     // MARK: - Function
     func setUI(){
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
         customNavigationBarAttribute(.white, .black)
         self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "아이템이름")
         customBtnBar()

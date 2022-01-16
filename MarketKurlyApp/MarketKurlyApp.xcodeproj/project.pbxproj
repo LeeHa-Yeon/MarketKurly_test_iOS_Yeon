@@ -50,6 +50,8 @@
 		9F309E142792914E00EBF5E0 /* ChangePwdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E132792914E00EBF5E0 /* ChangePwdResponse.swift */; };
 		9F489F632794031700E04879 /* HalfModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F622794031700E04879 /* HalfModalPresentationController.swift */; };
 		9F489F652794041E00E04879 /* ModalAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F642794041E00E04879 /* ModalAddressViewController.swift */; };
+		9F489F6727941E3A00E04879 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F6627941E3A00E04879 /* CartViewController.swift */; };
+		9F489F692794AF7400E04879 /* AddressDetailMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F682794AF7400E04879 /* AddressDetailMoreViewController.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -200,6 +202,8 @@
 		9F309E132792914E00EBF5E0 /* ChangePwdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwdResponse.swift; sourceTree = "<group>"; };
 		9F489F622794031700E04879 /* HalfModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalPresentationController.swift; sourceTree = "<group>"; };
 		9F489F642794041E00E04879 /* ModalAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddressViewController.swift; sourceTree = "<group>"; };
+		9F489F6627941E3A00E04879 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		9F489F682794AF7400E04879 /* AddressDetailMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDetailMoreViewController.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -831,6 +835,7 @@
 				9FC61BEE2792AB8F007AC4A7 /* NewAddressViewController.swift */,
 				9FC61BF02792AB9D007AC4A7 /* NewDetailAddressViewController.swift */,
 				9F489F642794041E00E04879 /* ModalAddressViewController.swift */,
+				9F489F682794AF7400E04879 /* AddressDetailMoreViewController.swift */,
 			);
 			path = Address;
 			sourceTree = "<group>";
@@ -839,6 +844,7 @@
 			isa = PBXGroup;
 			children = (
 				9FC61BF42792BB3D007AC4A7 /* Cart.storyboard */,
+				9F489F6627941E3A00E04879 /* CartViewController.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -1090,6 +1096,7 @@
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
 				9F309E0C27928FEC00EBF5E0 /* FindPwdEmailRequest.swift in Sources */,
 				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
+				9F489F6727941E3A00E04879 /* CartViewController.swift in Sources */,
 				9FA0437B278D11E800FCD2FE /* MyKurlyInfoCell.swift in Sources */,
 				9FC61BED2792AB63007AC4A7 /* ModifyAddressViewController.swift in Sources */,
 				9F2721BC2790FEEE00F85FA9 /* NewUserReponse.swift in Sources */,
@@ -1104,6 +1111,7 @@
 				9F272197278F95A100F85FA9 /* CategoryListCell.swift in Sources */,
 				9FB51FCE278E979100DEF835 /* SearchResultViewController.swift in Sources */,
 				9F309DE82791F4DF00EBF5E0 /* ItemDetailInfoViewController.swift in Sources */,
+				9F489F692794AF7400E04879 /* AddressDetailMoreViewController.swift in Sources */,
 				9FB51FBF278E82A700DEF835 /* SearchSubject3Cell.swift in Sources */,
 				9FC61BEF2792AB8F007AC4A7 /* NewAddressViewController.swift in Sources */,
 				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,

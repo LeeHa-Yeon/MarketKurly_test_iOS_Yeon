@@ -10,6 +10,8 @@ import UIKit
 class ModifyAddressViewController: UIViewController {
 
     // MARK: - Components
+    @IBOutlet weak var saveBtn: UIButton!
+    @IBOutlet weak var deleteBtn: UIButton!
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -19,6 +21,10 @@ class ModifyAddressViewController: UIViewController {
     
     // MARK: - Functions
     func setUI(){
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
+        customButton(saveBtn, cornerValue: 5, btnBorderColor: nil, btnBorderWidth: nil)
+        customButton(deleteBtn, cornerValue: 5, btnBorderColor: UIColor.lineColor, btnBorderWidth: 1)
         
     }
 }

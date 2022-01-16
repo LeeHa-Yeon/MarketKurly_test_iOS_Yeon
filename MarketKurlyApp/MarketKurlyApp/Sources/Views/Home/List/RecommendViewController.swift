@@ -34,6 +34,10 @@ class RecommendViewController: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
         setUI()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidLoad()
+    }
+        
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -268,6 +272,11 @@ extension RecommendViewController: ItemDetailViewControllerDelegate {
         let storyboard = UIStoryboard(name: "Item", bundle: nil)
         let ItemDetailVC = storyboard.instantiateViewController(identifier: "ItemDetailSB")
         ItemDetailVC.modalPresentationStyle = .fullScreen
+//        let backBarButtonItem = UIBarButtonItem(title: "k", style: .plain, target: self, action: nil)
+//        backBarButtonItem.tintColor = .black
+//        self.navigationItem.backBarButtonItem = backBarButtonItem
+        
+//        self.navigationController?.pushViewController(ItemDetailVC, animated: true)
         self.present(ItemDetailVC, animated: true, completion: nil)
         
 //

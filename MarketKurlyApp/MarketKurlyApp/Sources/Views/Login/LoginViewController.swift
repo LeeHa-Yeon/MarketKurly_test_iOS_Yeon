@@ -86,9 +86,11 @@ class LoginViewController: BaseViewController {
         
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         customNavigationBarAttribute(.white, .black)
+        self.title = "로그인"
     }
     
     //MARK: - Functions
