@@ -88,7 +88,7 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate  {
         case 1 :
             return 1100
         default :
-            return 1500
+            return UITableView.automaticDimension
         }
     }
     

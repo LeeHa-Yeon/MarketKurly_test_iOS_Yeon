@@ -5,6 +5,7 @@ PODS:
   - GMStepper (2.2)
   - GSMessages (1.7.5)
   - Kingfisher (7.1.2)
+  - Then (2.7.0)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - GMStepper
   - GSMessages
   - Kingfisher
+  - Then
   - XLPagerTabStrip
 
 SPEC REPOS:
@@ -24,6 +26,7 @@ SPEC REPOS:
     - GMStepper
     - GSMessages
     - Kingfisher
+    - Then
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
@@ -33,8 +36,9 @@ SPEC CHECKSUMS:
   GMStepper: 89fb106944dfcc3aa3add7164e3ebd463ea2104b
   GSMessages: ff0397d30b804fa38c6026fb080b8ad6f7454ab6
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 8d87fcf246f9125777038405915c2e8317c12e86
+PODFILE CHECKSUM: 25eb5ebf422bf153a5847f6bce6d41950666cc6e
 
 COCOAPODS: 1.11.2

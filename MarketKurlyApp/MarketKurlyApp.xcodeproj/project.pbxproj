@@ -48,6 +48,8 @@
 		9F309E10279290D300EBF5E0 /* FindPwdPhoneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E0F279290D300EBF5E0 /* FindPwdPhoneResponse.swift */; };
 		9F309E122792914300EBF5E0 /* ChangePwdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E112792914300EBF5E0 /* ChangePwdRequest.swift */; };
 		9F309E142792914E00EBF5E0 /* ChangePwdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309E132792914E00EBF5E0 /* ChangePwdResponse.swift */; };
+		9F489F632794031700E04879 /* HalfModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F622794031700E04879 /* HalfModalPresentationController.swift */; };
+		9F489F652794041E00E04879 /* ModalAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F642794041E00E04879 /* ModalAddressViewController.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -133,6 +135,7 @@
 		9FC61BEF2792AB8F007AC4A7 /* NewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC61BEE2792AB8F007AC4A7 /* NewAddressViewController.swift */; };
 		9FC61BF12792AB9D007AC4A7 /* NewDetailAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC61BF02792AB9D007AC4A7 /* NewDetailAddressViewController.swift */; };
 		9FC61BF52792BB3D007AC4A7 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC61BF42792BB3D007AC4A7 /* Cart.storyboard */; };
+		9FC61BF827939EB9007AC4A7 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC61BF727939EB9007AC4A7 /* Order.storyboard */; };
 		9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */; };
 		9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC942D278A1AD4000493AD /* MyKurly.storyboard */; };
 		9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9431278A1C8D000493AD /* Category.storyboard */; };
@@ -195,6 +198,8 @@
 		9F309E0F279290D300EBF5E0 /* FindPwdPhoneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdPhoneResponse.swift; sourceTree = "<group>"; };
 		9F309E112792914300EBF5E0 /* ChangePwdRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwdRequest.swift; sourceTree = "<group>"; };
 		9F309E132792914E00EBF5E0 /* ChangePwdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePwdResponse.swift; sourceTree = "<group>"; };
+		9F489F622794031700E04879 /* HalfModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalPresentationController.swift; sourceTree = "<group>"; };
+		9F489F642794041E00E04879 /* ModalAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAddressViewController.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +287,7 @@
 		9FC61BEE2792AB8F007AC4A7 /* NewAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAddressViewController.swift; sourceTree = "<group>"; };
 		9FC61BF02792AB9D007AC4A7 /* NewDetailAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailAddressViewController.swift; sourceTree = "<group>"; };
 		9FC61BF42792BB3D007AC4A7 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
+		9FC61BF727939EB9007AC4A7 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMemberMyKurlyViewController.swift; sourceTree = "<group>"; };
 		9FCC942D278A1AD4000493AD /* MyKurly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyKurly.storyboard; sourceTree = "<group>"; };
 		9FCC9431278A1C8D000493AD /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
@@ -451,6 +457,7 @@
 		9F309E0027927C8100EBF5E0 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				9FC61BF627939EA9007AC4A7 /* Order */,
 				9FC61BF32792BB2A007AC4A7 /* Cart */,
 				9FC61BF22792BB1C007AC4A7 /* Address */,
 			);
@@ -708,6 +715,7 @@
 				9F9D5E12278A0D5B00CC63FA /* UIViewController.swift */,
 				9FB51FA8278D904A00DEF835 /* UITextField.swift */,
 				9F309DFE2792658500EBF5E0 /* CALayer.swift */,
+				9F489F622794031700E04879 /* HalfModalPresentationController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -822,6 +830,7 @@
 				9FC61BEC2792AB63007AC4A7 /* ModifyAddressViewController.swift */,
 				9FC61BEE2792AB8F007AC4A7 /* NewAddressViewController.swift */,
 				9FC61BF02792AB9D007AC4A7 /* NewDetailAddressViewController.swift */,
+				9F489F642794041E00E04879 /* ModalAddressViewController.swift */,
 			);
 			path = Address;
 			sourceTree = "<group>";
@@ -832,6 +841,14 @@
 				9FC61BF42792BB3D007AC4A7 /* Cart.storyboard */,
 			);
 			path = Cart;
+			sourceTree = "<group>";
+		};
+		9FC61BF627939EA9007AC4A7 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				9FC61BF727939EB9007AC4A7 /* Order.storyboard */,
+			);
+			path = Order;
 			sourceTree = "<group>";
 		};
 		9FCC942F278A1C6D000493AD /* Category */ = {
@@ -941,6 +958,7 @@
 				9FCC9451278A6D97000493AD /* SignUp.storyboard in Resources */,
 				9F9C591E278B9DB6005D164C /* SpecialProductCell.xib in Resources */,
 				9F309DFB2792231300EBF5E0 /* ItemImgUrlCell.xib in Resources */,
+				9FC61BF827939EB9007AC4A7 /* Order.storyboard in Resources */,
 				9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */,
 				9F9C5916278B97BF005D164C /* RecipeListCell.xib in Resources */,
 				9F9D5DDB27895F4000CC63FA /* LaunchScreen.storyboard in Resources */,
@@ -1026,6 +1044,7 @@
 				9F9D5E13278A0D5B00CC63FA /* UIViewController.swift in Sources */,
 				9F9D5DF6278A09B200CC63FA /* BaseViewController.swift in Sources */,
 				9F309DFA2792231300EBF5E0 /* ItemImgUrlCell.swift in Sources */,
+				9F489F652794041E00E04879 /* ModalAddressViewController.swift in Sources */,
 				9F309E0A27928FDD00EBF5E0 /* FindPwdEmailResponse.swift in Sources */,
 				9F27219E278FB25600F85FA9 /* CategoryChildCell.swift in Sources */,
 				9F9C58FF278B88CB005D164C /* OnlyBannerCell.swift in Sources */,
@@ -1060,6 +1079,7 @@
 				9FA04382278D12F900FCD2FE /* MyKurlyOnCell.swift in Sources */,
 				9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */,
 				9F9C58E1278B3F72005D164C /* SpecialPriceViewController.swift in Sources */,
+				9F489F632794031700E04879 /* HalfModalPresentationController.swift in Sources */,
 				9F309E0E279290B700EBF5E0 /* FindPwdPhoneRequest.swift in Sources */,
 				9F309DF6279222FD00EBF5E0 /* ItemInfoCell.swift in Sources */,
 				9F27219B278FAB7D00F85FA9 /* CategoryParentCell.swift in Sources */,

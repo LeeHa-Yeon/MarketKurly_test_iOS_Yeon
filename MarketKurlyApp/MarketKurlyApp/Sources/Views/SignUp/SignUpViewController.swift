@@ -115,7 +115,10 @@ class SignUpViewController: UIViewController {
         setUI()
         dismissKeyboardWhenTappedAround()
         editTextField()
+        self.navigationController?.navigationItem.hidesBackButton = false
+        self.navigationController?.navigationItem.backButtonTitle = ""
     }
+    
     
     // MARK: - Functions
     func setUI(){

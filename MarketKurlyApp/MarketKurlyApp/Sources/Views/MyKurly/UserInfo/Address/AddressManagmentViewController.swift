@@ -9,10 +9,17 @@ import UIKit
 
 class AddressManagmentViewController: UIViewController {
     
+    // MARK: - Components
     
-
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
+    }
+    
+    // MARK: - Functions
+    func setUI(){
+        
     }
     
 }

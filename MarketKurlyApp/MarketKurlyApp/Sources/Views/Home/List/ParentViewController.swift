@@ -45,7 +45,9 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
     func setUI(){
         self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "마켓컬리")
         customBtnBar()
+        customNaviBarItem(btnColor: .white, naviItem: self.navigationItem)
     }
+    
     
     func customBtnBar(){
         

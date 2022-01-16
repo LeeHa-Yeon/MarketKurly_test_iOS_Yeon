@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import Kingfisher
+import Then
 
 extension UIViewController {
     // MARK: 빈 화면을 눌렀을 때 키보드가 내려가도록 처리
@@ -169,6 +170,39 @@ extension UIViewController {
             img.kf.indicatorType = .activity
             img.kf.setImage(with:url)
         }
+    }
+    
+    func customNaviBarItem(btnColor: UIColor, naviItem: UINavigationItem){
+
+        lazy var mapLeftBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 10)).then {
+            $0.setImage(UIImage(systemName: "map"), for: .normal)
+            $0.tintColor = btnColor
+            $0.addTarget(self, action: #selector(self.addressBarBtnTapped(_:)), for: .touchUpInside)
+        }
+        lazy var cartRightBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 10)).then {
+            $0.setImage(UIImage(systemName: "cart"), for: .normal)
+            $0.tintColor = btnColor
+            $0.addTarget(self, action: #selector(self.cartBarBtnTapped(_:)), for: .touchUpInside)
+        }
+        let leftBarBtnItem = UIBarButtonItem(customView: mapLeftBtn)
+        let rightBarBtnItem = UIBarButtonItem(customView: cartRightBtn)
+        
+        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: self, action: nil)
+        space.width = 15
+        naviItem.rightBarButtonItems = [rightBarBtnItem,space,leftBarBtnItem]
+        
+    }
+    
+    
+    @objc func addressBarBtnTapped(_ sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Address", bundle: nil)
+        let ModalAddressVC = storyboard.instantiateViewController(identifier: "ModalAddressSB")
+//        ModalAddressVC.modalPresentationStyle = .custom
+        present(ModalAddressVC, animated: true, completion: nil)
+    }
+    
+    @objc func cartBarBtnTapped(_ sender: AnyObject) {
+        
     }
     
 }
