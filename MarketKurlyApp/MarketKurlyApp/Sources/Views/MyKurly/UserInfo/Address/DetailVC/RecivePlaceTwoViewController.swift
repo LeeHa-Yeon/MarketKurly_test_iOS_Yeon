@@ -1,5 +1,5 @@
 //
-//  AddressDetailMoreViewController.swift
+//  RecivePlaceTwoViewController.swift
 //  MarketKurlyApp
 //
 //  Created by 이하연 on 2022/01/17.
@@ -7,8 +7,7 @@
 
 import UIKit
 
-class AddressDetailMoreViewController: UIViewController {
-
+class RecivePlaceTwoViewController: UIViewController {
     // MARK: - Components
         
         // MARK: - LifeCycle
@@ -19,7 +18,6 @@ class AddressDetailMoreViewController: UIViewController {
         
         // MARK: - Functions
         func setUI(){
-            naviTitleDelete(navi: self.navigationController!)
+            
         }
-
 }
