@@ -1012,7 +1012,7 @@
                                                         <rect key="frame" x="20" y="10" width="374" height="80"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="goN-qG-Fzs">
-                                                                <rect key="frame" x="0.0" y="0.0" width="148" height="20.5"/>
+                                                                <rect key="frame" x="5" y="0.0" width="148" height="20.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배송 완료 메시지 전송" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poU-Bw-tl9">
                                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="20.5"/>
@@ -1082,7 +1082,7 @@
                                                             <constraint firstItem="WJO-vE-xXc" firstAttribute="leading" secondItem="Pez-Nh-Nif" secondAttribute="leading" constant="10" id="IPu-du-XJA"/>
                                                             <constraint firstItem="goN-qG-Fzs" firstAttribute="top" secondItem="Pez-Nh-Nif" secondAttribute="top" id="QLr-W1-Tk4"/>
                                                             <constraint firstAttribute="height" constant="80" id="Rwz-tV-uc9"/>
-                                                            <constraint firstItem="goN-qG-Fzs" firstAttribute="leading" secondItem="Pez-Nh-Nif" secondAttribute="leading" id="cqV-HJ-EtD"/>
+                                                            <constraint firstItem="goN-qG-Fzs" firstAttribute="leading" secondItem="Pez-Nh-Nif" secondAttribute="leading" constant="5" id="cqV-HJ-EtD"/>
                                                             <constraint firstItem="WJO-vE-xXc" firstAttribute="top" secondItem="goN-qG-Fzs" secondAttribute="bottom" constant="10" id="eQE-yH-PhR"/>
                                                         </constraints>
                                                     </view>
@@ -1156,7 +1156,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Q7u-ZV-y3a">
-                                <rect key="frame" x="20" y="54" width="128.5" height="20.5"/>
+                                <rect key="frame" x="25" y="54" width="128.5" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공동현관 출입방법" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ed-gO-jRd">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
@@ -1277,7 +1277,7 @@
                             <constraint firstItem="nZ2-ZP-Siz" firstAttribute="top" secondItem="kef-7m-f3A" secondAttribute="bottom" constant="15" id="TgV-Eo-pjM"/>
                             <constraint firstAttribute="trailing" secondItem="kef-7m-f3A" secondAttribute="trailing" constant="20" id="p8I-vS-O26"/>
                             <constraint firstItem="kef-7m-f3A" firstAttribute="leading" secondItem="UBA-QA-JuI" secondAttribute="leading" constant="20" id="xCN-54-LKu"/>
-                            <constraint firstItem="Q7u-ZV-y3a" firstAttribute="leading" secondItem="UBA-QA-JuI" secondAttribute="leadingMargin" id="yoG-Au-qqR"/>
+                            <constraint firstItem="Q7u-ZV-y3a" firstAttribute="leading" secondItem="UBA-QA-JuI" secondAttribute="leadingMargin" constant="5" id="yoG-Au-qqR"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -1342,7 +1342,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xwy-qR-iWO">
-                                <rect key="frame" x="20" y="54" width="88.5" height="20.5"/>
+                                <rect key="frame" x="25" y="54" width="88.5" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="택배함 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-dI-tJW">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="20.5"/>
@@ -1362,7 +1362,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="택배함 위치/ 택배함 번호 ・ 비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vor-m4-9qb">
-                                <rect key="frame" x="20" y="84.5" width="374" height="50"/>
+                                <rect key="frame" x="25" y="84.5" width="369" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UCQ-8G-Pm7"/>
                                 </constraints>
@@ -1379,9 +1379,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xwy-qR-iWO" firstAttribute="top" secondItem="xnd-lO-TLm" secondAttribute="topMargin" constant="10" id="PbT-Ti-odr"/>
-                            <constraint firstItem="xwy-qR-iWO" firstAttribute="leading" secondItem="xnd-lO-TLm" secondAttribute="leadingMargin" id="Sak-sU-va1"/>
+                            <constraint firstItem="xwy-qR-iWO" firstAttribute="leading" secondItem="xnd-lO-TLm" secondAttribute="leadingMargin" constant="5" id="Sak-sU-va1"/>
                             <constraint firstItem="Vor-m4-9qb" firstAttribute="top" secondItem="xwy-qR-iWO" secondAttribute="bottom" constant="10" id="UaX-mm-nu2"/>
-                            <constraint firstItem="Vor-m4-9qb" firstAttribute="leading" secondItem="xnd-lO-TLm" secondAttribute="leadingMargin" id="XWD-TK-0wH"/>
+                            <constraint firstItem="Vor-m4-9qb" firstAttribute="leading" secondItem="xnd-lO-TLm" secondAttribute="leadingMargin" constant="5" id="XWD-TK-0wH"/>
                             <constraint firstItem="Vy4-YE-adE" firstAttribute="leading" secondItem="xnd-lO-TLm" secondAttribute="leadingMargin" id="cd1-Bf-V2n"/>
                             <constraint firstItem="Vy4-YE-adE" firstAttribute="top" secondItem="Vor-m4-9qb" secondAttribute="bottom" constant="10" id="nL5-6s-AIG"/>
                             <constraint firstItem="Vor-m4-9qb" firstAttribute="trailing" secondItem="xnd-lO-TLm" secondAttribute="trailingMargin" id="tnA-T4-JFX"/>
@@ -1401,7 +1401,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="예: 계단 밑, 주택단지 앞 경비초소를 지나 A동 출입구  (배송 시간은 별도로 지정할 수 없습니다.)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZM4-RV-X6S">
-                                <rect key="frame" x="20" y="84.5" width="374" height="80"/>
+                                <rect key="frame" x="25" y="84.5" width="369" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Inc-lc-z0O"/>
                                 </constraints>
@@ -1409,7 +1409,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zL5-iI-Tgr">
-                                <rect key="frame" x="20" y="54" width="138.5" height="20.5"/>
+                                <rect key="frame" x="25" y="54" width="138.5" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기타 장소 세부 사항" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyG-LP-YC0">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
@@ -1429,7 +1429,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarm5" translatesAutoresizingMaskIntoConstraints="NO" id="xhm-5I-g3D">
-                                <rect key="frame" x="20" y="184.5" width="374" height="220"/>
+                                <rect key="frame" x="25" y="184.5" width="369" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="KRd-GQ-trE"/>
                                 </constraints>
@@ -1439,10 +1439,10 @@
                         <constraints>
                             <constraint firstItem="zL5-iI-Tgr" firstAttribute="top" secondItem="l3D-ju-hZf" secondAttribute="topMargin" constant="10" id="Bhh-h2-bcb"/>
                             <constraint firstItem="xhm-5I-g3D" firstAttribute="top" secondItem="ZM4-RV-X6S" secondAttribute="bottom" constant="20" id="ES7-cc-dYz"/>
-                            <constraint firstItem="zL5-iI-Tgr" firstAttribute="leading" secondItem="l3D-ju-hZf" secondAttribute="leadingMargin" id="L0N-HE-Ebn"/>
+                            <constraint firstItem="zL5-iI-Tgr" firstAttribute="leading" secondItem="l3D-ju-hZf" secondAttribute="leadingMargin" constant="5" id="L0N-HE-Ebn"/>
                             <constraint firstItem="ZM4-RV-X6S" firstAttribute="trailing" secondItem="l3D-ju-hZf" secondAttribute="trailingMargin" id="adT-zj-eyu"/>
-                            <constraint firstItem="xhm-5I-g3D" firstAttribute="leading" secondItem="l3D-ju-hZf" secondAttribute="leadingMargin" id="kSV-LD-eNZ"/>
-                            <constraint firstItem="ZM4-RV-X6S" firstAttribute="leading" secondItem="l3D-ju-hZf" secondAttribute="leadingMargin" id="tnp-fK-nEf"/>
+                            <constraint firstItem="xhm-5I-g3D" firstAttribute="leading" secondItem="l3D-ju-hZf" secondAttribute="leadingMargin" constant="5" id="kSV-LD-eNZ"/>
+                            <constraint firstItem="ZM4-RV-X6S" firstAttribute="leading" secondItem="l3D-ju-hZf" secondAttribute="leadingMargin" constant="5" id="tnp-fK-nEf"/>
                             <constraint firstItem="xhm-5I-g3D" firstAttribute="trailing" secondItem="l3D-ju-hZf" secondAttribute="trailingMargin" id="vwZ-Wn-HfX"/>
                             <constraint firstItem="ZM4-RV-X6S" firstAttribute="top" secondItem="zL5-iI-Tgr" secondAttribute="bottom" constant="10" id="ysV-ow-9Ju"/>
                         </constraints>
