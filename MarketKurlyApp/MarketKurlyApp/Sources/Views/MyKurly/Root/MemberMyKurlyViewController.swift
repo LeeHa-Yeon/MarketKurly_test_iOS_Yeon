@@ -3,12 +3,11 @@
 //  MarketKurlyApp
 //
 //  Created by 이하연 on 2022/01/09.
-//
 
 import UIKit
 
 class MemberMyKurlyViewController: BaseViewController {
-
+    
     let dummyData: [String] = ["적립금","쿠폰","친구초대"]
     let dummyData2: [String] = ["주문 내역","선물 내역","찜한 상품","상품 후기"]
     let dummyData3: [String] = ["배송지 관리","컬리 퍼플 박스","개인정보 수정","알림 설정"]
@@ -104,6 +103,7 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             } else {
                 cell.subStrLabel.text = ""
             }
+            
             return cell
         case 4 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "myKurlyOnCell", for: indexPath) as? MyKurlyOnCell else {
@@ -137,12 +137,21 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if indexPath.section == 3 {
+            if indexPath.row == 0 {
+                let storyboard = UIStoryboard(name: "Order", bundle: nil)
+                let OrderHistoryVC = storyboard.instantiateViewController(identifier: "OrderHistorySB")
+                self.navigationController?.pushViewController(OrderHistoryVC, animated: true)
+            }
+        }
+        
         if indexPath.section == 4 {
             if indexPath.row == 0 {
                 let storyboard = UIStoryboard(name: "Address", bundle: nil)
                 let AddressVC = storyboard.instantiateViewController(identifier: "AddressManagmentSB")
-                AddressVC.modalPresentationStyle = .fullScreen
-                self.present(AddressVC, animated: true, completion: nil)
+                self.navigationController?.pushViewController(AddressVC, animated: true)
+//                AddressVC.modalPresentationStyle = .fullScreen
+//                self.present(AddressVC, animated: true, completion: nil)
             }
         }
         

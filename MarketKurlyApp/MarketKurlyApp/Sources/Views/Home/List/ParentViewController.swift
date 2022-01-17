@@ -21,8 +21,11 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "마켓컬리"
+        customNavigationBarAttribute(UIColor.mainKurlyPurple, .white)
+        customNaviBarItem(btnColor: .white, naviItem: self.navigationItem)
 //        setUI()
-        super.viewWillAppear(true)
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

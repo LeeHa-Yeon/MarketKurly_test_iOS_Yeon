@@ -12,7 +12,7 @@
         <!--배송지 관리-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="AddressManagmentViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddressManagmentSB" id="Y6W-OH-hqX" customClass="AddressManagmentViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,13 +148,8 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="C2Y-fB-pYS" secondAttribute="trailing" id="kTD-is-elg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="배송지 관리" id="uWQ-Vn-3Eq">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="am2-yv-Few">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="backBtnTapped:" destination="Y6W-OH-hqX" id="TCd-F5-QrP"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="배송지 관리" leftItemsSupplementBackButton="YES" id="uWQ-Vn-3Eq">
+                        <barButtonItem key="backBarButtonItem" title=" " id="0hG-W0-3KG"/>
                         <barButtonItem key="rightBarButtonItem" title="추가" id="Xaq-Ld-3Al">
                             <color key="tintColor" red="0.30813050939999997" green="0.040111903919999997" blue="0.44349308599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
@@ -163,7 +158,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="backBtn" destination="am2-yv-Few" id="meb-ek-IvZ"/>
                         <outlet property="tableView" destination="pLl-ZI-YHF" id="aVa-ZX-4QE"/>
                     </connections>
                 </viewController>
@@ -669,7 +663,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hlj-bF-VbQ">
             <objects>
-                <navigationController storyboardIdentifier="AddressManagmentSB" automaticallyAdjustsScrollViewInsets="NO" id="Wv6-Ei-SY6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wv6-Ei-SY6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y5U-ml-4MG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1462,7 +1456,6 @@
         <image name="alarm1" width="1042" height="298"/>
         <image name="alarm4" width="1050" height="302"/>
         <image name="alarm5" width="1050" height="640"/>
-        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="check" width="768" height="768"/>
         <image name="check2" width="86" height="72"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>

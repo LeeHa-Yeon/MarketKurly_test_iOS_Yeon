@@ -267,24 +267,8 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension RecommendViewController: ItemDetailViewControllerDelegate {
     func moveToVC() {
-        print("동작하니?")
-        
         let storyboard = UIStoryboard(name: "Item", bundle: nil)
         let ItemDetailVC = storyboard.instantiateViewController(identifier: "ItemDetailSB")
-        ItemDetailVC.modalPresentationStyle = .fullScreen
-//        let backBarButtonItem = UIBarButtonItem(title: "k", style: .plain, target: self, action: nil)
-//        backBarButtonItem.tintColor = .black
-//        self.navigationItem.backBarButtonItem = backBarButtonItem
-        
-//        self.navigationController?.pushViewController(ItemDetailVC, animated: true)
-        self.present(ItemDetailVC, animated: true, completion: nil)
-        
-//
-//        guard let ItemDetailVC = UIStoryboard.init(name: "Item", bundle: nil).instantiateViewController(withIdentifier: "ItemDetailSB") as? ItemDetailViewController else {
-//             return
-//        }
-//        ItemDetailVC.modalPresentationStyle = .fullScreen
-////        self.present(ItemDetailVC, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(ItemDetailVC, animated: true)
+        self.navigationController?.pushViewController(ItemDetailVC, animated: true)
     }
 }

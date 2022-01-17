@@ -23,6 +23,7 @@ class MyKurlyViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.title = "마이컬리"
         customNavigationBarAttribute(UIColor.mainKurlyPurple, .white)
         customNaviBarItem(btnColor: .white, naviItem: self.navigationItem)
         setUI()

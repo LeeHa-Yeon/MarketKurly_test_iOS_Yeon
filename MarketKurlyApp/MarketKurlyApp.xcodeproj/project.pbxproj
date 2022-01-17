@@ -58,6 +58,9 @@
 		9F489F722794C7CB00E04879 /* RecivePlaceFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F712794C7CB00E04879 /* RecivePlaceFourViewController.swift */; };
 		9F489F752794E5C400E04879 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F742794E5C400E04879 /* OrderViewController.swift */; };
 		9F489F772794E5E300E04879 /* AfterOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F762794E5E300E04879 /* AfterOrderViewController.swift */; };
+		9F489F792794F0D500E04879 /* OrderDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F782794F0D500E04879 /* OrderDetailListViewController.swift */; };
+		9F489F7B2794F13500E04879 /* FrequentPurchasesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F7A2794F13500E04879 /* FrequentPurchasesListViewController.swift */; };
+		9F489F7D2794F34A00E04879 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F7C2794F34A00E04879 /* OrderHistoryViewController.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -216,6 +219,9 @@
 		9F489F712794C7CB00E04879 /* RecivePlaceFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecivePlaceFourViewController.swift; sourceTree = "<group>"; };
 		9F489F742794E5C400E04879 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		9F489F762794E5E300E04879 /* AfterOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterOrderViewController.swift; sourceTree = "<group>"; };
+		9F489F782794F0D500E04879 /* OrderDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailListViewController.swift; sourceTree = "<group>"; };
+		9F489F7A2794F13500E04879 /* FrequentPurchasesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequentPurchasesListViewController.swift; sourceTree = "<group>"; };
+		9F489F7C2794F34A00E04879 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -887,6 +893,9 @@
 				9FC61BF727939EB9007AC4A7 /* Order.storyboard */,
 				9F489F742794E5C400E04879 /* OrderViewController.swift */,
 				9F489F762794E5E300E04879 /* AfterOrderViewController.swift */,
+				9F489F7C2794F34A00E04879 /* OrderHistoryViewController.swift */,
+				9F489F782794F0D500E04879 /* OrderDetailListViewController.swift */,
+				9F489F7A2794F13500E04879 /* FrequentPurchasesListViewController.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -1138,6 +1147,7 @@
 				9FC61BED2792AB63007AC4A7 /* ModifyAddressViewController.swift in Sources */,
 				9F2721BC2790FEEE00F85FA9 /* NewUserReponse.swift in Sources */,
 				9FC61BF12792AB9D007AC4A7 /* NewDetailAddressViewController.swift in Sources */,
+				9F489F7B2794F13500E04879 /* FrequentPurchasesListViewController.swift in Sources */,
 				9F2721A7278FCADE00F85FA9 /* CategoryDetailViewController.swift in Sources */,
 				9F309DDE27914D1100EBF5E0 /* TempViewController.swift in Sources */,
 				9F2721AC2790066F00F85FA9 /* AllUserDataManager.swift in Sources */,
@@ -1146,6 +1156,7 @@
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
 				9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */,
 				9F272197278F95A100F85FA9 /* CategoryListCell.swift in Sources */,
+				9F489F792794F0D500E04879 /* OrderDetailListViewController.swift in Sources */,
 				9FB51FCE278E979100DEF835 /* SearchResultViewController.swift in Sources */,
 				9F309DE82791F4DF00EBF5E0 /* ItemDetailInfoViewController.swift in Sources */,
 				9F489F692794AF7400E04879 /* AddressDetailMoreViewController.swift in Sources */,
@@ -1192,6 +1203,7 @@
 				9F9C5925278BB126005D164C /* Product2Cell.swift in Sources */,
 				9F2721A2278FC25D00F85FA9 /* KurlyRecommendCell.swift in Sources */,
 				9F9D5E19278A0FF700CC63FA /* LoginRequest.swift in Sources */,
+				9F489F7D2794F34A00E04879 /* OrderHistoryViewController.swift in Sources */,
 				9F309DF027920D3200EBF5E0 /* ItemMainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

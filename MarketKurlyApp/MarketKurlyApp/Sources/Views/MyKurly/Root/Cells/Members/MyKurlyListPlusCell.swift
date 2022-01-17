@@ -15,8 +15,8 @@ class MyKurlyListPlusCell: UITableViewCell {
     
     // MARK: - LifeCycle
     override func awakeFromNib() {
-        super.awakeFromNib()
         setUI()
+        super.awakeFromNib()
     }
     
     // MARK: - Functions

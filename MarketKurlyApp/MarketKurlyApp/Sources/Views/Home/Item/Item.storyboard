@@ -166,7 +166,7 @@
         <!--Title-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ItemDetailViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemDetailSB" id="Y6W-OH-hqX" customClass="ItemDetailViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,22 +239,14 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="712-U6-aMx" secondAttribute="bottom" id="yXh-FC-Uty"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="nBp-tI-g4K">
-                        <barButtonItem key="backBarButtonItem" title=" " id="AT3-3a-k3r"/>
-                        <leftBarButtonItems>
-                            <barButtonItem id="ytv-ro-LUg">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="backBtnTapped:" destination="Y6W-OH-hqX" id="6wF-jL-Tek"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem image="arrow.backward" catalog="system" id="z4Z-EA-200">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="backBtn:" destination="Y6W-OH-hqX" id="evj-9h-7cc"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                    <navigationItem key="navigationItem" title="Title" leftItemsSupplementBackButton="YES" id="nBp-tI-g4K">
+                        <barButtonItem key="backBarButtonItem" title="  " id="AT3-3a-k3r"/>
+                        <barButtonItem key="leftBarButtonItem" id="ytv-ro-LUg">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backBtnTapped:" destination="Y6W-OH-hqX" id="6wF-jL-Tek"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -454,7 +446,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yfp-q5-OCi">
             <objects>
-                <navigationController storyboardIdentifier="ItemDetailSB" automaticallyAdjustsScrollViewInsets="NO" id="3h9-Eq-nk0" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3h9-Eq-nk0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUf-9z-0pN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -471,7 +463,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="close" width="512" height="512"/>
         <image name="heart" width="512" height="512"/>
         <image name="noheart" width="400" height="400"/>

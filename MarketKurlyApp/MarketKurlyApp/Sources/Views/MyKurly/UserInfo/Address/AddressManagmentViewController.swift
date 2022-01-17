@@ -12,12 +12,6 @@ class AddressManagmentViewController: UIViewController {
     // MARK: - Components
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var backBtn: UIBarButtonItem!
-    
-    @IBAction func backBtnTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func testMoveTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Order", bundle: nil)
         guard let AfterOrderVC = storyboard.instantiateViewController(identifier: "AfterOrderSB") as? AfterOrderViewController else {
@@ -31,9 +25,20 @@ class AddressManagmentViewController: UIViewController {
         setUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     // MARK: - Functions
     func setUI(){
         customNavigationBarAttribute(.white, .black)
+        naviTitleDelete(navi: self.navigationController!)
         tableView.delegate = self
         tableView.dataSource = self
     }
