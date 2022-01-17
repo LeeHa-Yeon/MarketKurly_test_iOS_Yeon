@@ -13,8 +13,6 @@ class OrderDetailListViewController: UIViewController {
     // MARK: - Components
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
