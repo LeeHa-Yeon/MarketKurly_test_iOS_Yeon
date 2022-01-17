@@ -119,7 +119,6 @@ extension UIViewController {
     
     // MARK: 네비게이션바 마켓컬리 색상으로 변경
     func bgKurlyColor(_ navi: UINavigationController,_ naviItem: UINavigationItem , title: String){
-        print("색상이변경이왜안되는데..")
         navi.navigationBar.barTintColor = UIColor.mainKurlyPurple
         navi.navigationBar.isTranslucent = false
         navi.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]

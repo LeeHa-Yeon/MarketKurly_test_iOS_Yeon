@@ -52,7 +52,6 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
     
     // MARK: - Function
     func setUI(){
-        print("왜안먹는뎅...")
         self.bgKurlyColor(self.navigationController!, self.navigationItem, title: "마켓컬리")
         customNaviBarItem(btnColor: .white, naviItem: self.navigationItem)
     }

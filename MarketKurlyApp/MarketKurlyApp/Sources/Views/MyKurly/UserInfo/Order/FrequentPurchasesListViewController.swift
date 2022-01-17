@@ -16,8 +16,15 @@ class FrequentPurchasesListViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "주문내역"
+        setUI()
+        super.viewWillAppear(true)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,8 +46,22 @@ extension FrequentPurchasesListViewController: UITableViewDelegate, UITableViewD
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "frequentItemListCell", for: indexPath) as? FrequentItemListCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        /* API 통신해야되는 부분 */
+        // 아이템의 아이디를 찾아 넘겨주어서 나타내기
+        
+        let storyboard = UIStoryboard(name: "Item", bundle: nil)
+        let ItemDetailVC = storyboard.instantiateViewController(identifier: "ItemDetailSB")
+        self.navigationController?.pushViewController(ItemDetailVC, animated: true)
+        
+        
+        
+    }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160

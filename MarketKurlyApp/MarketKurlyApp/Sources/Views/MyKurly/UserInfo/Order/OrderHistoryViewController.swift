@@ -39,11 +39,13 @@ class OrderHistoryViewController: UIViewController  {
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
-        setUI()
+        firstBtnView.layer.addBorder([.bottom], color: UIColor.mainKurlyPurple, width: 2.0)
+        secondBtnView.layer.addBorder([ .bottom], color: .white, width: 0.0)
         super.viewDidLoad()
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        setUI()
         super.viewWillAppear(true)
         self.tabBarController?.tabBar.isHidden = true
     }
@@ -60,8 +62,7 @@ class OrderHistoryViewController: UIViewController  {
         customNaviBarItem2(btnColor: .black, naviItem: self.navigationItem)
         removeLine(self.navigationController!)
         naviTitleDelete(navi: self.navigationController!)
-        firstBtnView.layer.addBorder([.bottom], color: UIColor.mainKurlyPurple, width: 2.0)
-        secondBtnView.layer.addBorder([ .bottom], color: .white, width: 0.0)
+        
         
     }
     

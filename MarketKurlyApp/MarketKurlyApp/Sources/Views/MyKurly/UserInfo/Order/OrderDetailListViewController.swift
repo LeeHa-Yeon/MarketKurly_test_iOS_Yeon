@@ -39,6 +39,7 @@ extension OrderDetailListViewController: UITableViewDelegate, UITableViewDataSou
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderDetailListCell", for: indexPath) as? OrderDetailListCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         return cell
     }
     
