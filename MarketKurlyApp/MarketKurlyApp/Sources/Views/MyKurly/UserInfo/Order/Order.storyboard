@@ -39,8 +39,131 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" red="0.95687562230000001" green="0.95683962109999998" blue="0.95686405900000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderSheetFifthCell" rowHeight="220" id="iYK-AX-AqD" customClass="OrderSheetFifthCell" customModule="MarketKurlyApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderSheetSixCell" rowHeight="220" id="4q0-ph-hXW" customClass="OrderSheetSixCell" customModule="MarketKurlyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4q0-ph-hXW" id="eFX-az-edv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jrc-Vb-mvf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제수단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6q-zQ-dEv">
+                                                            <rect key="frame" x="20" y="20.5" width="55.5" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomArrow" translatesAutoresizingMaskIntoConstraints="NO" id="pK2-cP-IMI">
+                                                            <rect key="frame" x="385" y="23" width="14" height="14"/>
+                                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="pK2-cP-IMI" secondAttribute="height" id="I1S-aG-2za"/>
+                                                                <constraint firstAttribute="width" constant="14" id="mlJ-FW-VDx"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="3iF-6H-VqR"/>
+                                                        <constraint firstItem="M6q-zQ-dEv" firstAttribute="centerY" secondItem="Jrc-Vb-mvf" secondAttribute="centerY" id="4fl-hk-el3"/>
+                                                        <constraint firstItem="M6q-zQ-dEv" firstAttribute="leading" secondItem="Jrc-Vb-mvf" secondAttribute="leading" constant="20" id="5ln-bN-mGG"/>
+                                                        <constraint firstItem="pK2-cP-IMI" firstAttribute="centerY" secondItem="Jrc-Vb-mvf" secondAttribute="centerY" id="YoG-uM-B2Z"/>
+                                                        <constraint firstAttribute="trailing" secondItem="pK2-cP-IMI" secondAttribute="trailing" constant="15" id="Zgd-Q6-NT1"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QSu-pn-pun">
+                                                    <rect key="frame" x="20" y="65" width="374" height="105"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjH-ZZ-nKA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                            <color key="backgroundColor" red="0.30813050939999997" green="0.040111903919999997" blue="0.44349308599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="MNP-aE-tRZ"/>
+                                                            </constraints>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" image="kakao">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="moveToHomeTapped:" destination="h79-ef-O9M" eventType="touchUpInside" id="5ge-iT-Ean"/>
+                                                            </connections>
+                                                        </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="AUm-yl-RPm">
+                                                            <rect key="frame" x="0.0" y="55" width="374" height="50"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0l-OY-3HU">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="122.5" height="50"/>
+                                                                    <color key="backgroundColor" red="0.30813050939999997" green="0.040111903919999997" blue="0.44349308599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="홈으로 이동" image="pay1">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="moveToHomeTapped:" destination="h79-ef-O9M" eventType="touchUpInside" id="UC3-Yh-z5u"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enb-iS-oyk">
+                                                                    <rect key="frame" x="125.5" y="0.0" width="123" height="50"/>
+                                                                    <color key="backgroundColor" red="0.30813050939999997" green="0.040111903919999997" blue="0.44349308599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="홈으로 이동" image="pay2">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="moveToHomeTapped:" destination="h79-ef-O9M" eventType="touchUpInside" id="snW-13-3ZR"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwb-Ss-dyw">
+                                                                    <rect key="frame" x="251.5" y="0.0" width="122.5" height="50"/>
+                                                                    <color key="backgroundColor" red="0.30813050939999997" green="0.040111903919999997" blue="0.44349308599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="홈으로 이동" image="pay3">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="moveToHomeTapped:" destination="h79-ef-O9M" eventType="touchUpInside" id="tGv-og-rdr"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="F6R-9x-ZDI">
+                                                    <rect key="frame" x="30" y="185" width="248" height="30"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m26-T4-LXl">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="m26-T4-LXl" secondAttribute="height" multiplier="1:1" id="DAI-Ou-RAY"/>
+                                                                <constraint firstAttribute="width" constant="30" id="tvL-XT-TfC"/>
+                                                            </constraints>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" image="uncheck"/>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택한 결제 수단을 다음에도 사용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jco-oz-Vil">
+                                                            <rect key="frame" x="37" y="0.0" width="211" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Jrc-Vb-mvf" secondAttribute="trailing" id="Fxw-Oa-QEC"/>
+                                                <constraint firstItem="F6R-9x-ZDI" firstAttribute="top" secondItem="QSu-pn-pun" secondAttribute="bottom" constant="15" id="GU7-WD-tX5"/>
+                                                <constraint firstItem="Jrc-Vb-mvf" firstAttribute="top" secondItem="eFX-az-edv" secondAttribute="top" id="Kwv-ww-bam"/>
+                                                <constraint firstAttribute="trailing" secondItem="QSu-pn-pun" secondAttribute="trailing" constant="20" id="Ohq-mG-VTe"/>
+                                                <constraint firstItem="QSu-pn-pun" firstAttribute="leading" secondItem="eFX-az-edv" secondAttribute="leading" constant="20" id="SVH-Qo-a2o"/>
+                                                <constraint firstItem="Jrc-Vb-mvf" firstAttribute="leading" secondItem="eFX-az-edv" secondAttribute="leading" id="XHL-Mh-fln"/>
+                                                <constraint firstItem="F6R-9x-ZDI" firstAttribute="leading" secondItem="eFX-az-edv" secondAttribute="leadingMargin" constant="10" id="YMP-ji-Ju3"/>
+                                                <constraint firstItem="QSu-pn-pun" firstAttribute="top" secondItem="Jrc-Vb-mvf" secondAttribute="bottom" constant="5" id="t6O-dh-jLw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderSheetFifthCell" rowHeight="220" id="iYK-AX-AqD" customClass="OrderSheetFifthCell" customModule="MarketKurlyApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="264.5" width="414" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iYK-AX-AqD" id="2vj-EY-wnN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
@@ -127,7 +250,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderSheetThirdCell" rowHeight="366" id="dC4-pa-z1N" customClass="OrderSheetThirdCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="264.5" width="414" height="366"/>
+                                        <rect key="frame" x="0.0" y="484.5" width="414" height="366"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dC4-pa-z1N" id="yfR-a5-UAV">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
@@ -306,7 +429,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderSheetFirstCell" rowHeight="53" id="QcE-Ok-pdt" customClass="OrderSheetFirstCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="630.5" width="414" height="53"/>
+                                        <rect key="frame" x="0.0" y="850.5" width="414" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QcE-Ok-pdt" id="vb4-kY-W4V">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
@@ -373,7 +496,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderItemFirstCell" rowHeight="113" id="HqZ-AH-Fda" customClass="OrderItemFirstCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="683.5" width="414" height="113"/>
+                                        <rect key="frame" x="0.0" y="894.5" width="414" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HqZ-AH-Fda" id="5Kk-5D-1Tl">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
@@ -443,7 +566,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderSheetSecondCell" rowHeight="60" id="WbB-dm-WuX" customClass="OrderSheetSecondCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="796.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="1007.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WbB-dm-WuX" id="S1W-2b-0JN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -496,7 +619,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderUserInfoSecondCell" rowHeight="160" id="WX6-5w-qJC" customClass="OrderUserInfoSecondCell" customModule="MarketKurlyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="856.5" width="414" height="160"/>
+                                        <rect key="frame" x="0.0" y="1067.5" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WX6-5w-qJC" id="4LV-wt-e7v">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
@@ -587,6 +710,45 @@
                                             <outlet property="userPhone" destination="rdq-fo-GYL" id="bxH-tZ-brA"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderSheetLastCell" rowHeight="430" id="2Pf-2M-7ee" customClass="OrderSheetLastCell" customModule="MarketKurlyApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1227.5" width="414" height="430"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Pf-2M-7ee" id="RnY-Eb-G40">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agreeAlarm" translatesAutoresizingMaskIntoConstraints="NO" id="XxA-gc-Kgi">
+                                                    <rect key="frame" x="20" y="21" width="374" height="350"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="350" id="b9J-Md-Ddc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV5-4b-KdZ">
+                                                    <rect key="frame" x="20" y="381" width="374" height="40"/>
+                                                    <color key="backgroundColor" red="0.30813050939999997" green="0.040111903919999997" blue="0.44349308599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="yPS-9z-8ZD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="142,427 결제하기">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="moveToHomeTapped:" destination="h79-ef-O9M" eventType="touchUpInside" id="Geh-C4-KRm"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XxA-gc-Kgi" firstAttribute="top" secondItem="RnY-Eb-G40" secondAttribute="topMargin" constant="10" id="3f5-Rh-SZa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XxA-gc-Kgi" secondAttribute="trailing" id="IaK-AI-fmQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RV5-4b-KdZ" secondAttribute="trailing" id="SBM-cG-kN2"/>
+                                                <constraint firstItem="RV5-4b-KdZ" firstAttribute="leading" secondItem="RnY-Eb-G40" secondAttribute="leadingMargin" id="Uew-MR-7Kt"/>
+                                                <constraint firstItem="XxA-gc-Kgi" firstAttribute="leading" secondItem="RnY-Eb-G40" secondAttribute="leadingMargin" id="VQz-Yd-ElA"/>
+                                                <constraint firstItem="RV5-4b-KdZ" firstAttribute="top" secondItem="XxA-gc-Kgi" secondAttribute="bottom" constant="10" id="bS4-MD-id4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -606,7 +768,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968.11594202898561" y="100.44642857142857"/>
+            <point key="canvasLocation" x="899" y="-36"/>
         </scene>
         <!--After Order View Controller-->
         <scene sceneID="D4Q-VI-Yau">
@@ -1372,12 +1534,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="agreeAlarm" width="1170" height="971"/>
         <image name="bottomArrow" width="170.66667175292969" height="170.66667175292969"/>
         <image name="check22" width="260" height="252"/>
+        <image name="kakao" width="2076" height="278"/>
+        <image name="pay1" width="278" height="140"/>
+        <image name="pay2" width="276" height="136"/>
+        <image name="pay3" width="280" height="124"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="rightArrow" width="512" height="512"/>
         <image name="standardAddress" width="180" height="66"/>
         <image name="testItem" width="1170" height="1292"/>
+        <image name="uncheck" width="512" height="512"/>
         <image name="viewCoupon" width="348" height="174"/>
         <image name="viewimage" width="566" height="682"/>
         <image name="viewimage2" width="530" height="86"/>

@@ -61,6 +61,8 @@
 		9F489F792794F0D500E04879 /* OrderDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F782794F0D500E04879 /* OrderDetailListViewController.swift */; };
 		9F489F7B2794F13500E04879 /* FrequentPurchasesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F7A2794F13500E04879 /* FrequentPurchasesListViewController.swift */; };
 		9F489F7D2794F34A00E04879 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F7C2794F34A00E04879 /* OrderHistoryViewController.swift */; };
+		9F489F8D279565F400E04879 /* OrderSheetSevenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F8B279565F400E04879 /* OrderSheetSevenCell.swift */; };
+		9F489F8E279565F400E04879 /* OrderSheetSevenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F489F8C279565F400E04879 /* OrderSheetSevenCell.xib */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -222,6 +224,8 @@
 		9F489F782794F0D500E04879 /* OrderDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailListViewController.swift; sourceTree = "<group>"; };
 		9F489F7A2794F13500E04879 /* FrequentPurchasesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequentPurchasesListViewController.swift; sourceTree = "<group>"; };
 		9F489F7C2794F34A00E04879 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
+		9F489F8B279565F400E04879 /* OrderSheetSevenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSheetSevenCell.swift; sourceTree = "<group>"; };
+		9F489F8C279565F400E04879 /* OrderSheetSevenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSheetSevenCell.xib; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -520,6 +524,15 @@
 				9F309DDD27914D1100EBF5E0 /* TempViewController.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		9F489F88279565BF00E04879 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F489F8B279565F400E04879 /* OrderSheetSevenCell.swift */,
+				9F489F8C279565F400E04879 /* OrderSheetSevenCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
@@ -890,6 +903,7 @@
 		9FC61BF627939EA9007AC4A7 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				9F489F88279565BF00E04879 /* Cells */,
 				9FC61BF727939EB9007AC4A7 /* Order.storyboard */,
 				9F489F742794E5C400E04879 /* OrderViewController.swift */,
 				9F489F762794E5E300E04879 /* AfterOrderViewController.swift */,
@@ -1032,6 +1046,7 @@
 				9F9D5DFD278A09FE00CC63FA /* NotoSansCJKkr-Medium.otf in Resources */,
 				9F9D5DFE278A09FE00CC63FA /* NotoSansCJKkr-Bold.otf in Resources */,
 				9FCC943E278A357F000493AD /* Login.storyboard in Resources */,
+				9F489F8E279565F400E04879 /* OrderSheetSevenCell.xib in Resources */,
 				9FB51FC0278E82A700DEF835 /* SearchSubject3Cell.xib in Resources */,
 				9FB51FCC278E8B9100DEF835 /* VogueSearchWorldCell.xib in Resources */,
 				9F309DF7279222FD00EBF5E0 /* ItemInfoCell.xib in Resources */,
@@ -1200,6 +1215,7 @@
 				9F9C58F3278B64AC005D164C /* ProductsCell.swift in Sources */,
 				9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */,
 				9F2721B42790DE7F00F85FA9 /* IdResultViewController.swift in Sources */,
+				9F489F8D279565F400E04879 /* OrderSheetSevenCell.swift in Sources */,
 				9F9C5925278BB126005D164C /* Product2Cell.swift in Sources */,
 				9F2721A2278FC25D00F85FA9 /* KurlyRecommendCell.swift in Sources */,
 				9F9D5E19278A0FF700CC63FA /* LoginRequest.swift in Sources */,

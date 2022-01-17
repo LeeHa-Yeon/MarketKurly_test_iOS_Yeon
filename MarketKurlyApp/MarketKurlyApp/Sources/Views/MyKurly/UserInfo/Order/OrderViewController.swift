@@ -40,6 +40,8 @@ class OrderViewController: UIViewController {
         customNavigationBarAttribute(.white, .black)
         naviTitleDelete(navi: self.navigationController!)
         registerNib(cellNibName: "OnlyBannerCell", cellIdentifier: "onlyBannerCell")
+        registerNib(cellNibName: "OrderSheetSevenCell", cellIdentifier: "orderSheetSevenCell")
+        
     }
     
     func registerNib(cellNibName: String, cellIdentifier: String){
@@ -62,7 +64,7 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
     
     //섹션 갯수
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 8
     }
     
     //row 갯수
@@ -136,6 +138,24 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
             }
             cell.selectionStyle = .none
             return cell
+        case 5 :
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderSheetSixCell") as? OrderSheetSixCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        case 6 :
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderSheetSevenCell") as? OrderSheetSevenCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        case 7 :
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderSheetLastCell") as? OrderSheetLastCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
         default :
             return UITableViewCell()
         }
@@ -188,8 +208,12 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
             return UITableView.automaticDimension
         case 3 :
              return 80
-        case 4 :
+        case 4,5 :
             return 220
+        case 6 :
+            return 330
+        case 7 :
+            return 430
         default :
             return 0
         }
@@ -384,26 +408,7 @@ class OrderSheetSixCell: UITableViewCell {
         
     }
 }
-// 결제 금액
-class OrderSheetSevenCell: UITableViewCell {
-    
-    // MARK: - Components
-    
-    // MARK: - LifeCycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    // MARK: - Functions
-    func setUI(){
-        
-    }
-}
+
 
 // 결제 진행 필수 동의
 
