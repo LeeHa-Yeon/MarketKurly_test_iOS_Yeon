@@ -39,10 +39,22 @@ class OrderViewController: UIViewController {
         tableView.delegate = self
         customNavigationBarAttribute(.white, .black)
         naviTitleDelete(navi: self.navigationController!)
-        registerNib(cellNibName: "OnlyBannerCell", cellIdentifier: "onlyBannerCell")
-        registerNib(cellNibName: "OrderSheetSevenCell", cellIdentifier: "orderSheetSevenCell")
-        
+        setNib()
     }
+    
+    func setNib(){
+        registerNib(cellNibName: "OrderSheetFirstCell", cellIdentifier: "orderSheetFirstCell")
+        registerNib(cellNibName: "OrderItemFirstCell", cellIdentifier: "orderItemFirstCell")
+        registerNib(cellNibName: "OrderSheetSecondCell", cellIdentifier: "orderSheetSecondCell")
+        registerNib(cellNibName: "OrderUserInfoSecondCell", cellIdentifier: "orderUserInfoSecondCell")
+        registerNib(cellNibName: "OrderSheetThirdCell", cellIdentifier: "orderSheetThirdCell")
+        registerNib(cellNibName: "OnlyBannerCell", cellIdentifier: "onlyBannerCell")
+        registerNib(cellNibName: "OrderSheetFifthCell", cellIdentifier: "orderSheetFifthCell")
+        registerNib(cellNibName: "OrderSheetSixCell", cellIdentifier: "orderSheetSixCell")
+        registerNib(cellNibName: "OrderSheetSevenCell", cellIdentifier: "orderSheetSevenCell")
+        registerNib(cellNibName: "OrderSheetLastCell", cellIdentifier: "orderSheetLastCell")
+    }
+    
     
     func registerNib(cellNibName: String, cellIdentifier: String){
         let newCellNib = UINib(nibName: cellNibName, bundle: nil)
@@ -199,251 +211,58 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
     
     // cell 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0 :
-            // 섹션 높이는 60 , 하위 Cell 높이는 100 으로 설정
-            if indexPath.row == 0 {
-                return 60
-            }else {
-                return 100
-            }
-        case 1 :
-            if indexPath.row == 0 {
-                return 60
-            }else {
-                return 160
-            }
-        case 2 :
-            return UITableView.automaticDimension
-        case 3 :
-             return 80
-        case 4,5 :
-            return 220
-        case 6 :
-            return 330
-        case 7 :
-            return 440
-        default :
-            return 0
-        }
-
-        
-    }
-}
-
-// MARK: - Cells
-
-// 주문상품
-class OrderSheetFirstCell: UITableViewCell {
-    
-    // MARK: - Components
-    @IBOutlet weak var itemName: UILabel!
-    @IBOutlet weak var itemCnt: UILabel!
-    @IBOutlet weak var arrowImg: UIImageView!
-    
-    // MARK: - LifeCycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
- 
-    // MARK: - Functions
-    func setUI(){
-        
-    }
-}
-
-class OrderItemFirstCell: UITableViewCell {
-    
-    // MARK: - Components
-    @IBOutlet weak var itemImg: UIImageView!
-    @IBOutlet weak var itemName: UILabel!
-    @IBOutlet weak var itemPrice: UILabel!
-    @IBOutlet weak var itemOrignPrice: UILabel!
-    @IBOutlet weak var itemCnt: UILabel!
-    
-    // MARK: - LifeCycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    // MARK: - Functions
-    func setUI(){
-        
-    }
-}
-
-// 주문자 정보
-class OrderSheetSecondCell: UITableViewCell {
-    
-    // MARK: - Components
-    @IBOutlet weak var arrowImg: UIImageView!
-    @IBOutlet weak var userInfoLabel: UILabel!
-    
-    // MARK: - LifeCycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    // MARK: - Functions
-    func setUI(){
-        
-    }
-}
-
-class OrderUserInfoSecondCell: UITableViewCell {
-    
-    // MARK: - Components
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var userPhone: UILabel!
-    @IBOutlet weak var userEmail: UILabel!
-    
-    // MARK: - LifeCycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    // MARK: - Functions
-    func setUI(){
+        return UITableView.automaticDimension
         
     }
 }
 
 
-// 배송지
-class OrderSheetThirdCell: UITableViewCell {
-    
-    // MARK: - Components
-    @IBOutlet weak var standardAddressImg: UIImageView!
-    @IBOutlet weak var mainAddress: UILabel!
-    @IBOutlet weak var detailAddress: UILabel!
-    @IBOutlet weak var blankView: UIView!
-    @IBOutlet weak var fullView: UIView!
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var recivePlaceLabel: UILabel!
-    @IBOutlet weak var doneLabel: UILabel!
-    @IBOutlet weak var modifyBtn: UIButton!
-    
-    // MARK: - LifeCycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    // MARK: - Functions
-    func setUI(){
-        modifyBtn.layer.borderColor =
-        UIColor.lineColor.cgColor
-        modifyBtn.layer.borderWidth = 1
-        modifyBtn.layer.cornerRadius = 5
-        blankView.layer.addBorder([.top, ], color: UIColor.lineColor, width: 1.0)
-        fullView.layer.addBorder([.top, ], color: UIColor.lineColor, width: 1.0)
-        
-        standardAddressImg.isHidden = true
-        blankView.isHidden = true
-    }
-}
-
-// 배너는 이미 있으니 넘어가
 
 
-// 쿠폰 적립금
-class OrderSheetFifthCell: UITableViewCell {
-    
-    // MARK: - Components
-    
-    // MARK: - LifeCycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    // MARK: - Functions
-    func setUI(){
-        
-    }
-}
-// 결제 수단
-
-class OrderSheetSixCell: UITableViewCell {
-    
-    // MARK: - Components
-    
-    // MARK: - LifeCycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    // MARK: - Functions
-    func setUI(){
-        
-    }
-}
 
 
-// 결제 진행 필수 동의
 
-class OrderSheetLastCell: UITableViewCell {
-    
-    // MARK: - Components
-    
-    // MARK: - LifeCycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setUI()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    // MARK: - Functions
-    func setUI(){
-        
-    }
-}
+
+
+
+
+
+
+
+
 
 
 /*
+ cell 높이
+ //        switch indexPath.section {
+ //        case 0 :
+ //            // 섹션 높이는 60 , 하위 Cell 높이는 100 으로 설정
+ //            if indexPath.row == 0 {
+ //                return 60
+ //            }else {
+ //                return 100
+ //            }
+ //        case 1 :
+ //            if indexPath.row == 0 {
+ //                return 60
+ //            }else {
+ //                return 160
+ //            }
+ //        case 2 :
+ //            return UITableView.automaticDimension
+ //        case 3 :
+ //             return 80
+ //        case 4,5 :
+ //            return 220
+ //        case 6 :
+ //            return 330
+ //        case 7 :
+ //            return 440
+ //        default :
+ //            return 0
+ //        }
  
  
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-//    }
+ 
  
  */

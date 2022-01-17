@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderSheetFifthCell" rowHeight="220" id="KGk-i7-Jjw" customClass="OrderSheetFifthCell" customModule="MarketKurlyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoU-0W-Svf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿠폰 / 적립금" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWa-PB-MI4">
+                                <rect key="frame" x="20" y="20.5" width="82" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿠폰 사용 문의 (카카오톡) &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xaw-bv-jVT">
+                                <rect key="frame" x="227.5" y="21" width="166.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" red="0.43285220429999999" green="0.43285220429999999" blue="0.43285220429999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="sWa-PB-MI4" firstAttribute="leading" secondItem="HoU-0W-Svf" secondAttribute="leading" constant="20" id="44a-jG-HpY"/>
+                            <constraint firstItem="sWa-PB-MI4" firstAttribute="centerY" secondItem="HoU-0W-Svf" secondAttribute="centerY" id="I0z-ga-5pd"/>
+                            <constraint firstAttribute="height" constant="60" id="LWj-Al-NN9"/>
+                            <constraint firstItem="Xaw-bv-jVT" firstAttribute="centerY" secondItem="HoU-0W-Svf" secondAttribute="centerY" id="k3g-2T-9Le"/>
+                            <constraint firstAttribute="trailing" secondItem="Xaw-bv-jVT" secondAttribute="trailing" constant="20" id="uhs-JH-qqp"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용 가능 쿠폰 0장 / 전체 1장" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qj9-bW-NCD">
+                        <rect key="frame" x="20" y="60" width="374" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="o5U-Ob-kvw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYK-Rs-3WF">
+                        <rect key="frame" x="314" y="120" width="80" height="45"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="W9O-dr-GA9"/>
+                            <constraint firstAttribute="height" constant="45" id="XXC-k7-fDa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="모두 사용">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용가능 적립금 4,168원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFU-wN-GrC">
+                        <rect key="frame" x="20" y="175" width="140.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.43285220429999999" green="0.43285220429999999" blue="0.43285220429999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQq-1h-0cW">
+                        <rect key="frame" x="20" y="120" width="284" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="i0k-u3-MRS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aYK-Rs-3WF" firstAttribute="leading" secondItem="UQq-1h-0cW" secondAttribute="trailing" constant="10" id="0z8-cb-NRF"/>
+                    <constraint firstItem="Qj9-bW-NCD" firstAttribute="top" secondItem="HoU-0W-Svf" secondAttribute="bottom" id="3PI-Ko-1gj"/>
+                    <constraint firstItem="UQq-1h-0cW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="GCB-Ld-BHZ"/>
+                    <constraint firstItem="HFU-wN-GrC" firstAttribute="top" secondItem="UQq-1h-0cW" secondAttribute="bottom" constant="10" id="TAf-1s-LKr"/>
+                    <constraint firstItem="Qj9-bW-NCD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="b6a-3l-0av"/>
+                    <constraint firstItem="HFU-wN-GrC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bTa-qW-9d3"/>
+                    <constraint firstItem="HoU-0W-Svf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dh3-BN-zne"/>
+                    <constraint firstAttribute="trailing" secondItem="HoU-0W-Svf" secondAttribute="trailing" id="h1o-9T-qaX"/>
+                    <constraint firstItem="aYK-Rs-3WF" firstAttribute="top" secondItem="Qj9-bW-NCD" secondAttribute="bottom" constant="15" id="h8r-Nj-sTm"/>
+                    <constraint firstItem="UQq-1h-0cW" firstAttribute="top" secondItem="Qj9-bW-NCD" secondAttribute="bottom" constant="15" id="lz3-37-Ox6"/>
+                    <constraint firstItem="HoU-0W-Svf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rLb-DI-LXB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Qj9-bW-NCD" secondAttribute="trailing" id="ryf-KC-oyT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="aYK-Rs-3WF" secondAttribute="trailing" id="vLn-hs-BW5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="HFU-wN-GrC" secondAttribute="bottom" constant="17" id="wqG-yd-TxY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="139" y="110"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1150,7 +1150,6 @@
         <!--Recive Place One View Controller-->
         <scene sceneID="SBS-Mr-AJA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kV5-L3-hiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="60n-9v-rHu" customClass="RecivePlaceOneViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UBA-QA-JuI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
@@ -1269,6 +1268,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rpe-IU-BzS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nZ2-ZP-Siz" secondAttribute="trailing" constant="20" id="B3B-1e-0qJ"/>
@@ -1282,6 +1282,7 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kV5-L3-hiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1238" y="1339"/>
         </scene>
@@ -1317,6 +1318,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="eMO-jd-SUq"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="f9u-9u-5gH" firstAttribute="leading" secondItem="eV3-kN-H7d" secondAttribute="leadingMargin" constant="5" id="1qQ-TA-BTL"/>
@@ -1377,6 +1379,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jcq-oW-y41"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xwy-qR-iWO" firstAttribute="top" secondItem="xnd-lO-TLm" secondAttribute="topMargin" constant="10" id="PbT-Ti-odr"/>
@@ -1436,6 +1439,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7nM-CG-9bi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zL5-iI-Tgr" firstAttribute="top" secondItem="l3D-ju-hZf" secondAttribute="topMargin" constant="10" id="Bhh-h2-bcb"/>
