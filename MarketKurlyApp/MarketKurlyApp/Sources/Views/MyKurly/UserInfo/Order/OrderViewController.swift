@@ -183,6 +183,15 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
     
     // 선택후 동작하는 거 여기서 하기!
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                let storyboard = UIStoryboard(name: "Address", bundle: nil)
+                let AddressDetailMoreVC = storyboard.instantiateViewController(identifier: "AddressDetailMoreSB")
+                AddressDetailMoreVC.modalPresentationStyle = .fullScreen
+                self.present(AddressDetailMoreVC, animated: true, completion: nil)
+            }
+        }
+        
         print("\(indexPath.section)섹션 \(indexPath.row)로우 선택됨")
         statusCell[indexPath.section] = !statusCell[indexPath.section]
         tableView.reloadData()
@@ -213,7 +222,7 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
         case 6 :
             return 330
         case 7 :
-            return 430
+            return 440
         default :
             return 0
         }
@@ -335,11 +344,6 @@ class OrderSheetThirdCell: UITableViewCell {
     @IBOutlet weak var doneLabel: UILabel!
     @IBOutlet weak var modifyBtn: UIButton!
     
-    @IBAction func inputAddress_blank(_ sender: Any) {
-    }
-    
-    @IBAction func modifyAddress_full(_ sender: Any) {
-    }
     // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()

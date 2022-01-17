@@ -43,6 +43,11 @@ class CartViewController: UIViewController {
         setData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.title = "장바구니"
+    }
+    
     // MARK: - Functions
     func setUI(){
         

@@ -681,7 +681,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gk4-CM-SMt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YFp-3f-Ig9" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddressDetailMoreSB" automaticallyAdjustsScrollViewInsets="NO" id="YFp-3f-Ig9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2LL-Gc-tJV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -699,7 +699,7 @@
         <!--배송정보-->
         <scene sceneID="0EL-rv-rgJ">
             <objects>
-                <viewController storyboardIdentifier="AddressDetailMoreSB" id="rwz-EE-Nd3" customClass="AddressDetailMoreViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rwz-EE-Nd3" customClass="AddressDetailMoreViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f2q-2Y-y8e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1126,7 +1126,14 @@
                             <constraint firstItem="89s-t0-keP" firstAttribute="leading" secondItem="iM5-7C-f74" secondAttribute="leading" id="vtk-y0-MCd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="배송정보" id="K2N-Gh-d26"/>
+                    <navigationItem key="navigationItem" title="배송정보" id="K2N-Gh-d26">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Dcp-kk-bPh">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backBtn:" destination="rwz-EE-Nd3" id="ji3-LR-8K9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="recievePlace1Content" destination="jbK-hN-T9T" id="Cfx-Ho-J3n"/>

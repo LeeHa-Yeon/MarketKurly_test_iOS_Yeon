@@ -16,6 +16,9 @@ class AddressDetailMoreViewController: UIViewController {
     @IBOutlet weak var recievePlace4Content: UIView!
     @IBOutlet weak var saveBtn: UIButton!
     
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func recivePlace1(_ sender: Any) {
         recievePlace1Content.isHidden = false
@@ -59,6 +62,8 @@ class AddressDetailMoreViewController: UIViewController {
             recievePlace3Content.isHidden = true
             recievePlace4Content.isHidden = true
             customButton(saveBtn, cornerValue: 5, btnBorderColor: nil, btnBorderWidth: nil)
+            self.title = "배송정보"
+            customNavigationBarAttribute(.white, .black)
         }
 
 }
