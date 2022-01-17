@@ -56,6 +56,8 @@
 		9F489F6E2794C7B400E04879 /* RecivePlaceTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F6D2794C7B400E04879 /* RecivePlaceTwoViewController.swift */; };
 		9F489F702794C7C200E04879 /* RecivePlaceThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F6F2794C7C200E04879 /* RecivePlaceThreeViewController.swift */; };
 		9F489F722794C7CB00E04879 /* RecivePlaceFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F712794C7CB00E04879 /* RecivePlaceFourViewController.swift */; };
+		9F489F752794E5C400E04879 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F742794E5C400E04879 /* OrderViewController.swift */; };
+		9F489F772794E5E300E04879 /* AfterOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F762794E5E300E04879 /* AfterOrderViewController.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -212,6 +214,8 @@
 		9F489F6D2794C7B400E04879 /* RecivePlaceTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecivePlaceTwoViewController.swift; sourceTree = "<group>"; };
 		9F489F6F2794C7C200E04879 /* RecivePlaceThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecivePlaceThreeViewController.swift; sourceTree = "<group>"; };
 		9F489F712794C7CB00E04879 /* RecivePlaceFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecivePlaceFourViewController.swift; sourceTree = "<group>"; };
+		9F489F742794E5C400E04879 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		9F489F762794E5E300E04879 /* AfterOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterOrderViewController.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -499,6 +503,19 @@
 			path = DetailVC;
 			sourceTree = "<group>";
 		};
+		9F489F732794DDF100E04879 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9FA04373278D112000FCD2FE /* Cells */,
+				9FCC942D278A1AD4000493AD /* MyKurly.storyboard */,
+				9FA04383278D5E4E00FCD2FE /* MyKurlyViewController.swift */,
+				9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */,
+				9FCC9454278AA585000493AD /* MemberMyKurlyViewController.swift */,
+				9F309DDD27914D1100EBF5E0 /* TempViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,13 +698,8 @@
 		9F9D5DED278A05F600CC63FA /* MyKurly */ = {
 			isa = PBXGroup;
 			children = (
+				9F489F732794DDF100E04879 /* Root */,
 				9F309E0027927C8100EBF5E0 /* UserInfo */,
-				9FA04373278D112000FCD2FE /* Cells */,
-				9FCC942D278A1AD4000493AD /* MyKurly.storyboard */,
-				9FA04383278D5E4E00FCD2FE /* MyKurlyViewController.swift */,
-				9FCC942B278A1A9F000493AD /* NoMemberMyKurlyViewController.swift */,
-				9FCC9454278AA585000493AD /* MemberMyKurlyViewController.swift */,
-				9F309DDD27914D1100EBF5E0 /* TempViewController.swift */,
 			);
 			path = MyKurly;
 			sourceTree = "<group>";
@@ -873,6 +885,8 @@
 			isa = PBXGroup;
 			children = (
 				9FC61BF727939EB9007AC4A7 /* Order.storyboard */,
+				9F489F742794E5C400E04879 /* OrderViewController.swift */,
+				9F489F762794E5E300E04879 /* AfterOrderViewController.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -1093,6 +1107,7 @@
 				9F309DE427915F2500EBF5E0 /* ItemDetailViewController.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
 				9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */,
+				9F489F752794E5C400E04879 /* OrderViewController.swift in Sources */,
 				9FB51FB1278DB09100DEF835 /* SearchSubjectCell.swift in Sources */,
 				9FB51FD0278E996100DEF835 /* BaseImageView.swift in Sources */,
 				9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */,
@@ -1117,6 +1132,7 @@
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
 				9F309E0C27928FEC00EBF5E0 /* FindPwdEmailRequest.swift in Sources */,
 				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
+				9F489F772794E5E300E04879 /* AfterOrderViewController.swift in Sources */,
 				9F489F6727941E3A00E04879 /* CartViewController.swift in Sources */,
 				9FA0437B278D11E800FCD2FE /* MyKurlyInfoCell.swift in Sources */,
 				9FC61BED2792AB63007AC4A7 /* ModifyAddressViewController.swift in Sources */,

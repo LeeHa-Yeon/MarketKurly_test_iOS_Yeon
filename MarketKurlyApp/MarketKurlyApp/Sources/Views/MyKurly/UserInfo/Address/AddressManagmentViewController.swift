@@ -19,10 +19,10 @@ class AddressManagmentViewController: UIViewController {
     }
     
     @IBAction func testMoveTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Address", bundle: nil)
-        guard let AddressDetailMoreVC = storyboard.instantiateViewController(identifier: "AddressDetailMoreSB") as? AddressDetailMoreViewController else {
+        let storyboard = UIStoryboard(name: "Order", bundle: nil)
+        guard let AfterOrderVC = storyboard.instantiateViewController(identifier: "AfterOrderSB") as? AfterOrderViewController else {
             return }
-        self.navigationController?.pushViewController(AddressDetailMoreVC, animated: true)
+        self.present(AfterOrderVC, animated: true, completion: nil)
     }
     
     // MARK: - LifeCycle
