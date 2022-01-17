@@ -19,6 +19,7 @@ struct DummyOrderItem {
 
 class OrderViewController: UIViewController {
     
+    var statusCell = [false,false,false,false,false,false,false,false]
     var dummyOrderItemes: [DummyOrderItem] = []
     
     // MARK: - Components
@@ -31,10 +32,14 @@ class OrderViewController: UIViewController {
         setUI()
     }
     
+    
     // MARK: - Functions
     func setUI(){
         tableView.dataSource = self
         tableView.delegate = self
+        customNavigationBarAttribute(.white, .black)
+        naviTitleDelete(navi: self.navigationController!)
+        
     }
     
     /* API 통신할 부분 */
@@ -71,13 +76,10 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
         switch state {
         case .willExpand:
             print("WILL EXPAND")
-            
         case .willCollapse:
             print("WILL COLLAPSE")
-            
         case .didExpand:
             print("DID EXPAND")
-            
         case .didCollapse:
             print("DID COLLAPSE")
         }
@@ -86,7 +88,7 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
     func tableView(_ tableView: ExpyTableView, canExpandSection section: Int) -> Bool {
         // 0,1,3
         switch section {
-    
+            
         case 0 :
             return true
         default :
@@ -102,6 +104,16 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
+            if statusCell[0] {
+                cell.itemName.isHidden = true
+                cell.itemCnt.isHidden = true
+                cell.arrowImg.image = UIImage(named: "TopArrow")
+                
+            }else {
+                cell.itemName.isHidden = false
+                cell.itemCnt.isHidden = false
+                cell.arrowImg.image = UIImage(named: "bottomArrow")
+            }
             return cell
         default :
             return UITableViewCell()
@@ -120,6 +132,8 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
     // 선택후 동작하는 거 여기서 하기!
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.section)섹션 \(indexPath.row)로우 선택됨")
+        statusCell[indexPath.section] = !statusCell[indexPath.section]
+        tableView.reloadData()
     }
     
     // cell 높이
@@ -136,10 +150,51 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
 // 주문상품
 class OrderSheetFirstCell: UITableViewCell {
     
+    // MARK: - Components
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemCnt: UILabel!
+    @IBOutlet weak var arrowImg: UIImageView!
+    
+    // MARK: - LifeCycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setUI()
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+//    }
+    
+    // MARK: - Functions
+    func setUI(){
+        
+    }
 }
 
 class OrderItemFirstCell: UITableViewCell {
     
+    // MARK: - Components
+    
+    // MARK: - LifeCycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setUI()
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    // MARK: - Functions
+    func setUI(){
+        
+    }
 }
 
 // 주문자 정보

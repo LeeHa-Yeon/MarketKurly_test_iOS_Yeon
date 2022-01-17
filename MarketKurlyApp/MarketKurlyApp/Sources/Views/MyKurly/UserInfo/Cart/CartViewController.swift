@@ -29,6 +29,12 @@ class CartViewController: UIViewController {
     @IBAction func dismissTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func OrderBtnTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Order", bundle: nil)
+        guard let OrderVC = storyboard.instantiateViewController(identifier: "OrderSB") as? OrderViewController else {
+            return }
+        self.navigationController?.pushViewController(OrderVC, animated: true)
+    }
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
