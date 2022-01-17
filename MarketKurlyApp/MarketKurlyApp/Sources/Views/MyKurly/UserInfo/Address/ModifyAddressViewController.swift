@@ -19,6 +19,12 @@ class ModifyAddressViewController: UIViewController {
         setUI()
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     // MARK: - Functions
     func setUI(){
         dismissKeyboardWhenTappedAround()

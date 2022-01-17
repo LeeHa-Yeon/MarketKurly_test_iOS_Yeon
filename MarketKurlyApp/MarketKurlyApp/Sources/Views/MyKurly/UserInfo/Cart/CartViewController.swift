@@ -82,16 +82,19 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cartHeaderCell", for: indexPath) as? CartHeaderCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         case 1 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cartContentCell", for: indexPath) as? CartContentCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         default :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cartFooterCell", for: indexPath) as? CartFooterCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
             
         }
