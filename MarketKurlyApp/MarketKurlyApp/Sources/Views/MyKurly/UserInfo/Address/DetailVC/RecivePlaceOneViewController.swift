@@ -19,7 +19,7 @@ class RecivePlaceOneViewController: UIViewController {
     
     // MARK: - Functions
     func setUI(){
-        
+        dismissKeyboardWhenTappedAround()
     }
     
 }

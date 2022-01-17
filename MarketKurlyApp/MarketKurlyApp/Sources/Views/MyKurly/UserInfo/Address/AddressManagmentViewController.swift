@@ -26,6 +26,7 @@ class AddressManagmentViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setUI()
         super.viewWillAppear(true)
         self.tabBarController?.tabBar.isHidden = true
     }
@@ -37,6 +38,7 @@ class AddressManagmentViewController: UIViewController {
     
     // MARK: - Functions
     func setUI(){
+        self.title = "배송지 관리"
         customNavigationBarAttribute(.white, .black)
         naviTitleDelete(navi: self.navigationController!)
         tableView.delegate = self
@@ -54,6 +56,7 @@ extension AddressManagmentViewController: UITableViewDelegate, UITableViewDataSo
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "addressListCell", for: indexPath) as? AddressListCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         return cell
     }
     

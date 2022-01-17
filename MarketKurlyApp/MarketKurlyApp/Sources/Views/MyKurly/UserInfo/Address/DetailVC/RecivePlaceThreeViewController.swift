@@ -19,6 +19,6 @@ class RecivePlaceThreeViewController: UIViewController {
         
         // MARK: - Functions
         func setUI(){
-            
+            dismissKeyboardWhenTappedAround()
         }
 }

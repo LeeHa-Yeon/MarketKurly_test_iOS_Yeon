@@ -52,6 +52,7 @@ class AddressDetailMoreViewController: UIViewController {
         
         // MARK: - Functions
         func setUI(){
+            dismissKeyboardWhenTappedAround()
             naviTitleDelete(navi: self.navigationController!)
             recievePlace1Content.isHidden = false
             recievePlace2Content.isHidden = true

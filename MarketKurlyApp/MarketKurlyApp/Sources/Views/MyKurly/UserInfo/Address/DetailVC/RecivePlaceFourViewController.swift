@@ -19,6 +19,6 @@ class RecivePlaceFourViewController: UIViewController {
         
         // MARK: - Functions
         func setUI(){
-            
+            dismissKeyboardWhenTappedAround()
         }
 }

@@ -18,6 +18,6 @@ class RecivePlaceTwoViewController: UIViewController {
         
         // MARK: - Functions
         func setUI(){
-            
+            dismissKeyboardWhenTappedAround()
         }
 }

@@ -21,6 +21,7 @@ class ModifyAddressViewController: UIViewController {
     
     // MARK: - Functions
     func setUI(){
+        dismissKeyboardWhenTappedAround()
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         customButton(saveBtn, cornerValue: 5, btnBorderColor: nil, btnBorderWidth: nil)
