@@ -20,7 +20,6 @@ class EventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +27,7 @@ class EventViewController: UIViewController {
         super.viewWillAppear(true)
         self.tabBarController?.tabBar.isHidden = true
     }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
