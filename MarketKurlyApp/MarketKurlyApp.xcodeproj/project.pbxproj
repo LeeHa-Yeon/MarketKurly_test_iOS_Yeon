@@ -80,6 +80,14 @@
 		9F786CB22796359F00EEA867 /* OrderSheetSixCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CB02796359F00EEA867 /* OrderSheetSixCell.xib */; };
 		9F786CB52796367000EEA867 /* OrderSheetLastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CB32796367000EEA867 /* OrderSheetLastCell.swift */; };
 		9F786CB62796367000EEA867 /* OrderSheetLastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CB42796367000EEA867 /* OrderSheetLastCell.xib */; };
+		9F786CBB27965A1B00EEA867 /* PayInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CB927965A1B00EEA867 /* PayInfoCell.swift */; };
+		9F786CBC27965A1B00EEA867 /* PayInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CBA27965A1B00EEA867 /* PayInfoCell.xib */; };
+		9F786CBF27965A2D00EEA867 /* OrderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CBD27965A2D00EEA867 /* OrderInfoCell.swift */; };
+		9F786CC027965A2D00EEA867 /* OrderInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CBE27965A2D00EEA867 /* OrderInfoCell.xib */; };
+		9F786CC327965A5D00EEA867 /* DeliveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CC127965A5D00EEA867 /* DeliveryCell.swift */; };
+		9F786CC427965A5D00EEA867 /* DeliveryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CC227965A5D00EEA867 /* DeliveryCell.xib */; };
+		9F786CC927965AA200EEA867 /* AddDetailInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CC727965AA200EEA867 /* AddDetailInfoCell.swift */; };
+		9F786CCA27965AA200EEA867 /* AddDetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CC827965AA200EEA867 /* AddDetailInfoCell.xib */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -260,6 +268,14 @@
 		9F786CB02796359F00EEA867 /* OrderSheetSixCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSheetSixCell.xib; sourceTree = "<group>"; };
 		9F786CB32796367000EEA867 /* OrderSheetLastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSheetLastCell.swift; sourceTree = "<group>"; };
 		9F786CB42796367000EEA867 /* OrderSheetLastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSheetLastCell.xib; sourceTree = "<group>"; };
+		9F786CB927965A1B00EEA867 /* PayInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayInfoCell.swift; sourceTree = "<group>"; };
+		9F786CBA27965A1B00EEA867 /* PayInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayInfoCell.xib; sourceTree = "<group>"; };
+		9F786CBD27965A2D00EEA867 /* OrderInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoCell.swift; sourceTree = "<group>"; };
+		9F786CBE27965A2D00EEA867 /* OrderInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderInfoCell.xib; sourceTree = "<group>"; };
+		9F786CC127965A5D00EEA867 /* DeliveryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCell.swift; sourceTree = "<group>"; };
+		9F786CC227965A5D00EEA867 /* DeliveryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryCell.xib; sourceTree = "<group>"; };
+		9F786CC727965AA200EEA867 /* AddDetailInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailInfoCell.swift; sourceTree = "<group>"; };
+		9F786CC827965AA200EEA867 /* AddDetailInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDetailInfoCell.xib; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -563,8 +579,8 @@
 		9F489F88279565BF00E04879 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9F786C9927962C5900EEA867 /* Parent */,
-				9F786C9A27962C7300EEA867 /* Child */,
+				9F786CB827965A0000EEA867 /* ShowOrderDetail */,
+				9F786CB7279659E600EEA867 /* Order */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -599,6 +615,30 @@
 				9F786CA427962EDC00EEA867 /* OrderUserInfoSecondCell.xib */,
 			);
 			path = Child;
+			sourceTree = "<group>";
+		};
+		9F786CB7279659E600EEA867 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				9F786C9927962C5900EEA867 /* Parent */,
+				9F786C9A27962C7300EEA867 /* Child */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		9F786CB827965A0000EEA867 /* ShowOrderDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9F786CB927965A1B00EEA867 /* PayInfoCell.swift */,
+				9F786CBA27965A1B00EEA867 /* PayInfoCell.xib */,
+				9F786CBD27965A2D00EEA867 /* OrderInfoCell.swift */,
+				9F786CBE27965A2D00EEA867 /* OrderInfoCell.xib */,
+				9F786CC127965A5D00EEA867 /* DeliveryCell.swift */,
+				9F786CC227965A5D00EEA867 /* DeliveryCell.xib */,
+				9F786CC727965AA200EEA867 /* AddDetailInfoCell.swift */,
+				9F786CC827965AA200EEA867 /* AddDetailInfoCell.xib */,
+			);
+			path = ShowOrderDetail;
 			sourceTree = "<group>";
 		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
@@ -969,8 +1009,8 @@
 		9FC61BF627939EA9007AC4A7 /* Order */ = {
 			isa = PBXGroup;
 			children = (
-				9F489F88279565BF00E04879 /* Cells */,
 				9FC61BF727939EB9007AC4A7 /* Order.storyboard */,
+				9F489F88279565BF00E04879 /* Cells */,
 				9F489F742794E5C400E04879 /* OrderViewController.swift */,
 				9F489F762794E5E300E04879 /* AfterOrderViewController.swift */,
 				9F489F7C2794F34A00E04879 /* OrderHistoryViewController.swift */,
@@ -1081,6 +1121,7 @@
 			files = (
 				9F27219F278FB25600F85FA9 /* CategoryChildCell.xib in Resources */,
 				9F9C58F4278B64AC005D164C /* ProductsCell.xib in Resources */,
+				9F786CCA27965AA200EEA867 /* AddDetailInfoCell.xib in Resources */,
 				9F9C58F8278B64C2005D164C /* ProductCell.xib in Resources */,
 				9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */,
 				9FCC943A278A1DED000493AD /* Home.storyboard in Resources */,
@@ -1111,15 +1152,18 @@
 				9F9C58FC278B7440005D164C /* NoSaleProductCell.xib in Resources */,
 				9F786CA627962EDC00EEA867 /* OrderUserInfoSecondCell.xib in Resources */,
 				9F786CA227962DDE00EEA867 /* OrderSheetSecondCell.xib in Resources */,
+				9F786CBC27965A1B00EEA867 /* PayInfoCell.xib in Resources */,
 				9F309E0227927CC600EBF5E0 /* Address.storyboard in Resources */,
 				9F9C591A278B99A1005D164C /* RecipeCell.xib in Resources */,
 				9FC61BF52792BB3D007AC4A7 /* Cart.storyboard in Resources */,
 				9F9D5DD627895F3D00CC63FA /* Main.storyboard in Resources */,
+				9F786CC427965A5D00EEA867 /* DeliveryCell.xib in Resources */,
 				9F786CB22796359F00EEA867 /* OrderSheetSixCell.xib in Resources */,
 				9F9D5DFD278A09FE00CC63FA /* NotoSansCJKkr-Medium.otf in Resources */,
 				9F9D5DFE278A09FE00CC63FA /* NotoSansCJKkr-Bold.otf in Resources */,
 				9F786CAA2796315B00EEA867 /* OrderSheetThirdCell.xib in Resources */,
 				9F786CAE279633F600EEA867 /* OrderSheetFifthCell.xib in Resources */,
+				9F786CC027965A2D00EEA867 /* OrderInfoCell.xib in Resources */,
 				9FCC943E278A357F000493AD /* Login.storyboard in Resources */,
 				9F489F8E279565F400E04879 /* OrderSheetSevenCell.xib in Resources */,
 				9FB51FC0278E82A700DEF835 /* SearchSubject3Cell.xib in Resources */,
@@ -1177,9 +1221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F786CBF27965A2D00EEA867 /* OrderInfoCell.swift in Sources */,
 				9FB51FC7278E898B00DEF835 /* SearchSubject4Cell.swift in Sources */,
 				9FCC944B278A4C09000493AD /* FindUserViewController.swift in Sources */,
 				9F2721B62790DEAC00F85FA9 /* PwdResultViewController.swift in Sources */,
+				9F786CC327965A5D00EEA867 /* DeliveryCell.swift in Sources */,
 				9F9D5E13278A0D5B00CC63FA /* UIViewController.swift in Sources */,
 				9F489F90279592C500E04879 /* ShowOrderListViewController.swift in Sources */,
 				9F9D5DF6278A09B200CC63FA /* BaseViewController.swift in Sources */,
@@ -1233,6 +1279,7 @@
 				9FB51FD4278E9A2400DEF835 /* ExistSearchViewController.swift in Sources */,
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
 				9F309E0C27928FEC00EBF5E0 /* FindPwdEmailRequest.swift in Sources */,
+				9F786CC927965AA200EEA867 /* AddDetailInfoCell.swift in Sources */,
 				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
 				9F489F772794E5E300E04879 /* AfterOrderViewController.swift in Sources */,
 				9F786C9D27962C8800EEA867 /* OrderItemFirstCell.swift in Sources */,
@@ -1243,6 +1290,7 @@
 				9FC61BF12792AB9D007AC4A7 /* NewDetailAddressViewController.swift in Sources */,
 				9F489F7B2794F13500E04879 /* FrequentPurchasesListViewController.swift in Sources */,
 				9F2721A7278FCADE00F85FA9 /* CategoryDetailViewController.swift in Sources */,
+				9F786CBB27965A1B00EEA867 /* PayInfoCell.swift in Sources */,
 				9F309DDE27914D1100EBF5E0 /* TempViewController.swift in Sources */,
 				9F2721AC2790066F00F85FA9 /* AllUserDataManager.swift in Sources */,
 				9F309E10279290D300EBF5E0 /* FindPwdPhoneResponse.swift in Sources */,
