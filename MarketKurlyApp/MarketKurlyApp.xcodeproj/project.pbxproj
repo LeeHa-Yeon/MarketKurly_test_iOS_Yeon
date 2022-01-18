@@ -90,6 +90,8 @@
 		9F786CCA27965AA200EEA867 /* AddDetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CC827965AA200EEA867 /* AddDetailInfoCell.xib */; };
 		9F786CCE2796871900EEA867 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CCD2796871900EEA867 /* Coupon.storyboard */; };
 		9F786CD02796904C00EEA867 /* MyCouponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CCF2796904C00EEA867 /* MyCouponListViewController.swift */; };
+		9F786CD32796A96E00EEA867 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CD22796A96E00EEA867 /* Event.storyboard */; };
+		9F786CD52796A97B00EEA867 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CD42796A97B00EEA867 /* EventViewController.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -280,6 +282,8 @@
 		9F786CC827965AA200EEA867 /* AddDetailInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDetailInfoCell.xib; sourceTree = "<group>"; };
 		9F786CCD2796871900EEA867 /* Coupon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
 		9F786CCF2796904C00EEA867 /* MyCouponListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponListViewController.swift; sourceTree = "<group>"; };
+		9F786CD22796A96E00EEA867 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
+		9F786CD42796A97B00EEA867 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -495,6 +499,7 @@
 		9F309DE1279158EA00EBF5E0 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				9F786CD12796A95E00EEA867 /* Event */,
 				9FCC9439278A1DED000493AD /* Home.storyboard */,
 				9FCC943B278A1DF5000493AD /* ParentViewController.swift */,
 				9F9C58D8278B3F28005D164C /* RecommendViewController.swift */,
@@ -661,6 +666,15 @@
 			children = (
 			);
 			path = Wish;
+			sourceTree = "<group>";
+		};
+		9F786CD12796A95E00EEA867 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				9F786CD22796A96E00EEA867 /* Event.storyboard */,
+				9F786CD42796A97B00EEA867 /* EventViewController.swift */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
@@ -1166,6 +1180,7 @@
 				9FB51FBC278E744B00DEF835 /* SearchEventFrameCell.xib in Resources */,
 				9FB51FC8278E898B00DEF835 /* SearchSubject4Cell.xib in Resources */,
 				9F9C58EE278B5CF1005D164C /* BannerImgCell.xib in Resources */,
+				9F786CD32796A96E00EEA867 /* Event.storyboard in Resources */,
 				9F309DF127920D3200EBF5E0 /* ItemMainCell.xib in Resources */,
 				9F9C5926278BB126005D164C /* Product2Cell.xib in Resources */,
 				9F9C5908278B8B9F005D164C /* OtherProductsCell.xib in Resources */,
@@ -1283,6 +1298,7 @@
 				9FCC942C278A1A9F000493AD /* NoMemberMyKurlyViewController.swift in Sources */,
 				9F9C58E9278B5B75005D164C /* BannersCell.swift in Sources */,
 				9FB51FBB278E744B00DEF835 /* SearchEventFrameCell.swift in Sources */,
+				9F786CD52796A97B00EEA867 /* EventViewController.swift in Sources */,
 				9F309DFD27925D4700EBF5E0 /* ItemBuyViewController.swift in Sources */,
 				9FCC944F278A5498000493AD /* EmailCertifyViewController.swift in Sources */,
 				9F9C5915278B97BF005D164C /* RecipeListCell.swift in Sources */,

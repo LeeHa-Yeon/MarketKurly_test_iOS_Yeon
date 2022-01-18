@@ -68,7 +68,6 @@ extension ProductsCell : UICollectionViewDataSource, UICollectionViewDelegate, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("ProductsCell 동작합니다.")
         self.delegate?.moveToVC()
     }
     

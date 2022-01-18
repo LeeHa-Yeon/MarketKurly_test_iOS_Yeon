@@ -8,6 +8,11 @@
 import UIKit
 import XLPagerTabStrip
 
+protocol EventViewControllerDelegate {
+    func moveToVC(id: Int)
+}
+
+
 class SpecialPriceViewController: UIViewController, IndicatorInfoProvider {
 
     var tabName: String = ""
@@ -47,6 +52,8 @@ extension SpecialPriceViewController : UITableViewDataSource, UITableViewDelegat
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? EventCell else {
             return UITableViewCell()
         }
+        cell.delegate = self
+        cell.eventId = indexPath.row
         cell.eventBanner.imageView?.image = UIImage(named: "banner")
         return cell
     }
@@ -55,4 +62,13 @@ extension SpecialPriceViewController : UITableViewDataSource, UITableViewDelegat
         return 160
     }
     
+}
+
+extension SpecialPriceViewController: EventViewControllerDelegate {
+    func moveToVC(id: Int) {
+        let storyboard = UIStoryboard(name: "Event", bundle: nil)
+        guard let EventVC = storyboard.instantiateViewController(identifier: "EventSB") as? EventViewController else { return }
+        EventVC.eventId = id
+        self.navigationController?.pushViewController(EventVC, animated: true)
+    }
 }

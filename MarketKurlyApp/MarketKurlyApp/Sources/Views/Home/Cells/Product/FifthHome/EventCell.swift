@@ -8,12 +8,16 @@
 import UIKit
 
 class EventCell: UITableViewCell {
-    @IBOutlet weak var eventBanner: UIButton!
     
+    var eventId: Int?
+    var delegate: EventViewControllerDelegate?
+    
+    // MARK: - Components
+    @IBOutlet weak var eventBanner: UIButton!
     @IBAction func bannerTapped(_ sender: Any) {
-        print("탭했어요~~~")
+        self.delegate?.moveToVC(id: eventId ?? 0)
     }
-    // MARK: - 생명주기
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         eventBanner.imageView?.contentMode = .scaleToFill
