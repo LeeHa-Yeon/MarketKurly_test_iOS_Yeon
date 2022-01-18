@@ -166,6 +166,11 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
 //                AddressVC.modalPresentationStyle = .fullScreen
 //                self.present(AddressVC, animated: true, completion: nil)
             }
+            if indexPath.row == 3 {
+                let storyboard = UIStoryboard(name: "ETC", bundle: nil)
+                let NoticeVC = storyboard.instantiateViewController(identifier: "NoticeSB")
+                self.navigationController?.pushViewController(NoticeVC, animated: true)
+            }
         }
         
         if indexPath.section == 7 {
