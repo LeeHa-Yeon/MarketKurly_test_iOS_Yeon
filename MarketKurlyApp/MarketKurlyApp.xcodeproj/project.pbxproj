@@ -88,6 +88,8 @@
 		9F786CC427965A5D00EEA867 /* DeliveryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CC227965A5D00EEA867 /* DeliveryCell.xib */; };
 		9F786CC927965AA200EEA867 /* AddDetailInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CC727965AA200EEA867 /* AddDetailInfoCell.swift */; };
 		9F786CCA27965AA200EEA867 /* AddDetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CC827965AA200EEA867 /* AddDetailInfoCell.xib */; };
+		9F786CCE2796871900EEA867 /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CCD2796871900EEA867 /* Coupon.storyboard */; };
+		9F786CD02796904C00EEA867 /* MyCouponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CCF2796904C00EEA867 /* MyCouponListViewController.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -276,6 +278,8 @@
 		9F786CC227965A5D00EEA867 /* DeliveryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryCell.xib; sourceTree = "<group>"; };
 		9F786CC727965AA200EEA867 /* AddDetailInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailInfoCell.swift; sourceTree = "<group>"; };
 		9F786CC827965AA200EEA867 /* AddDetailInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDetailInfoCell.xib; sourceTree = "<group>"; };
+		9F786CCD2796871900EEA867 /* Coupon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
+		9F786CCF2796904C00EEA867 /* MyCouponListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCouponListViewController.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -533,6 +537,8 @@
 		9F309E0027927C8100EBF5E0 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				9F786CCC279684D800EEA867 /* Wish */,
+				9F786CCB279684CC00EEA867 /* Coupon */,
 				9FC61BF627939EA9007AC4A7 /* Order */,
 				9FC61BF32792BB2A007AC4A7 /* Cart */,
 				9FC61BF22792BB1C007AC4A7 /* Address */,
@@ -639,6 +645,22 @@
 				9F786CC827965AA200EEA867 /* AddDetailInfoCell.xib */,
 			);
 			path = ShowOrderDetail;
+			sourceTree = "<group>";
+		};
+		9F786CCB279684CC00EEA867 /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				9F786CCD2796871900EEA867 /* Coupon.storyboard */,
+				9F786CCF2796904C00EEA867 /* MyCouponListViewController.swift */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		9F786CCC279684D800EEA867 /* Wish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wish;
 			sourceTree = "<group>";
 		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
@@ -1153,6 +1175,7 @@
 				9F786CA627962EDC00EEA867 /* OrderUserInfoSecondCell.xib in Resources */,
 				9F786CA227962DDE00EEA867 /* OrderSheetSecondCell.xib in Resources */,
 				9F786CBC27965A1B00EEA867 /* PayInfoCell.xib in Resources */,
+				9F786CCE2796871900EEA867 /* Coupon.storyboard in Resources */,
 				9F309E0227927CC600EBF5E0 /* Address.storyboard in Resources */,
 				9F9C591A278B99A1005D164C /* RecipeCell.xib in Resources */,
 				9FC61BF52792BB3D007AC4A7 /* Cart.storyboard in Resources */,
@@ -1311,6 +1334,7 @@
 				9F309E0427927D4000EBF5E0 /* AddressManagmentViewController.swift in Sources */,
 				9F9C58DF278B3F5D005D164C /* ThriftyShoppingViewController.swift in Sources */,
 				9F9D5E00278A0A1A00CC63FA /* IndicatorView.swift in Sources */,
+				9F786CD02796904C00EEA867 /* MyCouponListViewController.swift in Sources */,
 				9F2721B82790EAED00F85FA9 /* UserDataManager.swift in Sources */,
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9F489F6E2794C7B400E04879 /* RecivePlaceTwoViewController.swift in Sources */,

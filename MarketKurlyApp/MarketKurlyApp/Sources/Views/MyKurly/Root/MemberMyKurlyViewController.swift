@@ -137,6 +137,15 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if indexPath.section == 2 {
+            if indexPath.row == 1 {
+                let storyboard = UIStoryboard(name: "Coupon", bundle: nil)
+                let MyCouponListVC = storyboard.instantiateViewController(identifier: "MyCouponListSB")
+                self.navigationController?.pushViewController(MyCouponListVC, animated: true)
+            }
+        }
+        
+        
         if indexPath.section == 3 {
             if indexPath.row == 0 {
                 let storyboard = UIStoryboard(name: "Order", bundle: nil)
