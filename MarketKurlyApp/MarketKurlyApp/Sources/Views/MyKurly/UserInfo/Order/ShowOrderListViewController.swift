@@ -17,11 +17,11 @@ struct DummyOrderItem1 {
 
 class ShowOrderListViewController: UIViewController {
     
-    var statusCell = [false,false,false,false,false,false,false,false]
+    var statusCell = [true,true,true,true,true,true,true]
     var dummyOrderItemes: [DummyOrderItem1] = []
     
     let dummyListName = ["주문번호 16543534523","","결제정보","주문정보","배송정보","추가정보"]
-    let dummyStatus = ["냉장","냉장","냉동","냉동","상온"]
+    let dummyStatus = ["냉장","상온"]
     
     // MARK: - Components
     @IBOutlet weak var tableView: ExpyTableView!
@@ -110,6 +110,8 @@ extension ShowOrderListViewController: ExpyTableViewDelegate, ExpyTableViewDataS
             }
             cell.titleLabel.text = dummyListName[section]
             cell.selectionStyle = .none
+            cell.isLast = statusCell[section]
+            cell.isLastTest()
             return cell
         case 1 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderContentFreshCell") as? OrderContentFreshCell else {
@@ -183,11 +185,21 @@ extension ShowOrderListViewController: ExpyTableViewDelegate, ExpyTableViewDataS
         return UITableView.automaticDimension
     }
     
+    // 선택후 동작하는 거 여기서 하기!
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        print("\(indexPath.section)섹션 \(indexPath.row)로우 선택됨")
+        statusCell[indexPath.section] = !statusCell[indexPath.section]
+        tableView.reloadData()
+    }
+    
 }
 
 
 
 class OrderContentListCell: UITableViewCell {
+    
+    var isLast: Bool = false
     
     // MARK: - Components
     @IBOutlet weak var titleLabel: UILabel!
@@ -208,10 +220,16 @@ class OrderContentListCell: UITableViewCell {
         
     }
     
-    //    override func layoutSubviews() {
-    //        super.layoutSubviews()
-    //        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
-    //    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        isLastTest()
+    }
+    
+    func isLastTest(){
+        if isLast {
+            contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
+        }
+    }
     
 }
 
@@ -237,12 +255,12 @@ class OrderContentFreshCell: UITableViewCell {
         
     }
     
-    //    override func layoutSubviews() {
-    //        super.layoutSubviews()
-    //        if isLast {
-    //            contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
-    //        }
-    //    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if isLast {
+            contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
+        }
+    }
     
     
 }
