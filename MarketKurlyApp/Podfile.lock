@@ -6,6 +6,35 @@ PODS:
   - GMStepper (2.2)
   - GSMessages (1.7.5)
   - Kingfisher (7.1.2)
+  - MaterialComponents/Availability (124.2.0)
+  - MaterialComponents/BottomSheet (124.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/Elevation (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (124.2.0)
+  - MaterialComponents/private/Color (124.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (124.2.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (124.2.0)
+  - MaterialComponents/ShadowElevations (124.2.0)
+  - MaterialComponents/ShadowLayer (124.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (124.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (124.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
   - Then (2.7.0)
   - XLPagerTabStrip (9.0.0)
 
@@ -17,6 +46,7 @@ DEPENDENCIES:
   - GMStepper
   - GSMessages
   - Kingfisher
+  - MaterialComponents/BottomSheet
   - Then
   - XLPagerTabStrip
 
@@ -29,6 +59,7 @@ SPEC REPOS:
     - GMStepper
     - GSMessages
     - Kingfisher
+    - MaterialComponents
     - Then
     - XLPagerTabStrip
 
@@ -40,9 +71,10 @@ SPEC CHECKSUMS:
   GMStepper: 89fb106944dfcc3aa3add7164e3ebd463ea2104b
   GSMessages: ff0397d30b804fa38c6026fb080b8ad6f7454ab6
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: cf8ed776c20377c70e2b5aeb8d08ce38045def49
+PODFILE CHECKSUM: 6ee08cf40cf5d43f0b6a69a9c34c5f8e23a2f648
 
 COCOAPODS: 1.11.2

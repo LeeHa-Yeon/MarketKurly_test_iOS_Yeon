@@ -15,4 +15,5 @@ target 'MarketKurlyApp' do
   pod "GSMessages"  # 로그인 팝업알림창
   pod "GMStepper"  # 구매 스탬프 변경
   pod 'DropDown' # 정렬 선택 드롭다운
+  pod 'MaterialComponents/BottomSheet'  # 배송지 보여주는 부분
 end
