@@ -14,6 +14,7 @@ class MyCouponListViewController: UIViewController {
     @IBOutlet weak var addCouponBtn: UIButton!
     @IBAction func addCouponTapped(_ sender: Any) {
         // TODO: - 알림창 커스텀해야됨
+        presentTextFieldAlert()
     }
     
     
@@ -44,6 +45,34 @@ class MyCouponListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    // 텍스트필드가 포함된 UIAlertController
+    func presentTextFieldAlert( preferredStyle style: UIAlertController.Style = .alert,
+                      handler: ((UIAlertAction) -> Void)? = nil) {
+        self.dismissIndicator()
+        let alert = UIAlertController(title: "쿠폰 등록", message: nil, preferredStyle: style)
+        alert.addTextField { couponTextField in
+            couponTextField.placeholder = "발급된 쿠폰번호를 입력해 주세요"
+            couponTextField.layer.cornerRadius = 5
+        }
+        let actionDone = UIAlertAction(title: "확인", style: .default) { (ok) in
+            // TODO: 쿠폰 API 해야됨
+            guard let couponIdString = alert.textFields?[0].text else {
+                return
+            }
+            let couponIdInt: Int = Int(couponIdString) ?? -1
+            if couponIdInt != -1 {
+                print("하이!! \(couponIdInt)")
+                self.tableView.reloadData()
+            }
+    
+        }
+        alert.addAction(actionDone)
+            let actionCancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+            alert.addAction(actionCancel)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
 }
 
