@@ -7,6 +7,7 @@
 
 import UIKit
 import ExpyTableView
+import SafariServices
 
 struct DummyOrderItem1 {
     let name: String
@@ -22,9 +23,14 @@ class ShowOrderListViewController: UIViewController {
     
     let dummyListName = ["주문번호 16543534523","","결제정보","주문정보","배송정보","추가정보"]
     let dummyStatus = ["냉장","상온"]
-    
+
     // MARK: - Components
     @IBOutlet weak var tableView: ExpyTableView!
+    
+    @IBAction func moveToURL(_ sender: Any) {
+        moveToWeb(url: "https://www.freshsolutions.co.kr/main/delivery_check.php?invoice_no=220-H0-1612874912972-0001" )
+        
+    }
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -59,6 +65,12 @@ class ShowOrderListViewController: UIViewController {
     func registerNib(cellNibName: String, cellIdentifier: String){
         let newCellNib = UINib(nibName: cellNibName, bundle: nil)
         self.tableView.register(newCellNib, forCellReuseIdentifier: cellIdentifier)
+    }
+    
+    func moveToWeb(url: String){
+        let targetUrl = NSURL(string: url)
+        let targetSafariView: SFSafariViewController = SFSafariViewController(url: targetUrl as! URL)
+        self.present(targetSafariView, animated: true, completion: nil)
     }
     
     /* API 통신할 부분 */

@@ -455,6 +455,9 @@
                                                                     </fragment>
                                                                 </attributedString>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="moveToURL:" destination="yCE-Ne-OeY" eventType="touchUpInside" id="0w5-el-P83"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
