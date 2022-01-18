@@ -136,7 +136,6 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         if indexPath.section == 2 {
             if indexPath.row == 1 {
                 let storyboard = UIStoryboard(name: "Coupon", bundle: nil)
@@ -151,6 +150,11 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
                 let storyboard = UIStoryboard(name: "Order", bundle: nil)
                 let OrderHistoryVC = storyboard.instantiateViewController(identifier: "OrderHistorySB")
                 self.navigationController?.pushViewController(OrderHistoryVC, animated: true)
+            }
+            if indexPath.row == 2 {
+                let storyboard = UIStoryboard(name: "Wish", bundle: nil)
+                let WishVC = storyboard.instantiateViewController(identifier: "WishSB")
+                self.navigationController?.pushViewController(WishVC, animated: true)
             }
         }
         

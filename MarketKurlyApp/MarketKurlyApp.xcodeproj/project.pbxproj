@@ -127,6 +127,8 @@
 		9F9C591E278B9DB6005D164C /* SpecialProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C591C278B9DB6005D164C /* SpecialProductCell.xib */; };
 		9F9C5925278BB126005D164C /* Product2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C5923278BB126005D164C /* Product2Cell.swift */; };
 		9F9C5926278BB126005D164C /* Product2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C5924278BB126005D164C /* Product2Cell.xib */; };
+		9F9CE976279715980071D454 /* WishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE975279715980071D454 /* WishViewController.swift */; };
+		9F9CE978279715D40071D454 /* Wish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9CE977279715D40071D454 /* Wish.storyboard */; };
 		9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */; };
 		9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */; };
 		9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD227895F3D00CC63FA /* ViewController.swift */; };
@@ -327,6 +329,8 @@
 		9F9C591C278B9DB6005D164C /* SpecialProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecialProductCell.xib; sourceTree = "<group>"; };
 		9F9C5923278BB126005D164C /* Product2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product2Cell.swift; sourceTree = "<group>"; };
 		9F9C5924278BB126005D164C /* Product2Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Product2Cell.xib; sourceTree = "<group>"; };
+		9F9CE975279715980071D454 /* WishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishViewController.swift; sourceTree = "<group>"; };
+		9F9CE977279715D40071D454 /* Wish.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wish.storyboard; sourceTree = "<group>"; };
 		9F9D5DCB27895F3D00CC63FA /* MarketKurlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -680,6 +684,8 @@
 		9F786CCC279684D800EEA867 /* Wish */ = {
 			isa = PBXGroup;
 			children = (
+				9F9CE977279715D40071D454 /* Wish.storyboard */,
+				9F9CE975279715980071D454 /* WishViewController.swift */,
 			);
 			path = Wish;
 			sourceTree = "<group>";
@@ -1203,6 +1209,7 @@
 				9FCC942E278A1AD4000493AD /* MyKurly.storyboard in Resources */,
 				9F9C5916278B97BF005D164C /* RecipeListCell.xib in Resources */,
 				9F9D5DDB27895F4000CC63FA /* LaunchScreen.storyboard in Resources */,
+				9F9CE978279715D40071D454 /* Wish.storyboard in Resources */,
 				9FB51FB8278DB73900DEF835 /* SearchWordCell.xib in Resources */,
 				9F309DE0279158D900EBF5E0 /* Item.storyboard in Resources */,
 				9F9D5DFC278A09FE00CC63FA /* NotoSansCJKkr-Regular.otf in Resources */,
@@ -1322,6 +1329,7 @@
 				9F9C5907278B8B9F005D164C /* OtherProductsCell.swift in Sources */,
 				9F309E142792914E00EBF5E0 /* ChangePwdResponse.swift in Sources */,
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
+				9F9CE976279715980071D454 /* WishViewController.swift in Sources */,
 				9F2721AA2790045700F85FA9 /* AllUserResponse.swift in Sources */,
 				9F2721BA2790EAFB00F85FA9 /* UserResponse.swift in Sources */,
 				9FB51FB7278DB73900DEF835 /* SearchWordCell.swift in Sources */,

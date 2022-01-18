@@ -29,7 +29,6 @@ class ShowOrderListViewController: UIViewController {
     
     @IBAction func moveToURL(_ sender: Any) {
         moveToWeb(url: "https://www.freshsolutions.co.kr/main/delivery_check.php?invoice_no=220-H0-1612874912972-0001" )
-        
     }
     
     // MARK: - LifeCycle
