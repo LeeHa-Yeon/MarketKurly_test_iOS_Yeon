@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 import Kingfisher
 import Then
+import MaterialComponents.MaterialBottomSheet
 
 extension UIViewController {
     // MARK: 빈 화면을 눌렀을 때 키보드가 내려가도록 처리
@@ -240,8 +241,10 @@ extension UIViewController {
     @objc func addressBarBtnTapped(_ sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Address", bundle: nil)
         let ModalAddressVC = storyboard.instantiateViewController(identifier: "ModalAddressSB")
-//        ModalAddressVC.modalPresentationStyle = .custom
-        present(ModalAddressVC, animated: true, completion: nil)
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: ModalAddressVC)
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 480
+        bottomSheet.scrimColor = UIColor.black.withAlphaComponent(0.5)
+        present(bottomSheet, animated: true, completion: nil)
     }
     
     @objc func cartBarBtnTapped(_ sender: AnyObject) {
