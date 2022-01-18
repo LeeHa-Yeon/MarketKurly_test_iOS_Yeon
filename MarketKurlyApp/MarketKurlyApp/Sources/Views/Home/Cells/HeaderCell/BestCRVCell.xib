@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bestCRVCell" id="U6b-Vx-4bR" customClass="BestCRVCell" customModule="MarketKurlyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGj-9A-8ap">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jml-vK-gse">
+                            <rect key="frame" x="322" y="10" width="52" height="30"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="판매량순">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="sortBtnTapped:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="TLW-Op-uf8"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomArrow" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-Zr-mMF">
+                            <rect key="frame" x="384" y="17.5" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="AYt-tn-FSD"/>
+                                <constraint firstAttribute="width" secondItem="2hC-Zr-mMF" secondAttribute="height" id="hDq-JT-vx7"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="2hC-Zr-mMF" firstAttribute="width" secondItem="2hC-Zr-mMF" secondAttribute="height" id="4gL-X4-lCb"/>
+                        <constraint firstAttribute="trailing" secondItem="2hC-Zr-mMF" secondAttribute="trailing" constant="15" id="9lR-jD-7LI"/>
+                        <constraint firstItem="2hC-Zr-mMF" firstAttribute="centerY" secondItem="NGj-9A-8ap" secondAttribute="centerY" id="PKc-oN-ljy"/>
+                        <constraint firstItem="2hC-Zr-mMF" firstAttribute="leading" secondItem="jml-vK-gse" secondAttribute="trailing" constant="10" id="cCv-Wh-SYm"/>
+                        <constraint firstItem="jml-vK-gse" firstAttribute="centerY" secondItem="NGj-9A-8ap" secondAttribute="centerY" id="lIU-t5-z4o"/>
+                        <constraint firstAttribute="height" constant="50" id="scT-oo-8sR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="NGj-9A-8ap" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="215-vU-yYW"/>
+                <constraint firstItem="NGj-9A-8ap" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="6fo-p3-VyO"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="NGj-9A-8ap" secondAttribute="trailing" id="wmI-0n-Wrj"/>
+            </constraints>
+            <connections>
+                <outlet property="arraowImg" destination="2hC-Zr-mMF" id="Xa0-TA-lpg"/>
+                <outlet property="sortBtn" destination="jml-vK-gse" id="t7a-Xm-KIL"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="122"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="bottomArrow" width="170.66667175292969" height="170.66667175292969"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

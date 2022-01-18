@@ -30,10 +30,11 @@ class BestViewController: UIViewController, IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "\(tabName)")
     }
-    
     func setUI(){
+        
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.register(UINib(nibName: "BestCRVCell", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "bestCRVCell")
         registerNib(cellNibName: "Product2Cell", cellIdentifier: "product2Cell")
     }
     
@@ -50,14 +51,31 @@ extension BestViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        switch kind {
-        case UICollectionView.elementKindSectionHeader :
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "bestHeaderView", for: indexPath)
-            return headerView
-        default :
-            assert(false,"No")
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "bestCRVCell", for: indexPath) as? BestCRVCell else {
+            return UICollectionReusableView()
         }
+        headerView.action = { (state: ButtomClickSort) in
+                switch state {
+                case .recommendOrder :
+                    print("추천순")
+                    headerView.test()
+                case .newProductOrder :
+                    print("신상품순")
+                case .doneOrder :
+                    print("판매량순")
+                case .salesOrder :
+                    print("혜택순")
+                case .lowPriceOrder :
+                    print("낮은가격순")
+                case .highPriceOrder :
+                    print("높은가격순")
+                }
+                self.collectionView.reloadData()
+            }
+    
+        return headerView
     }
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product2Cell", for: indexPath) as? Product2Cell else {
@@ -68,6 +86,11 @@ extension BestViewController : UICollectionViewDelegate, UICollectionViewDataSou
     
     
     //컬렉션뷰 사이즈 설정
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 50)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let margin:CGFloat = 25
         let cellRatio: CGFloat = 5/3

@@ -40,6 +40,7 @@ class EventViewController: UIViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.register(UINib(nibName: "EventCRVCell", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "eventCRVCell")
         registerNib(cellNibName: "Product2Cell", cellIdentifier: "product2Cell")
     
         naviTitleDelete(navi: self.navigationController!)
@@ -61,13 +62,29 @@ extension EventViewController : UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        switch kind {
-        case UICollectionView.elementKindSectionHeader :
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "eventHeaderView", for: indexPath)
-            return headerView
-        default :
-            assert(false,"No")
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "eventCRVCell", for: indexPath) as? EventCRVCell else {
+            return UICollectionReusableView()
         }
+        headerView.action = { (state: ButtomClickSort) in
+                switch state {
+                case .recommendOrder :
+                    print("추천순")
+                    headerView.test()
+                case .newProductOrder :
+                    print("신상품순")
+                case .doneOrder :
+                    print("판매량순")
+                case .salesOrder :
+                    print("혜택순")
+                case .lowPriceOrder :
+                    print("낮은가격순")
+                case .highPriceOrder :
+                    print("높은가격순")
+                }
+                self.collectionView.reloadData()
+            }
+    
+        return headerView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -78,6 +95,11 @@ extension EventViewController : UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     //컬렉션뷰 사이즈 설정
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 465)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let margin:CGFloat = 25
         let cellRatio: CGFloat = 5/3

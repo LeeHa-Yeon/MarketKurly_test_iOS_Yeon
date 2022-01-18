@@ -94,6 +94,12 @@
 		9F786CD52796A97B00EEA867 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CD42796A97B00EEA867 /* EventViewController.swift */; };
 		9F786CDC2796CD5500EEA867 /* NewProductCRVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CDA2796CD5400EEA867 /* NewProductCRVCell.swift */; };
 		9F786CDD2796CD5500EEA867 /* NewProductCRVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CDB2796CD5500EEA867 /* NewProductCRVCell.xib */; };
+		9F786CE12796E61500EEA867 /* BestCRVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CDF2796E61500EEA867 /* BestCRVCell.swift */; };
+		9F786CE22796E61500EEA867 /* BestCRVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CE02796E61500EEA867 /* BestCRVCell.xib */; };
+		9F786CE52796E62800EEA867 /* ThriftyShoppingCRVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CE32796E62800EEA867 /* ThriftyShoppingCRVCell.swift */; };
+		9F786CE62796E62800EEA867 /* ThriftyShoppingCRVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CE42796E62800EEA867 /* ThriftyShoppingCRVCell.xib */; };
+		9F786CED2796E71300EEA867 /* EventCRVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CEB2796E71300EEA867 /* EventCRVCell.swift */; };
+		9F786CEE2796E71300EEA867 /* EventCRVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CEC2796E71300EEA867 /* EventCRVCell.xib */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -288,6 +294,12 @@
 		9F786CD42796A97B00EEA867 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		9F786CDA2796CD5400EEA867 /* NewProductCRVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductCRVCell.swift; sourceTree = "<group>"; };
 		9F786CDB2796CD5500EEA867 /* NewProductCRVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewProductCRVCell.xib; sourceTree = "<group>"; };
+		9F786CDF2796E61500EEA867 /* BestCRVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestCRVCell.swift; sourceTree = "<group>"; };
+		9F786CE02796E61500EEA867 /* BestCRVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestCRVCell.xib; sourceTree = "<group>"; };
+		9F786CE32796E62800EEA867 /* ThriftyShoppingCRVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftyShoppingCRVCell.swift; sourceTree = "<group>"; };
+		9F786CE42796E62800EEA867 /* ThriftyShoppingCRVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThriftyShoppingCRVCell.xib; sourceTree = "<group>"; };
+		9F786CEB2796E71300EEA867 /* EventCRVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCRVCell.swift; sourceTree = "<group>"; };
+		9F786CEC2796E71300EEA867 /* EventCRVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCRVCell.xib; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -686,6 +698,12 @@
 			children = (
 				9F786CDA2796CD5400EEA867 /* NewProductCRVCell.swift */,
 				9F786CDB2796CD5500EEA867 /* NewProductCRVCell.xib */,
+				9F786CDF2796E61500EEA867 /* BestCRVCell.swift */,
+				9F786CE02796E61500EEA867 /* BestCRVCell.xib */,
+				9F786CE32796E62800EEA867 /* ThriftyShoppingCRVCell.swift */,
+				9F786CE42796E62800EEA867 /* ThriftyShoppingCRVCell.xib */,
+				9F786CEB2796E71300EEA867 /* EventCRVCell.swift */,
+				9F786CEC2796E71300EEA867 /* EventCRVCell.xib */,
 			);
 			path = HeaderCell;
 			sourceTree = "<group>";
@@ -1172,6 +1190,7 @@
 				9F27219F278FB25600F85FA9 /* CategoryChildCell.xib in Resources */,
 				9F9C58F4278B64AC005D164C /* ProductsCell.xib in Resources */,
 				9F786CCA27965AA200EEA867 /* AddDetailInfoCell.xib in Resources */,
+				9F786CE22796E61500EEA867 /* BestCRVCell.xib in Resources */,
 				9F9C58F8278B64C2005D164C /* ProductCell.xib in Resources */,
 				9FCC9432278A1C8D000493AD /* Category.storyboard in Resources */,
 				9FCC943A278A1DED000493AD /* Home.storyboard in Resources */,
@@ -1204,6 +1223,7 @@
 				9F9C58FC278B7440005D164C /* NoSaleProductCell.xib in Resources */,
 				9F786CA627962EDC00EEA867 /* OrderUserInfoSecondCell.xib in Resources */,
 				9F786CA227962DDE00EEA867 /* OrderSheetSecondCell.xib in Resources */,
+				9F786CE62796E62800EEA867 /* ThriftyShoppingCRVCell.xib in Resources */,
 				9F786CBC27965A1B00EEA867 /* PayInfoCell.xib in Resources */,
 				9F786CCE2796871900EEA867 /* Coupon.storyboard in Resources */,
 				9F309E0227927CC600EBF5E0 /* Address.storyboard in Resources */,
@@ -1213,6 +1233,7 @@
 				9F786CC427965A5D00EEA867 /* DeliveryCell.xib in Resources */,
 				9F786CB22796359F00EEA867 /* OrderSheetSixCell.xib in Resources */,
 				9F9D5DFD278A09FE00CC63FA /* NotoSansCJKkr-Medium.otf in Resources */,
+				9F786CEE2796E71300EEA867 /* EventCRVCell.xib in Resources */,
 				9F9D5DFE278A09FE00CC63FA /* NotoSansCJKkr-Bold.otf in Resources */,
 				9F786CAA2796315B00EEA867 /* OrderSheetThirdCell.xib in Resources */,
 				9F786CAE279633F600EEA867 /* OrderSheetFifthCell.xib in Resources */,
@@ -1289,6 +1310,7 @@
 				9F27219E278FB25600F85FA9 /* CategoryChildCell.swift in Sources */,
 				9F489F702794C7C200E04879 /* RecivePlaceThreeViewController.swift in Sources */,
 				9F9C58FF278B88CB005D164C /* OnlyBannerCell.swift in Sources */,
+				9F786CE52796E62800EEA867 /* ThriftyShoppingCRVCell.swift in Sources */,
 				9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */,
 				9F9D5E11278A0D4400CC63FA /* UINavigationBar.swift in Sources */,
 				9FB51FA7278D8D8400DEF835 /* BaseTextField.swift in Sources */,
@@ -1303,6 +1325,7 @@
 				9F2721AA2790045700F85FA9 /* AllUserResponse.swift in Sources */,
 				9F2721BA2790EAFB00F85FA9 /* UserResponse.swift in Sources */,
 				9FB51FB7278DB73900DEF835 /* SearchWordCell.swift in Sources */,
+				9F786CE12796E61500EEA867 /* BestCRVCell.swift in Sources */,
 				9FA04372278D10A000FCD2FE /* EventCell.swift in Sources */,
 				9F309DE427915F2500EBF5E0 /* ItemDetailViewController.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
@@ -1387,6 +1410,7 @@
 				9F309E122792914300EBF5E0 /* ChangePwdRequest.swift in Sources */,
 				9FA0437D278D126200FCD2FE /* BannerCell.swift in Sources */,
 				9F9D5E15278A0F7500CC63FA /* LoginDataManager.swift in Sources */,
+				9F786CED2796E71300EEA867 /* EventCRVCell.swift in Sources */,
 				9F309DFF2792658500EBF5E0 /* CALayer.swift in Sources */,
 				9FCC9455278AA585000493AD /* MemberMyKurlyViewController.swift in Sources */,
 				9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */,

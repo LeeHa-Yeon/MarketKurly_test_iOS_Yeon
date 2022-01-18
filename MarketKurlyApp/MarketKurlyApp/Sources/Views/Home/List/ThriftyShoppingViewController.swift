@@ -34,6 +34,7 @@ class ThriftyShoppingViewController: UIViewController, IndicatorInfoProvider {
     func setUI(){
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.register(UINib(nibName: "ThriftyShoppingCRVCell", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "thriftyShoppingCRVCell")
         registerNib(cellNibName: "Product2Cell", cellIdentifier: "product2Cell")
     }
     
@@ -50,13 +51,29 @@ extension ThriftyShoppingViewController : UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        switch kind {
-        case UICollectionView.elementKindSectionHeader :
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "thriftyHeaderView", for: indexPath)
-            return headerView
-        default :
-            assert(false,"No")
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "thriftyShoppingCRVCell", for: indexPath) as? ThriftyShoppingCRVCell else {
+            return UICollectionReusableView()
         }
+        headerView.action = { (state: ButtomClickSort) in
+                switch state {
+                case .recommendOrder :
+                    print("추천순")
+                    headerView.test()
+                case .newProductOrder :
+                    print("신상품순")
+                case .doneOrder :
+                    print("판매량순")
+                case .salesOrder :
+                    print("혜택순")
+                case .lowPriceOrder :
+                    print("낮은가격순")
+                case .highPriceOrder :
+                    print("높은가격순")
+                }
+                self.collectionView.reloadData()
+            }
+    
+        return headerView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -67,6 +84,11 @@ extension ThriftyShoppingViewController : UICollectionViewDelegate, UICollection
     }
 
     //컬렉션뷰 사이즈 설정
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 500)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let margin:CGFloat = 25
         let cellRatio: CGFloat = 5/3

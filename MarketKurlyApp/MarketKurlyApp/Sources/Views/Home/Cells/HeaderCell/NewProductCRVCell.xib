@@ -27,7 +27,7 @@
                     <rect key="frame" x="0.0" y="150" width="414" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plg-9a-MAh">
-                            <rect key="frame" x="321" y="10" width="52" height="30"/>
+                            <rect key="frame" x="322" y="10" width="52" height="30"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="판매량순">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,21 +36,22 @@
                                 <action selector="sortBtnTapped:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="U95-Lv-djJ"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⌄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wad-Vz-q3Q">
-                            <rect key="frame" x="383" y="14.5" width="11" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomArrow" translatesAutoresizingMaskIntoConstraints="NO" id="4fI-Up-yHM">
+                            <rect key="frame" x="384" y="17.5" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="4fI-Up-yHM" secondAttribute="height" id="2y6-8z-phO"/>
+                                <constraint firstAttribute="width" constant="15" id="ay5-3I-lka"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="Plg-9a-MAh" firstAttribute="centerY" secondItem="t7l-pN-hqi" secondAttribute="centerY" id="93I-xm-K7m"/>
-                        <constraint firstItem="Wad-Vz-q3Q" firstAttribute="leading" secondItem="Plg-9a-MAh" secondAttribute="trailing" constant="10" id="DsY-wT-jYK"/>
-                        <constraint firstItem="Wad-Vz-q3Q" firstAttribute="leading" secondItem="Plg-9a-MAh" secondAttribute="trailing" constant="10" id="Ghn-1j-mqU"/>
+                        <constraint firstItem="4fI-Up-yHM" firstAttribute="width" secondItem="4fI-Up-yHM" secondAttribute="height" id="Lwb-9I-hFK"/>
+                        <constraint firstAttribute="trailing" secondItem="4fI-Up-yHM" secondAttribute="trailing" constant="15" id="PPj-Oz-MzX"/>
+                        <constraint firstItem="4fI-Up-yHM" firstAttribute="leading" secondItem="Plg-9a-MAh" secondAttribute="trailing" constant="10" id="Uhr-3O-ffq"/>
                         <constraint firstAttribute="height" constant="50" id="VxB-q3-1rk"/>
-                        <constraint firstItem="Wad-Vz-q3Q" firstAttribute="centerY" secondItem="t7l-pN-hqi" secondAttribute="centerY" id="inz-m0-nE9"/>
-                        <constraint firstAttribute="trailing" secondItem="Wad-Vz-q3Q" secondAttribute="trailing" constant="20" symbolic="YES" id="lwd-ws-OnC"/>
+                        <constraint firstItem="4fI-Up-yHM" firstAttribute="centerY" secondItem="t7l-pN-hqi" secondAttribute="centerY" id="oM3-tJ-HnG"/>
                     </constraints>
                 </view>
             </subviews>
@@ -64,6 +65,7 @@
                 <constraint firstItem="g8E-13-6sx" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="gGO-yl-fAa"/>
             </constraints>
             <connections>
+                <outlet property="arraowImg" destination="4fI-Up-yHM" id="KGR-Sd-Pgb"/>
                 <outlet property="sortBtn" destination="Plg-9a-MAh" id="RHX-lx-QYU"/>
             </connections>
             <point key="canvasLocation" x="215.94202898550725" y="206.25"/>
@@ -71,6 +73,7 @@
     </objects>
     <resources>
         <image name="ad" width="1170" height="432"/>
+        <image name="bottomArrow" width="170.66667175292969" height="170.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,5 +1,5 @@
 //
-//  NewProductCRVCell.swift
+//  EventCRVCell.swift
 //  MarketKurlyApp
 //
 //  Created by 이하연 on 2022/01/18.
@@ -8,17 +8,8 @@
 import UIKit
 import DropDown
 
-enum ButtomClickSort {
-    case recommendOrder
-    case newProductOrder
-    case doneOrder
-    case salesOrder
-    case lowPriceOrder
-    case highPriceOrder
-}
+class EventCRVCell: UICollectionReusableView {
 
-class NewProductCRVCell: UICollectionReusableView {
-    
     let dropDown = DropDown()
     var action = { (state: ButtomClickSort) in }
     
@@ -65,5 +56,6 @@ class NewProductCRVCell: UICollectionReusableView {
     func test(){
         print("test")
     }
+    
     
 }
