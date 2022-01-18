@@ -43,6 +43,12 @@ extension OrderDetailListViewController: UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Order", bundle: nil)
+        guard let ShowOrderListVC = storyboard.instantiateViewController(identifier: "ShowOrderListSB") as? ShowOrderListViewController else { return }
+        self.navigationController?.pushViewController(ShowOrderListVC, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
     }

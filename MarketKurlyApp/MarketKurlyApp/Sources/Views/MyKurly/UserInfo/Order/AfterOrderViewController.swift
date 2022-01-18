@@ -24,6 +24,9 @@ class AfterOrderViewController: UIViewController {
     }
     @IBAction func moveToOrderListTapped(_ sender: Any) {
         // TODO: - 주문 내역 상세보기로 이동
+        
+        
+        
     }
     // MARK: - LifeCycle
     override func viewDidLoad() {
