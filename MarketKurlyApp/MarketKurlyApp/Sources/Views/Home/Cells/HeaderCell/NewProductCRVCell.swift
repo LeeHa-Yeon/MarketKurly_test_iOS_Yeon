@@ -28,8 +28,10 @@ class NewProductCRVCell: UICollectionReusableView {
     @IBAction func sortBtnTapped(_ sender: Any) {
         dropDown.anchorView = sortBtn
         dropDown.show()
-        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.bottomOffset = CGPoint(x: -30, y:(dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            sortBtn.setTitle(item, for: .normal)
+            
             switch index {
             case 0 :
                 action(.recommendOrder)
@@ -48,6 +50,7 @@ class NewProductCRVCell: UICollectionReusableView {
             }
             print("선택한 아이템 : \(item)")
             print("인덱스 : \(index)")
+            self.dropDown.clearSelection()
         }
     }
     
@@ -60,7 +63,16 @@ class NewProductCRVCell: UICollectionReusableView {
     // MARK: - Functions
     func setUI(){
         dropDown.dataSource = ["추천순", "신상품순", "판매량순", "혜택순", "낮은 가격순", "높은 가격순"]
+        dropDown.selectedTextColor = UIColor.mainKurlyPurple
+        dropDown.textFont = UIFont.systemFont(ofSize: 14)
+        dropDown.width = 100
+        dropDown.backgroundColor = UIColor.white
+        dropDown.selectionBackgroundColor = UIColor.white
+        dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+                    cell.optionLabel.textAlignment = .right
+                }
     }
+    
     
     func test(){
         print("test")
