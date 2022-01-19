@@ -9,7 +9,6 @@ import UIKit
 import XLPagerTabStrip
 
 class ParentViewController: ButtonBarPagerTabStripViewController {
-    
     let purpleInspireColor = UIColor.mainKurlyPurple
     
     // MARK: - LifeCycle
@@ -18,6 +17,7 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
         customBtnBar()
         setUI()
         super.viewDidLoad()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,7 +25,6 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
         self.title = "마켓컬리"
         customNavigationBarAttribute(UIColor.mainKurlyPurple, .white)
         customNaviBarItem(btnColor: .white, naviItem: self.navigationItem)
-//        setUI()
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -35,6 +34,7 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
         
         let NewProductVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "NewProductSB") as! NewProductViewController
         NewProductVC.tabName = "신상품"
+    
         
         let BestVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BestSB") as! BestViewController
         BestVC.tabName = "베스트"
@@ -77,5 +77,6 @@ class ParentViewController: ButtonBarPagerTabStripViewController {
         newCell?.label.textColor = self?.purpleInspireColor
         }
     }
+    
 }
 

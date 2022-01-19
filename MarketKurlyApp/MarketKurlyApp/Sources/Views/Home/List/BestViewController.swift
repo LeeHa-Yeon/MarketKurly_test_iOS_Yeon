@@ -7,11 +7,13 @@
 
 import UIKit
 import XLPagerTabStrip
-
+import Kingfisher
 
 class BestViewController: UIViewController, IndicatorInfoProvider {
     
     var tabName: String = ""
+    var itemList: [SortDocument] = []
+    let itemManager = ItemListDataManager.shared
     
     // MARK: - UIComponents
     @IBOutlet weak var collectionView: UICollectionView!
@@ -19,7 +21,11 @@ class BestViewController: UIViewController, IndicatorInfoProvider {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setData()
         setUI()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,11 +49,19 @@ class BestViewController: UIViewController, IndicatorInfoProvider {
         self.collectionView.register(newCellNib, forCellWithReuseIdentifier: cellIdentifier)
     }
     
+    /* API 부분 */
+    func setData(){
+        self.itemManager.requestOrderItemSortList { response in
+            self.itemList = response.result
+            self.collectionView.reloadData()
+        }
+    }
+    
 }
 
 extension BestViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return itemList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -55,24 +69,41 @@ extension BestViewController : UICollectionViewDelegate, UICollectionViewDataSou
             return UICollectionReusableView()
         }
         headerView.action = { (state: ButtomClickSort) in
-                switch state {
-                case .recommendOrder :
-                    print("추천순")
-                    headerView.test()
-                case .newProductOrder :
-                    print("신상품순")
-                case .doneOrder :
-                    print("판매량순")
-                case .salesOrder :
-                    print("혜택순")
-                case .lowPriceOrder :
-                    print("낮은가격순")
-                case .highPriceOrder :
-                    print("높은가격순")
+            switch state {
+            case .recommendOrder :
+                self.itemManager.requestOrderItemSortList { response in
+                    self.itemList = response.result
+                    self.collectionView.reloadData()
                 }
-                self.collectionView.reloadData()
+            case .newProductOrder :
+                
+                self.itemManager.requestNewItemSortList { response in
+                    self.itemList = response.result
+                    self.collectionView.reloadData()
+                }
+            case .doneOrder :
+                self.itemManager.requestOrderItemSortList { response in
+                    self.itemList = response.result
+                    self.collectionView.reloadData()
+                }
+            case .salesOrder :
+                self.itemManager.requestSaleItemSortList { response in
+                    self.itemList = response.result
+                    self.collectionView.reloadData()
+                }
+            case .lowPriceOrder :
+                self.itemManager.requestLowPriceItemSortList  { response in
+                    self.itemList = response.result
+                    self.collectionView.reloadData()
+                }
+            case .highPriceOrder :
+                self.itemManager.requestHighPriceItemSortList { response in
+                    self.itemList = response.result
+                    self.collectionView.reloadData()
+                }
             }
-    
+        }
+        
         return headerView
     }
 
@@ -81,7 +112,53 @@ extension BestViewController : UICollectionViewDelegate, UICollectionViewDataSou
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product2Cell", for: indexPath) as? Product2Cell else {
             return UICollectionViewCell()
         }
+        cell.delegate = self
+        let target = itemList[indexPath.row]
+        //////////////////////////////////////////////////// 공통  ////////////////////////////////////////////////
+        // 아이템 아이디 넘겨주기
+        cell.itemId = target.itemId
+        
+        // 설날특가 없애기 ( 우선 )
+        cell.newYearImg.isHidden = true
+        
+        // 아이템 이미지
+        urlToImg(urlStr: target.items_img_url , targetImg: cell.itemImg )
+        cell.itemTitle.text = target.name
+        
+        
+        //////////////////////////////////////////////////// 따로  ////////////////////////////////////////////////
+        // 할인 여부
+        if target.discount_rate != "0%" {
+            cell.discountLabel.isHidden = false
+            cell.originPrice.isHidden = false
+            cell.discountLabel.text = target.discount_rate
+            cancleLine(text: DecimalWon(value: target.price), targetLabel: cell.originPrice)
+            cell.salePrice.text = DecimalWon(value: target.member_discount_price)
+        }else {
+            cell.discountLabel.isHidden = true
+            cell.originPrice.isHidden = true
+            cell.salePrice.text = DecimalWon(value: target.price)
+        }
+        
+        // 선물 여부
+        if target.present == 0 {
+            cell.giftImg.isHidden = true
+        } else {
+            cell.giftImg.isHidden = false
+        }
+        
+        // 쿠폰 여부
+        if target.coupon == 0 {
+            cell.couponImg.isHidden = true
+        } else {
+            cell.couponImg.isHidden = false
+        }
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("체크",itemList[indexPath.row].itemId,itemList[indexPath.row].name)
     }
     
     
@@ -92,13 +169,24 @@ extension BestViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let margin:CGFloat = 25
+        let margin:CGFloat = 35
         let cellRatio: CGFloat = 5/3
         let screenWidth = UIScreen.main.bounds.width
         let cellWidth =  (screenWidth-margin) / CGFloat(2)
         let cellHeight = cellWidth * cellRatio + 50
         return CGSize(width: cellWidth, height: cellHeight)
     }
-    
+}
+
+
+extension BestViewController: ItemBuyViewControllerDelegate {
+    func moveToVC() {
+        let storyboard = UIStoryboard(name: "Item", bundle: nil)
+        let ItemDetailVC = storyboard.instantiateViewController(identifier: "ItemBuySB")
+        present(ItemDetailVC, animated: true, completion: nil)
+    }
+    func updateData(){
+        self.collectionView.reloadData()
+    }
 }
 

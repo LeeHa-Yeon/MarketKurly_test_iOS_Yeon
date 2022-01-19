@@ -260,9 +260,7 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20
     }
-    
-    
-    
+
 }
 
 extension RecommendViewController: ItemDetailViewControllerDelegate {
@@ -272,3 +270,4 @@ extension RecommendViewController: ItemDetailViewControllerDelegate {
         self.navigationController?.pushViewController(ItemDetailVC, animated: true)
     }
 }
+

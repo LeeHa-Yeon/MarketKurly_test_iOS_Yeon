@@ -276,4 +276,12 @@ extension UIViewController {
         attributedString.addAttribute(.strikethroughStyle, value: 1.07, range: (text as NSString).range(of: text))
         targetLabel.attributedText = attributedString
     }
+    
+    // MARK: - 이미지 변환
+    func urlToImg(urlStr: String, targetImg: UIImageView ){
+        if let url: URL = URL(string: urlStr){
+            targetImg.kf.indicatorType = .activity
+            targetImg.kf.setImage(with:url)
+        }
+    }
 }

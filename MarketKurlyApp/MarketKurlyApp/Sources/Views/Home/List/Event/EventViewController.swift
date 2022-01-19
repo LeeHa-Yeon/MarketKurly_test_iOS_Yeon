@@ -69,7 +69,6 @@ extension EventViewController : UICollectionViewDelegate, UICollectionViewDataSo
                 switch state {
                 case .recommendOrder :
                     print("추천순")
-                    headerView.test()
                 case .newProductOrder :
                     print("신상품순")
                 case .doneOrder :

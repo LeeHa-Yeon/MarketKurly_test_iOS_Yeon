@@ -150,6 +150,9 @@
 		9F9CE9A42797F7E10071D454 /* KurlyPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9A32797F7E10071D454 /* KurlyPassViewController.swift */; };
 		9F9CE9A62797F86A0071D454 /* KurlyPassOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9A52797F86A0071D454 /* KurlyPassOneViewController.swift */; };
 		9F9CE9A82797F8740071D454 /* KurlyPassTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9A72797F8740071D454 /* KurlyPassTwoViewController.swift */; };
+		9F9CE9AB27980C1F0071D454 /* ItemListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9AA27980C1F0071D454 /* ItemListDataManager.swift */; };
+		9F9CE9AD27980CF70071D454 /* SortResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9AC27980CF70071D454 /* SortResponse.swift */; };
+		9F9CE9B12798256F0071D454 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9B02798256F0071D454 /* Protocol.swift */; };
 		9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */; };
 		9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */; };
 		9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD227895F3D00CC63FA /* ViewController.swift */; };
@@ -373,6 +376,9 @@
 		9F9CE9A32797F7E10071D454 /* KurlyPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurlyPassViewController.swift; sourceTree = "<group>"; };
 		9F9CE9A52797F86A0071D454 /* KurlyPassOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurlyPassOneViewController.swift; sourceTree = "<group>"; };
 		9F9CE9A72797F8740071D454 /* KurlyPassTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurlyPassTwoViewController.swift; sourceTree = "<group>"; };
+		9F9CE9AA27980C1F0071D454 /* ItemListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataManager.swift; sourceTree = "<group>"; };
+		9F9CE9AC27980CF70071D454 /* SortResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortResponse.swift; sourceTree = "<group>"; };
+		9F9CE9B02798256F0071D454 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		9F9D5DCB27895F3D00CC63FA /* MarketKurlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -809,10 +815,9 @@
 		9F9C590A278B9500005D164C /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				9F9CE9AE27981D6E0071D454 /* Yes */,
 				9F9C591C278B9DB6005D164C /* SpecialProductCell.xib */,
 				9F9C591B278B9DB6005D164C /* SpecialProductCell.swift */,
-				9F9C5924278BB126005D164C /* Product2Cell.xib */,
-				9F9C5923278BB126005D164C /* Product2Cell.swift */,
 				9F9C58F6278B64C2005D164C /* ProductCell.xib */,
 				9F9C58F5278B64C2005D164C /* ProductCell.swift */,
 				9F9C58FA278B7440005D164C /* NoSaleProductCell.xib */,
@@ -862,6 +867,32 @@
 				9F9CE9912797A85A0071D454 /* PointViewController.swift */,
 			);
 			path = Point;
+			sourceTree = "<group>";
+		};
+		9F9CE9A927980BE30071D454 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				9F9CE9AA27980C1F0071D454 /* ItemListDataManager.swift */,
+				9F9CE9AC27980CF70071D454 /* SortResponse.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		9F9CE9AE27981D6E0071D454 /* Yes */ = {
+			isa = PBXGroup;
+			children = (
+				9F9C5924278BB126005D164C /* Product2Cell.xib */,
+				9F9C5923278BB126005D164C /* Product2Cell.swift */,
+			);
+			path = Yes;
+			sourceTree = "<group>";
+		};
+		9F9CE9AF279825580071D454 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9F9CE9B02798256F0071D454 /* Protocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		9F9D5DC227895F3D00CC63FA = {
@@ -917,10 +948,11 @@
 		9F9D5DE5278A046600CC63FA /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				9F2721A82790043600F85FA9 /* AllUser */,
-				9F2721B22790CAB500F85FA9 /* User */,
 				9F9D5E1C278A100F00CC63FA /* SignUp */,
 				9F9D5DE9278A052E00CC63FA /* Login */,
+				9F2721A82790043600F85FA9 /* AllUser */,
+				9F2721B22790CAB500F85FA9 /* User */,
+				9F9CE9A927980BE30071D454 /* Item */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -928,6 +960,7 @@
 		9F9D5DE6278A048B00CC63FA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F9CE9AF279825580071D454 /* Protocol */,
 				9F9D5DF1278A094100CC63FA /* Constants */,
 				9F9D5DF8278A09E800CC63FA /* Util */,
 				9F9D5DF7278A09DA00CC63FA /* Extension */,
@@ -1451,6 +1484,7 @@
 				9F309E0E279290B700EBF5E0 /* FindPwdPhoneRequest.swift in Sources */,
 				9F309DF6279222FD00EBF5E0 /* ItemInfoCell.swift in Sources */,
 				9F27219B278FAB7D00F85FA9 /* CategoryParentCell.swift in Sources */,
+				9F9CE9B12798256F0071D454 /* Protocol.swift in Sources */,
 				9F272199278F95C800F85FA9 /* CategoryRecommendCell.swift in Sources */,
 				9FB51FAB278D9ABE00DEF835 /* BeforeSearchViewController.swift in Sources */,
 				9F9D5E0D278A0D0C00CC63FA /* UIFont.swift in Sources */,
@@ -1488,6 +1522,7 @@
 				9FB51FCE278E979100DEF835 /* SearchResultViewController.swift in Sources */,
 				9F9CE9A42797F7E10071D454 /* KurlyPassViewController.swift in Sources */,
 				9F309DE82791F4DF00EBF5E0 /* ItemDetailInfoViewController.swift in Sources */,
+				9F9CE9AD27980CF70071D454 /* SortResponse.swift in Sources */,
 				9F489F692794AF7400E04879 /* AddressDetailMoreViewController.swift in Sources */,
 				9FB51FBF278E82A700DEF835 /* SearchSubject3Cell.swift in Sources */,
 				9FC61BEF2792AB8F007AC4A7 /* NewAddressViewController.swift in Sources */,
@@ -1506,6 +1541,7 @@
 				9F489F6E2794C7B400E04879 /* RecivePlaceTwoViewController.swift in Sources */,
 				9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */,
 				9F786CDC2796CD5500EEA867 /* NewProductCRVCell.swift in Sources */,
+				9F9CE9AB27980C1F0071D454 /* ItemListDataManager.swift in Sources */,
 				9FB51FD2278E9A0500DEF835 /* NoSearchViewController.swift in Sources */,
 				9F272195278F958500F85FA9 /* CategoryGiftCell.swift in Sources */,
 				9F2721C02790FF7C00F85FA9 /* NewUserRequest.swift in Sources */,

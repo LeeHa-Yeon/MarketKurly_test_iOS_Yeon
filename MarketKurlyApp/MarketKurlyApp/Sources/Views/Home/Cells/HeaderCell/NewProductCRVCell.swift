@@ -19,6 +19,10 @@ enum ButtomClickSort {
 
 class NewProductCRVCell: UICollectionReusableView {
     
+    var itemList: [SortDocument] = []
+    let itemManager = ItemListDataManager.shared
+    var delegate: ItemBuyViewControllerDelegate?
+    
     let dropDown = DropDown()
     var action = { (state: ButtomClickSort) in }
     
@@ -48,8 +52,6 @@ class NewProductCRVCell: UICollectionReusableView {
             default :
                 assert(false,"아님")
             }
-            print("선택한 아이템 : \(item)")
-            print("인덱스 : \(index)")
             self.dropDown.clearSelection()
         }
     }
@@ -71,11 +73,41 @@ class NewProductCRVCell: UICollectionReusableView {
         dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
                     cell.optionLabel.textAlignment = .right
                 }
+        sortBtn.setTitle("신상품순", for: .normal)
     }
     
-    
-    func test(){
-        print("test")
+    /* API 통신 부분 */
+    func setData(itemSort: Int) -> [SortDocument] {
+        switch itemSort {
+        case 0 :
+            self.itemManager.requestNewItemSortList { response in
+                self.itemList = response.result
+                
+            }
+        case 1 :
+            self.itemManager.requestOrderItemSortList { response in
+                self.itemList = response.result
+
+            }
+        case 2 :
+            self.itemManager.requestSaleItemSortList { response in
+                self.itemList = response.result
+
+            }
+        case 3 :
+            self.itemManager.requestLowPriceItemSortList  { response in
+                self.itemList = response.result
+
+            }
+        case 4 :
+            self.itemManager.requestHighPriceItemSortList { response in
+                self.itemList = response.result
+            }
+            
+        default :
+            assert(false,"선택안함")
+        }
+        return self.itemList
     }
     
 }
