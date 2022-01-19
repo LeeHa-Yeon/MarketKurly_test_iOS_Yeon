@@ -10,7 +10,7 @@ import UIKit
 class MyKurlyViewController: UIViewController {
     
     var isJwt: String?
-//    let userInfoManager = UserInfoManaer.shared
+    let userInfoManager = UserInfoManaer.shared
     
     //MARK: - UIComponents
     @IBOutlet weak var noMemberView: UIView!
@@ -46,7 +46,8 @@ class MyKurlyViewController: UIViewController {
     
     /* API 통신 부분 */
     func loadUserData(){
-//        print("---> \(userInfoManager.getUserId())")
+//        print("-kl--> \(userInfoManager.getUserLevelInfo())")
+//        print("--ll-> \(userInfoManager.getLevelId())")
     }
     
 }

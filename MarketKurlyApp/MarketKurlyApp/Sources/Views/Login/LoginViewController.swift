@@ -13,6 +13,7 @@ class LoginViewController: BaseViewController {
     
     let loginManager = LoginDataManager.shared
     let userDataManager = UserDataManager.shared
+    let levelDataManger = LevelDataManager.shared
     let userInfoManager = UserInfoManaer.shared
     
     // MARK: - UIComponents
@@ -131,6 +132,12 @@ class LoginViewController: BaseViewController {
         userDataManager.requestAllUser(userIdx: userIdx) { response in
 
             self.userInfoManager.setUserInfo(response.result)
+            self.loadLevelData(levelIdx: self.userInfoManager.getUserLevel())
+        }
+    }
+    func loadLevelData(levelIdx: Int){
+        levelDataManger.requestSelectLevel(levelId: levelIdx){ response in
+            self.userInfoManager.setUserLevelInfo(response.result)
             self.dismiss(animated: true, completion: nil)
         }
     }

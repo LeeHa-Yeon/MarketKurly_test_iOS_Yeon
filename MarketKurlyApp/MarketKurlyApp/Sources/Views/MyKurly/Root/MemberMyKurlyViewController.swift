@@ -70,15 +70,24 @@ class MemberMyKurlyViewController: BaseViewController {
     
     
     /* API 통신 부분  */
-    func loadUserData() -> String{
+    func loadUserData() -> UserDocument?{
         guard let userInfo = userInfoManager.getUserInfo() else {
             print("MemberMyKurlyViewController API 실패")
-            return "정보없음"
+            return nil
         }
-        return userInfo.getUserName() + "님"
-        // 등급 -> 일반 . 적립퍼센트
-        // 이름,
+        return userInfo
     }
+    
+    func loadLevelData() -> SelectLevelDocument?{
+        guard let levelInfo = userInfoManager.getUserLevelInfo() else {
+            print("MemberMyKurlyViewController API 실패")
+            return nil
+        }
+        return levelInfo
+    }
+    
+    //         // 등급 -> 일반 . 적립퍼센트
+    
 
 }
 
@@ -116,8 +125,12 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "myKurlyInfoCell", for: indexPath) as? MyKurlyInfoCell else {
                 return UITableViewCell()
             }
-            cell.nameLabel.text = loadUserData()
+            if loadUserData() != nil {
+                cell.nameLabel.text = loadUserData()?.getUserName()
+                cell.rankBtn.setTitle(loadLevelData()?.getLevelName(), for: .normal)
+                cell.pointRate.text = "적립 \(loadLevelData()!.getLevelPointsRate())%"
             cell.delegate = self
+            }
             return cell
         case 1 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "bannerCell", for: indexPath) as? BannerCell else {
@@ -131,7 +144,9 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             }
             cell.listNameLable.text = dummyData[indexPath.row]
             if indexPath.row == 0 {
-                cell.subStrLabel.text = DecimalWon(value: reserves)
+                if loadUserData() != nil {
+                    cell.subStrLabel.text =  DecimalWon(value: loadUserData()?.getUserPoint() ?? 900)
+                }
             } else if indexPath.row == 1 {
                 cell.subStrLabel.text = "\(coupon)장"
             }else {

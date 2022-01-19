@@ -12,6 +12,39 @@ class UserInfoManaer {
     
     private init() {}
     
+    // 사용자 레벨
+    var userLevelInfo: SelectLevelDocument?
+    
+    func setUserLevelInfo(_ info: SelectLevelDocument) {
+        self.userLevelInfo = info
+    }
+    
+    func getUserLevelInfo() -> SelectLevelDocument? {
+        guard let userLevelInfo = self.userLevelInfo else { return nil }
+        return userLevelInfo
+    }
+    
+    
+    func getLevelId() -> Int {
+        guard let levelId = self.userLevelInfo?.getLevelId() else { return 100 }
+        
+        return levelId
+    }
+    
+    func getLevelName() -> String {
+        guard let levelName = self.userLevelInfo?.getLevelName() else { return "" }
+        
+        return levelName
+    }
+    
+    func getLevelPointsRate() -> Double {
+        guard let levelPointsRate = self.userLevelInfo?.getLevelPointsRate() else { return 100 }
+        
+        return levelPointsRate
+    }
+    
+    
+    // UserDataManager의 UserDocument 부분
     var userInfo: UserDocument?
     
     func setUserInfo(_ info: UserDocument) {
@@ -73,7 +106,6 @@ class UserInfoManaer {
         userInfo?.setUserEmail(email)
     }
     
-    ///////
     func getUserPhone() -> String {
         guard let phone = self.userInfo?.getUserPhone() else { return ""
         }
@@ -134,6 +166,8 @@ class UserInfoManaer {
     func setUserPoint(_ point: Int){
         userInfo?.setUserPoint(point)
     }
+    
+    
 
 }
 

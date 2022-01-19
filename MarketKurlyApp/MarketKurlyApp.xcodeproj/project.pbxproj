@@ -157,7 +157,6 @@
 		9F9CE9B727984ADF0071D454 /* NotionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9B627984ADF0071D454 /* NotionResponse.swift */; };
 		9F9CE9B927984F570071D454 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9B827984F570071D454 /* UserInfoManager.swift */; };
 		9F9CE9BC2798B9C10071D454 /* LevelDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9BB2798B9C10071D454 /* LevelDataManager.swift */; };
-		9F9CE9BE2798B9EB0071D454 /* SelectLevelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9BD2798B9EB0071D454 /* SelectLevelRequest.swift */; };
 		9F9CE9C02798BA1A0071D454 /* SelectLevelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9BF2798BA1A0071D454 /* SelectLevelResponse.swift */; };
 		9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */; };
 		9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */; };
@@ -389,7 +388,6 @@
 		9F9CE9B627984ADF0071D454 /* NotionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionResponse.swift; sourceTree = "<group>"; };
 		9F9CE9B827984F570071D454 /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 		9F9CE9BB2798B9C10071D454 /* LevelDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDataManager.swift; sourceTree = "<group>"; };
-		9F9CE9BD2798B9EB0071D454 /* SelectLevelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelRequest.swift; sourceTree = "<group>"; };
 		9F9CE9BF2798BA1A0071D454 /* SelectLevelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelResponse.swift; sourceTree = "<group>"; };
 		9F9D5DCB27895F3D00CC63FA /* MarketKurlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -920,7 +918,6 @@
 			isa = PBXGroup;
 			children = (
 				9F9CE9BB2798B9C10071D454 /* LevelDataManager.swift */,
-				9F9CE9BD2798B9EB0071D454 /* SelectLevelRequest.swift */,
 				9F9CE9BF2798BA1A0071D454 /* SelectLevelResponse.swift */,
 			);
 			path = Level;
@@ -1575,7 +1572,6 @@
 				9F9CE99C2797E3C60071D454 /* CustomerSCViewController.swift in Sources */,
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9F489F6E2794C7B400E04879 /* RecivePlaceTwoViewController.swift in Sources */,
-				9F9CE9BE2798B9EB0071D454 /* SelectLevelRequest.swift in Sources */,
 				9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */,
 				9F786CDC2796CD5500EEA867 /* NewProductCRVCell.swift in Sources */,
 				9F9CE9AB27980C1F0071D454 /* ItemListDataManager.swift in Sources */,

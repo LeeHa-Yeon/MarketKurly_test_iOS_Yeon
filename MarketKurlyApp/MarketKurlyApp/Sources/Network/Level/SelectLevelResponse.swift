@@ -17,6 +17,20 @@ struct SelectLevelDocument: Decodable {
     let name : String
     let pointsRate : Double
     let discountRate : Int?
-    let description : Int
-    let nextPoints : String
+    let description : String
+    let nextPoints : Int
+    
+    
+    func getLevelId() -> Int {
+        return self.id
+    }
+    
+    func getLevelName() -> String {
+        return self.name
+    }
+    
+    func getLevelPointsRate() -> Double {
+        return self.pointsRate
+    }
+
 }
