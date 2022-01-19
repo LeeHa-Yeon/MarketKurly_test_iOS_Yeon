@@ -72,6 +72,7 @@ class CustomerSCViewController: UIViewController {
     
     // MARK: - Functions
     func setUI(){
+        self.title = "고객센터"
         naviTitleDelete(navi: self.navigationController!)
         customNavigationBarAttribute(.white, .black)
 

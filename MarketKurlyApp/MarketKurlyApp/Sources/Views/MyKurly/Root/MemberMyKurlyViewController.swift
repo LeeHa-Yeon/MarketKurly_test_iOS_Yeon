@@ -60,6 +60,12 @@ class MemberMyKurlyViewController: BaseViewController {
         tableView.delegate = self
         
     }
+    
+    func moveToVC(SBName: String, SBId: String ,VCName: String){
+        let storyboard = UIStoryboard(name: SBName, bundle: nil)
+        let VCName = storyboard.instantiateViewController(identifier: SBId)
+        self.navigationController?.pushViewController(VCName, animated: true)
+    }
 
 }
 
@@ -161,68 +167,125 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 1 || (indexPath.section == 2 && indexPath.row == 2 ) {
-            let storyboard = UIStoryboard(name: "ETC", bundle: nil)
-            let FriendVC = storyboard.instantiateViewController(identifier: "FriendSB")
-            self.navigationController?.pushViewController(FriendVC, animated: true)
+        // 배너
+        if indexPath.section == 1 {
+            moveToVC(SBName: "ETC", SBId: "FriendSB" ,VCName: "FriendVC")
         }
         
+        // 적립금, 쿠폰, 친구초대
         if indexPath.section == 2 {
             if indexPath.row == 0 {
-                let storyboard = UIStoryboard(name: "Point", bundle: nil)
-                let PointVC = storyboard.instantiateViewController(identifier: "PointSB")
-                self.navigationController?.pushViewController(PointVC, animated: true)
+                // 적립금
+                moveToVC(SBName: "Point", SBId: "PointSB" ,VCName: "PointVC")
             }
             if indexPath.row == 1 {
-                let storyboard = UIStoryboard(name: "Coupon", bundle: nil)
-                let MyCouponListVC = storyboard.instantiateViewController(identifier: "MyCouponListSB")
-                self.navigationController?.pushViewController(MyCouponListVC, animated: true)
+                //쿠폰
+                moveToVC(SBName: "Coupon", SBId: "MyCouponListSB" ,VCName: "MyCouponListVC")
             }
+            if indexPath.row == 2 {
+                // 친구초대
+                moveToVC(SBName: "ETC", SBId: "FriendSB" ,VCName: "FriendVC")
+            }
+            
         }
         
-        
+        // 주문내역,선물내역,찜한상품,상품후기
         if indexPath.section == 3 {
             if indexPath.row == 0 {
-                let storyboard = UIStoryboard(name: "Order", bundle: nil)
-                let OrderHistoryVC = storyboard.instantiateViewController(identifier: "OrderHistorySB")
-                self.navigationController?.pushViewController(OrderHistoryVC, animated: true)
+                // 주문 내역
+                moveToVC(SBName: "Order", SBId: "OrderHistorySB" ,VCName: "OrderHistoryVC")
             }
             
-            
             if indexPath.row == 1 {
-                let storyboard = UIStoryboard(name: "ETC", bundle: nil)
-                
-                let GiftBoxVC = storyboard.instantiateViewController(identifier: "GiftBoxSB")
-                self.navigationController?.pushViewController(GiftBoxVC, animated: true)
+                // 선물 내역
+                moveToVC(SBName: "ETC", SBId: "GiftBoxSB" ,VCName: "GiftBoxVC")
             }
             
             if indexPath.row == 2 {
-                let storyboard = UIStoryboard(name: "Wish", bundle: nil)
-                let WishVC = storyboard.instantiateViewController(identifier: "WishSB")
-                self.navigationController?.pushViewController(WishVC, animated: true)
+                // 찜한 상품
+                moveToVC(SBName: "Wish", SBId: "WishSB" ,VCName: "WishVC")
+            }
+            
+            if indexPath.row == 3 {
+                // 상품 후기
+                presentAlert(title: "미구현")
             }
             
         }
         
+        //배송지관리, 컬리퍼플박스, 개인정보수정, 알림설정
         if indexPath.section == 4 {
+            
             if indexPath.row == 0 {
-                let storyboard = UIStoryboard(name: "Address", bundle: nil)
-                let AddressVC = storyboard.instantiateViewController(identifier: "AddressManagmentSB")
-                self.navigationController?.pushViewController(AddressVC, animated: true)
-//                AddressVC.modalPresentationStyle = .fullScreen
-//                self.present(AddressVC, animated: true, completion: nil)
+                // 배송지 관리
+                moveToVC(SBName: "Address", SBId: "AddressManagmentSB" ,VCName: "AddressVC")
             }
+            
+            if indexPath.row == 1 {
+                // 컬리 퍼플 박스
+                moveToVC(SBName: "ETC", SBId: "KurlyPurpleBoxSB" ,VCName: "KurlyPurpleBoxVC")
+            }
+            
+            if indexPath.row == 2 {
+                // 개인정보 수정
+                presentAlert(title: "미구현")
+            }
+        
             if indexPath.row == 3 {
-                let storyboard = UIStoryboard(name: "ETC", bundle: nil)
-                let NoticeVC = storyboard.instantiateViewController(identifier: "NoticeSB")
-                self.navigationController?.pushViewController(NoticeVC, animated: true)
+                // 알림 설정
+                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
             }
         }
         
+        // 상품문의, 1:1문의, 대량주문 문의
+        
+        // 컬리소개 ~ 이용안내
+        if indexPath.section == 6 {
+            // 컬리소개
+           
+            if indexPath.row == 0 {
+                moveToVC(SBName: "ETC", SBId: "AboutKurlySB" ,VCName: "AboutKurlyVC")
+                
+            }
+            // 컬리패스
+            if indexPath.row == 1 {
+                moveToVC(SBName: "ETC", SBId: "KurlyPassSB" ,VCName: "KurlyPassVC")
+                
+            }
+            
+            
+            // 배송안내
+            if indexPath.row == 2 {
+                moveToVC(SBName: "ETC", SBId: "DeliveryNotionSB" ,VCName: "DeliveryNotionVC")
+            }
+            
+            // 공지사항
+            if indexPath.row == 3 {
+                moveToVC(SBName: "ETC", SBId: "NotionListSB" ,VCName: "NotionListVC")
+            }
+            
+            // 자주하는 질문
+            if indexPath.row == 4 {
+                presentAlert(title: "미구현")
+            }
+            
+            // 고객센터
+            if indexPath.row == 5 {
+                moveToVC(SBName: "ETC", SBId: "CustomerSCSB" ,VCName: "CustomerSCVC")
+            }
+            
+            // 이용안내
+            if indexPath.row == 6 {
+                moveToVC(SBName: "ETC", SBId: "InformationUseSB" ,VCName: "InformationUseVC")
+            }
+        }
+        
+        
+        // 로그아웃
         if indexPath.section == 7 {
             UserDefaults.standard.set("", forKey: Constant.jwtName)
             UserDefaults.standard.set(0, forKey: Constant.userIdxName)
-            let storyboard = UIStoryboard(name: "MyKurly", bundle: nil)
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
             let TempVC = storyboard.instantiateViewController(identifier: "TempSB")
             TempVC.modalPresentationStyle = .fullScreen
             self.present(TempVC, animated: true, completion: nil)

@@ -55,7 +55,7 @@ class NoMemberMyKurlyViewController: BaseViewController {
     }
     
     func moveToVC(SBName: String, SBId: String ,VCName: String){
-        let storyboard = UIStoryboard(name: "ETC", bundle: nil)
+        let storyboard = UIStoryboard(name: SBName, bundle: nil)
         let VCName = storyboard.instantiateViewController(identifier: SBId)
         self.navigationController?.pushViewController(VCName, animated: true)
     }
@@ -120,7 +120,7 @@ extension NoMemberMyKurlyViewController: UITableViewDataSource, UITableViewDeleg
                 moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
             }
         }
-        print("asdf")
+        
         if indexPath.section == 2 {
             // 컬리소개
            
@@ -152,7 +152,7 @@ extension NoMemberMyKurlyViewController: UITableViewDataSource, UITableViewDeleg
             
             // 이용안내
             if indexPath.row == 5 {
-                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+                moveToVC(SBName: "ETC", SBId: "InformationUseSB" ,VCName: "InformationUseVC")
             }
         }
         

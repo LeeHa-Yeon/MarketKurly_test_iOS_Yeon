@@ -1,5 +1,5 @@
 //
-//  OneToOneNotionViewController.swift
+//  KurlyPassOneViewController.swift
 //  MarketKurlyApp
 //
 //  Created by 이하연 on 2022/01/19.
@@ -7,17 +7,8 @@
 
 import UIKit
 
-class OneToOneNotionViewController: UIViewController {
-    
-    
-    @IBOutlet weak var navi: UINavigationBar!
-    @IBAction func backBtnTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func writeQeustTapped(_ sender: Any) {
-        presentAlert(title: "미구현")
-    }
-    
+class KurlyPassOneViewController: UIViewController {
+
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +28,6 @@ class OneToOneNotionViewController: UIViewController {
     
     // MARK: - Functions
     func setUI(){
-        navi.barTintColor = .white
-        navi.tintColor = .black
-        customNavigationBarAttribute(.white, .black)
     }
+
 }
