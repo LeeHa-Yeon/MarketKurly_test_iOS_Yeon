@@ -11,6 +11,8 @@ import GSMessages
 class NoticeViewController: UIViewController {
     
     // MARK: - Components
+    @IBOutlet weak var adView: UIView!
+    @IBOutlet weak var nightView: UIView!
     @IBOutlet weak var adSwitch: UISwitch!
     @IBOutlet weak var nightSwitch: UISwitch!
     @IBAction func adSwitchTapped(_ sender: Any) {
@@ -54,7 +56,9 @@ class NoticeViewController: UIViewController {
     func setUI(){
         naviTitleDelete(navi: self.navigationController!)
         customNavigationBarAttribute(.white, .black)
-        customNaviBarItem(btnColor: .black, naviItem: self.navigationItem)
+        
+        adView.layer.addBorder([.top], color: UIColor.lineColor , width: 0.5)
+        nightView.layer.addBorder([.bottom], color: #colorLiteral(red: 0.8872286081, green: 0.9422133565, blue: 0.9428553581, alpha: 1)  , width: 0.5)
     }
     
     func alertMessage(message: String){

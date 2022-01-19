@@ -100,6 +100,17 @@ extension NoMemberMyKurlyViewController: UITableViewDataSource, UITableViewDeleg
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            if indexPath.row == 1 {
+                let storyboard = UIStoryboard(name: "ETC", bundle: nil)
+                let NoticeVC = storyboard.instantiateViewController(identifier: "NoticeSB")
+                self.navigationController?.pushViewController(NoticeVC, animated: true)
+            }
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0 :
