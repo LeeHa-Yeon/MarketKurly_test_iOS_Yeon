@@ -43,6 +43,9 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-9X-0Qf">
                                         <rect key="frame" x="345" y="24.5" width="51" height="31"/>
                                         <color key="onTintColor" red="0.27017014020000002" green="0.097986580579999996" blue="0.47818239769999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="adSwitchTapped:" destination="Y6W-OH-hqX" eventType="valueChanged" id="iJL-BI-xtj"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,6 +83,9 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPe-Yg-nJA">
                                         <rect key="frame" x="345" y="24.5" width="51" height="31"/>
                                         <color key="onTintColor" red="0.27017014020000002" green="0.097986580579999996" blue="0.47818239769999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="nightSwitchTapped:" destination="Y6W-OH-hqX" eventType="valueChanged" id="xId-4b-Pw5"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,6 +133,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="알림 설정" id="qRP-T3-cb5"/>
+                    <connections>
+                        <outlet property="adSwitch" destination="HjO-9X-0Qf" id="13C-0c-fIZ"/>
+                        <outlet property="nightSwitch" destination="lPe-Yg-nJA" id="PCc-hx-JOq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
