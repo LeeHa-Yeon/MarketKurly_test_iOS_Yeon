@@ -54,6 +54,12 @@ class NoMemberMyKurlyViewController: BaseViewController {
         
     }
     
+    func moveToVC(SBName: String, SBId: String ,VCName: String){
+        let storyboard = UIStoryboard(name: "ETC", bundle: nil)
+        let VCName = storyboard.instantiateViewController(identifier: SBId)
+        self.navigationController?.pushViewController(VCName, animated: true)
+    }
+    
 }
 
 extension NoMemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegate {
@@ -102,12 +108,49 @@ extension NoMemberMyKurlyViewController: UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
+            
+            // TODO: 비회원주문 조회는 아직 안함
+            
+            // 알림설정
             if indexPath.row == 1 {
-                let storyboard = UIStoryboard(name: "ETC", bundle: nil)
-                let NoticeVC = storyboard.instantiateViewController(identifier: "NoticeSB")
-                self.navigationController?.pushViewController(NoticeVC, animated: true)
+                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
             }
         }
+        print("asdf")
+        if indexPath.section == 2 {
+            // 컬리소개
+           
+            if indexPath.row == 0 {
+                print("ㅉㅉㅉ")
+                moveToVC(SBName: "ETC", SBId: "AboutKurlySB" ,VCName: "AboutKurlyVC")
+                
+            }
+            // 배송안내
+            if indexPath.row == 1 {
+                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+            }
+            
+            // 공지사항
+            if indexPath.row == 2 {
+                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+            }
+            
+            // 자주하는 질문
+            if indexPath.row == 3 {
+                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+            }
+            
+            // 고객센터
+            if indexPath.row == 4 {
+                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+            }
+            
+            // 이용안내
+            if indexPath.row == 5 {
+                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+            }
+        }
+        
     }
     
     
