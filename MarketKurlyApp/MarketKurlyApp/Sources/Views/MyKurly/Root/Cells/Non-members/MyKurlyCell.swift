@@ -9,8 +9,13 @@ import UIKit
 
 class MyKurlyCell: UITableViewCell {
     
+    var delegate: BenefitViewControllerDelegate?
+    
     // MARK: - UIComponents
     @IBOutlet weak var loginBtn: UIButton!
+    @IBAction func benefitBtn(_ sender: Any) {
+        self.delegate?.moveToVC()
+    }
     
     // MARK: - LifeCycle
     override func awakeFromNib() {
@@ -24,3 +29,4 @@ class MyKurlyCell: UITableViewCell {
     }
     
 }
+

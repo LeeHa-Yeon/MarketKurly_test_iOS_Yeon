@@ -7,6 +7,20 @@
 
 import UIKit
 
+protocol BenefitViewControllerDelegate {
+    func moveToVC()
+}
+
+extension NoMemberMyKurlyViewController: BenefitViewControllerDelegate {
+    func moveToVC() {
+        let storyboard = UIStoryboard(name: "ETC", bundle: nil)
+        let MembershipBenefitVC = storyboard.instantiateViewController(identifier: "MembershipBenefitSB")
+        self.navigationController?.pushViewController(MembershipBenefitVC, animated: true)
+    }
+    
+    
+}
+
 class NoMemberMyKurlyViewController: BaseViewController {
     
     let dummyData: [String] = ["비회원 주문 조회","알림 설정"]
@@ -67,6 +81,7 @@ extension NoMemberMyKurlyViewController: UITableViewDataSource, UITableViewDeleg
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "mykurlyCell", for: indexPath) as? MyKurlyCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             return cell
         case 1 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "myKurlyListCell", for: indexPath) as? MyKurlyListCell else {

@@ -404,7 +404,7 @@
         <!--가입 혜택-->
         <scene sceneID="jIz-JW-Kz0">
             <objects>
-                <viewController id="0h5-cC-qir" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MembershipBenefitSB" id="0h5-cC-qir" customClass="MembershipBenefitViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T4a-Ex-ERq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -461,12 +461,31 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="1RH-X2-y7T"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="imG-fB-k4B"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xG-Aw-m3m">
+                                <rect key="frame" x="0.0" y="816" width="414" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomFix" translatesAutoresizingMaskIntoConstraints="NO" id="gMW-XC-G5k">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0mB-NR-Td2"/>
+                                    <constraint firstItem="gMW-XC-G5k" firstAttribute="leading" secondItem="5xG-Aw-m3m" secondAttribute="leading" id="Tqa-nk-MBf"/>
+                                    <constraint firstAttribute="trailing" secondItem="gMW-XC-G5k" secondAttribute="trailing" id="bQi-5d-TKO"/>
+                                    <constraint firstItem="gMW-XC-G5k" firstAttribute="top" secondItem="5xG-Aw-m3m" secondAttribute="top" id="lD5-Xj-nGl"/>
+                                    <constraint firstAttribute="bottom" secondItem="gMW-XC-G5k" secondAttribute="bottom" id="vy4-ag-bap"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EeT-yB-83Q"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="5xG-Aw-m3m" firstAttribute="leading" secondItem="EeT-yB-83Q" secondAttribute="leading" id="EfB-my-dV0"/>
                             <constraint firstItem="Gvc-Zm-wvT" firstAttribute="top" secondItem="EeT-yB-83Q" secondAttribute="top" id="Fiw-1K-qt8"/>
                             <constraint firstAttribute="bottom" secondItem="Gvc-Zm-wvT" secondAttribute="bottom" id="H97-Kn-lPs"/>
+                            <constraint firstItem="5xG-Aw-m3m" firstAttribute="trailing" secondItem="EeT-yB-83Q" secondAttribute="trailing" id="K4A-m9-7RL"/>
+                            <constraint firstAttribute="bottom" secondItem="5xG-Aw-m3m" secondAttribute="bottom" id="eE8-0x-Fio"/>
                             <constraint firstItem="Gvc-Zm-wvT" firstAttribute="leading" secondItem="EeT-yB-83Q" secondAttribute="leading" id="eMD-nK-iUa"/>
                             <constraint firstAttribute="trailing" secondItem="Gvc-Zm-wvT" secondAttribute="trailing" id="wzT-Fc-wLO"/>
                         </constraints>
@@ -1276,12 +1295,31 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="G5y-FD-9hh"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="chv-5h-tvA"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISW-yd-2kH">
+                                <rect key="frame" x="0.0" y="816" width="414" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomFix" translatesAutoresizingMaskIntoConstraints="NO" id="9AY-EF-hDq">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="9AY-EF-hDq" firstAttribute="top" secondItem="ISW-yd-2kH" secondAttribute="top" id="3i7-hj-7sS"/>
+                                    <constraint firstAttribute="trailing" secondItem="9AY-EF-hDq" secondAttribute="trailing" id="7zS-B7-28e"/>
+                                    <constraint firstAttribute="bottom" secondItem="9AY-EF-hDq" secondAttribute="bottom" id="cv9-8P-0Fg"/>
+                                    <constraint firstItem="9AY-EF-hDq" firstAttribute="leading" secondItem="ISW-yd-2kH" secondAttribute="leading" id="gRQ-KD-iWI"/>
+                                    <constraint firstAttribute="height" constant="80" id="y2o-Gc-lEi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UWp-dc-8uO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Hvh-RM-0k9" secondAttribute="bottom" id="5Pt-cG-xC1"/>
+                            <constraint firstItem="ISW-yd-2kH" firstAttribute="leading" secondItem="UWp-dc-8uO" secondAttribute="leading" id="5qz-jw-ThA"/>
+                            <constraint firstItem="ISW-yd-2kH" firstAttribute="trailing" secondItem="UWp-dc-8uO" secondAttribute="trailing" id="Dmv-nt-7hU"/>
                             <constraint firstItem="UWp-dc-8uO" firstAttribute="trailing" secondItem="Hvh-RM-0k9" secondAttribute="trailing" id="R7O-4F-ef4"/>
+                            <constraint firstAttribute="bottom" secondItem="ISW-yd-2kH" secondAttribute="bottom" id="c17-83-XB9"/>
                             <constraint firstItem="Hvh-RM-0k9" firstAttribute="top" secondItem="UWp-dc-8uO" secondAttribute="top" id="ooP-Gf-sia"/>
                             <constraint firstItem="Hvh-RM-0k9" firstAttribute="leading" secondItem="lhA-1V-0jY" secondAttribute="leading" id="yph-Dw-W5K"/>
                         </constraints>
@@ -1290,7 +1328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gi-mP-Vru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073.913043478261" y="4280.3571428571422"/>
+            <point key="canvasLocation" x="1073.913043478261" y="4279.6875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DNn-Tm-aEw">
@@ -1328,6 +1366,7 @@
         <image name="aboutKurly3" width="1170" height="2025"/>
         <image name="aboutKurly4" width="1170" height="2023"/>
         <image name="aboutKurly5" width="1170" height="293"/>
+        <image name="bottomFix" width="1170" height="180"/>
         <image name="delivery1" width="1170" height="2196"/>
         <image name="delivery2" width="1170" height="2080"/>
         <image name="delivery3" width="1162" height="2198"/>
