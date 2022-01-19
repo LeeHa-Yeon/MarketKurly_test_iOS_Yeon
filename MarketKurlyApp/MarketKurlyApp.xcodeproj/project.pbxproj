@@ -184,6 +184,8 @@
 		9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5E1D278A102200CC63FA /* SignUpDataManager.swift */; };
 		9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5E20278A103A00CC63FA /* SignUpRequest.swift */; };
 		9F9D5E23278A104500CC63FA /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5E22278A104500CC63FA /* SignUpResponse.swift */; };
+		9F9F67A52798D847008DD590 /* EventDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9F67A42798D847008DD590 /* EventDataManager.swift */; };
+		9F9F67A72798D875008DD590 /* EventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9F67A62798D875008DD590 /* EventResponse.swift */; };
 		9FA04372278D10A000FCD2FE /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA04371278D10A000FCD2FE /* EventCell.swift */; };
 		9FA04375278D113000FCD2FE /* MyKurlyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA04374278D113000FCD2FE /* MyKurlyCell.swift */; };
 		9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA04376278D116400FCD2FE /* MyKurlyListCell.swift */; };
@@ -417,6 +419,8 @@
 		9F9D5E1D278A102200CC63FA /* SignUpDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataManager.swift; sourceTree = "<group>"; };
 		9F9D5E20278A103A00CC63FA /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		9F9D5E22278A104500CC63FA /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		9F9F67A42798D847008DD590 /* EventDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataManager.swift; sourceTree = "<group>"; };
+		9F9F67A62798D875008DD590 /* EventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponse.swift; sourceTree = "<group>"; };
 		9FA04371278D10A000FCD2FE /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		9FA04374278D113000FCD2FE /* MyKurlyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyCell.swift; sourceTree = "<group>"; };
 		9FA04376278D116400FCD2FE /* MyKurlyListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyListCell.swift; sourceTree = "<group>"; };
@@ -976,6 +980,7 @@
 		9F9D5DE5278A046600CC63FA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9F9F67A32798D82A008DD590 /* Event */,
 				9F9CE9BA2798B9A90071D454 /* Level */,
 				9F9CE9B227984A6F0071D454 /* ETC */,
 				9F9D5E1C278A100F00CC63FA /* SignUp */,
@@ -1125,6 +1130,15 @@
 				9F9D5E22278A104500CC63FA /* SignUpResponse.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		9F9F67A32798D82A008DD590 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				9F9F67A42798D847008DD590 /* EventDataManager.swift */,
+				9F9F67A62798D875008DD590 /* EventResponse.swift */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 		9FA04370278D103900FCD2FE /* FifthHome */ = {
@@ -1470,6 +1484,7 @@
 				9F309E0A27928FDD00EBF5E0 /* FindPwdEmailResponse.swift in Sources */,
 				9F27219E278FB25600F85FA9 /* CategoryChildCell.swift in Sources */,
 				9F489F702794C7C200E04879 /* RecivePlaceThreeViewController.swift in Sources */,
+				9F9F67A72798D875008DD590 /* EventResponse.swift in Sources */,
 				9F9C58FF278B88CB005D164C /* OnlyBannerCell.swift in Sources */,
 				9F786CE52796E62800EEA867 /* ThriftyShoppingCRVCell.swift in Sources */,
 				9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */,
@@ -1492,6 +1507,7 @@
 				9FB51FB7278DB73900DEF835 /* SearchWordCell.swift in Sources */,
 				9F786CE12796E61500EEA867 /* BestCRVCell.swift in Sources */,
 				9FA04372278D10A000FCD2FE /* EventCell.swift in Sources */,
+				9F9F67A52798D847008DD590 /* EventDataManager.swift in Sources */,
 				9F309DE427915F2500EBF5E0 /* ItemDetailViewController.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
 				9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */,

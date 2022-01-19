@@ -13,6 +13,8 @@ class EventCell: UITableViewCell {
     var delegate: EventViewControllerDelegate?
     
     // MARK: - Components
+    
+    @IBOutlet weak var eventBannerImg: UIImageView!
     @IBOutlet weak var eventBanner: UIButton!
     @IBAction func bannerTapped(_ sender: Any) {
         self.delegate?.moveToVC(id: eventId ?? 0)

@@ -16,6 +16,8 @@ protocol EventViewControllerDelegate {
 class SpecialPriceViewController: UIViewController, IndicatorInfoProvider {
 
     var tabName: String = ""
+    let eventDataManger = EventDataManager.shared
+    var eventList: [EventDocument] = []
     
     // MARK: - UIComponents
     @IBOutlet weak var tableView: UITableView!
@@ -23,6 +25,7 @@ class SpecialPriceViewController: UIViewController, IndicatorInfoProvider {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
         setUI()
     }
 
@@ -39,27 +42,41 @@ class SpecialPriceViewController: UIViewController, IndicatorInfoProvider {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    /* API 통신 부분  */
+    func loadData(){
+        eventDataManger.requestEventList { response in
+            self.eventList = response.result
+            self.tableView.reloadData()
+        }
+    }
 
 }
 
 extension SpecialPriceViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return eventList.count - 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? EventCell else {
             return UITableViewCell()
         }
+        print("d???-> event\(indexPath.row+1)")
         cell.delegate = self
         cell.eventId = indexPath.row
-        cell.eventBanner.imageView?.image = UIImage(named: "banner")
+        cell.eventBanner.imageView?.image = UIImage(named: "event\(indexPath.row+1)")
+        cell.eventBannerImg.image = UIImage(named: "event\(indexPath.row+1)")
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
     }
     
 }

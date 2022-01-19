@@ -1,25 +1,23 @@
 //
-//  LevelDataManager.swift
+//  EventDataManager.swift
 //  MarketKurlyApp
 //
 //  Created by 이하연 on 2022/01/20.
 //
 
-
-
 import Alamofire
 
-class LevelDataManager {
+class EventDataManager {
     
-    static let shared = LevelDataManager()
+    static let shared = EventDataManager()
     private init() {}
     
     // MARK: - 사용자 등급 조회
-    func requestSelectLevel(levelId: Int, completion: @escaping (SelectLevelResponse)->(Void)){
+    func requestEventList(completion: @escaping (EventResponse)->(Void)){
         
-        let URL = Constant.BasicURL + "level?levelId=\(levelId)"
+        let URL = Constant.BasicURL + "event"
         
-        AF.request(URL, method: .get ).validate().responseDecodable(of:SelectLevelResponse.self) { response in
+        AF.request(URL, method: .get ).validate().responseDecodable(of:EventResponse.self) { response in
             switch response.result {
             case .success(let response) :
                 completion(response)
