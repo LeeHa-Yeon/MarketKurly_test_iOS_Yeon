@@ -141,6 +141,10 @@
 		9F9CE9922797A85A0071D454 /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9912797A85A0071D454 /* PointViewController.swift */; };
 		9F9CE9942797D2C20071D454 /* MembershipBenefitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9932797D2C20071D454 /* MembershipBenefitViewController.swift */; };
 		9F9CE9962797D9C20071D454 /* AboutKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9952797D9C20071D454 /* AboutKurlyViewController.swift */; };
+		9F9CE9982797DEF80071D454 /* DeliveryNotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9972797DEF80071D454 /* DeliveryNotionViewController.swift */; };
+		9F9CE99A2797DFB10071D454 /* NotionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9992797DFB10071D454 /* NotionListViewController.swift */; };
+		9F9CE99C2797E3C60071D454 /* CustomerSCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE99B2797E3C60071D454 /* CustomerSCViewController.swift */; };
+		9F9CE99E2797ED100071D454 /* OneToOneNotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE99D2797ED100071D454 /* OneToOneNotionViewController.swift */; };
 		9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */; };
 		9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */; };
 		9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD227895F3D00CC63FA /* ViewController.swift */; };
@@ -355,6 +359,10 @@
 		9F9CE9912797A85A0071D454 /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 		9F9CE9932797D2C20071D454 /* MembershipBenefitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipBenefitViewController.swift; sourceTree = "<group>"; };
 		9F9CE9952797D9C20071D454 /* AboutKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutKurlyViewController.swift; sourceTree = "<group>"; };
+		9F9CE9972797DEF80071D454 /* DeliveryNotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryNotionViewController.swift; sourceTree = "<group>"; };
+		9F9CE9992797DFB10071D454 /* NotionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionListViewController.swift; sourceTree = "<group>"; };
+		9F9CE99B2797E3C60071D454 /* CustomerSCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSCViewController.swift; sourceTree = "<group>"; };
+		9F9CE99D2797ED100071D454 /* OneToOneNotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneToOneNotionViewController.swift; sourceTree = "<group>"; };
 		9F9D5DCB27895F3D00CC63FA /* MarketKurlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -809,11 +817,15 @@
 			isa = PBXGroup;
 			children = (
 				9F9CE97A27977F8D0071D454 /* ETC.storyboard */,
+				9F9CE99B2797E3C60071D454 /* CustomerSCViewController.swift */,
+				9F9CE9992797DFB10071D454 /* NotionListViewController.swift */,
 				9F9CE9932797D2C20071D454 /* MembershipBenefitViewController.swift */,
 				9F9CE97C27977FA00071D454 /* NoticeViewController.swift */,
 				9F9CE97E27978EB40071D454 /* FriendViewController.swift */,
 				9F9CE98827979C040071D454 /* GiftBoxViewController.swift */,
 				9F9CE9952797D9C20071D454 /* AboutKurlyViewController.swift */,
+				9F9CE9972797DEF80071D454 /* DeliveryNotionViewController.swift */,
+				9F9CE99D2797ED100071D454 /* OneToOneNotionViewController.swift */,
 			);
 			path = ETC;
 			sourceTree = "<group>";
@@ -1426,6 +1438,7 @@
 				9FB51FAB278D9ABE00DEF835 /* BeforeSearchViewController.swift in Sources */,
 				9F9D5E0D278A0D0C00CC63FA /* UIFont.swift in Sources */,
 				9FB51FD4278E9A2400DEF835 /* ExistSearchViewController.swift in Sources */,
+				9F9CE9982797DEF80071D454 /* DeliveryNotionViewController.swift in Sources */,
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
 				9F9CE9872797963A0071D454 /* NextLevelViewController.swift in Sources */,
 				9F309E0C27928FEC00EBF5E0 /* FindPwdEmailRequest.swift in Sources */,
@@ -1468,6 +1481,7 @@
 				9F9CE97D27977FA00071D454 /* NoticeViewController.swift in Sources */,
 				9F786CD02796904C00EEA867 /* MyCouponListViewController.swift in Sources */,
 				9F2721B82790EAED00F85FA9 /* UserDataManager.swift in Sources */,
+				9F9CE99C2797E3C60071D454 /* CustomerSCViewController.swift in Sources */,
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9F489F6E2794C7B400E04879 /* RecivePlaceTwoViewController.swift in Sources */,
 				9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */,
@@ -1477,6 +1491,7 @@
 				9F2721C02790FF7C00F85FA9 /* NewUserRequest.swift in Sources */,
 				9F489F6C2794C7AC00E04879 /* RecivePlaceOneViewController.swift in Sources */,
 				9F9D5E23278A104500CC63FA /* SignUpResponse.swift in Sources */,
+				9F9CE99A2797DFB10071D454 /* NotionListViewController.swift in Sources */,
 				9F309DEA2791F50100EBF5E0 /* ItemReviewViewController.swift in Sources */,
 				9F9C5919278B99A1005D164C /* RecipeCell.swift in Sources */,
 				9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */,
@@ -1492,6 +1507,7 @@
 				9F309DFF2792658500EBF5E0 /* CALayer.swift in Sources */,
 				9FCC9455278AA585000493AD /* MemberMyKurlyViewController.swift in Sources */,
 				9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */,
+				9F9CE99E2797ED100071D454 /* OneToOneNotionViewController.swift in Sources */,
 				9F309DEC2791F51600EBF5E0 /* ItemQuestionViewController.swift in Sources */,
 				9F786CA92796315B00EEA867 /* OrderSheetThirdCell.swift in Sources */,
 				9F9D5E0F278A0D2700CC63FA /* UIButton.swift in Sources */,

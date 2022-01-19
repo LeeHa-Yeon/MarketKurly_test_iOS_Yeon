@@ -110,6 +110,10 @@ extension NoMemberMyKurlyViewController: UITableViewDataSource, UITableViewDeleg
         if indexPath.section == 1 {
             
             // TODO: 비회원주문 조회는 아직 안함
+            if indexPath.row == 0 {
+                presentAlert(title: "미구현")
+//                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+            }
             
             // 알림설정
             if indexPath.row == 1 {
@@ -127,22 +131,23 @@ extension NoMemberMyKurlyViewController: UITableViewDataSource, UITableViewDeleg
             }
             // 배송안내
             if indexPath.row == 1 {
-                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+                moveToVC(SBName: "ETC", SBId: "DeliveryNotionSB" ,VCName: "DeliveryNotionVC")
             }
             
             // 공지사항
             if indexPath.row == 2 {
-                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+                moveToVC(SBName: "ETC", SBId: "NotionListSB" ,VCName: "NotionListVC")
             }
             
             // 자주하는 질문
             if indexPath.row == 3 {
-                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+                presentAlert(title: "미구현")
+//                moveToVC(SBName: "ETC", SBId: "CustomerSCSB" ,VCName: "CustomerSCVC")
             }
             
             // 고객센터
             if indexPath.row == 4 {
-                moveToVC(SBName: "ETC", SBId: "NoticeSB" ,VCName: "NoticeVC")
+                moveToVC(SBName: "ETC", SBId: "CustomerSCSB" ,VCName: "CustomerSCVC")
             }
             
             // 이용안내
