@@ -137,6 +137,8 @@
 		9F9CE9872797963A0071D454 /* NextLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9862797963A0071D454 /* NextLevelViewController.swift */; };
 		9F9CE98927979C040071D454 /* GiftBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE98827979C040071D454 /* GiftBoxViewController.swift */; };
 		9F9CE98B2797A0AB0071D454 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE98A2797A0AB0071D454 /* UITableViewCell.swift */; };
+		9F9CE9902797A84B0071D454 /* Point.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9CE98F2797A84B0071D454 /* Point.storyboard */; };
+		9F9CE9922797A85A0071D454 /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9912797A85A0071D454 /* PointViewController.swift */; };
 		9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */; };
 		9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */; };
 		9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD227895F3D00CC63FA /* ViewController.swift */; };
@@ -347,6 +349,8 @@
 		9F9CE9862797963A0071D454 /* NextLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLevelViewController.swift; sourceTree = "<group>"; };
 		9F9CE98827979C040071D454 /* GiftBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftBoxViewController.swift; sourceTree = "<group>"; };
 		9F9CE98A2797A0AB0071D454 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		9F9CE98F2797A84B0071D454 /* Point.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Point.storyboard; sourceTree = "<group>"; };
+		9F9CE9912797A85A0071D454 /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 		9F9D5DCB27895F3D00CC63FA /* MarketKurlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -578,13 +582,14 @@
 		9F309E0027927C8100EBF5E0 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				9F9CE98C2797A8310071D454 /* Point */,
 				9F9CE982279795C80071D454 /* Level */,
-				9F9CE97927977F390071D454 /* ETC */,
 				9F786CCC279684D800EEA867 /* Wish */,
 				9F786CCB279684CC00EEA867 /* Coupon */,
 				9FC61BF627939EA9007AC4A7 /* Order */,
 				9FC61BF32792BB2A007AC4A7 /* Cart */,
 				9FC61BF22792BB1C007AC4A7 /* Address */,
+				9F9CE97927977F390071D454 /* ETC */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -815,6 +820,15 @@
 				9F9CE9862797963A0071D454 /* NextLevelViewController.swift */,
 			);
 			path = Level;
+			sourceTree = "<group>";
+		};
+		9F9CE98C2797A8310071D454 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				9F9CE98F2797A84B0071D454 /* Point.storyboard */,
+				9F9CE9912797A85A0071D454 /* PointViewController.swift */,
+			);
+			path = Point;
 			sourceTree = "<group>";
 		};
 		9F9D5DC227895F3D00CC63FA = {
@@ -1250,6 +1264,7 @@
 				9F9C5916278B97BF005D164C /* RecipeListCell.xib in Resources */,
 				9F9D5DDB27895F4000CC63FA /* LaunchScreen.storyboard in Resources */,
 				9F9CE978279715D40071D454 /* Wish.storyboard in Resources */,
+				9F9CE9902797A84B0071D454 /* Point.storyboard in Resources */,
 				9F9CE985279795F20071D454 /* Level.storyboard in Resources */,
 				9FB51FB8278DB73900DEF835 /* SearchWordCell.xib in Resources */,
 				9F309DE0279158D900EBF5E0 /* Item.storyboard in Resources */,
@@ -1489,6 +1504,7 @@
 				9F489F7D2794F34A00E04879 /* OrderHistoryViewController.swift in Sources */,
 				9F309DF027920D3200EBF5E0 /* ItemMainCell.swift in Sources */,
 				9F786CB12796359F00EEA867 /* OrderSheetSixCell.swift in Sources */,
+				9F9CE9922797A85A0071D454 /* PointViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -168,6 +168,11 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
         }
         
         if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                let storyboard = UIStoryboard(name: "Point", bundle: nil)
+                let PointVC = storyboard.instantiateViewController(identifier: "PointSB")
+                self.navigationController?.pushViewController(PointVC, animated: true)
+            }
             if indexPath.row == 1 {
                 let storyboard = UIStoryboard(name: "Coupon", bundle: nil)
                 let MyCouponListVC = storyboard.instantiateViewController(identifier: "MyCouponListSB")
