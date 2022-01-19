@@ -153,6 +153,12 @@
 		9F9CE9AB27980C1F0071D454 /* ItemListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9AA27980C1F0071D454 /* ItemListDataManager.swift */; };
 		9F9CE9AD27980CF70071D454 /* SortResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9AC27980CF70071D454 /* SortResponse.swift */; };
 		9F9CE9B12798256F0071D454 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9B02798256F0071D454 /* Protocol.swift */; };
+		9F9CE9B527984A900071D454 /* NotionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9B427984A900071D454 /* NotionDataManager.swift */; };
+		9F9CE9B727984ADF0071D454 /* NotionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9B627984ADF0071D454 /* NotionResponse.swift */; };
+		9F9CE9B927984F570071D454 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9B827984F570071D454 /* UserInfoManager.swift */; };
+		9F9CE9BC2798B9C10071D454 /* LevelDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9BB2798B9C10071D454 /* LevelDataManager.swift */; };
+		9F9CE9BE2798B9EB0071D454 /* SelectLevelRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9BD2798B9EB0071D454 /* SelectLevelRequest.swift */; };
+		9F9CE9C02798BA1A0071D454 /* SelectLevelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9BF2798BA1A0071D454 /* SelectLevelResponse.swift */; };
 		9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */; };
 		9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */; };
 		9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD227895F3D00CC63FA /* ViewController.swift */; };
@@ -379,6 +385,12 @@
 		9F9CE9AA27980C1F0071D454 /* ItemListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataManager.swift; sourceTree = "<group>"; };
 		9F9CE9AC27980CF70071D454 /* SortResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortResponse.swift; sourceTree = "<group>"; };
 		9F9CE9B02798256F0071D454 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		9F9CE9B427984A900071D454 /* NotionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionDataManager.swift; sourceTree = "<group>"; };
+		9F9CE9B627984ADF0071D454 /* NotionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionResponse.swift; sourceTree = "<group>"; };
+		9F9CE9B827984F570071D454 /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		9F9CE9BB2798B9C10071D454 /* LevelDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDataManager.swift; sourceTree = "<group>"; };
+		9F9CE9BD2798B9EB0071D454 /* SelectLevelRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelRequest.swift; sourceTree = "<group>"; };
+		9F9CE9BF2798BA1A0071D454 /* SelectLevelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLevelResponse.swift; sourceTree = "<group>"; };
 		9F9D5DCB27895F3D00CC63FA /* MarketKurlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -895,6 +907,25 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		9F9CE9B227984A6F0071D454 /* ETC */ = {
+			isa = PBXGroup;
+			children = (
+				9F9CE9B427984A900071D454 /* NotionDataManager.swift */,
+				9F9CE9B627984ADF0071D454 /* NotionResponse.swift */,
+			);
+			path = ETC;
+			sourceTree = "<group>";
+		};
+		9F9CE9BA2798B9A90071D454 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				9F9CE9BB2798B9C10071D454 /* LevelDataManager.swift */,
+				9F9CE9BD2798B9EB0071D454 /* SelectLevelRequest.swift */,
+				9F9CE9BF2798BA1A0071D454 /* SelectLevelResponse.swift */,
+			);
+			path = Level;
+			sourceTree = "<group>";
+		};
 		9F9D5DC227895F3D00CC63FA = {
 			isa = PBXGroup;
 			children = (
@@ -948,6 +979,8 @@
 		9F9D5DE5278A046600CC63FA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9F9CE9BA2798B9A90071D454 /* Level */,
+				9F9CE9B227984A6F0071D454 /* ETC */,
 				9F9D5E1C278A100F00CC63FA /* SignUp */,
 				9F9D5DE9278A052E00CC63FA /* Login */,
 				9F2721A82790043600F85FA9 /* AllUser */,
@@ -1035,6 +1068,7 @@
 		9F9D5DEF278A06F300CC63FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9F9CE9B827984F570071D454 /* UserInfoManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1452,6 +1486,7 @@
 				9F9C5907278B8B9F005D164C /* OtherProductsCell.swift in Sources */,
 				9F9CE98B2797A0AB0071D454 /* UITableViewCell.swift in Sources */,
 				9F309E142792914E00EBF5E0 /* ChangePwdResponse.swift in Sources */,
+				9F9CE9B727984ADF0071D454 /* NotionResponse.swift in Sources */,
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
 				9F9CE9A82797F8740071D454 /* KurlyPassTwoViewController.swift in Sources */,
 				9F9CE976279715980071D454 /* WishViewController.swift in Sources */,
@@ -1526,6 +1561,7 @@
 				9F489F692794AF7400E04879 /* AddressDetailMoreViewController.swift in Sources */,
 				9FB51FBF278E82A700DEF835 /* SearchSubject3Cell.swift in Sources */,
 				9FC61BEF2792AB8F007AC4A7 /* NewAddressViewController.swift in Sources */,
+				9F9CE9BC2798B9C10071D454 /* LevelDataManager.swift in Sources */,
 				9FCC9440278A358A000493AD /* LoginViewController.swift in Sources */,
 				9F309DF327921E9A00EBF5E0 /* ShareViewController.swift in Sources */,
 				9F9CE981279793900071D454 /* AllLevelViewController.swift in Sources */,
@@ -1539,6 +1575,7 @@
 				9F9CE99C2797E3C60071D454 /* CustomerSCViewController.swift in Sources */,
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9F489F6E2794C7B400E04879 /* RecivePlaceTwoViewController.swift in Sources */,
+				9F9CE9BE2798B9EB0071D454 /* SelectLevelRequest.swift in Sources */,
 				9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */,
 				9F786CDC2796CD5500EEA867 /* NewProductCRVCell.swift in Sources */,
 				9F9CE9AB27980C1F0071D454 /* ItemListDataManager.swift in Sources */,
@@ -1568,6 +1605,7 @@
 				9F786CA92796315B00EEA867 /* OrderSheetThirdCell.swift in Sources */,
 				9F9D5E0F278A0D2700CC63FA /* UIButton.swift in Sources */,
 				9FB51FAD278D9AC900DEF835 /* AfterSearchViewController.swift in Sources */,
+				9F9CE9B527984A900071D454 /* NotionDataManager.swift in Sources */,
 				9FB51FCB278E8B9100DEF835 /* VogueSearchWorldCell.swift in Sources */,
 				9F9D5E1B278A100100CC63FA /* LoginResponse.swift in Sources */,
 				9FB51FA9278D904A00DEF835 /* UITextField.swift in Sources */,
@@ -1575,7 +1613,9 @@
 				9F786C9727962B6D00EEA867 /* OrderSheetFirstCell.swift in Sources */,
 				9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */,
 				9F2721B42790DE7F00F85FA9 /* IdResultViewController.swift in Sources */,
+				9F9CE9B927984F570071D454 /* UserInfoManager.swift in Sources */,
 				9F489F8D279565F400E04879 /* OrderSheetSevenCell.swift in Sources */,
+				9F9CE9C02798BA1A0071D454 /* SelectLevelResponse.swift in Sources */,
 				9F9CE98927979C040071D454 /* GiftBoxViewController.swift in Sources */,
 				9F9C5925278BB126005D164C /* Product2Cell.swift in Sources */,
 				9F2721A2278FC25D00F85FA9 /* KurlyRecommendCell.swift in Sources */,

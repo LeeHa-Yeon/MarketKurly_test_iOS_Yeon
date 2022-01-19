@@ -9,12 +9,16 @@ import UIKit
 
 class NotionListViewController: UIViewController {
     
+    let etcDataManager = NotionDataManager.shared
+    var datasoureList: [NotionDocument] = []
+    
     // MARK: - Components
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
         setUI()
     }
     
@@ -38,18 +42,29 @@ class NotionListViewController: UIViewController {
         naviTitleDelete(navi: self.navigationController!)
         customNavigationBarAttribute(.white, .black)
     }
+    
+    /* API 통신하는 부분 */
+    func loadData(){
+        etcDataManager.requestShowNotion { response in
+            self.datasoureList = response.result
+            self.tableView.reloadData()
+        }
+    }
 }
 
 
 extension NotionListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return datasoureList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "notionListCell", for: indexPath) as? NotionListCell else {
             return UITableViewCell()
         }
+        let target = datasoureList[indexPath.row]
+        cell.notionTitle.text = target.title
+        cell.notionDate.text = target.time
         return cell
     }
     

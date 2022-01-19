@@ -12,6 +12,8 @@ import GSMessages
 class LoginViewController: BaseViewController {
     
     let loginManager = LoginDataManager.shared
+    let userDataManager = UserDataManager.shared
+    let userInfoManager = UserInfoManaer.shared
     
     // MARK: - UIComponents
     
@@ -116,14 +118,24 @@ class LoginViewController: BaseViewController {
                 // 로그인 성공시
                 UserDefaults.standard.set(response.result!.userIdx, forKey: Constant.userIdxName)
                 UserDefaults.standard.set(response.result!.jwt,forKey: Constant.jwtName)
+                self.loadUserData(userIdx: response.result!.userIdx)
                 print("\(response.result!.jwt)")
-                self.dismiss(animated: true, completion: nil)
             } else {
                 // 로그인 실패시
                 self.alertMessage(message: "아이디, 비밀번호를 확인해주세요.")
             }
         }
     }
+    
+    func loadUserData(userIdx: Int){
+        userDataManager.requestAllUser(userIdx: userIdx) { response in
+
+            self.userInfoManager.setUserInfo(response.result)
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
     
     func KeyboardDismiss(){
         let tap: UITapGestureRecognizer =

@@ -39,6 +39,7 @@ class MemberMyKurlyViewController: BaseViewController {
     var reserves: Int = 40168
     var coupon: Int = 0
     var heartCnt: Int = 0
+    let userInfoManager = UserInfoManaer.shared
     
     //MARK: - UIComponents
     @IBOutlet weak var tableView: UITableView!
@@ -65,6 +66,18 @@ class MemberMyKurlyViewController: BaseViewController {
         let storyboard = UIStoryboard(name: SBName, bundle: nil)
         let VCName = storyboard.instantiateViewController(identifier: SBId)
         self.navigationController?.pushViewController(VCName, animated: true)
+    }
+    
+    
+    /* API 통신 부분  */
+    func loadUserData() -> String{
+        guard let userInfo = userInfoManager.getUserInfo() else {
+            print("MemberMyKurlyViewController API 실패")
+            return "정보없음"
+        }
+        return userInfo.getUserName() + "님"
+        // 등급 -> 일반 . 적립퍼센트
+        // 이름,
     }
 
 }
@@ -103,6 +116,7 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "myKurlyInfoCell", for: indexPath) as? MyKurlyInfoCell else {
                 return UITableViewCell()
             }
+            cell.nameLabel.text = loadUserData()
             cell.delegate = self
             return cell
         case 1 :
@@ -285,7 +299,7 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
         if indexPath.section == 7 {
             UserDefaults.standard.set("", forKey: Constant.jwtName)
             UserDefaults.standard.set(0, forKey: Constant.userIdxName)
-            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let storyboard = UIStoryboard(name: "MyKurly", bundle: nil)
             let TempVC = storyboard.instantiateViewController(identifier: "TempSB")
             TempVC.modalPresentationStyle = .fullScreen
             self.present(TempVC, animated: true, completion: nil)

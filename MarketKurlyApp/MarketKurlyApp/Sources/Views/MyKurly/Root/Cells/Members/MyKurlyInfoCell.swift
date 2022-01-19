@@ -42,4 +42,6 @@ class MyKurlyInfoCell: UITableViewCell {
         nextRankBtn.layer.cornerRadius = 20
     }
     
+
+    
 }
