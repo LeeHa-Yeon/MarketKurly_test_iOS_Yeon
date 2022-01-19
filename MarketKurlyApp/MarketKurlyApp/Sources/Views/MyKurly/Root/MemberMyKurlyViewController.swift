@@ -79,6 +79,7 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "bannerCell", for: indexPath) as? BannerCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         case 2 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "myKurlyListPlusCell", for: indexPath) as? MyKurlyListPlusCell else {
@@ -136,6 +137,12 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 || (indexPath.section == 2 && indexPath.row == 2 ) {
+            let storyboard = UIStoryboard(name: "ETC", bundle: nil)
+            let FriendVC = storyboard.instantiateViewController(identifier: "FriendSB")
+            self.navigationController?.pushViewController(FriendVC, animated: true)
+        }
+        
         if indexPath.section == 2 {
             if indexPath.row == 1 {
                 let storyboard = UIStoryboard(name: "Coupon", bundle: nil)

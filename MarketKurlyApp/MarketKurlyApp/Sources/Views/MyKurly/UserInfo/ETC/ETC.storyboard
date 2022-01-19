@@ -142,6 +142,60 @@
             </objects>
             <point key="canvasLocation" x="1018.840579710145" y="134.59821428571428"/>
         </scene>
+        <!--친구초대 이벤트-->
+        <scene sceneID="pof-Qh-l4C">
+            <objects>
+                <viewController storyboardIdentifier="FriendSB" id="nWL-7N-Erd" customClass="FriendViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tvX-IM-snz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friend" translatesAutoresizingMaskIntoConstraints="NO" id="9H7-FW-JIv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XeP-EO-e2N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9H7-FW-JIv" secondAttribute="bottom" id="B8Z-t8-GEd"/>
+                            <constraint firstItem="9H7-FW-JIv" firstAttribute="top" secondItem="XeP-EO-e2N" secondAttribute="top" id="DJL-9h-gXj"/>
+                            <constraint firstItem="XeP-EO-e2N" firstAttribute="trailing" secondItem="9H7-FW-JIv" secondAttribute="trailing" id="O3U-aq-h1F"/>
+                            <constraint firstItem="9H7-FW-JIv" firstAttribute="leading" secondItem="XeP-EO-e2N" secondAttribute="leading" id="gEp-uy-DSg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="친구초대 이벤트" id="uEg-x3-iLE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yha-Kb-MzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.913043478261" y="811.60714285714278"/>
+        </scene>
+        <!--등급 안내-->
+        <scene sceneID="iPW-Xo-DMC">
+            <objects>
+                <viewController storyboardIdentifier="AllLevelSB" id="trV-xY-h6e" customClass="AllLevelViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zpN-tZ-E4l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allLevel" translatesAutoresizingMaskIntoConstraints="NO" id="TZM-xf-Hjs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="omO-wq-8ks"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TZM-xf-Hjs" firstAttribute="leading" secondItem="omO-wq-8ks" secondAttribute="leading" id="6lj-8W-TLc"/>
+                            <constraint firstAttribute="bottom" secondItem="TZM-xf-Hjs" secondAttribute="bottom" id="b1J-Ms-KOS"/>
+                            <constraint firstItem="TZM-xf-Hjs" firstAttribute="top" secondItem="omO-wq-8ks" secondAttribute="top" id="lMu-40-brV"/>
+                            <constraint firstItem="TZM-xf-Hjs" firstAttribute="trailing" secondItem="omO-wq-8ks" secondAttribute="trailing" id="pV2-xg-rc2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="등급 안내" id="oQN-Ek-5ha"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cJ-si-EjN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2876.811594202899" y="1569.6428571428571"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="qFp-Bt-3dG">
             <objects>
@@ -160,8 +214,46 @@
             </objects>
             <point key="canvasLocation" x="111.59420289855073" y="134.59821428571428"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0RO-ob-qSC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oc3-Lt-PRE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I9F-Hk-Jbq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nWL-7N-Erd" kind="relationship" relationship="rootViewController" id="nfc-0T-BDL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YcY-8p-wAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.6666666666667" y="811.60714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uWt-hh-xL9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xhF-pW-swi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ytN-0a-qrb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="trV-xY-h6e" kind="relationship" relationship="rootViewController" id="Kog-qh-FjS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G29-N7-vfj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969.5652173913045" y="1569.6428571428571"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="allLevel" width="1170" height="2259"/>
+        <image name="friend" width="1170" height="2259"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
