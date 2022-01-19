@@ -24,4 +24,5 @@ class MyKurlyListPlusCell: UITableViewCell {
         listNameLable.text = ""
         subStrLabel.text = ""
     }
+
 }

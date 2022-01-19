@@ -274,6 +274,9 @@
                                                             <state key="normal" title="전체등급 보기">
                                                                 <color key="titleColor" red="0.020791757540000001" green="0.020889011230000001" blue="0.02118077229" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="allLevelTapped:" destination="Jh2-mC-Aev" eventType="touchUpInside" id="GFM-zB-gIi"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vps-3g-vBV">
                                                             <rect key="frame" x="187" y="0.0" width="167" height="40"/>
@@ -283,6 +286,9 @@
                                                             <state key="normal" title="다음 달 예상등급 보기">
                                                                 <color key="titleColor" red="0.020791757540000001" green="0.020889011230000001" blue="0.02118077229" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="nextLevelTapped:" destination="Jh2-mC-Aev" eventType="touchUpInside" id="I9b-pP-pjs"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>

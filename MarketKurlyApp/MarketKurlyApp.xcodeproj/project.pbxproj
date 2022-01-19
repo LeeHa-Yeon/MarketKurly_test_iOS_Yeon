@@ -133,6 +133,10 @@
 		9F9CE97D27977FA00071D454 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE97C27977FA00071D454 /* NoticeViewController.swift */; };
 		9F9CE97F27978EB40071D454 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE97E27978EB40071D454 /* FriendViewController.swift */; };
 		9F9CE981279793900071D454 /* AllLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE980279793900071D454 /* AllLevelViewController.swift */; };
+		9F9CE985279795F20071D454 /* Level.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9CE984279795F20071D454 /* Level.storyboard */; };
+		9F9CE9872797963A0071D454 /* NextLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE9862797963A0071D454 /* NextLevelViewController.swift */; };
+		9F9CE98927979C040071D454 /* GiftBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE98827979C040071D454 /* GiftBoxViewController.swift */; };
+		9F9CE98B2797A0AB0071D454 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE98A2797A0AB0071D454 /* UITableViewCell.swift */; };
 		9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */; };
 		9F9D5DD127895F3D00CC63FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */; };
 		9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5DD227895F3D00CC63FA /* ViewController.swift */; };
@@ -339,6 +343,10 @@
 		9F9CE97C27977FA00071D454 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		9F9CE97E27978EB40071D454 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		9F9CE980279793900071D454 /* AllLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLevelViewController.swift; sourceTree = "<group>"; };
+		9F9CE984279795F20071D454 /* Level.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Level.storyboard; sourceTree = "<group>"; };
+		9F9CE9862797963A0071D454 /* NextLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLevelViewController.swift; sourceTree = "<group>"; };
+		9F9CE98827979C040071D454 /* GiftBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftBoxViewController.swift; sourceTree = "<group>"; };
+		9F9CE98A2797A0AB0071D454 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		9F9D5DCB27895F3D00CC63FA /* MarketKurlyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketKurlyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9D5DCE27895F3D00CC63FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9D5DD027895F3D00CC63FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -570,6 +578,7 @@
 		9F309E0027927C8100EBF5E0 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				9F9CE982279795C80071D454 /* Level */,
 				9F9CE97927977F390071D454 /* ETC */,
 				9F786CCC279684D800EEA867 /* Wish */,
 				9F786CCB279684CC00EEA867 /* Coupon */,
@@ -791,11 +800,21 @@
 			isa = PBXGroup;
 			children = (
 				9F9CE97A27977F8D0071D454 /* ETC.storyboard */,
-				9F9CE980279793900071D454 /* AllLevelViewController.swift */,
 				9F9CE97C27977FA00071D454 /* NoticeViewController.swift */,
 				9F9CE97E27978EB40071D454 /* FriendViewController.swift */,
+				9F9CE98827979C040071D454 /* GiftBoxViewController.swift */,
 			);
 			path = ETC;
+			sourceTree = "<group>";
+		};
+		9F9CE982279795C80071D454 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				9F9CE984279795F20071D454 /* Level.storyboard */,
+				9F9CE980279793900071D454 /* AllLevelViewController.swift */,
+				9F9CE9862797963A0071D454 /* NextLevelViewController.swift */,
+			);
+			path = Level;
 			sourceTree = "<group>";
 		};
 		9F9D5DC227895F3D00CC63FA = {
@@ -971,6 +990,7 @@
 				9FB51FA8278D904A00DEF835 /* UITextField.swift */,
 				9F309DFE2792658500EBF5E0 /* CALayer.swift */,
 				9F489F622794031700E04879 /* HalfModalPresentationController.swift */,
+				9F9CE98A2797A0AB0071D454 /* UITableViewCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1230,6 +1250,7 @@
 				9F9C5916278B97BF005D164C /* RecipeListCell.xib in Resources */,
 				9F9D5DDB27895F4000CC63FA /* LaunchScreen.storyboard in Resources */,
 				9F9CE978279715D40071D454 /* Wish.storyboard in Resources */,
+				9F9CE985279795F20071D454 /* Level.storyboard in Resources */,
 				9FB51FB8278DB73900DEF835 /* SearchWordCell.xib in Resources */,
 				9F309DE0279158D900EBF5E0 /* Item.storyboard in Resources */,
 				9F9D5DFC278A09FE00CC63FA /* NotoSansCJKkr-Regular.otf in Resources */,
@@ -1348,6 +1369,7 @@
 				9F9C58ED278B5CF1005D164C /* BannerImgCell.swift in Sources */,
 				9FA04375278D113000FCD2FE /* MyKurlyCell.swift in Sources */,
 				9F9C5907278B8B9F005D164C /* OtherProductsCell.swift in Sources */,
+				9F9CE98B2797A0AB0071D454 /* UITableViewCell.swift in Sources */,
 				9F309E142792914E00EBF5E0 /* ChangePwdResponse.swift in Sources */,
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
 				9F9CE976279715980071D454 /* WishViewController.swift in Sources */,
@@ -1384,6 +1406,7 @@
 				9F9D5E0D278A0D0C00CC63FA /* UIFont.swift in Sources */,
 				9FB51FD4278E9A2400DEF835 /* ExistSearchViewController.swift in Sources */,
 				9F9D5E1E278A102200CC63FA /* SignUpDataManager.swift in Sources */,
+				9F9CE9872797963A0071D454 /* NextLevelViewController.swift in Sources */,
 				9F309E0C27928FEC00EBF5E0 /* FindPwdEmailRequest.swift in Sources */,
 				9F786CC927965AA200EEA867 /* AddDetailInfoCell.swift in Sources */,
 				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
@@ -1458,6 +1481,7 @@
 				9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */,
 				9F2721B42790DE7F00F85FA9 /* IdResultViewController.swift in Sources */,
 				9F489F8D279565F400E04879 /* OrderSheetSevenCell.swift in Sources */,
+				9F9CE98927979C040071D454 /* GiftBoxViewController.swift in Sources */,
 				9F9C5925278BB126005D164C /* Product2Cell.swift in Sources */,
 				9F2721A2278FC25D00F85FA9 /* KurlyRecommendCell.swift in Sources */,
 				9F9D5E19278A0FF700CC63FA /* LoginRequest.swift in Sources */,

@@ -1,28 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--등급 안내-->
+        <scene sceneID="E2i-1i-Jfy">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController storyboardIdentifier="AllLevelSB" id="O9w-5o-4p9" customClass="AllLevelViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vrc-aL-osN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allLevel" translatesAutoresizingMaskIntoConstraints="NO" id="RFr-TY-Jcy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D82-JP-1ch"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RFr-TY-Jcy" firstAttribute="leading" secondItem="D82-JP-1ch" secondAttribute="leading" id="8Os-hc-Og6"/>
+                            <constraint firstAttribute="bottom" secondItem="RFr-TY-Jcy" secondAttribute="bottom" id="SSf-nB-tF5"/>
+                            <constraint firstItem="RFr-TY-Jcy" firstAttribute="trailing" secondItem="D82-JP-1ch" secondAttribute="trailing" id="fMa-ci-ve6"/>
+                            <constraint firstItem="RFr-TY-Jcy" firstAttribute="top" secondItem="D82-JP-1ch" secondAttribute="top" id="fqM-OF-xEk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="등급 안내" id="zDQ-ld-Pln"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUz-py-ULX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2876.811594202899" y="1569.6428571428571"/>
+        </scene>
+        <!--등급별 혜택-->
+        <scene sceneID="jPd-Bk-MZv">
+            <objects>
+                <viewController storyboardIdentifier="NextLevelSB" id="rfE-KW-Jer" customClass="NextLevelViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5HS-o7-8dg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuA-m3-5NR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="758"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nbt-Yj-DwA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1230"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstLevelScreen" translatesAutoresizingMaskIntoConstraints="NO" id="clr-2D-NUR">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="700"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="700" id="qfg-Yz-tJ3"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secondLevelScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Czk-Hb-Wm9">
+                                                <rect key="frame" x="0.0" y="700" width="414" height="480"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="480" id="bJq-hn-iHh"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl8-on-Kd2">
+                                                <rect key="frame" x="0.0" y="1180" width="414" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="jEU-ok-DOl"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Nbt-Yj-DwA" firstAttribute="leading" secondItem="Izb-Rl-xiy" secondAttribute="leading" id="BZs-tf-5nD"/>
+                                    <constraint firstItem="Nbt-Yj-DwA" firstAttribute="trailing" secondItem="Izb-Rl-xiy" secondAttribute="trailing" id="Hhj-c0-D2b"/>
+                                    <constraint firstItem="Nbt-Yj-DwA" firstAttribute="width" secondItem="ROk-7C-w3C" secondAttribute="width" id="Zlh-Ua-4g2"/>
+                                    <constraint firstItem="Nbt-Yj-DwA" firstAttribute="bottom" secondItem="Izb-Rl-xiy" secondAttribute="bottom" id="rmc-Qw-c5X"/>
+                                    <constraint firstItem="Nbt-Yj-DwA" firstAttribute="top" secondItem="Izb-Rl-xiy" secondAttribute="top" id="voR-kZ-z7v"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Izb-Rl-xiy"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ROk-7C-w3C"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jux-ft-aSd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AuA-m3-5NR" firstAttribute="leading" secondItem="jux-ft-aSd" secondAttribute="leading" id="XkX-m0-w9d"/>
+                            <constraint firstItem="AuA-m3-5NR" firstAttribute="top" secondItem="jux-ft-aSd" secondAttribute="top" id="ZDt-Om-9hK"/>
+                            <constraint firstItem="AuA-m3-5NR" firstAttribute="trailing" secondItem="jux-ft-aSd" secondAttribute="trailing" id="kBh-7f-xuY"/>
+                            <constraint firstAttribute="bottom" secondItem="AuA-m3-5NR" secondAttribute="bottom" constant="50" id="vu6-fW-dWT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="등급별 혜택" id="uaA-Tl-W9y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3T-F5-odv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2876.811594202899" y="2258.0357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fB1-GW-rFL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6aD-Ny-e1S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bu0-Ek-XQe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="O9w-5o-4p9" kind="relationship" relationship="rootViewController" id="IV3-HX-Ud3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXF-WT-ZOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969.5652173913045" y="1569.6428571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="adv-0e-7kI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t19-GP-FYS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q3r-RU-mTd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rfE-KW-Jer" kind="relationship" relationship="rootViewController" id="rHn-L3-KVq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCV-CE-KPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2001" y="2259"/>
         </scene>
     </scenes>
     <resources>
+        <image name="allLevel" width="1170" height="2259"/>
+        <image name="firstLevelScreen" width="1170" height="1997"/>
+        <image name="secondLevelScreen" width="1143" height="1388"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

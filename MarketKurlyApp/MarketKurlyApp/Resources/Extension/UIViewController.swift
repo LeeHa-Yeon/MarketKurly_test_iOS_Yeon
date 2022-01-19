@@ -179,7 +179,7 @@ extension UIViewController {
     }
     
     func customNaviBarItem(btnColor: UIColor, naviItem: UINavigationItem){
-
+        
         lazy var mapLeftBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 10)).then {
             $0.setImage(UIImage(systemName: "map"), for: .normal)
             $0.tintColor = btnColor
@@ -201,7 +201,7 @@ extension UIViewController {
     
     
     func customNaviBarItem2(btnColor: UIColor, naviItem: UINavigationItem){
-
+        
         lazy var cartRightBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 10, height: 10)).then {
             $0.setImage(UIImage(systemName: "cart"), for: .normal)
             $0.tintColor = btnColor
@@ -219,21 +219,21 @@ extension UIViewController {
         iconButton.setBackgroundImage(icon, for: .normal)
         let barButton = UIBarButtonItem(customView: iconButton)
         iconButton.addTarget(self, action: #selector(addressBarBtnTapped(_:)), for: .touchUpInside)
-
+        
         navigationItem.leftBarButtonItem = barButton
         
         
-//        lazy var arrowLeftBtn = UIButton().then {
-//            $0.setImage(UIImage(named: "arrow"), for: .normal)
-//            $0.tintColor = btnColor
-//            $0.imageView?.contentMode = .scaleAspectFit
-//            $0.addTarget(self, action: #selector(self.cartBarBtnTapped(_:)), for: .touchUpInside)
-//            $0.frame = CGRect(x: 0, y: 0, width: 5, height: 5)
-//        }
-//        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: self, action: nil)
-//        space.width = 15
-//        let leftBarBtnItem = UIBarButtonItem(customView: arrowLeftBtn)
-//        naviItem.leftBarButtonItems = [leftBarBtnItem]
+        //        lazy var arrowLeftBtn = UIButton().then {
+        //            $0.setImage(UIImage(named: "arrow"), for: .normal)
+        //            $0.tintColor = btnColor
+        //            $0.imageView?.contentMode = .scaleAspectFit
+        //            $0.addTarget(self, action: #selector(self.cartBarBtnTapped(_:)), for: .touchUpInside)
+        //            $0.frame = CGRect(x: 0, y: 0, width: 5, height: 5)
+        //        }
+        //        let space = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: self, action: nil)
+        //        space.width = 15
+        //        let leftBarBtnItem = UIBarButtonItem(customView: arrowLeftBtn)
+        //        naviItem.leftBarButtonItems = [leftBarBtnItem]
     }
     
     
@@ -261,5 +261,19 @@ extension UIViewController {
         navi.navigationBar.topItem?.title = ""
     }
     
+    // MARK: - 세자리 숫자마다 콤마 넣기
+    func DecimalWon(value: Int) -> String{
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let result = numberFormatter.string(from: NSNumber(value: value))! + "원"
+        
+        return result
+    }
     
+    // MARK: - 취소선
+    func cancleLine(text: String, targetLabel: UILabel){
+        let attributedString = NSMutableAttributedString(string: text)
+        attributedString.addAttribute(.strikethroughStyle, value: 1.07, range: (text as NSString).range(of: text))
+        targetLabel.attributedText = attributedString
+    }
 }

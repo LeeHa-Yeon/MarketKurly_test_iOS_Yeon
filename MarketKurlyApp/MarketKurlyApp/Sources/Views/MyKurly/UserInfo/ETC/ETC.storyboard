@@ -167,34 +167,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yha-Kb-MzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973.913043478261" y="811.60714285714278"/>
+            <point key="canvasLocation" x="1019" y="817"/>
         </scene>
-        <!--등급 안내-->
-        <scene sceneID="iPW-Xo-DMC">
+        <!--선물 내역-->
+        <scene sceneID="Gue-a4-mb8">
             <objects>
-                <viewController storyboardIdentifier="AllLevelSB" id="trV-xY-h6e" customClass="AllLevelViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zpN-tZ-E4l">
+                <viewController storyboardIdentifier="GiftBoxSB" id="spe-lk-G0R" customClass="GiftBoxViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8aI-uz-Xhj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allLevel" translatesAutoresizingMaskIntoConstraints="NO" id="TZM-xf-Hjs">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nogiftScreen" translatesAutoresizingMaskIntoConstraints="NO" id="eZK-78-buX">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="omO-wq-8ks"/>
+                        <viewLayoutGuide key="safeArea" id="6VT-7J-Xbh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TZM-xf-Hjs" firstAttribute="leading" secondItem="omO-wq-8ks" secondAttribute="leading" id="6lj-8W-TLc"/>
-                            <constraint firstAttribute="bottom" secondItem="TZM-xf-Hjs" secondAttribute="bottom" id="b1J-Ms-KOS"/>
-                            <constraint firstItem="TZM-xf-Hjs" firstAttribute="top" secondItem="omO-wq-8ks" secondAttribute="top" id="lMu-40-brV"/>
-                            <constraint firstItem="TZM-xf-Hjs" firstAttribute="trailing" secondItem="omO-wq-8ks" secondAttribute="trailing" id="pV2-xg-rc2"/>
+                            <constraint firstItem="6VT-7J-Xbh" firstAttribute="trailing" secondItem="eZK-78-buX" secondAttribute="trailing" id="JIS-Td-bVh"/>
+                            <constraint firstItem="eZK-78-buX" firstAttribute="top" secondItem="6VT-7J-Xbh" secondAttribute="top" id="m0E-7w-Ccs"/>
+                            <constraint firstItem="6VT-7J-Xbh" firstAttribute="bottom" secondItem="eZK-78-buX" secondAttribute="bottom" id="os4-MN-Wjq"/>
+                            <constraint firstItem="eZK-78-buX" firstAttribute="leading" secondItem="6VT-7J-Xbh" secondAttribute="leading" id="zaH-nU-pNs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="등급 안내" id="oQN-Ek-5ha"/>
+                    <navigationItem key="navigationItem" title="선물 내역" id="Pbh-YI-Qfk"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0cJ-si-EjN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Lp-gl-jNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2876.811594202899" y="1569.6428571428571"/>
+            <point key="canvasLocation" x="1019" y="1499"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qFp-Bt-3dG">
@@ -230,30 +231,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YcY-8p-wAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066.6666666666667" y="811.60714285714278"/>
+            <point key="canvasLocation" x="112" y="817"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="uWt-hh-xL9">
+        <scene sceneID="6in-ZN-ofo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xhF-pW-swi" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NPs-A9-SNv" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ytN-0a-qrb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FYg-Zs-3eA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="trV-xY-h6e" kind="relationship" relationship="rootViewController" id="Kog-qh-FjS"/>
+                        <segue destination="spe-lk-G0R" kind="relationship" relationship="rootViewController" id="YdX-rN-oYq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G29-N7-vfj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uK4-jx-PdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1969.5652173913045" y="1569.6428571428571"/>
+            <point key="canvasLocation" x="112" y="1499"/>
         </scene>
     </scenes>
     <resources>
-        <image name="allLevel" width="1170" height="2259"/>
         <image name="friend" width="1170" height="2259"/>
+        <image name="nogiftScreen" width="1170" height="2084"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

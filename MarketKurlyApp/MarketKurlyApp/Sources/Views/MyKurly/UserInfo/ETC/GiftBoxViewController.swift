@@ -1,5 +1,5 @@
 //
-//  NextLevelViewController.swift
+//  GiftBoxViewController.swift
 //  MarketKurlyApp
 //
 //  Created by 이하연 on 2022/01/19.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class NextLevelViewController: UIViewController {
-    
+class GiftBoxViewController: UIViewController {
+
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,7 @@ class NextLevelViewController: UIViewController {
     func setUI(){
         naviTitleDelete(navi: self.navigationController!)
         customNavigationBarAttribute(.white, .black)
+        customNaviBarItem2(btnColor: .black, naviItem: self.navigationItem)
     }
 
 }

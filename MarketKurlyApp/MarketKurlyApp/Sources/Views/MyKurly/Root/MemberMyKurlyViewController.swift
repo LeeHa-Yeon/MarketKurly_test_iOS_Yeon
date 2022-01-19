@@ -6,6 +6,29 @@
 
 import UIKit
 
+protocol LevelViewControllerDelegate {
+    func moveToAllLevelVC()
+    
+    func moveToNextLevelVC()
+}
+
+extension MemberMyKurlyViewController: LevelViewControllerDelegate {
+    
+    func moveToAllLevelVC() {
+        let storyboard = UIStoryboard(name: "Level", bundle: nil)
+        let AllLevelVC = storyboard.instantiateViewController(identifier: "AllLevelSB")
+        self.navigationController?.pushViewController(AllLevelVC, animated: true)
+    }
+    
+    func moveToNextLevelVC() {
+        let storyboard = UIStoryboard(name: "Level", bundle: nil)
+        let NextLevelVC = storyboard.instantiateViewController(identifier: "NextLevelSB")
+        self.navigationController?.pushViewController(NextLevelVC, animated: true)
+    }
+    
+}
+
+
 class MemberMyKurlyViewController: BaseViewController {
     
     let dummyData: [String] = ["적립금","쿠폰","친구초대"]
@@ -13,7 +36,7 @@ class MemberMyKurlyViewController: BaseViewController {
     let dummyData3: [String] = ["배송지 관리","컬리 퍼플 박스","개인정보 수정","알림 설정"]
     let dummyData4:[String] = ["상품 문의","1:1 문의","대량주문 문의"]
     let dummyData5:[String] = ["컬리소개","컬리패스","배송 안내","공지사항","자주하는 질문","고객센터","이용안내"]
-    var reserves: Int = 4168
+    var reserves: Int = 40168
     var coupon: Int = 0
     var heartCnt: Int = 0
     
@@ -74,6 +97,7 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "myKurlyInfoCell", for: indexPath) as? MyKurlyInfoCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             return cell
         case 1 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "bannerCell", for: indexPath) as? BannerCell else {
@@ -87,7 +111,7 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             }
             cell.listNameLable.text = dummyData[indexPath.row]
             if indexPath.row == 0 {
-                cell.subStrLabel.text = "\(reserves)원"
+                cell.subStrLabel.text = DecimalWon(value: reserves)
             } else if indexPath.row == 1 {
                 cell.subStrLabel.text = "\(coupon)장"
             }else {
@@ -158,11 +182,21 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
                 let OrderHistoryVC = storyboard.instantiateViewController(identifier: "OrderHistorySB")
                 self.navigationController?.pushViewController(OrderHistoryVC, animated: true)
             }
+            
+            
+            if indexPath.row == 1 {
+                let storyboard = UIStoryboard(name: "ETC", bundle: nil)
+                
+                let GiftBoxVC = storyboard.instantiateViewController(identifier: "GiftBoxSB")
+                self.navigationController?.pushViewController(GiftBoxVC, animated: true)
+            }
+            
             if indexPath.row == 2 {
                 let storyboard = UIStoryboard(name: "Wish", bundle: nil)
                 let WishVC = storyboard.instantiateViewController(identifier: "WishSB")
                 self.navigationController?.pushViewController(WishVC, animated: true)
             }
+            
         }
         
         if indexPath.section == 4 {

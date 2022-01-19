@@ -9,6 +9,8 @@ import UIKit
 
 class MyKurlyInfoCell: UITableViewCell {
     
+    var delegate: LevelViewControllerDelegate?
+    
     // MARK: - UIComponents
     @IBOutlet weak var rankBtn: UIButton!
     @IBOutlet weak var allRankBtn: UIButton!
@@ -16,6 +18,14 @@ class MyKurlyInfoCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var pointRate: UILabel!
+    
+    @IBAction func allLevelTapped(_ sender: Any) {
+        self.delegate?.moveToAllLevelVC()
+    }
+    
+    @IBAction func nextLevelTapped(_ sender: Any) {
+        self.delegate?.moveToNextLevelVC()
+    }
     
     // MARK: - LifeCycle
     override func awakeFromNib() {
