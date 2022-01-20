@@ -11,8 +11,8 @@ class CategoryParentCell: UITableViewCell {
     
     // MARK: - Components
     @IBOutlet weak var categoryNameLabel: UILabel!
+    @IBOutlet weak var categoryImg: UIImageView!
     
-
     // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()

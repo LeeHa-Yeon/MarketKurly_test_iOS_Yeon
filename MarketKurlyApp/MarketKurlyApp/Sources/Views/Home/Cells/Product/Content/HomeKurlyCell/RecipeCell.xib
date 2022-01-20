@@ -23,7 +23,7 @@
                         <state key="normal" image="testRecipe"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요리제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Em-em-9AC">
-                        <rect key="frame" x="0.0" y="114" width="48.5" height="17"/>
+                        <rect key="frame" x="0.0" y="117" width="48.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                 <constraint firstItem="lfx-6k-eWN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="d2R-f9-7X1"/>
                 <constraint firstItem="1Em-em-9AC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ff3-Jq-mhe"/>
                 <constraint firstAttribute="trailing" secondItem="lfx-6k-eWN" secondAttribute="trailing" id="xTk-Su-2Nv"/>
-                <constraint firstItem="1Em-em-9AC" firstAttribute="top" secondItem="lfx-6k-eWN" secondAttribute="bottom" constant="5" id="y9X-HO-avU"/>
+                <constraint firstItem="1Em-em-9AC" firstAttribute="top" secondItem="lfx-6k-eWN" secondAttribute="bottom" constant="8" id="y9X-HO-avU"/>
             </constraints>
             <size key="customSize" width="205" height="139"/>
             <connections>

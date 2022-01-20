@@ -9,7 +9,6 @@ import UIKit
 
 class ProductCell: UICollectionViewCell {
     
-//    var delegate: ItemBuyViewControllerDelegate?
     var itemId : Int?
     
     // MARK: - Components
@@ -28,13 +27,19 @@ class ProductCell: UICollectionViewCell {
     
     
     @IBAction func cartTapped(_ sender: Any) {
-//        delegate?.moveToVC()
         
     }
     
     // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUI()
+    }
+    
+    
+    // MARK: - Functions
+    func setUI(){
+        newYearImg.isHidden = true
     }
 
 }

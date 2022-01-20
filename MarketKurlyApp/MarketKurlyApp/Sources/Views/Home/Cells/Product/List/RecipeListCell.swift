@@ -8,6 +8,8 @@
 import UIKit
 
 class RecipeListCell: UITableViewCell {
+    
+    let dummyData = ["쪽파무침","오렌지 마멀레이드","모둠 버섯 전골","뚝배기 계란찜","마 우동"]
 
     // MARK: - UIComponents
     @IBOutlet weak var titleLabel: UILabel!
@@ -42,21 +44,23 @@ class RecipeListCell: UITableViewCell {
 
 extension RecipeListCell : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return dummyData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCell", for: indexPath) as? RecipeCell else {
             return UICollectionViewCell()
         }
-        cell.cookTitleLabel.text = "모둠 버섯 전골"
+        let itemImg = UIImage(named: "E_recipe\(indexPath.row)")
+        cell.RecipeBtn.setImage(itemImg, for: .normal)
+        cell.cookTitleLabel.text = dummyData[indexPath.row]
         return cell
         
     }
     
     //컬렉션뷰 사이즈 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300  , height:  collectionView.frame.height)
+        return CGSize(width: 240  , height:  collectionView.frame.height+10)
     }
     
 }

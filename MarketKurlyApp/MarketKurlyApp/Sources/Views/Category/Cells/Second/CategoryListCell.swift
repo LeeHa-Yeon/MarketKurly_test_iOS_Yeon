@@ -7,12 +7,16 @@
 
 import UIKit
 import ExpyTableView
+import Kingfisher
 
 class CategoryListCell: UITableViewCell {
     
+    let categoryDataManager = CategoryDataManger.shared
+    var tempCategory: [CategoryListDocument] = []
+    
     let categoryList: Array<String> = ["설 선물세트","채소","과일,견과,쌀","수산,해산,건어물","정육,계란","국,반찬,메인요리","샐러드,간편식","면,양념,오일","생수,음료,우유,커피","간식,과자,떡","베이커리,치즈,델리","건강식품","전통주","생활용품,리빙,캠핑","스킨케어,메이크업","헤어,바디,구강","주방용품","가전제품","반려동물","베이비,키즈,완구"]
-    let arraySection0: Array<String> = ["section0_row0","section0_row1","section0_row2"]
-    let arraySection1: Array<String> = ["section1_row0","section1_row1","section1_row2","section1_row3"]
+    let categoryDummyData: [[String]] = [["","=== 카테고리별 ===","홍삼·즙·건강식품","정육·가공육·건육","수산·건어물·젓갈","과일·견과·곡류","디저트·치즈·다과류","면·양념·오일·캔류","생활·주방·뷰티","생활·주방·뷰티","간편식·반찬","=== 가격대별 ===","3만원 미만","5~10만원","10-20만원","20만원 이상"],["","친환경","고구마·감자·당근","시금치·쌈채소·나물","브로콜리·파프리카·양배추","양파·대파·마늘·배추","오이·호박·고추","냉동·이색·간편채소","콩나물·버섯"],["","친환경","제철과일","국산과일","수입과일","간편과일","냉동·건과일","견과류","쌀·잡곡"],["","제철수산"],["","국내산 소고기"],["","국·탕·찌개"],["","샐러드·닭가슴살"],["","파스타·면류"],["","생수·탄산수"],["","과자·스낵·쿠키"],["","식빵·빵류"],["","영양제"],["","막걸리·약주"],["","휴지·티슈"],["","스킨·미스트·패드"],["","구강·면도"],["","주방소모품·잡화"],["","주방가전"],["","강아지 간식"],["","분유·간편 이유식"]]
+    
     
     // MARK: - Components
     @IBOutlet weak var tableView: ExpyTableView!
@@ -20,6 +24,7 @@ class CategoryListCell: UITableViewCell {
     // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        setData()
         setUI()
     }
 
@@ -40,6 +45,14 @@ class CategoryListCell: UITableViewCell {
         self.tableView.register(newCellNib, forCellReuseIdentifier: cellIdentifier)
     }
 
+    /* API 통신 */
+    func setData(){
+        categoryDataManager.requestCategoryList { response in
+            self.tempCategory = response.result
+            self.tableView.reloadData()
+        }
+    }
+    
 }
 
 extension CategoryListCell: ExpyTableViewDelegate, ExpyTableViewDataSource {
@@ -47,29 +60,25 @@ extension CategoryListCell: ExpyTableViewDelegate, ExpyTableViewDataSource {
     // 섹션 갯수
     func numberOfSections(in tableView: UITableView) -> Int {
         return categoryList.count
+//        return tempCategory.count
     }
     
     // 선택시 어떤 셀이 선택되었는지 이벤트를 처리
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 0 :
-            print("\(categoryList[indexPath.row]) - \(arraySection0[indexPath.row])")
-        case 1 :
-            print("\(categoryList[indexPath.row]) - \(arraySection1[indexPath.row])")
-        default :
-            print("\(indexPath.section)섹션 \(indexPath.row)로우 선택됨")
-        }
+        print("\(categoryList[indexPath.row]) - \(categoryDummyData[indexPath.section][indexPath.row])")
+
     }
     
     // cell 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            // 섹션의 높이
-            return 48
-        }else {
-            // 하위 셀의 높이
-            return 50
-        }
+        return UITableView.automaticDimension
+//        if indexPath.row == 0 {
+//            // 섹션의 높이
+//            return 48
+//        }else {
+//            // 하위 셀의 높이
+//            return 50
+//        }
     }
     
     
@@ -80,11 +89,13 @@ extension CategoryListCell: ExpyTableViewDelegate, ExpyTableViewDataSource {
     
     // row 갯수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return arraySection0.count
-        } else {
-            return arraySection1.count
-        }
+        
+        return categoryDummyData[section].count
+//        if section == 0 {
+//            return arraySection0.count
+//        } else {
+//            return arraySection1.count
+//        }
     }
     
      // 열리고 닫힐 때 확인
@@ -112,6 +123,11 @@ extension CategoryListCell: ExpyTableViewDelegate, ExpyTableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoryParentCell") as? CategoryParentCell else {
             return UITableViewCell()
         }
+        if section < tempCategory.count-1 && section > 0 {
+            let target = tempCategory[section-1]
+            urlToImg(urlStr: target.imageULR, targetImg: cell.categoryImg)
+        }
+        
         cell.categoryNameLabel.text = categoryList[section]
         cell.selectionStyle = .none //선택했을 때 회색되는거 없애기
         return cell
@@ -126,11 +142,7 @@ extension CategoryListCell: ExpyTableViewDelegate, ExpyTableViewDataSource {
         }
         cell.backgroundColor = #colorLiteral(red: 0.9086460471, green: 0.9014798999, blue: 0.9141244292, alpha: 1)
         cell.selectionStyle = .none
-        if indexPath.section == 0 {
-            cell.nameLabel.text = arraySection0[indexPath.row]
-        } else {
-            cell.nameLabel.text = arraySection1[indexPath.row]
-        }
+        cell.nameLabel.text = categoryDummyData[indexPath.section][indexPath.row]
         return cell
         
     }

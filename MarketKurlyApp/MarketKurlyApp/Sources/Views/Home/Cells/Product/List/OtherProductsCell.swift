@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class OtherProductsCell: UITableViewCell {
     
@@ -19,6 +20,7 @@ class OtherProductsCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBAction func moreBtnTapped(_ sender: Any) {
+        print("미구현")
     }
     
     // MARK: - LifeCycle
@@ -47,22 +49,50 @@ class OtherProductsCell: UITableViewCell {
 
 extension OtherProductsCell : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return itemList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.row >= 0 && indexPath.row < 5 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as? ProductCell else {
-                return UICollectionViewCell()
-            }
-            return cell
-        }else {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "noSaleProductCell", for: indexPath) as? NoSaleProductCell else {
-                return UICollectionViewCell()
-            }
-            return cell
+        let target = itemList[indexPath.row]
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCell", for: indexPath) as? ProductCell else {
+            return UICollectionViewCell()
         }
+        
+        urlToImg(urlStr: target.items_img_url, targetImg: cell.itemImg)
+        // 카트
+        cell.itemName.text = target.name
+        
+        if target.present == 0 {
+            cell.presentImg.isHidden = true
+        }else {
+            cell.presentImg.isHidden = false
+        }
+        
+        if target.coupon == 0 {
+            cell.couponImg.isHidden = true
+        } else {
+            cell.couponImg.isHidden = false
+        }
+        
+        if target.discount_rate == "0%" {
+            // 세일 안할때
+            cell.discountLabel.isHidden = true
+            cell.originLabel.isHidden = true
+            cell.saleLabel.text = DecimalWon(value: target.price)
+            
+        } else {
+            // 세일할때
+            cell.discountLabel.text = target.discount_rate
+            cancleLine(text: DecimalWon(value: target.price), targetLabel: cell.originLabel)
+            cell.saleLabel.text = DecimalWon(value: target.member_discount_price)
+            
+        }
+        
+        
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

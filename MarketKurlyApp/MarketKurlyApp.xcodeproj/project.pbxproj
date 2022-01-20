@@ -73,6 +73,8 @@
 		9F6710B2279940BC00BC485A /* SubjectItemesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710B1279940BC00BC485A /* SubjectItemesResponse.swift */; };
 		9F6710B52799444D00BC485A /* Loding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6710B42799444D00BC485A /* Loding.storyboard */; };
 		9F6710B72799445E00BC485A /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710B62799445E00BC485A /* LodingViewController.swift */; };
+		9F6710BD2799887E00BC485A /* CategoryDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710BC2799887E00BC485A /* CategoryDataManger.swift */; };
+		9F6710BF279988D800BC485A /* CategoryListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710BE279988D800BC485A /* CategoryListResponse.swift */; };
 		9F786C9727962B6D00EEA867 /* OrderSheetFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786C9527962B6D00EEA867 /* OrderSheetFirstCell.swift */; };
 		9F786C9827962B6D00EEA867 /* OrderSheetFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786C9627962B6D00EEA867 /* OrderSheetFirstCell.xib */; };
 		9F786C9D27962C8800EEA867 /* OrderItemFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786C9B27962C8800EEA867 /* OrderItemFirstCell.swift */; };
@@ -317,6 +319,8 @@
 		9F6710B1279940BC00BC485A /* SubjectItemesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectItemesResponse.swift; sourceTree = "<group>"; };
 		9F6710B42799444D00BC485A /* Loding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loding.storyboard; sourceTree = "<group>"; };
 		9F6710B62799445E00BC485A /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
+		9F6710BC2799887E00BC485A /* CategoryDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataManger.swift; sourceTree = "<group>"; };
+		9F6710BE279988D800BC485A /* CategoryListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListResponse.swift; sourceTree = "<group>"; };
 		9F786C9527962B6D00EEA867 /* OrderSheetFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSheetFirstCell.swift; sourceTree = "<group>"; };
 		9F786C9627962B6D00EEA867 /* OrderSheetFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSheetFirstCell.xib; sourceTree = "<group>"; };
 		9F786C9B27962C8800EEA867 /* OrderItemFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFirstCell.swift; sourceTree = "<group>"; };
@@ -760,6 +764,15 @@
 			path = No;
 			sourceTree = "<group>";
 		};
+		9F6710BB2799886700BC485A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9F6710BC2799887E00BC485A /* CategoryDataManger.swift */,
+				9F6710BE279988D800BC485A /* CategoryListResponse.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		9F786C9927962C5900EEA867 /* Parent */ = {
 			isa = PBXGroup;
 			children = (
@@ -1054,6 +1067,7 @@
 		9F9D5DE5278A046600CC63FA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9F6710BB2799886700BC485A /* Category */,
 				9F9F67A32798D82A008DD590 /* Event */,
 				9F9F67A82798E038008DD590 /* Coupon */,
 				9F9CE9BA2798B9A90071D454 /* Level */,
@@ -1637,6 +1651,7 @@
 				9F489F772794E5E300E04879 /* AfterOrderViewController.swift in Sources */,
 				9F9CE9A22797F3B50071D454 /* KurlyPurpleBoxViewController.swift in Sources */,
 				9F6710A22798F92F00BC485A /* DownloadCouponResponse.swift in Sources */,
+				9F6710BD2799887E00BC485A /* CategoryDataManger.swift in Sources */,
 				9F786C9D27962C8800EEA867 /* OrderItemFirstCell.swift in Sources */,
 				9F489F6727941E3A00E04879 /* CartViewController.swift in Sources */,
 				9FA0437B278D11E800FCD2FE /* MyKurlyInfoCell.swift in Sources */,
@@ -1736,6 +1751,7 @@
 				9F489F7D2794F34A00E04879 /* OrderHistoryViewController.swift in Sources */,
 				9F309DF027920D3200EBF5E0 /* ItemMainCell.swift in Sources */,
 				9F786CB12796359F00EEA867 /* OrderSheetSixCell.swift in Sources */,
+				9F6710BF279988D800BC485A /* CategoryListResponse.swift in Sources */,
 				9F9CE9922797A85A0071D454 /* PointViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

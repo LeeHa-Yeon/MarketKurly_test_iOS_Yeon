@@ -87,11 +87,11 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate  {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0 :
-            return 50
-        case 1 :
-            return 1100
-        default :
             return UITableView.automaticDimension
+        case 1 :
+            return 1050
+        default :
+            return 1500
         }
     }
     

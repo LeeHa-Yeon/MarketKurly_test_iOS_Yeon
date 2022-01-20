@@ -13,6 +13,8 @@ protocol ItemDetailViewControllerDelegate {
     func moveToVC()
 }
 
+
+
 /* 서버에서 받아오는 데이터 (임시 구조체) */
 struct TempProductListData {
     let name: String
@@ -146,6 +148,7 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
             
         default :
+            
             let target = subjectList[indexPath.section-1]
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "otherProductsCell", for: indexPath) as? OtherProductsCell else {
                 return UITableViewCell()
@@ -201,4 +204,5 @@ extension RecommendViewController: ItemDetailViewControllerDelegate {
         self.navigationController?.pushViewController(ItemDetailVC, animated: true)
     }
 }
+
 
