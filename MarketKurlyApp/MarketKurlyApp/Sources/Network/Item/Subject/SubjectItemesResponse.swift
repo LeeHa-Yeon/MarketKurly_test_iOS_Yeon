@@ -24,5 +24,5 @@ struct SubjectItemesDocument: Decodable {
     let items_img_url: String
     let coupon: Int
     let present: Int
-    let newyear_count: String
+    let newyear_count: String?
 }
