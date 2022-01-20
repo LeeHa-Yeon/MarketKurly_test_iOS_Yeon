@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct DoWishRequest {
+struct WishRequest: Encodable {
     let itemId: Int
 }

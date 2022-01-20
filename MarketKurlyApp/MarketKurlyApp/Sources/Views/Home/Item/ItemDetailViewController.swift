@@ -44,6 +44,7 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.title = "\(itemDocument!.name)"
         self.view.bringSubviewToFront(self.fixView)
         self.tabBarController?.tabBar.isHidden = true
     }

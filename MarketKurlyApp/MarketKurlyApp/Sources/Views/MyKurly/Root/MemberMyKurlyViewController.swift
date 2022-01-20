@@ -94,6 +94,15 @@ class MemberMyKurlyViewController: BaseViewController {
         return userCouponListInfo.count
     }
     
+    func loadWishItemCnt() -> Int?{
+        guard let userWishListInfo = userInfoManager.getUserWishListInfo() else {
+            print("MemberMyKurlyViewController API 실패")
+            return nil
+        }
+        return userWishListInfo.count
+    }
+    
+    
     //         // 등급 -> 일반 . 적립퍼센트
     
 
@@ -170,7 +179,9 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             }
             cell.listNameLable.text = dummyData2[indexPath.row]
             if indexPath.row == 2 {
-                cell.subStrLabel.text = "\(heartCnt)개"
+                if loadWishItemCnt() != nil {
+                    cell.subStrLabel.text = "\(loadWishItemCnt() ?? 0)개"
+                }
             } else {
                 cell.subStrLabel.text = ""
             }

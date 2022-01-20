@@ -28,6 +28,21 @@ class UserInfoManaer {
         self.tokenString = token
     }
     
+    // 사용자 찜 내역
+    var userWishListInfo: [ShowWishListDocument]?
+    
+    func setUserWishListInfo(_ info: [ShowWishListDocument]) {
+        self.userWishListInfo = info
+    }
+    
+    func getUserWishListInfo() -> [ShowWishListDocument]? {
+        guard let userWishListInfo = self.userWishListInfo else { return nil }
+        return userWishListInfo
+    }
+    
+    
+    
+    
     // 사용자 쿠폰 내역
     var userCouponInfo: [UserCouponListDocument]?
     

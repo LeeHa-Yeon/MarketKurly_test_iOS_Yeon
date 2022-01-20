@@ -77,6 +77,9 @@
                                                             <state key="normal" title="삭제">
                                                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="deleteBtnTapped:" destination="2wQ-MQ-R9W" eventType="touchUpInside" id="1Sd-Uk-abf"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbA-5h-WZj">
                                                             <rect key="frame" x="141" y="0.0" width="133" height="36"/>
@@ -90,6 +93,9 @@
                                                             <state key="normal" title="담기" image="cart" catalog="system">
                                                                 <color key="titleColor" red="0.34238135809999998" green="0.047692976890000002" blue="0.48630309100000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="cartBtnTapped:" destination="2wQ-MQ-R9W" eventType="touchUpInside" id="TJ2-Yj-KEG"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -134,6 +140,11 @@
                                         <connections>
                                             <outlet property="cartAddBtn" destination="KbA-5h-WZj" id="Rz9-s0-hYT"/>
                                             <outlet property="deleteBtn" destination="zqN-7W-acv" id="Sia-2P-46P"/>
+                                            <outlet property="itemDiscount" destination="fed-Vv-9iP" id="NeC-gn-CO3"/>
+                                            <outlet property="itemImg" destination="KN3-5f-NUI" id="KvA-ZY-ibc"/>
+                                            <outlet property="itemName" destination="2mw-CE-uaV" id="ogv-O4-Mu1"/>
+                                            <outlet property="itemOriginPrice" destination="sCY-Yt-TeB" id="Mik-6k-sxb"/>
+                                            <outlet property="itemSalePrice" destination="HpE-F9-TuO" id="XOp-wL-f8k"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -154,6 +165,7 @@
                     <navigationItem key="navigationItem" title="찜한 상품" id="duX-xI-0Xc"/>
                     <connections>
                         <outlet property="tableView" destination="I17-kC-Zqv" id="ft2-cb-f4p"/>
+                        <outlet property="totalCnt" destination="SW5-Eh-l9M" id="huk-8m-tkw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

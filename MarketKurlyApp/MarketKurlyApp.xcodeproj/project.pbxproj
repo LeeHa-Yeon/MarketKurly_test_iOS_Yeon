@@ -82,6 +82,11 @@
 		9F6710CA2799D31700BC485A /* RootReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710C92799D31700BC485A /* RootReviewViewController.swift */; };
 		9F6710CC2799D3B300BC485A /* ReviewPossibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710CB2799D3B300BC485A /* ReviewPossibleViewController.swift */; };
 		9F6710CE2799D3C600BC485A /* ReviewEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710CD2799D3C600BC485A /* ReviewEndViewController.swift */; };
+		9F6710D3279A16ED00BC485A /* WishDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710D2279A16ED00BC485A /* WishDataManager.swift */; };
+		9F6710D5279A171000BC485A /* WishRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710D4279A171000BC485A /* WishRequest.swift */; };
+		9F6710D7279A172C00BC485A /* DoWishResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710D6279A172C00BC485A /* DoWishResponse.swift */; };
+		9F6710D9279A185800BC485A /* DeleteWishResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710D8279A185800BC485A /* DeleteWishResponse.swift */; };
+		9F6710DB279A186600BC485A /* ShowWishListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710DA279A186600BC485A /* ShowWishListResponse.swift */; };
 		9F786C9727962B6D00EEA867 /* OrderSheetFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786C9527962B6D00EEA867 /* OrderSheetFirstCell.swift */; };
 		9F786C9827962B6D00EEA867 /* OrderSheetFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786C9627962B6D00EEA867 /* OrderSheetFirstCell.xib */; };
 		9F786C9D27962C8800EEA867 /* OrderItemFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786C9B27962C8800EEA867 /* OrderItemFirstCell.swift */; };
@@ -335,6 +340,11 @@
 		9F6710C92799D31700BC485A /* RootReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootReviewViewController.swift; sourceTree = "<group>"; };
 		9F6710CB2799D3B300BC485A /* ReviewPossibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPossibleViewController.swift; sourceTree = "<group>"; };
 		9F6710CD2799D3C600BC485A /* ReviewEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewEndViewController.swift; sourceTree = "<group>"; };
+		9F6710D2279A16ED00BC485A /* WishDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishDataManager.swift; sourceTree = "<group>"; };
+		9F6710D4279A171000BC485A /* WishRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishRequest.swift; sourceTree = "<group>"; };
+		9F6710D6279A172C00BC485A /* DoWishResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoWishResponse.swift; sourceTree = "<group>"; };
+		9F6710D8279A185800BC485A /* DeleteWishResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteWishResponse.swift; sourceTree = "<group>"; };
+		9F6710DA279A186600BC485A /* ShowWishListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWishListResponse.swift; sourceTree = "<group>"; };
 		9F786C9527962B6D00EEA867 /* OrderSheetFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSheetFirstCell.swift; sourceTree = "<group>"; };
 		9F786C9627962B6D00EEA867 /* OrderSheetFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSheetFirstCell.xib; sourceTree = "<group>"; };
 		9F786C9B27962C8800EEA867 /* OrderItemFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFirstCell.swift; sourceTree = "<group>"; };
@@ -798,6 +808,18 @@
 			path = ItemInfo;
 			sourceTree = "<group>";
 		};
+		9F6710CF279A16B200BC485A /* Wish */ = {
+			isa = PBXGroup;
+			children = (
+				9F6710D2279A16ED00BC485A /* WishDataManager.swift */,
+				9F6710D4279A171000BC485A /* WishRequest.swift */,
+				9F6710D6279A172C00BC485A /* DoWishResponse.swift */,
+				9F6710DA279A186600BC485A /* ShowWishListResponse.swift */,
+				9F6710D8279A185800BC485A /* DeleteWishResponse.swift */,
+			);
+			name = Wish;
+			sourceTree = "<group>";
+		};
 		9F786C9927962C5900EEA867 /* Parent */ = {
 			isa = PBXGroup;
 			children = (
@@ -1096,6 +1118,7 @@
 		9F9D5DE5278A046600CC63FA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9F6710CF279A16B200BC485A /* Wish */,
 				9F6710BB2799886700BC485A /* Category */,
 				9F9F67A32798D82A008DD590 /* Event */,
 				9F9F67A82798E038008DD590 /* Coupon */,
@@ -1701,9 +1724,11 @@
 				9F309E10279290D300EBF5E0 /* FindPwdPhoneResponse.swift in Sources */,
 				9F9CE9A02797EFE80071D454 /* InformationUseViewController.swift in Sources */,
 				9FCC943C278A1DF5000493AD /* ParentViewController.swift in Sources */,
+				9F6710DB279A186600BC485A /* ShowWishListResponse.swift in Sources */,
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
 				9F9CE9962797D9C20071D454 /* AboutKurlyViewController.swift in Sources */,
 				9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */,
+				9F6710D7279A172C00BC485A /* DoWishResponse.swift in Sources */,
 				9F272197278F95A100F85FA9 /* CategoryListCell.swift in Sources */,
 				9F489F792794F0D500E04879 /* OrderDetailListViewController.swift in Sources */,
 				9F9CE9942797D2C20071D454 /* MembershipBenefitViewController.swift in Sources */,
@@ -1732,6 +1757,7 @@
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9F489F6E2794C7B400E04879 /* RecivePlaceTwoViewController.swift in Sources */,
 				9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */,
+				9F6710D5279A171000BC485A /* WishRequest.swift in Sources */,
 				9F786CDC2796CD5500EEA867 /* NewProductCRVCell.swift in Sources */,
 				9F6710B72799445E00BC485A /* LodingViewController.swift in Sources */,
 				9F9CE9AB27980C1F0071D454 /* ItemListDataManager.swift in Sources */,
@@ -1766,12 +1792,14 @@
 				9F9CE9B527984A900071D454 /* NotionDataManager.swift in Sources */,
 				9FB51FCB278E8B9100DEF835 /* VogueSearchWorldCell.swift in Sources */,
 				9F9D5E1B278A100100CC63FA /* LoginResponse.swift in Sources */,
+				9F6710D3279A16ED00BC485A /* WishDataManager.swift in Sources */,
 				9F6710B2279940BC00BC485A /* SubjectItemesResponse.swift in Sources */,
 				9F6710AE2799406300BC485A /* ItemInfoManager.swift in Sources */,
 				9FB51FA9278D904A00DEF835 /* UITextField.swift in Sources */,
 				9F6710CC2799D3B300BC485A /* ReviewPossibleViewController.swift in Sources */,
 				9F9C58F3278B64AC005D164C /* ProductsCell.swift in Sources */,
 				9F786C9727962B6D00EEA867 /* OrderSheetFirstCell.swift in Sources */,
+				9F6710D9279A185800BC485A /* DeleteWishResponse.swift in Sources */,
 				9FCC9436278A1C9E000493AD /* CategoryViewController.swift in Sources */,
 				9F2721B42790DE7F00F85FA9 /* IdResultViewController.swift in Sources */,
 				9F9CE9B927984F570071D454 /* UserInfoManager.swift in Sources */,

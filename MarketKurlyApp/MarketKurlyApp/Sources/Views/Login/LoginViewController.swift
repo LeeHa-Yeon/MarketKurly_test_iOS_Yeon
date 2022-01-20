@@ -15,6 +15,7 @@ class LoginViewController: BaseViewController {
     let userDataManager = UserDataManager.shared
     let levelDataManger = LevelDataManager.shared
     let couponDataManger = CouponDataManager.shared
+    let wishDataManager = WishDataManager.shared
     let userInfoManager = UserInfoManaer.shared
 
     
@@ -137,6 +138,7 @@ class LoginViewController: BaseViewController {
             self.userInfoManager.setUserInfo(response.result)
             self.loadLevelData(levelIdx: self.userInfoManager.getUserLevel())
             self.loadCouponData(token: UserDefaults.standard.string(forKey: Constant.jwtName))
+            self.loadWishListData(token: self.userInfoManager.tokenString, userIdx: self.userInfoManager.getUid())
         }
     }
     func loadLevelData(levelIdx: Int){
@@ -152,9 +154,22 @@ class LoginViewController: BaseViewController {
         }
         couponDataManger.requestUserCouponList(token: usertoken) { response in
             self.userInfoManager.setUserCouponInfo(response.result!)
-            self.dismiss(animated: true, completion: nil)
         }
     }
+    
+    func loadWishListData(token: String?, userIdx: Int){
+        guard let usertoken = token else {
+            print("로그인부분 - 찜 내역 로드 못함")
+            return
+        }
+        
+        wishDataManager.requestMyWishList(userId: userIdx, token: usertoken) { response in
+            self.userInfoManager.setUserWishListInfo(response.result)
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    
     
     
     func KeyboardDismiss(){
