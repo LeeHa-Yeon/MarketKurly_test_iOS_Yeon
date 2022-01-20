@@ -17,13 +17,15 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     // MARK: - Components
     @IBOutlet weak var fixView: UIView!
     @IBOutlet weak var heartBtn: UIButton!
+    @IBOutlet weak var presentBtn: UIButton!
     @IBOutlet weak var buyBtn: UIButton!
     
     @IBAction func heartBtnTapped(_ sender: UIButton!) {
         sender.isSelected.toggle()
     }
     @IBAction func buyBtnTapped(_ sender: Any) {
-        // TODO: 구매하기 
+        // TODO: 구매하기
+        print("구매하기 탭했어여!")
     }
     
     
@@ -31,6 +33,13 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         setUI()
         super.viewDidLoad()
+        if itemDocument?.present == 0 {
+            print("dia")
+            presentBtn.isHidden = true
+        } else {
+            print("만ㅇㄹ")
+            presentBtn.isHidden = false
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +60,7 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
         
         let DetailInfoVC = self.storyboard?.instantiateViewController(withIdentifier: "ItemDetailInfoSB") as! ItemDetailInfoViewController
         DetailInfoVC.tabName = "상세정보"
+        DetailInfoVC.itemDocument = self.itemDocument
         
         
         let ReviewVC = self.storyboard?.instantiateViewController(withIdentifier: "ItemReviewSB") as! ItemReviewViewController
@@ -78,6 +88,7 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
         customBtnBar()
         customButton(heartBtn, cornerValue: 5, btnBorderColor: UIColor.lightGray, btnBorderWidth: 1)
         customButton(buyBtn, cornerValue: 5, btnBorderColor: nil, btnBorderWidth: nil)
+        
     }
     
     /* API 해당 부분 */

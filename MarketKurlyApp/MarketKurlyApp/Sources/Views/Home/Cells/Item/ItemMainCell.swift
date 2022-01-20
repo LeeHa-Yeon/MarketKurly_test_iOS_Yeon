@@ -21,6 +21,7 @@ class ItemMainCell: UITableViewCell {
     @IBOutlet weak var itemOriginPriceLabel: UILabel!
     @IBOutlet weak var itemSalePriceLabel: UILabel!
     @IBOutlet weak var itemDiscountRate: UILabel!
+    @IBOutlet weak var questimage: UIButton!
     
     @IBOutlet weak var userLevelLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!

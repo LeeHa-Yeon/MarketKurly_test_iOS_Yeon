@@ -14,7 +14,7 @@ class ItemInfoDataManager {
 
     // MARK: - 상세아이템 조회
     func requestItemDetailInfo(itemId: Int, completion: @escaping (ItemContentResponse)->(Void)){
-        let URL = Constant.BasicURL2 + "more/\(itemId)"
+        let URL = Constant.BasicURL + "more/\(itemId)"
         AF.request(URL, method: .get ).validate().responseDecodable(of:ItemContentResponse.self) { response in
             switch response.result {
             case .success(let response) :

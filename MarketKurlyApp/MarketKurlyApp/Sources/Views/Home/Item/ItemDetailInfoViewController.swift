@@ -12,9 +12,12 @@ import XLPagerTabStrip
 class ItemDetailInfoViewController: UIViewController,IndicatorInfoProvider {
 
     var tabName: String = ""
+    var itemDocument: ItemContentDocument?
     
     // MARK: - Components
-
+    
+    @IBOutlet weak var itemDetailInfo: UIImageView!
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,7 @@ class ItemDetailInfoViewController: UIViewController,IndicatorInfoProvider {
     }
     
     func setUI(){
+        urlToImg(urlStr: itemDocument!.more_informaion_url, img: itemDetailInfo)
     }
     
 }
