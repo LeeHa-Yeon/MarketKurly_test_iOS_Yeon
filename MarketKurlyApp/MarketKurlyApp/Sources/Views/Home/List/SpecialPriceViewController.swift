@@ -8,11 +8,6 @@
 import UIKit
 import XLPagerTabStrip
 
-protocol EventViewControllerDelegate {
-    func moveToVC(id: Int)
-}
-
-
 class SpecialPriceViewController: UIViewController, IndicatorInfoProvider {
 
     var tabName: String = ""
@@ -43,6 +38,13 @@ class SpecialPriceViewController: UIViewController, IndicatorInfoProvider {
         tableView.delegate = self
     }
     
+    func moveToVC(eventIdx: Int) {
+        let storyboard = UIStoryboard(name: "Event", bundle: nil)
+        guard let EventVC = storyboard.instantiateViewController(identifier: "EventSB") as? EventViewController else { return }
+        EventVC.eventId = eventIdx
+        self.navigationController?.pushViewController(EventVC, animated: true)
+    }
+    
     /* API 통신 부분  */
     func loadData(){
         eventDataManger.requestEventList { response in
@@ -63,10 +65,7 @@ extension SpecialPriceViewController : UITableViewDataSource, UITableViewDelegat
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as? EventCell else {
             return UITableViewCell()
         }
-        print("d???-> event\(indexPath.row+1)")
-        cell.delegate = self
-        cell.eventId = indexPath.row
-        cell.eventBanner.imageView?.image = UIImage(named: "event\(indexPath.row+1)")
+
         cell.eventBannerImg.image = UIImage(named: "event\(indexPath.row+1)")
         return cell
     }
@@ -76,16 +75,7 @@ extension SpecialPriceViewController : UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        moveToVC(eventIdx: indexPath.row)
     }
     
-}
-
-extension SpecialPriceViewController: EventViewControllerDelegate {
-    func moveToVC(id: Int) {
-        let storyboard = UIStoryboard(name: "Event", bundle: nil)
-        guard let EventVC = storyboard.instantiateViewController(identifier: "EventSB") as? EventViewController else { return }
-        EventVC.eventId = id
-        self.navigationController?.pushViewController(EventVC, animated: true)
-    }
 }
