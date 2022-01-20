@@ -11,6 +11,7 @@ import DropDown
 class EventCRVCell: UICollectionReusableView {
     
     var delegate: EventCRVDelegate?
+    var delegate2: ItemBuyViewControllerDelegate?
     
     let couponDataManger = CouponDataManager.shared
     let userInfoManager = UserInfoManaer.shared
@@ -18,15 +19,23 @@ class EventCRVCell: UICollectionReusableView {
     var itemList: [SortDocument] = []
     let itemManager = ItemListDataManager.shared
     var eventId: Int = 13
-    var delegate2: ItemBuyViewControllerDelegate?
-
-    @IBAction func downloadImg(_ sender: Any) {
-        downloadCoupon()
-    }
+    
     let dropDown = DropDown()
     var action = { (state: ButtomClickSort) in }
     
     // MARK: - Components
+    
+    @IBOutlet weak var discountLabel: UILabel!
+    @IBOutlet weak var couponName: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var eventName: UILabel!
+    @IBOutlet weak var eventSubName: UILabel!
+    
+    
+    @IBAction func downloadImg(_ sender: Any) {
+        downloadCoupon()
+    }
     @IBOutlet weak var arraowImg: UIImageView!
     @IBOutlet weak var sortBtn: UIButton!
     @IBAction func sortBtnTapped(_ sender: Any) {

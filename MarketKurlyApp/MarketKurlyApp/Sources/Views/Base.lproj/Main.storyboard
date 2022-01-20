@@ -10,7 +10,7 @@
         <!--Root Tab Bar Controller-->
         <scene sceneID="OVh-ot-BZx">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" id="aOa-ev-W8D" customClass="rootTabBarController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="rootTabBarSB" automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" id="aOa-ev-W8D" customClass="rootTabBarController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

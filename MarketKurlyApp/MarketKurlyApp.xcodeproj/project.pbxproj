@@ -67,6 +67,12 @@
 		9F6710A02798F47900BC485A /* RegisterCouponResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67109F2798F47900BC485A /* RegisterCouponResponse.swift */; };
 		9F6710A22798F92F00BC485A /* DownloadCouponResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710A12798F92F00BC485A /* DownloadCouponResponse.swift */; };
 		9F6710A4279917CD00BC485A /* SelectCouponInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710A3279917CD00BC485A /* SelectCouponInfoResponse.swift */; };
+		9F6710A6279938E200BC485A /* AllSubjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710A5279938E200BC485A /* AllSubjectResponse.swift */; };
+		9F6710A927993BE300BC485A /* SubjectItemDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710A827993BE300BC485A /* SubjectItemDataManager.swift */; };
+		9F6710AE2799406300BC485A /* ItemInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710AD2799406300BC485A /* ItemInfoManager.swift */; };
+		9F6710B2279940BC00BC485A /* SubjectItemesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710B1279940BC00BC485A /* SubjectItemesResponse.swift */; };
+		9F6710B52799444D00BC485A /* Loding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6710B42799444D00BC485A /* Loding.storyboard */; };
+		9F6710B72799445E00BC485A /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710B62799445E00BC485A /* LodingViewController.swift */; };
 		9F786C9727962B6D00EEA867 /* OrderSheetFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786C9527962B6D00EEA867 /* OrderSheetFirstCell.swift */; };
 		9F786C9827962B6D00EEA867 /* OrderSheetFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786C9627962B6D00EEA867 /* OrderSheetFirstCell.xib */; };
 		9F786C9D27962C8800EEA867 /* OrderItemFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786C9B27962C8800EEA867 /* OrderItemFirstCell.swift */; };
@@ -305,6 +311,12 @@
 		9F67109F2798F47900BC485A /* RegisterCouponResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCouponResponse.swift; sourceTree = "<group>"; };
 		9F6710A12798F92F00BC485A /* DownloadCouponResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCouponResponse.swift; sourceTree = "<group>"; };
 		9F6710A3279917CD00BC485A /* SelectCouponInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCouponInfoResponse.swift; sourceTree = "<group>"; };
+		9F6710A5279938E200BC485A /* AllSubjectResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSubjectResponse.swift; sourceTree = "<group>"; };
+		9F6710A827993BE300BC485A /* SubjectItemDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectItemDataManager.swift; sourceTree = "<group>"; };
+		9F6710AD2799406300BC485A /* ItemInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoManager.swift; sourceTree = "<group>"; };
+		9F6710B1279940BC00BC485A /* SubjectItemesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectItemesResponse.swift; sourceTree = "<group>"; };
+		9F6710B42799444D00BC485A /* Loding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loding.storyboard; sourceTree = "<group>"; };
+		9F6710B62799445E00BC485A /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
 		9F786C9527962B6D00EEA867 /* OrderSheetFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSheetFirstCell.swift; sourceTree = "<group>"; };
 		9F786C9627962B6D00EEA867 /* OrderSheetFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSheetFirstCell.xib; sourceTree = "<group>"; };
 		9F786C9B27962C8800EEA867 /* OrderItemFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFirstCell.swift; sourceTree = "<group>"; };
@@ -591,14 +603,13 @@
 		9F309DE1279158EA00EBF5E0 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				9F786CD12796A95E00EEA867 /* Event */,
 				9FCC9439278A1DED000493AD /* Home.storyboard */,
 				9FCC943B278A1DF5000493AD /* ParentViewController.swift */,
 				9F9C58D8278B3F28005D164C /* RecommendViewController.swift */,
 				9F9C58DA278B3F42005D164C /* NewProductViewController.swift */,
 				9F9C58DC278B3F48005D164C /* BestViewController.swift */,
 				9F9C58DE278B3F5D005D164C /* ThriftyShoppingViewController.swift */,
-				9F9C58E0278B3F72005D164C /* SpecialPriceViewController.swift */,
+				9F786CD12796A95E00EEA867 /* Event */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -691,6 +702,34 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		9F6710A727993BC700BC485A /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				9F6710A827993BE300BC485A /* SubjectItemDataManager.swift */,
+				9F6710A5279938E200BC485A /* AllSubjectResponse.swift */,
+				9F6710B1279940BC00BC485A /* SubjectItemesResponse.swift */,
+			);
+			path = Subject;
+			sourceTree = "<group>";
+		};
+		9F6710AA27993BEE00BC485A /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				9F9CE9AA27980C1F0071D454 /* ItemListDataManager.swift */,
+				9F9CE9AC27980CF70071D454 /* SortResponse.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		9F6710B32799442600BC485A /* Loding */ = {
+			isa = PBXGroup;
+			children = (
+				9F6710B42799444D00BC485A /* Loding.storyboard */,
+				9F6710B62799445E00BC485A /* LodingViewController.swift */,
+			);
+			path = Loding;
+			sourceTree = "<group>";
+		};
 		9F786C9927962C5900EEA867 /* Parent */ = {
 			isa = PBXGroup;
 			children = (
@@ -769,6 +808,7 @@
 			isa = PBXGroup;
 			children = (
 				9F786CD22796A96E00EEA867 /* Event.storyboard */,
+				9F9C58E0278B3F72005D164C /* SpecialPriceViewController.swift */,
 				9F786CD42796A97B00EEA867 /* EventViewController.swift */,
 			);
 			path = Event;
@@ -896,8 +936,8 @@
 		9F9CE9A927980BE30071D454 /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				9F9CE9AA27980C1F0071D454 /* ItemListDataManager.swift */,
-				9F9CE9AC27980CF70071D454 /* SortResponse.swift */,
+				9F6710AA27993BEE00BC485A /* Item */,
+				9F6710A727993BC700BC485A /* Subject */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -1029,6 +1069,7 @@
 		9F9D5DEA278A057300CC63FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F6710B32799442600BC485A /* Loding */,
 				9F9D5DD427895F3D00CC63FA /* Main.storyboard */,
 				9F9D5DEC278A05EA00CC63FA /* SignUp */,
 				9F9D5DEB278A05DB00CC63FA /* Login */,
@@ -1082,6 +1123,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9CE9B827984F570071D454 /* UserInfoManager.swift */,
+				9F6710AD2799406300BC485A /* ItemInfoManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1406,6 +1448,7 @@
 				9F9C58EA278B5B75005D164C /* BannersCell.xib in Resources */,
 				9F9C5900278B88CB005D164C /* OnlyBannerCell.xib in Resources */,
 				9F786C9E27962C8800EEA867 /* OrderItemFirstCell.xib in Resources */,
+				9F6710B52799444D00BC485A /* Loding.storyboard in Resources */,
 				9FCC9434278A1C93000493AD /* Search.storyboard in Resources */,
 				9F9D5DD827895F4000CC63FA /* Assets.xcassets in Resources */,
 				9FB51FBC278E744B00DEF835 /* SearchEventFrameCell.xib in Resources */,
@@ -1534,6 +1577,7 @@
 				9F309DE427915F2500EBF5E0 /* ItemDetailViewController.swift in Sources */,
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
 				9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */,
+				9F6710A6279938E200BC485A /* AllSubjectResponse.swift in Sources */,
 				9F489F752794E5C400E04879 /* OrderViewController.swift in Sources */,
 				9FB51FB1278DB09100DEF835 /* SearchSubjectCell.swift in Sources */,
 				9FB51FD0278E996100DEF835 /* BaseImageView.swift in Sources */,
@@ -1581,6 +1625,7 @@
 				9F786CBB27965A1B00EEA867 /* PayInfoCell.swift in Sources */,
 				9F309DDE27914D1100EBF5E0 /* TempViewController.swift in Sources */,
 				9F2721AC2790066F00F85FA9 /* AllUserDataManager.swift in Sources */,
+				9F6710A927993BE300BC485A /* SubjectItemDataManager.swift in Sources */,
 				9F309E10279290D300EBF5E0 /* FindPwdPhoneResponse.swift in Sources */,
 				9F9CE9A02797EFE80071D454 /* InformationUseViewController.swift in Sources */,
 				9FCC943C278A1DF5000493AD /* ParentViewController.swift in Sources */,
@@ -1615,6 +1660,7 @@
 				9F489F6E2794C7B400E04879 /* RecivePlaceTwoViewController.swift in Sources */,
 				9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */,
 				9F786CDC2796CD5500EEA867 /* NewProductCRVCell.swift in Sources */,
+				9F6710B72799445E00BC485A /* LodingViewController.swift in Sources */,
 				9F9CE9AB27980C1F0071D454 /* ItemListDataManager.swift in Sources */,
 				9FB51FD2278E9A0500DEF835 /* NoSearchViewController.swift in Sources */,
 				9F272195278F958500F85FA9 /* CategoryGiftCell.swift in Sources */,
@@ -1647,6 +1693,8 @@
 				9F9CE9B527984A900071D454 /* NotionDataManager.swift in Sources */,
 				9FB51FCB278E8B9100DEF835 /* VogueSearchWorldCell.swift in Sources */,
 				9F9D5E1B278A100100CC63FA /* LoginResponse.swift in Sources */,
+				9F6710B2279940BC00BC485A /* SubjectItemesResponse.swift in Sources */,
+				9F6710AE2799406300BC485A /* ItemInfoManager.swift in Sources */,
 				9FB51FA9278D904A00DEF835 /* UITextField.swift in Sources */,
 				9F9C58F3278B64AC005D164C /* ProductsCell.swift in Sources */,
 				9F786C9727962B6D00EEA867 /* OrderSheetFirstCell.swift in Sources */,
@@ -1819,9 +1867,10 @@
 				INFOPLIST_FILE = MarketKurlyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Loding;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1849,9 +1898,10 @@
 				INFOPLIST_FILE = MarketKurlyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Loding;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

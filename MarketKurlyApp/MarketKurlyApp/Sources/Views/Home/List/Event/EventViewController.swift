@@ -27,6 +27,7 @@ class EventViewController: UIViewController {
     
     var eventId: Int?
     var evnetTitle: String = "농활갑시다 이벤트"
+    var couponInfo: SelectCouponInfoDocument?
     
     let couponeManager = CouponDataManager.shared
     
@@ -85,8 +86,18 @@ extension EventViewController : UICollectionViewDelegate, UICollectionViewDataSo
         guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "eventCRVCell", for: indexPath) as? EventCRVCell else {
             return UICollectionReusableView()
         }
+        if couponInfo != nil {
+            headerView.eventName.text = "[이벤트] \(couponInfo?.couponName ?? "할인쿠폰")"
+            headerView.eventSubName.text = "추가 \(DecimalWon(value: Int(couponInfo!.discount))) 할인 쿠폰"
+            headerView.discountLabel.text =  "\(DecimalWon(value: Int(couponInfo!.discount)))"
+            headerView.couponName.text = " \(couponInfo?.couponName ?? "할인쿠폰")"
+    
+            headerView.dateLabel.text = getFormattedDate2(dateString: couponInfo!.expired_date)
+            
+        }
         headerView.delegate = self
         headerView.eventId = eventId!
+        
         headerView.action = { (state: ButtomClickSort) in
                 switch state {
                 case .recommendOrder :

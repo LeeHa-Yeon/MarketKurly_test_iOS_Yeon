@@ -296,4 +296,15 @@ extension UIViewController {
             let date: Date? = dateFormatterGet.date(from: testDate)
             return dateFormatterPrint.string(from: date!);
         }
+    
+    func getFormattedDate2(dateString: String) -> String{
+        let testDate = dateString.substring(from: 0, to: 10)
+            let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "yyyy-MM-dd"
+
+            let dateFormatterPrint = DateFormatter()
+            dateFormatterPrint.dateFormat = "MM.dd 12시"
+            let date: Date? = dateFormatterGet.date(from: testDate)
+            return dateFormatterPrint.string(from: date!);
+        }
 }

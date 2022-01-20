@@ -11,13 +11,13 @@ import XLPagerTabStrip
 class ParentViewController: ButtonBarPagerTabStripViewController {
     let purpleInspireColor = UIColor.mainKurlyPurple
     
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         UserDefaults.standard.set(false, forKey: Constant.loginStatusName)
         customBtnBar()
         setUI()
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
