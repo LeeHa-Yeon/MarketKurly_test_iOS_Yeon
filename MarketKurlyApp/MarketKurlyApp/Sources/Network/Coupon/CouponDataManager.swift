@@ -30,4 +30,33 @@ class CouponDataManager {
         }
     }
     
+    // MARK: - 사용자 쿠폰 등록
+    // 사용자 쿠폰 조회를 통해 데이터를 받아오고 테이블 reload, user거기에 수정
+    func requestRegisterCoupon(userId:Int,couponId:Int,completion: @escaping (RegisterCouponResponse)->(Void)){
+        let URL = Constant.BasicURL + "coupon/coupon/\(couponId)/user/\(userId)"
+        AF.request(URL, method: .get ).validate().responseDecodable(of:RegisterCouponResponse.self) { response in
+            switch response.result {
+            case .success(let response) :
+                completion(response)
+            case .failure(let error) :
+                print(" 네트워크 실패2: ",error.localizedDescription)
+            }
+        }
+    }
+    
+    // MARK: - 쿠폰 다운로드
+    // /
+    func requestDownloadCoupon(token:String, eventId:Int, completion: @escaping (DownloadCouponResponse)->(Void)){
+        let URL = Constant.BasicURL + "event/\(eventId)"
+        let HTTP_HEADERS: HTTPHeaders = ["X-ACCESS-TOKEN":token]
+        AF.request(URL, method: .get ,headers: HTTP_HEADERS ).validate().responseDecodable(of:DownloadCouponResponse.self) { response in
+            switch response.result {
+            case .success(let response) :
+                completion(response)
+            case .failure(let error) :
+                print(" 네트워크 실패2: ",error.localizedDescription)
+            }
+        }
+    }
+    
 }

@@ -10,14 +10,14 @@ import UIKit
 class MyCouponListViewController: UIViewController {
     
     let userInfoManager = UserInfoManaer.shared
-    let couponInfoManager = CouponDataManager.shared
+    let couponDataManager = CouponDataManager.shared
     var myCouponList: [UserCouponListDocument] = []
     
     // MARK: - Components
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addCouponBtn: UIButton!
     @IBAction func addCouponTapped(_ sender: Any) {
-        // TODO: - 알림창 커스텀해야됨
+        // TODO: - 알림창 커스텀해야됨 - 못할듯
         presentTextFieldAlert()
     }
     
@@ -67,8 +67,16 @@ class MyCouponListViewController: UIViewController {
             }
             let couponIdInt: Int = Int(couponIdString) ?? -1
             if couponIdInt != -1 {
-                print("하이!! \(couponIdInt)")
-                self.tableView.reloadData()
+                self.couponDataManager.requestRegisterCoupon(userId: self.userInfoManager.getUid(), couponId: couponIdInt) { response in
+                    print("ww111",response)
+                    self.couponDataManager.requestUserCouponList(token: UserDefaults.standard.string(forKey: Constant.jwtName)!) { response in
+                        self.userInfoManager.setUserCouponInfo(response.result!)
+                        self.myCouponList = response.result!
+                        self.tableView.reloadData()
+                    }
+                    self.presentAlert(title: response.result)
+                    
+                }
             }
     
         }

@@ -122,6 +122,7 @@ class LoginViewController: BaseViewController {
                 UserDefaults.standard.set(response.result!.userIdx, forKey: Constant.userIdxName)
                 UserDefaults.standard.set(response.result!.jwt,forKey: Constant.jwtName)
                 self.loadUserData(userIdx: response.result!.userIdx)
+                self.userInfoManager.tokenString = response.result!.jwt
                 print("\(response.result!.jwt)")
             } else {
                 // 로그인 실패시

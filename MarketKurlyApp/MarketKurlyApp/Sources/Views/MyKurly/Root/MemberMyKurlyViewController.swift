@@ -48,9 +48,11 @@ class MemberMyKurlyViewController: BaseViewController {
         super.viewDidLoad()
         setUI()
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.tableView.reloadData()
     }
     
     // MARK: - Function

@@ -285,20 +285,6 @@ extension UIViewController {
         }
     }
     
-    func dateToString(dateString: String) -> String{
-        print(dateString)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
-        let date:Date = dateFormatter.date(from: dateString) ?? Date()
-        
-
-        let dateFormatter2 = DateFormatter()
-        dateFormatter2.dateFormat = "yyyy년 MM월 dd일 12시까지"
-
-        let dateString:String = dateFormatter2.string(from: date)
-        return dateString
-    }
     
     func getFormattedDate(dateString: String) -> String{
         let testDate = dateString.substring(from: 0, to: 10)

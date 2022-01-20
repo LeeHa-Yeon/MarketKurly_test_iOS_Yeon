@@ -12,6 +12,17 @@ class UserInfoManaer {
     
     private init() {}
     
+    var tokenString: String?
+    
+    func getToken() -> String {
+        guard let userToken = self.tokenString else { print("토큰없음") return "" }
+        return userToken
+    }
+    
+    func setToken(_ token: String ){
+        self.tokenString = token
+    }
+    
     // 사용자 쿠폰 내역
     var userCouponInfo: [UserCouponListDocument]?
     
