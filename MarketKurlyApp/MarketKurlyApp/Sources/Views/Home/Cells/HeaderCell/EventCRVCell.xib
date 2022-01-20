@@ -29,6 +29,9 @@
                                     </constraints>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="couponDownload"/>
+                                    <connections>
+                                        <action selector="downloadImg:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="dIt-Rl-lGg"/>
+                                    </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Sya-lr-Pth">
                                     <rect key="frame" x="71" y="176" width="272.5" height="48"/>

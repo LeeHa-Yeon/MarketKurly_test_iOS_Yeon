@@ -75,7 +75,9 @@ extension SpecialPriceViewController : UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        moveToVC(eventIdx: indexPath.row)
+        moveToVC(eventIdx: indexPath.row+1)
+        
+        
     }
     
 }

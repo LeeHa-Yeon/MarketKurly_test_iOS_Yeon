@@ -10,10 +10,19 @@ import DropDown
 
 class EventCRVCell: UICollectionReusableView {
     
+    var delegate: EventCRVDelegate?
+    
+    let couponDataManger = CouponDataManager.shared
+    let userInfoManager = UserInfoManaer.shared
+    
     var itemList: [SortDocument] = []
     let itemManager = ItemListDataManager.shared
-    var delegate: ItemBuyViewControllerDelegate?
+    var eventId: Int = 13
+    var delegate2: ItemBuyViewControllerDelegate?
 
+    @IBAction func downloadImg(_ sender: Any) {
+        downloadCoupon()
+    }
     let dropDown = DropDown()
     var action = { (state: ButtomClickSort) in }
     
@@ -95,6 +104,18 @@ class EventCRVCell: UICollectionReusableView {
             assert(false,"선택안함")
         }
         return self.itemList
+    }
+    
+    /* API 통신 부분 */
+    func downloadCoupon(){
+        couponDataManger.requestDownloadCoupon(token: userInfoManager.tokenString!, eventId: eventId) { response in
+            print("흠\(self.eventId)")
+            self.couponDataManger.requestUserCouponList(token: self.userInfoManager.tokenString!) { response in
+                self.userInfoManager.setUserCouponInfo(response.result!)
+            }
+            self.delegate?.presnetAlert(message: response.result)
+            
+        }
     }
     
 }

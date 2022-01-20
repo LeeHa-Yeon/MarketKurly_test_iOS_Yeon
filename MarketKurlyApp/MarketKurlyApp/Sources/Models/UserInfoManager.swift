@@ -15,7 +15,12 @@ class UserInfoManaer {
     var tokenString: String?
     
     func getToken() -> String {
-        guard let userToken = self.tokenString else { print("토큰없음") return "" }
+        guard let userToken = self.tokenString else
+        {
+            print("토큰없음")
+            return ""
+            
+        }
         return userToken
     }
     

@@ -7,10 +7,28 @@
 
 import UIKit
 
+protocol EventCRVDelegate {
+    func presnetAlert(message: String)
+}
+
+extension EventViewController: EventCRVDelegate {
+    func presnetAlert(message: String) {
+        let alert = UIAlertController(title: "쿠폰 발급", message: "이벤트에 \(message)", preferredStyle: UIAlertController.Style.alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .destructive) { (action) in
+        }
+        alert.addAction(defaultAction)
+        self.present(alert, animated: false, completion: nil)
+    }
+    
+    
+}
+
 class EventViewController: UIViewController {
     
     var eventId: Int?
     var evnetTitle: String = "농활갑시다 이벤트"
+    
+    let couponeManager = CouponDataManager.shared
     
     // MARK: - Components
     @IBOutlet weak var collectionView: UICollectionView!
@@ -54,6 +72,8 @@ class EventViewController: UIViewController {
         self.collectionView.register(newCellNib, forCellWithReuseIdentifier: cellIdentifier)
     }
     
+
+    
 }
 
 extension EventViewController : UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout {
@@ -65,6 +85,8 @@ extension EventViewController : UICollectionViewDelegate, UICollectionViewDataSo
         guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "eventCRVCell", for: indexPath) as? EventCRVCell else {
             return UICollectionReusableView()
         }
+        headerView.delegate = self
+        headerView.eventId = eventId!
         headerView.action = { (state: ButtomClickSort) in
                 switch state {
                 case .recommendOrder :

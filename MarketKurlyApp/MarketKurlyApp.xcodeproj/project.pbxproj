@@ -66,6 +66,7 @@
 		9F489F90279592C500E04879 /* ShowOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F489F8F279592C500E04879 /* ShowOrderListViewController.swift */; };
 		9F6710A02798F47900BC485A /* RegisterCouponResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67109F2798F47900BC485A /* RegisterCouponResponse.swift */; };
 		9F6710A22798F92F00BC485A /* DownloadCouponResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710A12798F92F00BC485A /* DownloadCouponResponse.swift */; };
+		9F6710A4279917CD00BC485A /* SelectCouponInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710A3279917CD00BC485A /* SelectCouponInfoResponse.swift */; };
 		9F786C9727962B6D00EEA867 /* OrderSheetFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786C9527962B6D00EEA867 /* OrderSheetFirstCell.swift */; };
 		9F786C9827962B6D00EEA867 /* OrderSheetFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786C9627962B6D00EEA867 /* OrderSheetFirstCell.xib */; };
 		9F786C9D27962C8800EEA867 /* OrderItemFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786C9B27962C8800EEA867 /* OrderItemFirstCell.swift */; };
@@ -303,6 +304,7 @@
 		9F489F8F279592C500E04879 /* ShowOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOrderListViewController.swift; sourceTree = "<group>"; };
 		9F67109F2798F47900BC485A /* RegisterCouponResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCouponResponse.swift; sourceTree = "<group>"; };
 		9F6710A12798F92F00BC485A /* DownloadCouponResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCouponResponse.swift; sourceTree = "<group>"; };
+		9F6710A3279917CD00BC485A /* SelectCouponInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCouponInfoResponse.swift; sourceTree = "<group>"; };
 		9F786C9527962B6D00EEA867 /* OrderSheetFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSheetFirstCell.swift; sourceTree = "<group>"; };
 		9F786C9627962B6D00EEA867 /* OrderSheetFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSheetFirstCell.xib; sourceTree = "<group>"; };
 		9F786C9B27962C8800EEA867 /* OrderItemFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFirstCell.swift; sourceTree = "<group>"; };
@@ -1157,6 +1159,7 @@
 				9F9F67AB2798E0F4008DD590 /* UserCouponListResponse.swift */,
 				9F67109F2798F47900BC485A /* RegisterCouponResponse.swift */,
 				9F6710A12798F92F00BC485A /* DownloadCouponResponse.swift */,
+				9F6710A3279917CD00BC485A /* SelectCouponInfoResponse.swift */,
 			);
 			path = Coupon;
 			sourceTree = "<group>";
@@ -1626,6 +1629,7 @@
 				9F9D5DF3278A095700CC63FA /* Constant.swift in Sources */,
 				9F9D5E08278A0C0200CC63FA /* Date.swift in Sources */,
 				9F9D5E05278A0B0A00CC63FA /* Device.swift in Sources */,
+				9F6710A4279917CD00BC485A /* SelectCouponInfoResponse.swift in Sources */,
 				9F9C58F7278B64C2005D164C /* ProductCell.swift in Sources */,
 				9F309E122792914300EBF5E0 /* ChangePwdRequest.swift in Sources */,
 				9FA0437D278D126200FCD2FE /* BannerCell.swift in Sources */,
