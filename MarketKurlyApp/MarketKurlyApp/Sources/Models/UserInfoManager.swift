@@ -12,6 +12,55 @@ class UserInfoManaer {
     
     private init() {}
     
+    // 사용자 쿠폰 내역
+    var userCouponInfo: [UserCouponListDocument]?
+    
+    func setUserCouponInfo(_ info: [UserCouponListDocument]) {
+        self.userCouponInfo = info
+    }
+    
+    func getUserCouponInfo() -> [UserCouponListDocument]? {
+        guard let userCouponInfo = self.userCouponInfo else { return nil }
+        return userCouponInfo
+    }
+    
+    func getCouponId(idx: Int = 0) -> Int {
+        guard let couponId = self.userCouponInfo?[idx].getCouponId() else { return 0 }
+        
+        return couponId
+    }
+    
+    func getCouponName(idx: Int = 0) -> String {
+        guard let couponName = self.userCouponInfo?[idx].getCouponName() else { return "" }
+        
+        return couponName
+    }
+    
+    func getCouponDiscount(idx: Int = 0) -> Double {
+        guard let discount = self.userCouponInfo?[idx].getCouponDiscount() else { return 0 }
+        
+        return discount
+    }
+    
+    func getEventId(idx: Int = 0) -> Int {
+        guard let eventId = self.userCouponInfo?[idx].getEventId() else { return 0 }
+        
+        return eventId
+    }
+    
+    func getCouponDescription(idx: Int = 0) -> String {
+        guard let description = self.userCouponInfo?[idx].getCouponDescription() else { return "" }
+        
+        return description
+    }
+    func getCouponExpiredDate(idx: Int = 0) -> String {
+        guard let expired_date = self.userCouponInfo?[idx].getCouponExpiredDate() else { return "" }
+        
+        return expired_date
+    }
+    
+    
+    
     // 사용자 레벨
     var userLevelInfo: SelectLevelDocument?
     
@@ -172,3 +221,5 @@ class UserInfoManaer {
 }
 
 // assert(false,"실패")
+
+

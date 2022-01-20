@@ -186,6 +186,8 @@
 		9F9D5E23278A104500CC63FA /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D5E22278A104500CC63FA /* SignUpResponse.swift */; };
 		9F9F67A52798D847008DD590 /* EventDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9F67A42798D847008DD590 /* EventDataManager.swift */; };
 		9F9F67A72798D875008DD590 /* EventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9F67A62798D875008DD590 /* EventResponse.swift */; };
+		9F9F67AA2798E050008DD590 /* CouponDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9F67A92798E050008DD590 /* CouponDataManager.swift */; };
+		9F9F67AC2798E0F4008DD590 /* UserCouponListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9F67AB2798E0F4008DD590 /* UserCouponListResponse.swift */; };
 		9FA04372278D10A000FCD2FE /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA04371278D10A000FCD2FE /* EventCell.swift */; };
 		9FA04375278D113000FCD2FE /* MyKurlyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA04374278D113000FCD2FE /* MyKurlyCell.swift */; };
 		9FA04377278D116400FCD2FE /* MyKurlyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA04376278D116400FCD2FE /* MyKurlyListCell.swift */; };
@@ -421,6 +423,8 @@
 		9F9D5E22278A104500CC63FA /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		9F9F67A42798D847008DD590 /* EventDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataManager.swift; sourceTree = "<group>"; };
 		9F9F67A62798D875008DD590 /* EventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponse.swift; sourceTree = "<group>"; };
+		9F9F67A92798E050008DD590 /* CouponDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDataManager.swift; sourceTree = "<group>"; };
+		9F9F67AB2798E0F4008DD590 /* UserCouponListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCouponListResponse.swift; sourceTree = "<group>"; };
 		9FA04371278D10A000FCD2FE /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		9FA04374278D113000FCD2FE /* MyKurlyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyCell.swift; sourceTree = "<group>"; };
 		9FA04376278D116400FCD2FE /* MyKurlyListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKurlyListCell.swift; sourceTree = "<group>"; };
@@ -981,6 +985,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9F67A32798D82A008DD590 /* Event */,
+				9F9F67A82798E038008DD590 /* Coupon */,
 				9F9CE9BA2798B9A90071D454 /* Level */,
 				9F9CE9B227984A6F0071D454 /* ETC */,
 				9F9D5E1C278A100F00CC63FA /* SignUp */,
@@ -1139,6 +1144,15 @@
 				9F9F67A62798D875008DD590 /* EventResponse.swift */,
 			);
 			path = Event;
+			sourceTree = "<group>";
+		};
+		9F9F67A82798E038008DD590 /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				9F9F67A92798E050008DD590 /* CouponDataManager.swift */,
+				9F9F67AB2798E0F4008DD590 /* UserCouponListResponse.swift */,
+			);
+			path = Coupon;
 			sourceTree = "<group>";
 		};
 		9FA04370278D103900FCD2FE /* FifthHome */ = {
@@ -1585,6 +1599,7 @@
 				9F9CE97D27977FA00071D454 /* NoticeViewController.swift in Sources */,
 				9F786CD02796904C00EEA867 /* MyCouponListViewController.swift in Sources */,
 				9F2721B82790EAED00F85FA9 /* UserDataManager.swift in Sources */,
+				9F9F67AA2798E050008DD590 /* CouponDataManager.swift in Sources */,
 				9F9CE99C2797E3C60071D454 /* CustomerSCViewController.swift in Sources */,
 				9FCC9438278A1CA5000493AD /* SearchViewController.swift in Sources */,
 				9F489F6E2794C7B400E04879 /* RecivePlaceTwoViewController.swift in Sources */,
@@ -1617,6 +1632,7 @@
 				9F786CA92796315B00EEA867 /* OrderSheetThirdCell.swift in Sources */,
 				9F9D5E0F278A0D2700CC63FA /* UIButton.swift in Sources */,
 				9FB51FAD278D9AC900DEF835 /* AfterSearchViewController.swift in Sources */,
+				9F9F67AC2798E0F4008DD590 /* UserCouponListResponse.swift in Sources */,
 				9F9CE9B527984A900071D454 /* NotionDataManager.swift in Sources */,
 				9FB51FCB278E8B9100DEF835 /* VogueSearchWorldCell.swift in Sources */,
 				9F9D5E1B278A100100CC63FA /* LoginResponse.swift in Sources */,

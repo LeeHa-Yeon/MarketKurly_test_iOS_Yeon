@@ -14,7 +14,9 @@ class LoginViewController: BaseViewController {
     let loginManager = LoginDataManager.shared
     let userDataManager = UserDataManager.shared
     let levelDataManger = LevelDataManager.shared
+    let couponDataManger = CouponDataManager.shared
     let userInfoManager = UserInfoManaer.shared
+
     
     // MARK: - UIComponents
     
@@ -133,15 +135,25 @@ class LoginViewController: BaseViewController {
 
             self.userInfoManager.setUserInfo(response.result)
             self.loadLevelData(levelIdx: self.userInfoManager.getUserLevel())
+            self.loadCouponData(token: UserDefaults.standard.string(forKey: Constant.jwtName))
         }
     }
     func loadLevelData(levelIdx: Int){
         levelDataManger.requestSelectLevel(levelId: levelIdx){ response in
             self.userInfoManager.setUserLevelInfo(response.result)
+            
+        }
+    }
+    func loadCouponData(token: String?){
+        guard let usertoken = token else {
+            print("로그인부분 - 쿠폰데이터 로드 못함")
+            return
+        }
+        couponDataManger.requestUserCouponList(token: usertoken) { response in
+            self.userInfoManager.setUserCouponInfo(response.result!)
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
     
     
     func KeyboardDismiss(){

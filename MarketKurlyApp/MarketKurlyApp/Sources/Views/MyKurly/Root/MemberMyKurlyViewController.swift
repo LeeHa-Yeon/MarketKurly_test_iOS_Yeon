@@ -36,8 +36,6 @@ class MemberMyKurlyViewController: BaseViewController {
     let dummyData3: [String] = ["배송지 관리","컬리 퍼플 박스","개인정보 수정","알림 설정"]
     let dummyData4:[String] = ["상품 문의","1:1 문의","대량주문 문의"]
     let dummyData5:[String] = ["컬리소개","컬리패스","배송 안내","공지사항","자주하는 질문","고객센터","이용안내"]
-    var reserves: Int = 40168
-    var coupon: Int = 0
     var heartCnt: Int = 0
     let userInfoManager = UserInfoManaer.shared
     
@@ -84,6 +82,14 @@ class MemberMyKurlyViewController: BaseViewController {
             return nil
         }
         return levelInfo
+    }
+    
+    func loadCouponListCnt() -> Int?{
+        guard let userCouponListInfo = userInfoManager.getUserCouponInfo() else {
+            print("MemberMyKurlyViewController API 실패")
+            return nil
+        }
+        return userCouponListInfo.count
     }
     
     //         // 등급 -> 일반 . 적립퍼센트
@@ -148,7 +154,10 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
                     cell.subStrLabel.text =  DecimalWon(value: loadUserData()?.getUserPoint() ?? 900)
                 }
             } else if indexPath.row == 1 {
-                cell.subStrLabel.text = "\(coupon)장"
+                if loadCouponListCnt() != nil {
+                    cell.subStrLabel.text = "\(loadCouponListCnt() ?? 0)장"
+                }
+                
             }else {
                 cell.subStrLabel.text = "지금 5000원 받기"
             }
