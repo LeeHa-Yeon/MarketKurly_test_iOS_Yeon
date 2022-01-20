@@ -68,7 +68,6 @@ extension ProductsCell : UICollectionViewDataSource, UICollectionViewDelegate, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.delegate?.moveToVC()
     }
     
     //컬렉션뷰 사이즈 설정

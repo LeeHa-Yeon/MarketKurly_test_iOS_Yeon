@@ -75,6 +75,8 @@
 		9F6710B72799445E00BC485A /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710B62799445E00BC485A /* LodingViewController.swift */; };
 		9F6710BD2799887E00BC485A /* CategoryDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710BC2799887E00BC485A /* CategoryDataManger.swift */; };
 		9F6710BF279988D800BC485A /* CategoryListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710BE279988D800BC485A /* CategoryListResponse.swift */; };
+		9F6710C227999B3700BC485A /* ItemInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710C127999B3700BC485A /* ItemInfoDataManager.swift */; };
+		9F6710C427999B4F00BC485A /* ItemContentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6710C327999B4F00BC485A /* ItemContentResponse.swift */; };
 		9F786C9727962B6D00EEA867 /* OrderSheetFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786C9527962B6D00EEA867 /* OrderSheetFirstCell.swift */; };
 		9F786C9827962B6D00EEA867 /* OrderSheetFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786C9627962B6D00EEA867 /* OrderSheetFirstCell.xib */; };
 		9F786C9D27962C8800EEA867 /* OrderItemFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786C9B27962C8800EEA867 /* OrderItemFirstCell.swift */; };
@@ -321,6 +323,8 @@
 		9F6710B62799445E00BC485A /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
 		9F6710BC2799887E00BC485A /* CategoryDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataManger.swift; sourceTree = "<group>"; };
 		9F6710BE279988D800BC485A /* CategoryListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListResponse.swift; sourceTree = "<group>"; };
+		9F6710C127999B3700BC485A /* ItemInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoDataManager.swift; sourceTree = "<group>"; };
+		9F6710C327999B4F00BC485A /* ItemContentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemContentResponse.swift; sourceTree = "<group>"; };
 		9F786C9527962B6D00EEA867 /* OrderSheetFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSheetFirstCell.swift; sourceTree = "<group>"; };
 		9F786C9627962B6D00EEA867 /* OrderSheetFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSheetFirstCell.xib; sourceTree = "<group>"; };
 		9F786C9B27962C8800EEA867 /* OrderItemFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFirstCell.swift; sourceTree = "<group>"; };
@@ -716,13 +720,13 @@
 			path = Subject;
 			sourceTree = "<group>";
 		};
-		9F6710AA27993BEE00BC485A /* Item */ = {
+		9F6710AA27993BEE00BC485A /* ItemList */ = {
 			isa = PBXGroup;
 			children = (
 				9F9CE9AA27980C1F0071D454 /* ItemListDataManager.swift */,
 				9F9CE9AC27980CF70071D454 /* SortResponse.swift */,
 			);
-			path = Item;
+			path = ItemList;
 			sourceTree = "<group>";
 		};
 		9F6710B32799442600BC485A /* Loding */ = {
@@ -771,6 +775,15 @@
 				9F6710BE279988D800BC485A /* CategoryListResponse.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		9F6710C027999B2700BC485A /* ItemInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9F6710C127999B3700BC485A /* ItemInfoDataManager.swift */,
+				9F6710C327999B4F00BC485A /* ItemContentResponse.swift */,
+			);
+			path = ItemInfo;
 			sourceTree = "<group>";
 		};
 		9F786C9927962C5900EEA867 /* Parent */ = {
@@ -973,7 +986,8 @@
 		9F9CE9A927980BE30071D454 /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				9F6710AA27993BEE00BC485A /* Item */,
+				9F6710C027999B2700BC485A /* ItemInfo */,
+				9F6710AA27993BEE00BC485A /* ItemList */,
 				9F6710A727993BC700BC485A /* Subject */,
 			);
 			path = Item;
@@ -1616,6 +1630,7 @@
 				9F9D5E0A278A0C3B00CC63FA /* String.swift in Sources */,
 				9FCC944D278A5484000493AD /* PhoneCertifyViewController.swift in Sources */,
 				9F6710A6279938E200BC485A /* AllSubjectResponse.swift in Sources */,
+				9F6710C427999B4F00BC485A /* ItemContentResponse.swift in Sources */,
 				9F489F752794E5C400E04879 /* OrderViewController.swift in Sources */,
 				9FB51FB1278DB09100DEF835 /* SearchSubjectCell.swift in Sources */,
 				9FB51FD0278E996100DEF835 /* BaseImageView.swift in Sources */,
@@ -1628,6 +1643,7 @@
 				9FCC944F278A5498000493AD /* EmailCertifyViewController.swift in Sources */,
 				9F9C5915278B97BF005D164C /* RecipeListCell.swift in Sources */,
 				9F786CA527962EDC00EEA867 /* OrderUserInfoSecondCell.swift in Sources */,
+				9F6710C227999B3700BC485A /* ItemInfoDataManager.swift in Sources */,
 				9F9D5DD327895F3D00CC63FA /* ViewController.swift in Sources */,
 				9F9D5DCF27895F3D00CC63FA /* AppDelegate.swift in Sources */,
 				9FA04382278D12F900FCD2FE /* MyKurlyOnCell.swift in Sources */,

@@ -13,6 +13,7 @@ class CategoryListCell: UITableViewCell {
     
     let categoryDataManager = CategoryDataManger.shared
     var tempCategory: [CategoryListDocument] = []
+    var testCategory: CategoryListDocument?
     
     let categoryList: Array<String> = ["설 선물세트","채소","과일,견과,쌀","수산,해산,건어물","정육,계란","국,반찬,메인요리","샐러드,간편식","면,양념,오일","생수,음료,우유,커피","간식,과자,떡","베이커리,치즈,델리","건강식품","전통주","생활용품,리빙,캠핑","스킨케어,메이크업","헤어,바디,구강","주방용품","가전제품","반려동물","베이비,키즈,완구"]
     let categoryDummyData: [[String]] = [["","=== 카테고리별 ===","홍삼·즙·건강식품","정육·가공육·건육","수산·건어물·젓갈","과일·견과·곡류","디저트·치즈·다과류","면·양념·오일·캔류","생활·주방·뷰티","생활·주방·뷰티","간편식·반찬","=== 가격대별 ===","3만원 미만","5~10만원","10-20만원","20만원 이상"],["","친환경","고구마·감자·당근","시금치·쌈채소·나물","브로콜리·파프리카·양배추","양파·대파·마늘·배추","오이·호박·고추","냉동·이색·간편채소","콩나물·버섯"],["","친환경","제철과일","국산과일","수입과일","간편과일","냉동·건과일","견과류","쌀·잡곡"],["","제철수산"],["","국내산 소고기"],["","국·탕·찌개"],["","샐러드·닭가슴살"],["","파스타·면류"],["","생수·탄산수"],["","과자·스낵·쿠키"],["","식빵·빵류"],["","영양제"],["","막걸리·약주"],["","휴지·티슈"],["","스킨·미스트·패드"],["","구강·면도"],["","주방소모품·잡화"],["","주방가전"],["","강아지 간식"],["","분유·간편 이유식"]]
@@ -49,6 +50,7 @@ class CategoryListCell: UITableViewCell {
     func setData(){
         categoryDataManager.requestCategoryList { response in
             self.tempCategory = response.result
+            self.testCategory = response.result[0]
             self.tableView.reloadData()
         }
     }
@@ -126,6 +128,12 @@ extension CategoryListCell: ExpyTableViewDelegate, ExpyTableViewDataSource {
         if section < tempCategory.count-1 && section > 0 {
             let target = tempCategory[section-1]
             urlToImg(urlStr: target.imageULR, targetImg: cell.categoryImg)
+        } else if section > 3 && section < 20 {
+            // 이건 임시로 이미지 넣음
+            if testCategory != nil {
+                urlToImg(urlStr: testCategory!.imageULR, targetImg: cell.categoryImg)
+            }
+            
         }
         
         cell.categoryNameLabel.text = categoryList[section]

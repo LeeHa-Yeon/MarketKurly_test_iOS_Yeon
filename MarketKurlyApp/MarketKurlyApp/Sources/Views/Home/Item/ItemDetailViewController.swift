@@ -12,6 +12,7 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     
     let purpleInspireColor = UIColor.mainKurlyPurple
     let reviewCnt: Int? = nil
+    var itemDocument: ItemContentDocument?
     
     // MARK: - Components
     @IBOutlet weak var fixView: UIView!
@@ -30,6 +31,7 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         setUI()
         super.viewDidLoad()
+        print(itemDocument)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,7 +83,6 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     /* API 해당 부분 */
     // TODO: 이 상품에 해당하는 후기 API를 받아와서 후기의 개수를 출력해야될듯
     func setData(){
-        
     }
     
     

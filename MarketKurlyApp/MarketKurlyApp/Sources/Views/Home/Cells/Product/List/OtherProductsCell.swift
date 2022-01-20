@@ -96,8 +96,8 @@ extension OtherProductsCell : UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("ProductsCell 동작합니다.")
-        self.delegate?.moveToVC()
+        let idx = itemList[indexPath.row].itemId
+        self.delegate?.moveToVC(itemIdx: idx)
     }
     
     

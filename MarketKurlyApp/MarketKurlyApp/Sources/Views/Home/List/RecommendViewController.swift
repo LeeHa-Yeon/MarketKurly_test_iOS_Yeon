@@ -10,19 +10,7 @@ import XLPagerTabStrip
 import Kingfisher
 
 protocol ItemDetailViewControllerDelegate {
-    func moveToVC()
-}
-
-
-
-/* 서버에서 받아오는 데이터 (임시 구조체) */
-struct TempProductListData {
-    let name: String
-    let price: String
-    let created_at: String
-    let item_img_url: String
-    let discount_rate: String
-    let member_discount: Int
+    func moveToVC(itemIdx: Int)
 }
 
 class RecommendViewController: UIViewController, IndicatorInfoProvider {
@@ -189,6 +177,21 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 {
+            // 설날특가일때 아이템 누르면 안넘어가지넹..
+//            print("???")
+//            let item = itemManager.getItemList(subjectId: 2)[0]
+//            let storyboard = UIStoryboard(name: "Item", bundle: nil)
+//            let itemInfoDataManager = ItemInfoDataManager.shared
+//            guard let ItemDetailVC = storyboard.instantiateViewController(identifier: "ItemDetailSB") as? ItemDetailViewController else { return }
+//            itemInfoDataManager.requestItemDetailInfo(itemId: item.itemId) { response in
+//                ItemDetailVC.itemDocument = response.result
+//                self.navigationController?.pushViewController(ItemDetailVC, animated: true)
+//            }
+        }
+    }
+    
     
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -198,10 +201,14 @@ extension RecommendViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension RecommendViewController: ItemDetailViewControllerDelegate {
-    func moveToVC() {
+    func moveToVC(itemIdx: Int) {
         let storyboard = UIStoryboard(name: "Item", bundle: nil)
-        let ItemDetailVC = storyboard.instantiateViewController(identifier: "ItemDetailSB")
-        self.navigationController?.pushViewController(ItemDetailVC, animated: true)
+        let itemInfoDataManager = ItemInfoDataManager.shared
+        guard let ItemDetailVC = storyboard.instantiateViewController(identifier: "ItemDetailSB") as? ItemDetailViewController else { return }
+        itemInfoDataManager.requestItemDetailInfo(itemId: itemIdx) { response in
+            ItemDetailVC.itemDocument = response.result
+            self.navigationController?.pushViewController(ItemDetailVC, animated: true)
+        }
     }
 }
 
