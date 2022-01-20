@@ -813,6 +813,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="NdK-3b-ifp"/>
                         <color key="backgroundColor" red="0.95687562230000001" green="0.95683962109999998" blue="0.95686405900000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="IBv-Iy-GaO" secondAttribute="bottom" id="7nA-ZO-Nji"/>
@@ -839,6 +840,7 @@
                                 <color key="backgroundColor" red="0.95687562230000001" green="0.95683962109999998" blue="0.95686405900000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="o6m-ts-0gh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Sca-Hh-mrq" firstAttribute="top" secondItem="2D4-Rb-BAF" secondAttribute="top" id="0iH-Ql-467"/>
@@ -851,6 +853,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY6-PU-S01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5365.217391304348" y="2343.75"/>
+        </scene>
+        <!--상품 후기-->
+        <scene sceneID="TF7-ed-5uq">
+            <objects>
+                <viewController storyboardIdentifier="RootReviewSB" id="Uwq-R0-jjn" customClass="RootReviewViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uW2-NG-a5r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ADz-9w-fLM" userLabel="Second Container View">
+                                <rect key="frame" x="0.0" y="138" width="425" height="724"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="PnL-Os-2Ar" kind="embed" id="5za-PB-hN4"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASl-QW-pjI" userLabel="First Container View">
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <connections>
+                                    <segue destination="mJb-gJ-DQ2" kind="embed" id="T49-7Y-TrK"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-Db-ohb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfS-tz-bWf">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pli-2k-BeH">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="작성가능 후기 (0)">
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="firstBtnTapped:" destination="Uwq-R0-jjn" eventType="touchUpInside" id="Fc4-xT-TJx"/>
+                                                    <action selector="firstBtnTapped:" destination="xST-U3-2xr" eventType="touchUpInside" id="bVq-iA-FA5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="pli-2k-BeH" firstAttribute="leading" secondItem="ZfS-tz-bWf" secondAttribute="leading" id="3G3-kQ-A8V"/>
+                                            <constraint firstAttribute="bottom" secondItem="pli-2k-BeH" secondAttribute="bottom" id="3GU-N7-sDq"/>
+                                            <constraint firstAttribute="trailing" secondItem="pli-2k-BeH" secondAttribute="trailing" id="D8f-nu-Wa2"/>
+                                            <constraint firstItem="pli-2k-BeH" firstAttribute="top" secondItem="ZfS-tz-bWf" secondAttribute="top" id="S7R-e2-xX6"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgc-Zb-1X8">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWY-BT-cWX">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="작성완료 후기(0)">
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="secondBtnTapped:" destination="Uwq-R0-jjn" eventType="touchUpInside" id="0pK-0f-lSj"/>
+                                                    <action selector="secondBtnTapped:" destination="xST-U3-2xr" eventType="touchUpInside" id="aSs-Tm-yfz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="KWY-BT-cWX" secondAttribute="bottom" id="BnJ-7b-CHI"/>
+                                            <constraint firstItem="KWY-BT-cWX" firstAttribute="top" secondItem="tgc-Zb-1X8" secondAttribute="top" id="Nnz-m4-Bdy"/>
+                                            <constraint firstItem="KWY-BT-cWX" firstAttribute="leading" secondItem="tgc-Zb-1X8" secondAttribute="leading" id="UFz-JX-jLc"/>
+                                            <constraint firstAttribute="trailing" secondItem="KWY-BT-cWX" secondAttribute="trailing" id="gMH-aZ-bH4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="j2N-cP-g7d"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="knE-o5-8qD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ASl-QW-pjI" firstAttribute="leading" secondItem="knE-o5-8qD" secondAttribute="leading" id="0yC-5W-D4K"/>
+                            <constraint firstItem="Jgv-Db-ohb" firstAttribute="leading" secondItem="uW2-NG-a5r" secondAttribute="leading" id="B6W-LO-39K"/>
+                            <constraint firstItem="ASl-QW-pjI" firstAttribute="top" secondItem="Jgv-Db-ohb" secondAttribute="bottom" id="Dq8-87-GAT"/>
+                            <constraint firstItem="knE-o5-8qD" firstAttribute="bottom" secondItem="ASl-QW-pjI" secondAttribute="bottom" id="G5q-9o-UYg"/>
+                            <constraint firstItem="knE-o5-8qD" firstAttribute="trailing" secondItem="ASl-QW-pjI" secondAttribute="trailing" id="IH8-pX-FSn"/>
+                            <constraint firstItem="Jgv-Db-ohb" firstAttribute="top" secondItem="knE-o5-8qD" secondAttribute="top" id="Tas-Jf-Wgf"/>
+                            <constraint firstItem="knE-o5-8qD" firstAttribute="trailing" secondItem="Jgv-Db-ohb" secondAttribute="trailing" id="lIm-mQ-EDX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="상품 후기" id="YVq-Hb-8r8"/>
+                    <connections>
+                        <outlet property="firstBtn" destination="pli-2k-BeH" id="gNA-Op-x4w"/>
+                        <outlet property="firstBtnView" destination="ZfS-tz-bWf" id="VGj-Pi-l7M"/>
+                        <outlet property="firstView" destination="ASl-QW-pjI" id="X45-C6-0hn"/>
+                        <outlet property="secondBtn" destination="KWY-BT-cWX" id="aIw-U1-sfs"/>
+                        <outlet property="secondBtnView" destination="tgc-Zb-1X8" id="mt1-ro-t0B"/>
+                        <outlet property="secondView" destination="ADz-9w-fLM" id="Cbt-8m-nwh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XD2-hM-JMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7160.8695652173919" y="1631.9196428571429"/>
         </scene>
         <!--컬리 피플 박스-->
         <scene sceneID="1vs-Rs-G1i">
@@ -1549,8 +1655,73 @@
             </objects>
             <point key="canvasLocation" x="166.66666666666669" y="4280.3571428571422"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eqj-U5-o73">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bjT-Q8-qJc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rrc-vO-K0C">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Uwq-R0-jjn" kind="relationship" relationship="rootViewController" id="19Q-7H-Qs9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4W-tb-YJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6255" y="1632"/>
+        </scene>
+        <!--Review Possible View Controller-->
+        <scene sceneID="7nl-i4-Iu7">
+            <objects>
+                <viewController storyboardIdentifier="ReviewPossibleSB" id="mJb-gJ-DQ2" customClass="ReviewPossibleViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fuj-jI-9qB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="PPo-eN-ez5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PPo-eN-ez5" firstAttribute="top" secondItem="fuj-jI-9qB" secondAttribute="top" id="LBj-7f-1aM"/>
+                            <constraint firstItem="PPo-eN-ez5" firstAttribute="leading" secondItem="fuj-jI-9qB" secondAttribute="leading" id="Xie-Hh-1h2"/>
+                            <constraint firstAttribute="trailing" secondItem="PPo-eN-ez5" secondAttribute="trailing" id="c14-lq-R6r"/>
+                            <constraint firstAttribute="bottom" secondItem="PPo-eN-ez5" secondAttribute="bottom" id="cSn-bh-o80"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xq6-pT-t4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6676.811594202899" y="2309.5982142857142"/>
+        </scene>
+        <!--Review End View Controller-->
+        <scene sceneID="LK5-ND-Wtw">
+            <objects>
+                <viewController storyboardIdentifier="ReviewEndSB" id="PnL-Os-2Ar" customClass="ReviewEndViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WSB-Yf-gzD">
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="wTc-1L-55X">
+                                <rect key="frame" x="0.0" y="0.0" width="425" height="724"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBd-WO-WYw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7548.5507246376819" y="2309.5982142857142"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="1" width="1170" height="1995"/>
+        <image name="2" width="1170" height="1991"/>
         <image name="IMG_FF80E6BF18BA-1" width="1170" height="1141"/>
         <image name="IMG_FF80E6BF18BA-2" width="1170" height="1279"/>
         <image name="KurlyPurpleBox1" width="1170" height="2018"/>

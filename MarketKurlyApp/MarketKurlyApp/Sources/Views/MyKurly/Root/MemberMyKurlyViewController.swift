@@ -248,7 +248,7 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             
             if indexPath.row == 3 {
                 // 상품 후기
-                presentAlert(title: "미구현")
+                moveToVC(SBName: "ETC", SBId: "RootReviewSB" ,VCName: "RootReviewVC")
             }
             
         }
