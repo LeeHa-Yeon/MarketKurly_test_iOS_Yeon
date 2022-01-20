@@ -9,6 +9,10 @@ import UIKit
 
 class MyCouponListViewController: UIViewController {
     
+    let userInfoManager = UserInfoManaer.shared
+    let couponInfoManager = CouponDataManager.shared
+    var myCouponList: [UserCouponListDocument] = []
+    
     // MARK: - Components
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addCouponBtn: UIButton!
@@ -21,6 +25,7 @@ class MyCouponListViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadCouponList()
         setUI()
     }
     
@@ -73,18 +78,34 @@ class MyCouponListViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    /* API 통신하는 부분 */
+    func loadCouponList(){
+        guard let couponList = userInfoManager.getUserCouponInfo() else {
+            return
+        }
+        myCouponList = couponList
+        tableView.reloadData()
+        
+    }
     
 }
 
 extension MyCouponListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return myCouponList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "couponCell", for: indexPath) as? CouponCell else {
             return UITableViewCell()
         }
+        
+        let target = myCouponList[indexPath.row]
+        cell.discountLabel.text = "\(DecimalWon(value: Int(target.getCouponDiscount() ) )) 할인"
+        cell.nameLabel.text = target.getCouponName()
+        cell.contentLabel.text = target.getCouponDescription()
+        cell.dateLabel.text = getFormattedDate(dateString: target.getCouponExpiredDate())
+        
         return cell
     }
     
