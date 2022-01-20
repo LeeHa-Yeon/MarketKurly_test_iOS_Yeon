@@ -10,6 +10,7 @@ import UIKit
 class OtherProductsCell: UITableViewCell {
     
     var delegate: ItemDetailViewControllerDelegate?
+    var itemList: [SubjectItemesDocument] = []
     
     // MARK: - UIComponents
     @IBOutlet weak var titleLabel: UILabel!

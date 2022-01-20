@@ -21,12 +21,24 @@ class SpecialProductCell: UITableViewCell {
     @IBOutlet weak var originPriceLabel: UILabel!
     
     
+    @IBOutlet weak var itemImg: UIImageView!
+    
+    @IBOutlet weak var presentImg: UIImageView!
+    
+    @IBOutlet weak var newYearImg: UIImageView!
+    
+    
+    @IBOutlet weak var couponImg: UIImageView!
+    
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     
     @IBOutlet weak var timeOutView: UIView!
     @IBOutlet weak var timeOutLabel: UILabel!
+    
+    
+    
     
     @IBAction func cartTapped(_ sender: Any) {
     }
@@ -52,6 +64,7 @@ class SpecialProductCell: UITableViewCell {
     func setUI(){
         timeOutView.isHidden = true
         timeOutLabel.isHidden = true
+        itemImg.contentMode = .scaleToFill
     }
     
     // 오늘 날짜 남은 시간 초로 변환해서 만들기

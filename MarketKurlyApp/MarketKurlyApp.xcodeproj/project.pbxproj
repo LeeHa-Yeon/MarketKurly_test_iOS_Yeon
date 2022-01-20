@@ -730,6 +730,36 @@
 			path = Loding;
 			sourceTree = "<group>";
 		};
+		9F6710B82799588400BC485A /* No */ = {
+			isa = PBXGroup;
+			children = (
+				9F9C58F2278B64AC005D164C /* ProductsCell.xib */,
+				9F9C58F1278B64AC005D164C /* ProductsCell.swift */,
+			);
+			path = No;
+			sourceTree = "<group>";
+		};
+		9F6710B92799719300BC485A /* HomeKurlyCell */ = {
+			isa = PBXGroup;
+			children = (
+				9F6710BA27997A8600BC485A /* No */,
+				9F9C5918278B99A1005D164C /* RecipeCell.xib */,
+				9F9C5917278B99A1005D164C /* RecipeCell.swift */,
+				9F9C58F6278B64C2005D164C /* ProductCell.xib */,
+				9F9C58F5278B64C2005D164C /* ProductCell.swift */,
+			);
+			path = HomeKurlyCell;
+			sourceTree = "<group>";
+		};
+		9F6710BA27997A8600BC485A /* No */ = {
+			isa = PBXGroup;
+			children = (
+				9F9C58FA278B7440005D164C /* NoSaleProductCell.xib */,
+				9F9C58F9278B7440005D164C /* NoSaleProductCell.swift */,
+			);
+			path = No;
+			sourceTree = "<group>";
+		};
 		9F786C9927962C5900EEA867 /* Parent */ = {
 			isa = PBXGroup;
 			children = (
@@ -858,7 +888,6 @@
 			children = (
 				9F9C5909278B94F2005D164C /* List */,
 				9F9C590A278B9500005D164C /* Content */,
-				9FA04370278D103900FCD2FE /* FifthHome */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -866,10 +895,12 @@
 		9F9C5909278B94F2005D164C /* List */ = {
 			isa = PBXGroup;
 			children = (
-				9F9C58F2278B64AC005D164C /* ProductsCell.xib */,
-				9F9C58F1278B64AC005D164C /* ProductsCell.swift */,
+				9FA04370278D103900FCD2FE /* FifthHome */,
+				9F6710B82799588400BC485A /* No */,
 				9F9C5906278B8B9F005D164C /* OtherProductsCell.xib */,
 				9F9C5905278B8B9F005D164C /* OtherProductsCell.swift */,
+				9F9C591C278B9DB6005D164C /* SpecialProductCell.xib */,
+				9F9C591B278B9DB6005D164C /* SpecialProductCell.swift */,
 				9F9C5914278B97BF005D164C /* RecipeListCell.xib */,
 				9F9C5913278B97BF005D164C /* RecipeListCell.swift */,
 			);
@@ -879,15 +910,8 @@
 		9F9C590A278B9500005D164C /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				9F9CE9AE27981D6E0071D454 /* Yes */,
-				9F9C591C278B9DB6005D164C /* SpecialProductCell.xib */,
-				9F9C591B278B9DB6005D164C /* SpecialProductCell.swift */,
-				9F9C58F6278B64C2005D164C /* ProductCell.xib */,
-				9F9C58F5278B64C2005D164C /* ProductCell.swift */,
-				9F9C58FA278B7440005D164C /* NoSaleProductCell.xib */,
-				9F9C58F9278B7440005D164C /* NoSaleProductCell.swift */,
-				9F9C5918278B99A1005D164C /* RecipeCell.xib */,
-				9F9C5917278B99A1005D164C /* RecipeCell.swift */,
+				9F6710B92799719300BC485A /* HomeKurlyCell */,
+				9F9CE9AE27981D6E0071D454 /* SortCell */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -942,13 +966,13 @@
 			path = Item;
 			sourceTree = "<group>";
 		};
-		9F9CE9AE27981D6E0071D454 /* Yes */ = {
+		9F9CE9AE27981D6E0071D454 /* SortCell */ = {
 			isa = PBXGroup;
 			children = (
 				9F9C5924278BB126005D164C /* Product2Cell.xib */,
 				9F9C5923278BB126005D164C /* Product2Cell.swift */,
 			);
-			path = Yes;
+			path = SortCell;
 			sourceTree = "<group>";
 		};
 		9F9CE9AF279825580071D454 /* Protocol */ = {
