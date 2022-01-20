@@ -8,7 +8,18 @@
 import UIKit
 
 class ItemInfoCell: UITableViewCell {
-
+    
+    // MARK: - Components
+    @IBOutlet weak var salesUnit: UILabel!
+    @IBOutlet weak var weightCapacity: UILabel!
+    @IBOutlet weak var shippingCategory: UILabel!
+    @IBOutlet weak var origin: UILabel!
+    @IBOutlet weak var packagingType: UILabel!
+    @IBOutlet weak var shelf_life: UILabel!
+    @IBOutlet weak var notification: UILabel!
+    
+    
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -31,7 +31,6 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         setUI()
         super.viewDidLoad()
-        print(itemDocument)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +47,7 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let ExplanationVC = self.storyboard?.instantiateViewController(withIdentifier: "ItemExplanationSB") as! ItemExplanationViewController
         ExplanationVC.tabName = "상품설명"
+        ExplanationVC.itemDocument = self.itemDocument
         
         let DetailInfoVC = self.storyboard?.instantiateViewController(withIdentifier: "ItemDetailInfoSB") as! ItemDetailInfoViewController
         DetailInfoVC.tabName = "상세정보"

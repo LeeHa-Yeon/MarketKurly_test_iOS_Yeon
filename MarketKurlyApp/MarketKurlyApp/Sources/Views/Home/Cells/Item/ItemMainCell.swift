@@ -16,10 +16,16 @@ class ItemMainCell: UITableViewCell {
     @IBOutlet weak var itemImg: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemSubNameLabel: UILabel!
-    @IBOutlet weak var itemPriceLabel: UILabel!
+    
+    @IBOutlet weak var memberDiscount: UILabel!
+    @IBOutlet weak var itemOriginPriceLabel: UILabel!
+    @IBOutlet weak var itemSalePriceLabel: UILabel!
+    @IBOutlet weak var itemDiscountRate: UILabel!
+    
     @IBOutlet weak var userLevelLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
     
+    @IBOutlet weak var tempView: UIView!
     @IBOutlet weak var couponButton: UIButton!
     
     @IBAction func shareBtnTapped(_ sender: Any) {

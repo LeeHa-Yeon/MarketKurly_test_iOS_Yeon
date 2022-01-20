@@ -270,6 +270,15 @@ extension UIViewController {
         return result
     }
     
+    // MARK: - 세자리 숫자마다 콤마 넣기2
+    func DecimalWon2(value: Int) -> String{
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let result = numberFormatter.string(from: NSNumber(value: value))!
+        
+        return result
+    }
+    
     // MARK: - 취소선
     func cancleLine(text: String, targetLabel: UILabel){
         let attributedString = NSMutableAttributedString(string: text)
@@ -286,6 +295,7 @@ extension UIViewController {
     }
     
     
+    // MARK: - 날짜를 원하는 형태로 변경
     func getFormattedDate(dateString: String) -> String{
         let testDate = dateString.substring(from: 0, to: 10)
             let dateFormatterGet = DateFormatter()

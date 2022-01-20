@@ -144,7 +144,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ac6-uV-UC0">
                                 <rect key="frame" x="0.0" y="228.5" width="351" height="100.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안내사항" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agf-Uk-4gl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안내사항" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agf-Uk-4gl">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="100.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="nNp-Dz-s8s"/>
@@ -192,6 +192,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="notification" destination="Ibk-dm-Byi" id="3P1-V6-wxs"/>
+                <outlet property="origin" destination="BuD-21-YjM" id="wAs-UU-h60"/>
+                <outlet property="packagingType" destination="8de-S3-dQ7" id="QJa-Uu-Z7X"/>
+                <outlet property="salesUnit" destination="yZb-Zh-bH5" id="sNN-O5-i05"/>
+                <outlet property="shelf_life" destination="wga-j1-8LC" id="cLl-LP-pAo"/>
+                <outlet property="shippingCategory" destination="DzK-NI-5UA" id="Q18-J9-UN3"/>
+                <outlet property="weightCapacity" destination="abF-eN-NBt" id="4yB-kg-us4"/>
+            </connections>
             <point key="canvasLocation" x="189.13043478260872" y="237.38839285714283"/>
         </tableViewCell>
     </objects>

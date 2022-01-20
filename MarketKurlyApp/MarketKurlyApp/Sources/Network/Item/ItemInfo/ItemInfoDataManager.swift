@@ -12,7 +12,7 @@ class ItemInfoDataManager {
     static let shared = ItemInfoDataManager()
     private init() {}
 
-    // MARK: - 전체 카테고리 조회
+    // MARK: - 상세아이템 조회
     func requestItemDetailInfo(itemId: Int, completion: @escaping (ItemContentResponse)->(Void)){
         let URL = Constant.BasicURL2 + "more/\(itemId)"
         AF.request(URL, method: .get ).validate().responseDecodable(of:ItemContentResponse.self) { response in
