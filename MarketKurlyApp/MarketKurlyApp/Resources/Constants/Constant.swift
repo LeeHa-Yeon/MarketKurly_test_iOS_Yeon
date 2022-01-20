@@ -12,9 +12,10 @@ struct Constant {
     static let loginStatusName: String = "loginStatus"
     
     static let BasicURL: String = "http://3.36.52.30:8081/app/"
-    static let BasicURL2: String = "https://marketkurly.site/app/"
+    static let BasicURL2: String = "http://3.34.127.98:9000/app/"
     
     // "https://marketkurly.site/app/"
+    // http://3.34.127.98:9000/app/more/3
     
     static let userIdxName: String = "userInfoIdx"
     static let jwtName: String = "userInfoJwt"

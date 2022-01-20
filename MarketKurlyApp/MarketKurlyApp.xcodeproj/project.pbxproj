@@ -639,12 +639,12 @@
 				9F309DE327915F2500EBF5E0 /* ItemDetailViewController.swift */,
 				9F309DE52791F4BC00EBF5E0 /* ItemExplanationViewController.swift */,
 				9F309DE72791F4DF00EBF5E0 /* ItemDetailInfoViewController.swift */,
-				9F6710C52799C88700BC485A /* ShowReviewViewController.swift */,
 				9F309DE92791F50100EBF5E0 /* ItemReviewViewController.swift */,
+				9F6710C52799C88700BC485A /* ShowReviewViewController.swift */,
 				9F309DEB2791F51600EBF5E0 /* ItemQuestionViewController.swift */,
+				9F6710C72799CE7300BC485A /* ItemQuestViewController.swift */,
 				9F309DF227921E9A00EBF5E0 /* ShareViewController.swift */,
 				9F309DFC27925D4700EBF5E0 /* ItemBuyViewController.swift */,
-				9F6710C72799CE7300BC485A /* ItemQuestViewController.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";

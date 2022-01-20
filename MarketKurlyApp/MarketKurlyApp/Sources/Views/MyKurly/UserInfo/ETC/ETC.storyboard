@@ -863,7 +863,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ADz-9w-fLM" userLabel="Second Container View">
-                                <rect key="frame" x="0.0" y="138" width="425" height="724"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="PnL-Os-2Ar" kind="embed" id="5za-PB-hN4"/>
@@ -883,7 +883,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pli-2k-BeH">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="작성가능 후기 (0)">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -907,7 +907,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWY-BT-cWX">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="작성완료 후기(0)">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -937,11 +937,11 @@
                         <constraints>
                             <constraint firstItem="ASl-QW-pjI" firstAttribute="leading" secondItem="knE-o5-8qD" secondAttribute="leading" id="0yC-5W-D4K"/>
                             <constraint firstItem="Jgv-Db-ohb" firstAttribute="leading" secondItem="uW2-NG-a5r" secondAttribute="leading" id="B6W-LO-39K"/>
-                            <constraint firstItem="ASl-QW-pjI" firstAttribute="top" secondItem="Jgv-Db-ohb" secondAttribute="bottom" id="Dq8-87-GAT"/>
                             <constraint firstItem="knE-o5-8qD" firstAttribute="bottom" secondItem="ASl-QW-pjI" secondAttribute="bottom" id="G5q-9o-UYg"/>
                             <constraint firstItem="knE-o5-8qD" firstAttribute="trailing" secondItem="ASl-QW-pjI" secondAttribute="trailing" id="IH8-pX-FSn"/>
                             <constraint firstItem="Jgv-Db-ohb" firstAttribute="top" secondItem="knE-o5-8qD" secondAttribute="top" id="Tas-Jf-Wgf"/>
                             <constraint firstItem="knE-o5-8qD" firstAttribute="trailing" secondItem="Jgv-Db-ohb" secondAttribute="trailing" id="lIm-mQ-EDX"/>
+                            <constraint firstItem="ASl-QW-pjI" firstAttribute="top" secondItem="Jgv-Db-ohb" secondAttribute="bottom" id="wMz-Ui-9EH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="상품 후기" id="YVq-Hb-8r8"/>
@@ -1681,7 +1681,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="PPo-eN-ez5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="PPo-eN-ez5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
                             </imageView>
                         </subviews>
@@ -1703,10 +1703,10 @@
             <objects>
                 <viewController storyboardIdentifier="ReviewEndSB" id="PnL-Os-2Ar" customClass="ReviewEndViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WSB-Yf-gzD">
-                        <rect key="frame" x="0.0" y="0.0" width="425" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="wTc-1L-55X">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="wTc-1L-55X">
                                 <rect key="frame" x="0.0" y="0.0" width="425" height="724"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>

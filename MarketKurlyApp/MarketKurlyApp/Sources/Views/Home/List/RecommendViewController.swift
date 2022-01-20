@@ -205,6 +205,7 @@ extension RecommendViewController: ItemDetailViewControllerDelegate {
         let storyboard = UIStoryboard(name: "Item", bundle: nil)
         let itemInfoDataManager = ItemInfoDataManager.shared
         guard let ItemDetailVC = storyboard.instantiateViewController(identifier: "ItemDetailSB") as? ItemDetailViewController else { return }
+        // 로 변경하기
         itemInfoDataManager.requestItemDetailInfo(itemId: itemIdx) { response in
             ItemDetailVC.itemDocument = response.result
             self.navigationController?.pushViewController(ItemDetailVC, animated: true)
