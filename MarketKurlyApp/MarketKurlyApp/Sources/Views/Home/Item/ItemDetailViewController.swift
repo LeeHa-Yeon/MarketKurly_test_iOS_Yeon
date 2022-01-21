@@ -10,6 +10,9 @@ import XLPagerTabStrip
 
 class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     
+    let wishDataManager = WishDataManager.shared
+    let userInfoManager = UserInfoManaer.shared
+    
     let purpleInspireColor = UIColor.mainKurlyPurple
     let reviewCnt: Int? = nil
     var itemDocument: ItemContentDocument?
@@ -22,6 +25,16 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     
     @IBAction func heartBtnTapped(_ sender: UIButton!) {
         sender.isSelected.toggle()
+        let request: WishRequest = WishRequest(itemId: itemDocument!.itemId)
+        print(itemDocument!.itemId)
+        print(userInfoManager.getUserInfo()!.userId)
+        wishDataManager.requestClickWish(userId: userInfoManager.getUserInfo()!.userId, token: userInfoManager.getToken(), para: request) { response in
+            self.wishDataManager.requestMyWishList(userId: self.userInfoManager.getUid(), token: self.userInfoManager.getToken()) { response in
+                self.userInfoManager.setUserWishListInfo(response.result)
+
+            }
+        }
+        
     }
     @IBAction func buyBtnTapped(_ sender: Any) {
         // TODO: 구매하기
@@ -33,13 +46,6 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         setUI()
         super.viewDidLoad()
-        if itemDocument?.present == 0 {
-            print("dia")
-            presentBtn.isHidden = true
-        } else {
-            print("만ㅇㄹ")
-            presentBtn.isHidden = false
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +53,7 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
         self.title = "\(itemDocument!.name)"
         self.view.bringSubviewToFront(self.fixView)
         self.tabBarController?.tabBar.isHidden = true
+        setData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -79,7 +86,7 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     
     // MARK: - Function
     func setUI(){
-        
+        customButton(presentBtn, cornerValue: 5, btnBorderColor: UIColor.mainKurlyPurple, btnBorderWidth: 1)
         self.title = "아이템이름"
         customNavigationBarAttribute(.white, .black)
         customNaviBarItem2(btnColor: .black, naviItem: self.navigationItem)
@@ -93,9 +100,17 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     }
     
     /* API 해당 부분 */
-    // TODO: 이 상품에 해당하는 후기 API를 받아와서 후기의 개수를 출력해야될듯
     func setData(){
+        if itemDocument?.present == 0 {
+            print("dia")
+            presentBtn.isHidden = true
+        } else {
+            print("만ㅇㄹ")
+            presentBtn.isHidden = false
+        }
     }
+    
+    // TODO: 이 상품에 해당하는 후기 API를 받아와서 후기의 개수를 출력해야될듯
     
     
     func customBtnBar(){

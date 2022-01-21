@@ -29,7 +29,6 @@ extension WishViewController :AlertWishDelegate {
                     self.totalCnt.text = "전체 \(self.myWishList.count)개"
                     self.tableView.reloadData()
                 }
-                
             }
         }
         let cancelAction = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)

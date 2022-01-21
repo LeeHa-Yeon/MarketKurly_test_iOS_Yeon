@@ -23,7 +23,7 @@ class WishDataManager {
             case .success(let response) :
                 completion(response)
             case .failure(let error) :
-                print(" 찜 네ㅡ워크 실패: ",error.localizedDescription)
+                print(" 1찜 네ㅡ워크 실패: ",error.localizedDescription)
             }
         }
     }
@@ -39,7 +39,7 @@ class WishDataManager {
             case .success(let response) :
                 completion(response)
             case .failure(let error) :
-                print(" 찜 네ㅡ워크 실패: ",error.localizedDescription)
+                print(" 2찜 네ㅡ워크 실패: ",error.localizedDescription)
             }
         }
     }
@@ -55,7 +55,7 @@ class WishDataManager {
             case .success(let response) :
                 completion(response)
             case .failure(let error) :
-                print(" 찜 네ㅡ워크 실패: ",error.localizedDescription)
+                print(" 3찜 네ㅡ워크 실패: ",error.localizedDescription)
             }
         }
     }
