@@ -7,11 +7,20 @@
 
 import UIKit
 
+
+
 // 결제 진행 필수 동의
 class OrderSheetLastCell: UITableViewCell {
     
-    // MARK: - Components
+    var delegate :testDelegate?
     
+    // MARK: - Components
+    @IBOutlet weak var button: UIButton!
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        delegate?.moveToVC()
+//
+    }
     // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()

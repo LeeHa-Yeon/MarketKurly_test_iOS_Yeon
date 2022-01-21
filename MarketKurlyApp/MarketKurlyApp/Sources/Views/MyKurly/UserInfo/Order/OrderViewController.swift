@@ -16,6 +16,17 @@ struct DummyOrderItem {
     let cnt: Int
 }
 
+protocol testDelegate  {
+    func moveToVC()
+}
+extension OrderViewController  : testDelegate {
+    func moveToVC(){
+        let storyboard = UIStoryboard(name: "Order", bundle: nil)
+        guard let AfterOrderVC = storyboard.instantiateViewController(identifier: "AfterOrderSB") as? AfterOrderViewController else { return }
+        self.present(AfterOrderVC, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(AfterOrderVC, animated: true)
+    }
+}
 
 class OrderViewController: UIViewController {
     
@@ -166,6 +177,7 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderSheetLastCell") as? OrderSheetLastCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.selectionStyle = .none
             return cell
         default :

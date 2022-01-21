@@ -161,9 +161,10 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             }
             cell.listNameLable.text = dummyData[indexPath.row]
             if indexPath.row == 0 {
-                if loadUserData() != nil {
-                    cell.subStrLabel.text =  DecimalWon(value: loadUserData()?.getUserPoint() ?? 900)
-                }
+                cell.subStrLabel.text = "4,168원"
+//                if loadUserData() != nil {
+//                    cell.subStrLabel.text =  DecimalWon(value: loadUserData()?.getUserPoint() ?? 900)
+//                }
             } else if indexPath.row == 1 {
                 if loadCouponListCnt() != nil {
                     cell.subStrLabel.text = "\(loadCouponListCnt() ?? 0)장"

@@ -23,14 +23,13 @@ class AddressDataManager {
             case .success(let response) :
                 completion(response)
             case .failure(let error) :
-                print(" 배송지1 네ㅡ워크 실패: ",error.localizedDescription)
+                print(" 전체 배송지1 네ㅡ워크 실패: ",error.localizedDescription)
             }
         }
     }
     
-    // /app/address/:userId?addressIdx=:addressIdx
     // MARK: - 특정 배송지 조회하기 14
-    func requestAddAddress(userId:Int,addressIdx:Int, token:String,completion: @escaping (SelectAddressInfoResponse)->(Void)){
+    func requestShowSelectAddress(userId:Int,addressIdx:Int, token:String,completion: @escaping (SelectAddressInfoResponse)->(Void)){
         
         let URL = Constant.BasicURL + "address/\(userId)?addressIdx=\(addressIdx)"
         let HTTP_HEADERS: HTTPHeaders = ["X-ACCESS-TOKEN":token]
@@ -40,7 +39,7 @@ class AddressDataManager {
             case .success(let response) :
                 completion(response)
             case .failure(let error) :
-                print(" 배송지2 네ㅡ워크 실패: ",error.localizedDescription)
+                print(" 특정 배송지2 네ㅡ워크 실패: ",error.localizedDescription)
             }
         }
     }
@@ -56,13 +55,13 @@ class AddressDataManager {
             case .success(let response) :
                 completion(response)
             case .failure(let error) :
-                print(" 배송지3 네ㅡ워크 실패: ",error.localizedDescription)
+                print(" 배송지3 추가  네ㅡ워크 실패: ",error.localizedDescription)
             }
         }
     }
     
     // MARK: - 배송지 수정하기 71
-    func requestAddAddress(userId:Int , addressIdx:Int, para: ModifyAddressRequest ,completion: @escaping (ModifyAddressResponse)->(Void)){
+    func requestModifyAddress(userId:Int , addressIdx:Int, para: ModifyAddressRequest ,completion: @escaping (ModifyAddressResponse)->(Void)){
         
         let URL = Constant.BasicURL + "address/\(userId)/content/\(addressIdx)"
         
