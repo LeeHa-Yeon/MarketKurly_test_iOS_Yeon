@@ -20,4 +20,9 @@ struct SelectAddressInfoDocument: Decodable {
     let userId : Int
     let address : String
     let detail_address : String
+    let name : String?
+    let phoneNumber : String?
+    let isSelected : Int
+    let isFirst : Int
+    let detailAddressInfo : SubAddressDocument?
 }
