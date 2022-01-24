@@ -61,6 +61,7 @@ class AddressManagmentViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        userDefault()
         setUI()
         setData()
         super.viewWillAppear(true)
@@ -79,6 +80,10 @@ class AddressManagmentViewController: UIViewController {
         naviTitleDelete(navi: self.navigationController!)
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func userDefault(){
+        UserDefaults.standard.set(false, forKey: "addressBackStatusName")
     }
     
     /* API 통신 부분 */
@@ -109,6 +114,7 @@ extension AddressManagmentViewController: UITableViewDelegate, UITableViewDataSo
         cell.addressIdx = target.id
         
         if target.name != nil {
+            cell.userInfo.isHidden = false
             // 이름이 있다
             if target.phoneNumber != nil {
                 // 넘버가 있다.
@@ -119,6 +125,7 @@ extension AddressManagmentViewController: UITableViewDelegate, UITableViewDataSo
             }
         }else {
             if target.phoneNumber != nil {
+                cell.userInfo.isHidden = false
                 cell.userInfo.text = " \(target.phoneNumber ?? " ")"
             } else {
                 cell.userInfo.isHidden = true

@@ -22,6 +22,7 @@ class NewDetailAddressViewController: UIViewController {
     @IBOutlet weak var saveBtn: UIButton!
     
     @IBAction func checkBtnTapped(_ sender: Any) {
+        isCheck = !isCheck
         if isCheck {
             let imageName = UIImage(named: "I_check")
             checkBtn.setImage(imageName, for: .normal)
@@ -44,8 +45,11 @@ class NewDetailAddressViewController: UIViewController {
             addressDataManager.requestAddAddress(userId: userInfoManager.getUid(), token: userInfoManager.getToken(), para: para) { response in
                 if response.isSuccess {
                     print("성공")
+                    UserDefaults.standard.set(true, forKey: "addressBackStatusName")
+                    self.navigationController?.popViewController(animated: true)
                 }else {
-                    print("실패")
+                    print("새 배송지 저장 실패")
+                    UserDefaults.standard.set(false, forKey: "addressBackStatusName")
                 }
             }
         }
@@ -86,8 +90,11 @@ class NewDetailAddressViewController: UIViewController {
             self.addressDataManager.requestAddAddress(userId: self.userInfoManager.getUid(), token: self.userInfoManager.getToken(), para: para) { response in
                 if response.isSuccess {
                     print("성공2")
+                    UserDefaults.standard.set(true, forKey: "addressBackStatusName")
+                    self.navigationController?.popViewController(animated: true)
                 }else {
-                    print("실패2")
+                    print("새 배송지 저장 실패2")
+                    UserDefaults.standard.set(false, forKey: "addressBackStatusName")
                 }
             }
         }

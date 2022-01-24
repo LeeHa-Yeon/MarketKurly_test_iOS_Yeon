@@ -34,6 +34,7 @@ class NewAddressViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        dissmissScreen()
         setUI()
         super.viewWillAppear(true)
         self.tabBarController?.tabBar.isHidden = true
@@ -45,6 +46,12 @@ class NewAddressViewController: UIViewController {
         self.title = "주소 검색"
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
+        
+    }
+    func dissmissScreen(){
+        if UserDefaults.standard.bool(forKey: "addressBackStatusName") {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func moveToVC(){

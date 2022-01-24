@@ -103,6 +103,8 @@ class ModifyAddressViewController: UIViewController {
         
     }
     
+    
+    
     func loadData(){
         if selectAddressInfo != nil {
             
@@ -110,9 +112,11 @@ class ModifyAddressViewController: UIViewController {
             if selectAddressInfo?.isFirst == 0 {
                 basicAddressStackView.isHidden = true
                 basicStackView.isHidden = false
+                deleteBtn.isHidden = false
             } else {
                 basicAddressStackView.isHidden = false
                 basicStackView.isHidden = true
+                deleteBtn.isHidden = true
             }
             
             if selectAddressInfo?.address != nil {
