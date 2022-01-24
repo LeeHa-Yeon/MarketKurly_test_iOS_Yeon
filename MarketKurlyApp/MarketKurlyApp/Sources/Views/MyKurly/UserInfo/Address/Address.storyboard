@@ -185,7 +185,7 @@
             </objects>
             <point key="canvasLocation" x="-1101" y="-171"/>
         </scene>
-        <!--주소 입력-->
+        <!--주소 검색-->
         <scene sceneID="TQA-pL-aRL">
             <objects>
                 <viewController storyboardIdentifier="NewAddressSB" id="aGx-Kk-g3t" customClass="NewAddressViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -213,7 +213,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="search"/>
                                         <connections>
-                                            <segue destination="URh-Nc-Pqr" kind="show" id="9Dv-uB-VCA"/>
+                                            <action selector="nextBtnTapped:" destination="aGx-Kk-g3t" eventType="touchUpInside" id="6yi-Z4-S6A"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -238,7 +238,11 @@
                             <constraint firstItem="ghO-FS-oxV" firstAttribute="top" secondItem="se6-do-QFG" secondAttribute="top" id="pIH-bh-8JF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="주소 입력" id="I3e-wO-nI1"/>
+                    <navigationItem key="navigationItem" title="주소 검색" id="I3e-wO-nI1"/>
+                    <connections>
+                        <outlet property="mainAddressTextField" destination="97q-tn-UtK" id="muM-S9-DYd"/>
+                        <outlet property="searchBtn" destination="EKl-Ww-XcQ" id="8dX-Su-u1i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrC-Gw-ro6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -318,6 +322,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="uncheck"/>
+                                        <connections>
+                                            <action selector="checkBtnTapped:" destination="URh-Nc-Pqr" eventType="touchUpInside" id="Z1J-38-ika"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기본 배송지로 저장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBP-NO-qRZ">
                                         <rect key="frame" x="37" y="0.0" width="126.5" height="30"/>
@@ -337,6 +344,9 @@
                                 <state key="normal" title="저장">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveBtnTapped:" destination="URh-Nc-Pqr" eventType="touchUpInside" id="Puy-ik-cTV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="샛별배송 지역 중 배송 불가 장소 안내" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS3-Cj-2El">
                                 <rect key="frame" x="41" y="498.5" width="176" height="14.5"/>
@@ -385,12 +395,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="배송지" id="LQF-bX-GXt"/>
                     <connections>
+                        <outlet property="checkBtn" destination="d1V-5b-Y27" id="jfI-Lb-PK7"/>
+                        <outlet property="mainAddressLabel" destination="p1x-UF-27i" id="dJ2-fT-IvT"/>
                         <outlet property="saveBtn" destination="gQG-NU-NKm" id="a5h-gv-FCU"/>
+                        <outlet property="subAddressTextField" destination="6ae-dO-8VH" id="xLf-VK-53i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HlX-UM-mZv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="-785"/>
+            <point key="canvasLocation" x="2892.753623188406" y="-778.125"/>
         </scene>
         <!--배송지-->
         <scene sceneID="MM8-fe-iG5">
@@ -1526,6 +1539,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="184-uZ-r80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660.86956521739137" y="-13.392857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wPr-Mf-vTf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Rf-3G-Op5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mbj-yO-F34">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="URh-Nc-Pqr" kind="relationship" relationship="rootViewController" id="6Fg-hm-B9d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XgJ-Z2-CZI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985.5072463768117" y="-778.125"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

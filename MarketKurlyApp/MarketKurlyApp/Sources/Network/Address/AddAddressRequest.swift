@@ -9,9 +9,9 @@ import Foundation
 
 struct AddAddressRequest: Encodable {
     let address : String
-    let detailAddress : String
+    let detailAddress : String?
     let name : String?
     let phoneNumber : String?
-    let isSelected : String?
-    let isFirst : String?
+    let isSelected : Int?
+    let isFirst : Int?
 }

@@ -13,6 +13,7 @@ import Foundation
 
 struct ModifyAddressRequest: Encodable {
     let address: String?
+    let detailAddress: String?
     let name: String?
     let phoneNumber: String?
     let isSelected: Int?

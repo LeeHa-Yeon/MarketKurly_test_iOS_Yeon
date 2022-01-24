@@ -31,10 +31,7 @@ class ModifyAddressViewController: UIViewController {
     
     
     @IBAction func saveTapped(_ sender: Any) {
-        
-        guard let subAddressText = subAddress.text else {
-            return
-        }
+
         var isFirstValue = 0
         
         if isCheck {
@@ -42,7 +39,7 @@ class ModifyAddressViewController: UIViewController {
         } else {
             isFirstValue = 0
         }
-        let para: ModifyAddressRequest = ModifyAddressRequest(address: nil, name: receiveName.text, phoneNumber: receivePhone.text, isSelected: nil, isFirst: isFirstValue, detailAddressInfo: nil)
+        let para: ModifyAddressRequest = ModifyAddressRequest(address: nil, detailAddress: subAddress.text , name: receiveName.text, phoneNumber: receivePhone.text, isSelected: nil, isFirst: isFirstValue, detailAddressInfo: nil)
         
         addressDataManager.requestModifyAddress(userId: userInfoManager.getUid(), addressIdx: addressIdx!, para: para) { response in
             if response.isSuccess {

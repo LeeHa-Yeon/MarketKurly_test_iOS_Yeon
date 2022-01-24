@@ -173,7 +173,7 @@ class AddressListCell: UITableViewCell {
     
     
     @IBAction func checkTapped(_ sender: UIButton!) {
-        let para: ModifyAddressRequest = ModifyAddressRequest(address: nil, name: nil, phoneNumber: nil, isSelected: 1, isFirst: nil, detailAddressInfo: nil)
+        let para: ModifyAddressRequest = ModifyAddressRequest(address: nil, detailAddress: nil, name: nil, phoneNumber: nil, isSelected: 1, isFirst: nil, detailAddressInfo: nil)
         
         addDataManager.requestModifyAddress(userId: userInfoManager.getUid(), addressIdx: addressIdx, para: para) { response in
             if response.isSuccess {
