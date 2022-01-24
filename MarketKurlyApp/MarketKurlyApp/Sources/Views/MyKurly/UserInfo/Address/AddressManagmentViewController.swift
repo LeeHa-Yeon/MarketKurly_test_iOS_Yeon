@@ -16,7 +16,7 @@ protocol AlertSelectAddressDelegate {
 
 extension AddressManagmentViewController: AlertSelectAddressDelegate {
     func updateData() {
-        addDataManager.requestShowAddressList(userId: userInfoManager.getUid(), token: userInfoManager.getToken()) { response in
+        addressDataManager.requestShowAddressList(userId: userInfoManager.getUid(), token: userInfoManager.getToken()) { response in
             self.myAddressList = response.result
             self.tableView.reloadData()
         }
@@ -35,7 +35,7 @@ extension AddressManagmentViewController: AlertSelectAddressDelegate {
         
         guard let ModifyAddressVC = storyboard.instantiateViewController(identifier: "ModifyAddressSB") as? ModifyAddressViewController else { return }
         ModifyAddressVC.addressIdx = addressIndx
-        addDataManager.requestShowSelectAddress(userId: userInfoManager.getUid(), addressIdx: addressIndx, token: userInfoManager.tokenString!) { response in
+        addressDataManager.requestShowSelectAddress(userId: userInfoManager.getUid(), addressIdx: addressIndx, token: userInfoManager.tokenString!) { response in
             ModifyAddressVC.selectAddressInfo = response.result[0]
             self.navigationController?.pushViewController(ModifyAddressVC, animated: true)
         }
@@ -45,19 +45,18 @@ extension AddressManagmentViewController: AlertSelectAddressDelegate {
 
 class AddressManagmentViewController: UIViewController {
     
-    // MARK: - Components
-    @IBOutlet weak var tableView: UITableView!
-    let addDataManager = AddressDataManager.shared
+    let addressDataManager = AddressDataManager.shared
     let userInfoManager = UserInfoManaer.shared
     var myAddressList: [AllAddressListDocument] = []
     
+    // MARK: - Components
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setData()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,7 +87,7 @@ class AddressManagmentViewController: UIViewController {
     
     /* API 통신 부분 */
     func setData(){
-        addDataManager.requestShowAddressList(userId: userInfoManager.getUid(), token: userInfoManager.getToken()) { response in
+        addressDataManager.requestShowAddressList(userId: userInfoManager.getUid(), token: userInfoManager.getToken()) { response in
             self.myAddressList = response.result
             self.tableView.reloadData()
         }
@@ -162,7 +161,7 @@ extension AddressManagmentViewController: UITableViewDelegate, UITableViewDataSo
 class AddressListCell: UITableViewCell {
     
     var addressIdx: Int = 0
-    let addDataManager = AddressDataManager.shared
+    let addressDataManager = AddressDataManager.shared
     let userInfoManager = UserInfoManaer.shared
     
     var delegate: AlertSelectAddressDelegate?
@@ -182,7 +181,7 @@ class AddressListCell: UITableViewCell {
     @IBAction func checkTapped(_ sender: UIButton!) {
         let para: ModifyAddressRequest = ModifyAddressRequest(address: nil, detailAddress: nil, name: nil, phoneNumber: nil, isSelected: 1, isFirst: nil, detailAddressInfo: nil)
         
-        addDataManager.requestModifyAddress(userId: userInfoManager.getUid(), addressIdx: addressIdx, para: para) { response in
+        addressDataManager.requestModifyAddress(userId: userInfoManager.getUid(), addressIdx: addressIdx, para: para) { response in
             if response.isSuccess {
                 self.delegate?.updateData()
                 self.delegate?.alert()

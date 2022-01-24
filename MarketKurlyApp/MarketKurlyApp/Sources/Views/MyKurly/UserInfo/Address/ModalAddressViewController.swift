@@ -14,6 +14,10 @@
 import UIKit
 
 class ModalAddressViewController: UIViewController {
+    
+    let addressDataManager = AddressDataManager.shared
+    let userInfoManager = UserInfoManaer.shared
+    var myAddressList: [AllAddressListDocument] = []
 
     // MARK: - Components
     @IBOutlet weak var tableView: UITableView!
@@ -22,6 +26,7 @@ class ModalAddressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setData()
     }
     
     // MARK: - Functions
@@ -30,6 +35,22 @@ class ModalAddressViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 130
+    }
+    
+    /* API 통신 부분 */
+    func setData(){
+        addressDataManager.requestShowAddressList(userId: userInfoManager.getUid(), token: userInfoManager.getToken()) { response in
+            self.myAddressList = response.result
+            self.tableView.reloadData()
+        }
+    }
+    
+    func alert(){
+        let alert = UIAlertController(title: "배송지 선택", message: "배송지 선택이 완료되었습니다.", preferredStyle: UIAlertController.Style.alert)
+        let defaultAction = UIAlertAction(title: "확인", style: .default) { (action) in
+        }
+        alert.addAction(defaultAction)
+        self.present(alert, animated: false, completion: nil)
     }
 }
 
@@ -41,7 +62,7 @@ extension ModalAddressViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0 :
-            return 2
+            return myAddressList.count
         default:
             return 1
         }
@@ -53,13 +74,68 @@ extension ModalAddressViewController: UITableViewDelegate, UITableViewDataSource
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "addressCell", for: indexPath) as? AddressCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
+            
+            let target = myAddressList[indexPath.row]
+            
+            cell.mainAddressLabel.text =  target.address
+            cell.subAddressLabel.text = target.detail_address
+            
+            if target.name != nil {
+                cell.userInfoLabel.isHidden = false
+                // 이름이 있다
+                if target.phoneNumber != nil {
+                    // 넘버가 있다.
+                    cell.userInfoLabel.text =
+                    " \(target.name ?? " ") \(target.phoneNumber ?? " ")"
+                } else {
+                    cell.userInfoLabel.text = " \(target.name ?? " ")"
+                }
+            }else {
+                if target.phoneNumber != nil {
+                    cell.userInfoLabel.isHidden = false
+                    cell.userInfoLabel.text = " \(target.phoneNumber ?? " ")"
+                } else {
+                    cell.userInfoLabel.isHidden = true
+                }
+            }
+            
+            if target.isFirst == 1 {
+                cell.basicStackView.isHidden = false
+            } else {
+                cell.basicStackView.isHidden = true
+            }
+            
+            if target.isSelected == 1 {
+                cell.checkImg.isHidden = false
+            } else {
+                cell.checkImg.isHidden = true
+            }
+            
             return cell
         default :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "addNewAddressCell", for: indexPath) as? AddNewAddressCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let target = myAddressList[indexPath.row]
+        
+        let para: ModifyAddressRequest = ModifyAddressRequest(address: nil, detailAddress: nil, name: nil, phoneNumber: nil, isSelected: 1, isFirst: nil, detailAddressInfo: nil)
+        
+        addressDataManager.requestModifyAddress(userId: userInfoManager.getUid(), addressIdx: target.id, para: para) { response in
+            if response.isSuccess {
+                self.setData()
+                self.alert()
+            }
+            
+        }
+        
     }
     
     
@@ -72,6 +148,27 @@ extension ModalAddressViewController: UITableViewDelegate, UITableViewDataSource
 
 class AddressCell: UITableViewCell {
     
+    // MARK: - Components
+    @IBOutlet weak var basicStackView: UIStackView!
+    @IBOutlet weak var mainAddressLabel: UILabel!
+    @IBOutlet weak var subAddressLabel: UILabel!
+    @IBOutlet weak var userInfoLabel: UILabel!
+    @IBOutlet weak var checkImg: UIImageView!
+    
+    // MARK: - LifeCycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setUI()
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    // MARK: - Functions
+    func setUI(){
+        
+    }
     
 }
 

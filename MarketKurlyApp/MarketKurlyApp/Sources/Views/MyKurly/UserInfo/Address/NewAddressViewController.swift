@@ -44,6 +44,8 @@ class NewAddressViewController: UIViewController {
     func setUI(){
         dismissKeyboardWhenTappedAround()
         self.title = "주소 검색"
+        customNavigationBarAttribute(.white, .black)
+//        naviTitleDelete(navi: self.navigationController!)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         
@@ -55,7 +57,6 @@ class NewAddressViewController: UIViewController {
     }
     
     func moveToVC(){
-        print("들어갔니?")
         let storyboard = UIStoryboard(name: "Address", bundle: nil)
         guard let NewDetailAddressVC = storyboard.instantiateViewController(identifier: "NewDetailAddressSB") as? NewDetailAddressViewController else { return }
         NewDetailAddressVC.mainAddress = mainAddressTextField.text!
