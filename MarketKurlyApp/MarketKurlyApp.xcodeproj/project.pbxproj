@@ -131,6 +131,9 @@
 		9F786CE62796E62800EEA867 /* ThriftyShoppingCRVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CE42796E62800EEA867 /* ThriftyShoppingCRVCell.xib */; };
 		9F786CED2796E71300EEA867 /* EventCRVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F786CEB2796E71300EEA867 /* EventCRVCell.swift */; };
 		9F786CEE2796E71300EEA867 /* EventCRVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F786CEC2796E71300EEA867 /* EventCRVCell.xib */; };
+		9F8DC7C8279EEF49008D9076 /* CartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7C7279EEF49008D9076 /* CartDataManager.swift */; };
+		9F8DC7CA279EF09A008D9076 /* AddCartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7C9279EF09A008D9076 /* AddCartRequest.swift */; };
+		9F8DC7CC279EF0A3008D9076 /* AddCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7CB279EF0A3008D9076 /* AddCartResponse.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -397,6 +400,9 @@
 		9F786CE42796E62800EEA867 /* ThriftyShoppingCRVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThriftyShoppingCRVCell.xib; sourceTree = "<group>"; };
 		9F786CEB2796E71300EEA867 /* EventCRVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCRVCell.swift; sourceTree = "<group>"; };
 		9F786CEC2796E71300EEA867 /* EventCRVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCRVCell.xib; sourceTree = "<group>"; };
+		9F8DC7C7279EEF49008D9076 /* CartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataManager.swift; sourceTree = "<group>"; };
+		9F8DC7C9279EF09A008D9076 /* AddCartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCartRequest.swift; sourceTree = "<group>"; };
+		9F8DC7CB279EF0A3008D9076 /* AddCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCartResponse.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -950,6 +956,16 @@
 			path = HeaderCell;
 			sourceTree = "<group>";
 		};
+		9F8DC7C6279EEF34008D9076 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				9F8DC7C7279EEF49008D9076 /* CartDataManager.swift */,
+				9F8DC7C9279EF09A008D9076 /* AddCartRequest.swift */,
+				9F8DC7CB279EF0A3008D9076 /* AddCartResponse.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1149,6 +1165,7 @@
 		9F9D5DE5278A046600CC63FA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9F8DC7C6279EEF34008D9076 /* Cart */,
 				9F6710DC279A301E00BC485A /* Address */,
 				9F6710CF279A16B200BC485A /* Wish */,
 				9F6710BB2799886700BC485A /* Category */,
@@ -1676,6 +1693,7 @@
 				9F9C58FF278B88CB005D164C /* OnlyBannerCell.swift in Sources */,
 				9F6710EA279A367800BC485A /* ModifyAddressRequest.swift in Sources */,
 				9F786CE52796E62800EEA867 /* ThriftyShoppingCRVCell.swift in Sources */,
+				9F8DC7CC279EF0A3008D9076 /* AddCartResponse.swift in Sources */,
 				9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */,
 				9F9D5E11278A0D4400CC63FA /* UINavigationBar.swift in Sources */,
 				9FB51FA7278D8D8400DEF835 /* BaseTextField.swift in Sources */,
@@ -1761,6 +1779,8 @@
 				9F9CE9A02797EFE80071D454 /* InformationUseViewController.swift in Sources */,
 				9FCC943C278A1DF5000493AD /* ParentViewController.swift in Sources */,
 				9F6710DB279A186600BC485A /* ShowWishListResponse.swift in Sources */,
+				9F8DC7C8279EEF49008D9076 /* CartDataManager.swift in Sources */,
+				9F8DC7CA279EF09A008D9076 /* AddCartRequest.swift in Sources */,
 				9F9D5E21278A103A00CC63FA /* SignUpRequest.swift in Sources */,
 				9F9CE9962797D9C20071D454 /* AboutKurlyViewController.swift in Sources */,
 				9F6710E6279A353600BC485A /* SelectAddressInfoResponse.swift in Sources */,

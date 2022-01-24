@@ -27,6 +27,11 @@ class ItemBuyViewController: UIViewController {
     
     @IBAction func buyBtnTapped(_ sender: Any) {
         presentAlert(title: "장바구니에 상품을 담았습니다.")
+        
+        
+        
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -45,7 +50,8 @@ class ItemBuyViewController: UIViewController {
         }
         
         totalPrice = Int(stepper.value * Double(salePrice))
-        buyBtn.setTitle("\(totalPrice)원 장바구니 담기", for: .normal)
+        buyBtn.setTitle("\(DecimalWon(value: totalPrice)) 장바구니 담기", for: .normal)
+        pointTransform(cnt: Int(stepper.value))
     }
     
     
@@ -54,7 +60,7 @@ class ItemBuyViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         loadData()
-        pointTransform()
+        pointTransform(cnt: 1)
     }
     
     // MARK: - Functions
@@ -84,14 +90,16 @@ class ItemBuyViewController: UIViewController {
         itemNameLabel.text = itemDocument.name
         if itemDocument.discount_rate == "0%" {
             priceLabel.text = DecimalWon(value: itemDocument.price)
-            buyBtn.setTitle("\(itemDocument.price)원 장바구니 담기", for: .normal)
+            
+            buyBtn.setTitle("\(DecimalWon(value: itemDocument.price)) 장바구니 담기", for: .normal)
         }else {
             priceLabel.text = DecimalWon(value: itemDocument.member_discount_price)
-            buyBtn.setTitle("\(itemDocument.member_discount_price)원 장바구니 담기", for: .normal)
+            
+            buyBtn.setTitle("\(DecimalWon(value: itemDocument.member_discount_price)) 장바구니 담기", for: .normal)
         }
     }
     
-    func pointTransform(){
+    func pointTransform(cnt: Int){
         let levelInfo = userInfoManater.getUserLevelInfo()
         guard let itemDocument = itemDocument else {
             return
@@ -104,12 +112,12 @@ class ItemBuyViewController: UIViewController {
         if itemDocument.discount_rate == "0%" {
             let point = levelInfo.pointsRate * 0.01 * Double(itemDocument.price)
             let pointUp = round(point*pow(10,0))/pow(10,0)
-            pointLabel.text = "구매시 \(Int(pointUp))원 적립"
+            pointLabel.text = "구매시 \(Int(pointUp)*cnt)원 적립"
             originPriceLabel.isHidden = true
         }else {
             let point = levelInfo.pointsRate * 0.01 * Double(itemDocument.member_discount_price)
             let pointUp = round(point*pow(10,0))/pow(10,0)
-            pointLabel.text = "구매시 \(Int(pointUp))원 적립"
+            pointLabel.text = "구매시 \(Int(pointUp)*cnt)원 적립"
             originPriceLabel.isHidden = false
             cancleLine(text: DecimalWon(value: itemDocument.price), targetLabel: originPriceLabel)
         }
