@@ -20,6 +20,9 @@ class ItemMainCell: UITableViewCell {
     @IBOutlet weak var memberDiscount: UILabel!
     @IBOutlet weak var itemOriginPriceLabel: UILabel!
     @IBOutlet weak var itemSalePriceLabel: UILabel!
+    
+    
+    @IBOutlet weak var itemDiscountStackView: UIStackView!
     @IBOutlet weak var itemDiscountRate: UILabel!
     @IBOutlet weak var questimage: UIButton!
     

@@ -50,6 +50,31 @@ class ItemExplanationViewController: UIViewController, IndicatorInfoProvider {
         self.tableView.register(newCellNib, forCellReuseIdentifier: cellIdentifier)
     }
     
+    func pointTransform(levelLabel: UILabel,pointLabel: UILabel){
+        let levelInfo = userInfoManater.getUserLevelInfo()
+        guard let itemDocument = itemDocument else {
+            return
+        }
+        guard let levelInfo = levelInfo else {
+            levelLabel.text = "로그인 후, 회원할인가와 적립혜택이 제공됩니다."
+            pointLabel.isHidden = true
+            return
+        }
+        levelLabel.text = "\(levelInfo.name) \(levelInfo.pointsRate)%"
+        pointLabel.isHidden = false
+        
+        if itemDocument.discount_rate == "0%" {
+            let point = levelInfo.pointsRate * 0.01 * Double(itemDocument.price)
+            let pointUp = round(point*pow(10,0))/pow(10,0)
+            pointLabel.text = "개당 \(Int(pointUp))원 적립"
+        }else {
+            let point = levelInfo.pointsRate * 0.01 * Double(itemDocument.member_discount_price)
+            let pointUp = round(point*pow(10,0))/pow(10,0)
+            pointLabel.text = "개당 \(Int(pointUp))원 적립"
+        }
+  
+    }
+    
 }
 
 extension ItemExplanationViewController: UITableViewDataSource, UITableViewDelegate {
@@ -80,26 +105,18 @@ extension ItemExplanationViewController: UITableViewDataSource, UITableViewDeleg
                 cell.itemNameLabel.text = itemInfo?.name
                 cell.itemSubNameLabel.text = itemInfo?.product_description
                 
-//                let levelInfo = userInfoManater.getUserLevelInfo()
-//                cell.userLevelLabel.text = "\(levelInfo?.name) \(levelInfo!.pointsRate)%"
-//
-//                let point = Double(levelInfo!.pointsRate) * 0.1 * Double(itemInfo!.price)
-//
-//                let pointUp = round(point*pow(10,0))/pow(10,0)
-//                cell.pointLabel.text = "개당 \(pointUp)원 적립"
+                pointTransform(levelLabel: cell.userLevelLabel, pointLabel: cell.pointLabel)
                 
                 // 할인 유무
                 if itemInfo?.discount_rate == "0%" {
                     cell.memberDiscount.isHidden = true
                     cell.itemDiscountRate.isHidden = true
-                    cell.itemOriginPriceLabel.isHidden = true
-                    cell.questimage.isHidden = true
+                    cell.itemDiscountStackView.isHidden = true
                     cell.itemSalePriceLabel.text = DecimalWon2(value: itemInfo?.price ?? 12900)
                 } else {
                     cell.memberDiscount.isHidden = false
                     cell.itemDiscountRate.isHidden = false
-                    cell.itemOriginPriceLabel.isHidden = false
-                    cell.questimage.isHidden = false
+                    cell.itemDiscountStackView.isHidden = false
                     cell.itemSalePriceLabel.text = DecimalWon2(value: itemInfo?.member_discount_price ?? 15900)
                     cell.itemDiscountRate.text = itemInfo?.discount_rate
                     cancleLine(text: DecimalWon(value: itemInfo?.price ?? 20900), targetLabel: cell.itemOriginPriceLabel)

@@ -332,9 +332,16 @@
                                             <action selector="changeCntTapped:" destination="R5c-5J-agL" eventType="valueChanged" id="ed1-P7-QS2"/>
                                         </connections>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2,990원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxH-Kn-xPd">
+                                        <rect key="frame" x="87" y="66" width="53.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.50046207929999997" green="0.50046207929999997" blue="0.50046207929999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="NxH-Kn-xPd" secondAttribute="bottom" constant="16" id="4BJ-Ue-paN"/>
                                     <constraint firstAttribute="trailing" secondItem="QtV-qc-Q61" secondAttribute="trailing" constant="20" id="NZk-gs-hag"/>
                                     <constraint firstItem="Uc0-Vj-ngE" firstAttribute="leading" secondItem="v5d-8k-Exf" secondAttribute="leading" constant="20" id="Sym-vZ-DiR"/>
                                     <constraint firstAttribute="height" constant="100" id="WRv-ta-Pwe"/>
@@ -342,6 +349,7 @@
                                     <constraint firstItem="Uc0-Vj-ngE" firstAttribute="top" secondItem="v5d-8k-Exf" secondAttribute="top" constant="15" id="b1A-8f-1ub"/>
                                     <constraint firstAttribute="bottom" secondItem="Y4O-pW-XMq" secondAttribute="bottom" constant="15" id="k3q-gb-qeV"/>
                                     <constraint firstItem="Y4O-pW-XMq" firstAttribute="leading" secondItem="v5d-8k-Exf" secondAttribute="leading" constant="20" id="mf3-UL-wQl"/>
+                                    <constraint firstItem="NxH-Kn-xPd" firstAttribute="leading" secondItem="Y4O-pW-XMq" secondAttribute="trailing" constant="5" id="nO2-Z9-xLt"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQI-iZ-nql">
@@ -398,6 +406,7 @@
                         <outlet property="buyBtn" destination="qQI-iZ-nql" id="b81-aU-3xW"/>
                         <outlet property="contentView" destination="v5d-8k-Exf" id="jX6-H1-Mhn"/>
                         <outlet property="itemNameLabel" destination="Uc0-Vj-ngE" id="G3w-fU-HCh"/>
+                        <outlet property="originPriceLabel" destination="NxH-Kn-xPd" id="is9-ky-GUg"/>
                         <outlet property="pointLabel" destination="5EY-QE-cIR" id="Das-eZ-qiT"/>
                         <outlet property="priceLabel" destination="Y4O-pW-XMq" id="iPy-tt-Jfh"/>
                         <outlet property="stepper" destination="QtV-qc-Q61" id="Spz-7q-Ul1"/>

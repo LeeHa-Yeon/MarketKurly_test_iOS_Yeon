@@ -105,10 +105,8 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     /* API 해당 부분 */
     func setData(){
         if itemDocument?.present == 0 {
-            print("dia")
             presentBtn.isHidden = true
         } else {
-            print("만ㅇㄹ")
             presentBtn.isHidden = false
         }
     }

@@ -11,14 +11,17 @@ import GMStepper
 class ItemBuyViewController: UIViewController {
     
     var itemDocument: ItemContentDocument?
+    let userInfoManater = UserInfoManaer.shared
     var totalPrice: Int = 0
     var pointContent: String = ""
-
+    
     // MARK: - Components
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var stepper: GMStepper!
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var originPriceLabel: UILabel!
+    
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var buyBtn: UIButton!
     
@@ -26,7 +29,7 @@ class ItemBuyViewController: UIViewController {
         presentAlert(title: "장바구니에 상품을 담았습니다.")
     }
     
-
+    
     @IBAction func changeCntTapped(_ sender: Any) {
         
         var salePrice: Int = 0
@@ -51,8 +54,9 @@ class ItemBuyViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         loadData()
+        pointTransform()
     }
-
+    
     // MARK: - Functions
     func setUI(){
         customView(stepper, cornerValue: 3, viewBorderColor: #colorLiteral(red: 0.8375317454, green: 0.8376728892, blue: 0.8375131488, alpha: 1) , viewBorderWidth: 1)
@@ -70,7 +74,7 @@ class ItemBuyViewController: UIViewController {
         stepper.labelTextColor = .black
         stepper.labelBackgroundColor = .clear
         stepper.labelFont =  UIFont ( name : "AvenirNext-Bold" , size : 14.0 )!
-
+        
     }
     
     func loadData(){
@@ -85,7 +89,31 @@ class ItemBuyViewController: UIViewController {
             priceLabel.text = DecimalWon(value: itemDocument.member_discount_price)
             buyBtn.setTitle("\(itemDocument.member_discount_price)원 장바구니 담기", for: .normal)
         }
-        
     }
-
+    
+    func pointTransform(){
+        let levelInfo = userInfoManater.getUserLevelInfo()
+        guard let itemDocument = itemDocument else {
+            return
+        }
+        guard let levelInfo = levelInfo else {
+            pointLabel.text = "로그인 후, 적립해택 제공"
+            return
+        }
+        
+        if itemDocument.discount_rate == "0%" {
+            let point = levelInfo.pointsRate * 0.01 * Double(itemDocument.price)
+            let pointUp = round(point*pow(10,0))/pow(10,0)
+            pointLabel.text = "구매시 \(Int(pointUp))원 적립"
+            originPriceLabel.isHidden = true
+        }else {
+            let point = levelInfo.pointsRate * 0.01 * Double(itemDocument.member_discount_price)
+            let pointUp = round(point*pow(10,0))/pow(10,0)
+            pointLabel.text = "구매시 \(Int(pointUp))원 적립"
+            originPriceLabel.isHidden = false
+            cancleLine(text: DecimalWon(value: itemDocument.price), targetLabel: originPriceLabel)
+        }
+  
+    }
+    
 }
