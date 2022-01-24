@@ -10,7 +10,9 @@ import GMStepper
 
 class ItemBuyViewController: UIViewController {
     
+    var itemDocument: ItemContentDocument?
     var totalPrice: Int = 0
+    var pointContent: String = ""
 
     // MARK: - Components
     @IBOutlet weak var contentView: UIView!
@@ -26,7 +28,20 @@ class ItemBuyViewController: UIViewController {
     
 
     @IBAction func changeCntTapped(_ sender: Any) {
-        totalPrice = Int(stepper.value * 2990)
+        
+        var salePrice: Int = 0
+        
+        guard let itemDocument = itemDocument else {
+            return
+        }
+        
+        if itemDocument.discount_rate == "0%" {
+            salePrice = itemDocument.price
+        }else {
+            salePrice = itemDocument.member_discount_price
+        }
+        
+        totalPrice = Int(stepper.value * Double(salePrice))
         buyBtn.setTitle("\(totalPrice)원 장바구니 담기", for: .normal)
     }
     
@@ -35,6 +50,7 @@ class ItemBuyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        loadData()
     }
 
     // MARK: - Functions
@@ -55,6 +71,21 @@ class ItemBuyViewController: UIViewController {
         stepper.labelBackgroundColor = .clear
         stepper.labelFont =  UIFont ( name : "AvenirNext-Bold" , size : 14.0 )!
 
+    }
+    
+    func loadData(){
+        guard let itemDocument = itemDocument else {
+            return
+        }
+        itemNameLabel.text = itemDocument.name
+        if itemDocument.discount_rate == "0%" {
+            priceLabel.text = DecimalWon(value: itemDocument.price)
+            buyBtn.setTitle("\(itemDocument.price)원 장바구니 담기", for: .normal)
+        }else {
+            priceLabel.text = DecimalWon(value: itemDocument.member_discount_price)
+            buyBtn.setTitle("\(itemDocument.member_discount_price)원 장바구니 담기", for: .normal)
+        }
+        
     }
 
 }

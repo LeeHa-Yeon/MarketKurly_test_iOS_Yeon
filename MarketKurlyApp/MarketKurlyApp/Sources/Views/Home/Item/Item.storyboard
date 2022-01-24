@@ -198,9 +198,6 @@
                                                 <state key="normal" title="선물하기">
                                                     <color key="titleColor" red="0.34238141779999998" green="0.053343534470000002" blue="0.48630303139999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="buyBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qz9-43-lHA"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-FQ-Ufz">
                                                 <rect key="frame" x="168.5" y="0.0" width="165.5" height="50"/>
@@ -211,8 +208,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="buyBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Kj8-gp-isg"/>
-                                                    <segue destination="R5c-5J-agL" kind="presentation" id="wqM-Yi-VBQ"/>
+                                                    <action selector="buyBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2c4-sS-Ecv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -259,9 +255,6 @@
                         <barButtonItem key="backBarButtonItem" title="  " id="AT3-3a-k3r"/>
                         <barButtonItem key="leftBarButtonItem" id="ytv-ro-LUg">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="backBtnTapped:" destination="Y6W-OH-hqX" id="6wF-jL-Tek"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -282,11 +275,11 @@
             <objects>
                 <viewController storyboardIdentifier="ItemBuySB" id="R5c-5J-agL" customClass="ItemBuyViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dzx-3L-os8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sm9-D7-L4r">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKe-7N-9oT">
                                         <rect key="frame" x="20" y="22.5" width="15" height="15"/>
@@ -314,7 +307,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5d-8k-Exf">
-                                <rect key="frame" x="0.0" y="60" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친환경 당근 500g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc0-Vj-ngE">
                                         <rect key="frame" x="20" y="15" width="109.5" height="18"/>
@@ -352,29 +345,28 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQI-iZ-nql">
-                                <rect key="frame" x="15" y="743" width="384" height="50"/>
+                                <rect key="frame" x="15" y="797" width="384" height="50"/>
                                 <color key="backgroundColor" red="0.30813050939999997" green="0.040111903919999997" blue="0.44349308599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="A7n-zu-Fe0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="2,990원 장바구니 담기">
+                                <state key="normal" title="장바구니 담기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buyBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OC3-JT-Gdi"/>
                                     <action selector="buyBtnTapped:" destination="R5c-5J-agL" eventType="touchUpInside" id="PX8-hz-cfv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 후, 적립해택 제공" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EY-QE-cIR">
-                                <rect key="frame" x="267" y="175" width="132" height="17"/>
+                                <rect key="frame" x="267" y="219" width="132" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13.5"/>
                                 <color key="textColor" red="0.43285220429999999" green="0.43285220429999999" blue="0.43285220429999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCD-Kq-z4Z">
-                                <rect key="frame" x="242" y="175" width="17" height="17"/>
+                                <rect key="frame" x="242" y="219" width="17" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="17" id="DsS-Lo-1DW"/>
                                     <constraint firstAttribute="width" secondItem="lCD-Kq-z4Z" secondAttribute="height" id="bdp-s9-ZPP"/>
@@ -514,7 +506,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buyBtnTapped:" destination="R5c-5J-agL" eventType="touchUpInside" id="Xa9-Yf-eJX"/>
-                                    <action selector="buyBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ke9-Hy-qLx"/>
                                     <action selector="writeReviewTapped:" destination="Qbb-hf-5vf" eventType="touchUpInside" id="F3O-Ri-8jo"/>
                                 </connections>
                             </button>
@@ -737,7 +728,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buyBtnTapped:" destination="R5c-5J-agL" eventType="touchUpInside" id="Dnm-Mc-p9W"/>
-                                    <action selector="buyBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="U2Y-ch-m31"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ixe-WM-E6x">
@@ -795,7 +785,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buyBtnTapped:" destination="R5c-5J-agL" eventType="touchUpInside" id="gtf-q6-UzG"/>
-                                    <action selector="buyBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yzj-yT-Jex"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0r0-cr-955">

@@ -38,7 +38,10 @@ class ItemDetailViewController: ButtonBarPagerTabStripViewController {
     }
     @IBAction func buyBtnTapped(_ sender: Any) {
         // TODO: 구매하기
-        print("구매하기 탭했어여!")
+        let storyboard = UIStoryboard(name: "Item", bundle: nil)
+        guard let ItemBuyVC = storyboard.instantiateViewController(identifier: "ItemBuySB") as? ItemBuyViewController else { return }
+        ItemBuyVC.itemDocument = itemDocument
+        self.present(ItemBuyVC, animated: true, completion: nil)
     }
     
     

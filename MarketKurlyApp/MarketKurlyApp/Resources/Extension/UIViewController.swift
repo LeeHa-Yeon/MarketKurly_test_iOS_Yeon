@@ -242,7 +242,7 @@ extension UIViewController {
         let storyboard = UIStoryboard(name: "Address", bundle: nil)
         let ModalAddressVC = storyboard.instantiateViewController(identifier: "ModalAddressSB")
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: ModalAddressVC)
-        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 480
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 540
         bottomSheet.scrimColor = UIColor.black.withAlphaComponent(0.5)
         present(bottomSheet, animated: true, completion: nil)
     }
