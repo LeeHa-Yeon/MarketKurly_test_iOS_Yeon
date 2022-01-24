@@ -13,7 +13,7 @@ class CartDataManager {
     private init() {}
     
     // MARK: - 장바구니 생성
-    func requestAddCart(userId:Int ,para: AddCartRequest ,completion: @escaping (AddCartResponse)->(Void)){
+    func requestAddCart(userId:Int, para: AddCartRequest, completion: @escaping (AddCartResponse)->(Void)){
         let URL = Constant.BasicURL + "users/v2/\(userId)/basket/v2"
         
         AF.request(URL, method: .post, parameters: para, encoder: JSONParameterEncoder() ).validate().responseDecodable(of:AddCartResponse.self) { response in
@@ -25,6 +25,23 @@ class CartDataManager {
             }
         }
     }
+    
+    // MARK: - 장바구니 조회
+    func requestShowCartList(userId:Int, completion: @escaping (ShowCartListResponse)->(Void)){
+        let URL = Constant.BasicURL + "users/v2/\(userId)/basket/v2"
+        
+        AF.request(URL, method: .get ).validate().responseDecodable(of:ShowCartListResponse.self) { response in
+            switch response.result {
+            case .success(let response) :
+                completion(response)
+            case .failure(let error) :
+                print(" 2장바구니 네ㅡ워크 실패: ",error.localizedDescription)
+            }
+        }
+    }
+    
+    
+    // MARK: - 장바구니 삭제
     
     
 }
