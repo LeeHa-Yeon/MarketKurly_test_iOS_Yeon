@@ -40,8 +40,18 @@ class CartDataManager {
         }
     }
     
-    
     // MARK: - 장바구니 삭제
-    
+    func requestDeleteCart(basketId:Int, completion: @escaping (DeleteCartResponse)->(Void)){
+        let URL = "http://3.36.52.30:8081/basket/kurly/\(basketId)"
+        
+        AF.request(URL, method: .delete ).validate().responseDecodable(of:DeleteCartResponse.self) { response in
+            switch response.result {
+            case .success(let response) :
+                completion(response)
+            case .failure(let error) :
+                print(" 3장바구니 네ㅡ워크 실패: ",error.localizedDescription)
+            }
+        }
+    }
     
 }

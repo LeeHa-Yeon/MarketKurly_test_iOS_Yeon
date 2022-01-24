@@ -135,6 +135,7 @@
 		9F8DC7CA279EF09A008D9076 /* AddCartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7C9279EF09A008D9076 /* AddCartRequest.swift */; };
 		9F8DC7CC279EF0A3008D9076 /* AddCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7CB279EF0A3008D9076 /* AddCartResponse.swift */; };
 		9F8DC7CE279EF3DB008D9076 /* ShowCartListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7CD279EF3DB008D9076 /* ShowCartListResponse.swift */; };
+		9F8DC7D0279EF615008D9076 /* DeleteCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7CF279EF615008D9076 /* DeleteCartResponse.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -405,6 +406,7 @@
 		9F8DC7C9279EF09A008D9076 /* AddCartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCartRequest.swift; sourceTree = "<group>"; };
 		9F8DC7CB279EF0A3008D9076 /* AddCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCartResponse.swift; sourceTree = "<group>"; };
 		9F8DC7CD279EF3DB008D9076 /* ShowCartListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCartListResponse.swift; sourceTree = "<group>"; };
+		9F8DC7CF279EF615008D9076 /* DeleteCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCartResponse.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -965,6 +967,7 @@
 				9F8DC7C9279EF09A008D9076 /* AddCartRequest.swift */,
 				9F8DC7CB279EF0A3008D9076 /* AddCartResponse.swift */,
 				9F8DC7CD279EF3DB008D9076 /* ShowCartListResponse.swift */,
+				9F8DC7CF279EF615008D9076 /* DeleteCartResponse.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -1841,6 +1844,7 @@
 				9F9D5E15278A0F7500CC63FA /* LoginDataManager.swift in Sources */,
 				9F786CED2796E71300EEA867 /* EventCRVCell.swift in Sources */,
 				9F309DFF2792658500EBF5E0 /* CALayer.swift in Sources */,
+				9F8DC7D0279EF615008D9076 /* DeleteCartResponse.swift in Sources */,
 				9FCC9455278AA585000493AD /* MemberMyKurlyViewController.swift in Sources */,
 				9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */,
 				9F9CE99E2797ED100071D454 /* OneToOneNotionViewController.swift in Sources */,
