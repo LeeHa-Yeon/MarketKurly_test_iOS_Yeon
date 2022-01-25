@@ -44,6 +44,21 @@ class AddressDataManager {
         }
     }
     
+    // MARK: - 현재 선택된 배송지 조회하기 14
+    func requestCurrentSelectAddress(userId:Int,completion: @escaping (CurrentSelectAddressResponse)->(Void)){
+        
+        let URL = Constant.BasicURL + "address/\(userId)/selected"
+        
+        AF.request(URL, method: .get ).validate().responseDecodable(of:CurrentSelectAddressResponse.self) { response in
+            switch response.result {
+            case .success(let response) :
+                completion(response)
+            case .failure(let error) :
+                print(" 현재선택된 배송지 네ㅡ워크 실패: ",error.localizedDescription)
+            }
+        }
+    }
+    
     // MARK: - 배송지 추가하기 12
     func requestAddAddress(userId:Int ,token:String,para: AddAddressRequest ,completion: @escaping (AddAddressResponse)->(Void)){
         

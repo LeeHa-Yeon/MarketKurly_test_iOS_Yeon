@@ -8,18 +8,19 @@
 import UIKit
 import GMStepper
 
-struct DummyData {
-    let name: String
-    let price: String
-    let discountPrice: String
-    let cnt: Int
-    let img: String
-}
-
-
 class CartViewController: UIViewController {
     
-    var dummyData = [DummyData]()
+    var selectCnt: Int = 0
+    
+    var originPrice: Int = 0
+    var totalSalePrice: Int = 0
+    var discountPrice: Int = 0
+    
+    let userInfoManager = UserInfoManaer.shared
+    let cartDataManager = CartDataManager.shared
+    let addressDataManager = AddressDataManager.shared
+    var myCartList: [ShowCartListDocument] = []
+    var selectAddress: CurrentSelectAddressDocument?
     
     // MARK: - Components
     @IBOutlet weak var tableView: UITableView!
@@ -41,6 +42,10 @@ class CartViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setData()
+        let time = DispatchTime.now()
+        DispatchQueue.main.asyncAfter(deadline: time) {
+            self.setAddress()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,12 +65,44 @@ class CartViewController: UIViewController {
         tableView.estimatedRowHeight = 130
     }
     
+    func pointTransform(totalPrice: Int, pointLabel: UILabel){
+        let levelInfo = userInfoManager.getUserLevelInfo()
+        
+        guard let levelInfo = levelInfo else {
+            pointLabel.text = "로그인 후, 적립해택 제공"
+            return
+        }
+        
+        let point = levelInfo.pointsRate * 0.01 * Double(totalPrice)
+        let pointUp = round(point*pow(10,0))/pow(10,0)
+        pointLabel.text = "구매시 \(Int(pointUp))원 적립"
+    }
+    
+    
+    
     /* API 통신 부분 */
     func setData(){
-        dummyData.append(DummyData(name: "[아임웰 곤약잡곡 부드러운 닭가슴살 간장 계란밥]", price: "10,400원", discountPrice: "", cnt: 3, img:"testItem"))
-        dummyData.append(DummyData(name: "[아임웰 곤약잡곡 부드러운 닭가슴살 간장 계란밥]", price: "10,400원", discountPrice: "", cnt: 3, img:"testItem"))
-        dummyData.append(DummyData(name: "[아임웰 곤약잡곡 부드러운 닭가슴살 간장 계란밥]", price: "10,400원", discountPrice: "", cnt: 3, img:"testItem"))
+        cartDataManager.requestShowCartList(userId: userInfoManager.getUid()) { response in
+            self.myCartList = response.result
+            self.selectCnt  = 0
+            self.selectCnt = self.myCartList.count
+        }
     }
+    
+    func setAddress(){
+        addressDataManager.requestCurrentSelectAddress(userId: userInfoManager.getUid()) { response in
+            self.selectAddress = response.result
+            self.updateTable()
+        }
+    }
+    
+    func updateTable(){
+        self.originPrice = 0
+        self.totalSalePrice = 0
+        self.discountPrice = 0
+        self.tableView.reloadData()
+    }
+    
     
     
     
@@ -81,7 +118,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 1 :
-            return dummyData.count
+            return myCartList.count
         default :
             return 1
         }
@@ -129,17 +166,76 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
+            
+            cell.selectCntLabel.text = "전체선택 (\(selectCnt)/\(myCartList.count))"
+            
+            if selectCnt == myCartList.count {
+                let imageName = UIImage(named: "I_check")
+                cell.selectBtn.setImage(imageName, for: .normal)
+            } else {
+                let imageName = UIImage(named: "uncheck")
+                cell.selectBtn.setImage(imageName, for: .normal)
+            }
+            if selectAddress?.detail_address != nil {
+                cell.selectAddress.text = "\(selectAddress?.address ?? "") \(selectAddress?.detail_address ?? "")"
+            }else {
+                cell.selectAddress.text = "\(selectAddress?.address ?? "")"
+            }
+            
             return cell
+            
+            
         case 1 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cartContentCell", for: indexPath) as? CartContentCell else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
+            cell.delegate = self
+            let target = myCartList[indexPath.row]
+            cell.selectBasketIdx = target.basketId
+            cell.itemName.text = target.getItemRes.name
+            urlToImg(urlStr: target.getItemRes.items_img_url, img: cell.itemImage)
+            
+            cell.stepper.value = Double(target.count)
+            
+            if target.getItemRes.discount_rate == "0%" {
+                // 할인 상품이 아닐때
+                cell.salePrice.text = DecimalWon(value: target.getItemRes.price)
+                
+                cell.originPrice.isHidden = true
+                
+                totalSalePrice += target.getItemRes.price * target.count
+                
+                
+            } else {
+                // 할인 상품일때
+                cell.salePrice.text = DecimalWon(value: target.getItemRes.member_discount_price)
+                
+                cell.originPrice.isHidden = false
+                cancleLine(text: DecimalWon(value: target.getItemRes.price), targetLabel: cell.originPrice)
+                
+                totalSalePrice += target.getItemRes.member_discount_price * target.count
+                
+            }
+            
+            originPrice += target.getItemRes.price * target.count
+            
             return cell
+            
+            
+            
         default :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cartFooterCell", for: indexPath) as? CartFooterCell else {
                 return UITableViewCell()
             }
+            cell.originTotalPrice.text = DecimalWon(value: originPrice)
+            
+            cell.discountTotalPrice.text = "-\(DecimalWon(value: originPrice-totalSalePrice))"
+            cell.saleTotalPrice.text = DecimalWon(value: totalSalePrice)
+            
+            pointTransform(totalPrice: totalSalePrice, pointLabel: cell.pointLabel)
+            
+            
             cell.selectionStyle = .none
             return cell
             
@@ -156,6 +252,16 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
 class CartHeaderCell: UITableViewCell {
     
     // MARK: - Components
+    @IBOutlet weak var selectAddress: UILabel!
+    @IBOutlet weak var selectCntLabel: UILabel!
+    @IBOutlet weak var selectBtn: UIButton!
+    
+    
+    @IBAction func changeSelectAddress(_ sender: Any) {
+    }
+    @IBAction func allCheckBtnTapped(_ sender: Any) {
+        
+    }
     
     // MARK: - LifeCycle
     override func awakeFromNib() {
@@ -173,11 +279,53 @@ class CartHeaderCell: UITableViewCell {
     }
 }
 
+protocol CartVCDelegate {
+    func updateVC()
+}
+
+extension CartViewController: CartVCDelegate {
+    func updateVC(){
+        selectCnt-=1
+        originPrice = 0
+        totalSalePrice = 0
+        discountPrice = 0
+        
+        cartDataManager.requestShowCartList(userId: userInfoManager.getUid()) { response in
+            self.myCartList = response.result
+            self.tableView.reloadData()
+        }
+    }
+}
+
 
 class CartContentCell: UITableViewCell {
     
+    var delegate: CartVCDelegate?
+    
+    var selectBasketIdx:Int?
+    let cartDataManager = CartDataManager.shared
+    
     // MARK: - Components
+    @IBOutlet weak var checkBtn: UIButton!
+    @IBOutlet weak var deleteBtn: UIButton!
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var salePrice: UILabel!
+    @IBOutlet weak var originPrice: UILabel!
+    
     @IBOutlet weak var stepper: GMStepper!
+    
+    
+    @IBAction func deleteBtnTapped(_ sender: Any) {
+        guard let basketIdx = selectBasketIdx else {
+            return
+        }
+        cartDataManager.requestDeleteCart(basketId: basketIdx) { response in
+            if response.isSuccess {
+                self.delegate?.updateVC()
+            }
+        }
+    }
     
     
     // MARK: - LifeCycle
@@ -212,5 +360,32 @@ class CartContentCell: UITableViewCell {
 }
 
 class CartFooterCell: UITableViewCell {
+    
+    // MARK: - Components
+    
+    @IBOutlet weak var priceContentView: UIView!
+    @IBOutlet weak var originTotalPrice: UILabel!
+    @IBOutlet weak var discountTotalPrice: UILabel!
+    @IBOutlet weak var saleTotalPrice: UILabel!
+    @IBOutlet weak var pointLabel: UILabel!
+    
+    
+    // MARK: - LifeCycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setUI()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0))
+    }
+    
+    // MARK: - Functions
+    func setUI(){
+        priceContentView.layer.addBorder([.bottom], color: UIColor.lineColor, width: 1.0)
+        
+    }
     
 }
