@@ -371,6 +371,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.9368804007" green="0.9368804007" blue="0.9368804007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
+                                            <outlet property="deliveryPrice" destination="cHD-nn-X8g" id="mBr-dZ-ikh"/>
                                             <outlet property="discountTotalPrice" destination="wXv-4o-cAG" id="GpQ-xL-UQF"/>
                                             <outlet property="originTotalPrice" destination="ET1-tG-pIB" id="6fh-1a-BGc"/>
                                             <outlet property="pointLabel" destination="lC6-u5-OTa" id="XOI-LU-VKN"/>

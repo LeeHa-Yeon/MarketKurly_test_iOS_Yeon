@@ -40,17 +40,18 @@ class CartViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.title = "장바구니"
         setUI()
         setData()
         let time = DispatchTime.now()
         DispatchQueue.main.asyncAfter(deadline: time) {
             self.setAddress()
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.title = "장바구니"
     }
     
     // MARK: - Functions
@@ -78,6 +79,11 @@ class CartViewController: UIViewController {
         pointLabel.text = "구매시 \(Int(pointUp))원 적립"
     }
     
+    func moveToVC(SBName: String, SBId: String ,VCName: String){
+        let storyboard = UIStoryboard(name: SBName, bundle: nil)
+        let VCName = storyboard.instantiateViewController(identifier: SBId)
+        self.navigationController?.pushViewController(VCName, animated: true)
+    }
     
     
     /* API 통신 부분 */
@@ -166,7 +172,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
-            
+            cell.delegate = self
             cell.selectCntLabel.text = "전체선택 (\(selectCnt)/\(myCartList.count))"
             
             if selectCnt == myCartList.count {
@@ -231,7 +237,15 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
             cell.originTotalPrice.text = DecimalWon(value: originPrice)
             
             cell.discountTotalPrice.text = "-\(DecimalWon(value: originPrice-totalSalePrice))"
-            cell.saleTotalPrice.text = DecimalWon(value: totalSalePrice)
+            
+            if totalSalePrice >= 30000 {
+                cell.deliveryPrice.text = "0원"
+                cell.saleTotalPrice.text = DecimalWon(value: totalSalePrice)
+            }else {
+                cell.deliveryPrice.text = DecimalWon(value: 3000)
+                totalSalePrice += 3000
+                cell.saleTotalPrice.text = DecimalWon(value: totalSalePrice)
+            }
             
             pointTransform(totalPrice: totalSalePrice, pointLabel: cell.pointLabel)
             
@@ -251,6 +265,8 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
 
 class CartHeaderCell: UITableViewCell {
     
+    var delegate: CartVCDelegate?
+    
     // MARK: - Components
     @IBOutlet weak var selectAddress: UILabel!
     @IBOutlet weak var selectCntLabel: UILabel!
@@ -258,6 +274,9 @@ class CartHeaderCell: UITableViewCell {
     
     
     @IBAction func changeSelectAddress(_ sender: Any) {
+        
+        delegate?.moveToViewController()
+        
     }
     @IBAction func allCheckBtnTapped(_ sender: Any) {
         
@@ -281,9 +300,14 @@ class CartHeaderCell: UITableViewCell {
 
 protocol CartVCDelegate {
     func updateVC()
+    func moveToViewController()
 }
 
 extension CartViewController: CartVCDelegate {
+    func moveToViewController() {
+        moveToVC(SBName: "Address", SBId: "AddressManagmentSB" ,VCName: "AddressVC")
+    }
+    
     func updateVC(){
         selectCnt-=1
         originPrice = 0
@@ -295,6 +319,7 @@ extension CartViewController: CartVCDelegate {
             self.tableView.reloadData()
         }
     }
+    
 }
 
 
@@ -366,6 +391,7 @@ class CartFooterCell: UITableViewCell {
     @IBOutlet weak var priceContentView: UIView!
     @IBOutlet weak var originTotalPrice: UILabel!
     @IBOutlet weak var discountTotalPrice: UILabel!
+    @IBOutlet weak var deliveryPrice: UILabel!
     @IBOutlet weak var saleTotalPrice: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
     

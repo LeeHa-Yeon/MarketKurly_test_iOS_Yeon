@@ -125,7 +125,7 @@ extension CategoryListCell: ExpyTableViewDelegate, ExpyTableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoryParentCell") as? CategoryParentCell else {
             return UITableViewCell()
         }
-        if section < tempCategory.count-1 && section > 0 {
+        if section < tempCategory.count && section > 0 {
             let target = tempCategory[section-1]
             urlToImg(urlStr: target.imageULR, targetImg: cell.categoryImg)
         } else if section > 3 && section < 20 {
