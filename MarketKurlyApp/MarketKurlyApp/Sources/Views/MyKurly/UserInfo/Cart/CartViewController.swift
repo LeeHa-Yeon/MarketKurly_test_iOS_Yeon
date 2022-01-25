@@ -87,6 +87,41 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 1 {
+            return "냉장 상품"
+        }
+        return nil
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 1 {
+            return 35
+        }
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let myImage = UIImageView()
+        myImage.frame = CGRect(x: 15, y: -10, width: 30, height: 33)
+        myImage.image = UIImage(named: "I_water")
+        
+        
+        let myLabel = UILabel()
+        myLabel.frame = CGRect(x: 57, y: -10, width: UIScreen.main.bounds.size.width-30, height: 35)
+        myLabel.textAlignment = .left
+        myLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        myLabel.textColor = .black
+        myLabel.backgroundColor = .white
+        myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+        
+        let headerView = UIView()
+        headerView.addSubview(myLabel)
+        headerView.addSubview(myImage)
+        
+        return headerView
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0 :
@@ -120,7 +155,24 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
 
 class CartHeaderCell: UITableViewCell {
     
+    // MARK: - Components
+    
+    // MARK: - LifeCycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setUI()
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
+    }
+    
+    // MARK: - Functions
+    func setUI(){
+    }
 }
+
 
 class CartContentCell: UITableViewCell {
     

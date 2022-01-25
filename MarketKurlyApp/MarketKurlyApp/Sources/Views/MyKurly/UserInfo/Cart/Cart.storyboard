@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="30" estimatedSectionHeaderHeight="-1" sectionFooterHeight="30" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZlV-pD-XTK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="30" estimatedSectionHeaderHeight="-1" sectionFooterHeight="30" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZlV-pD-XTK">
                                 <rect key="frame" x="0.0" y="88" width="414" height="714"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -46,10 +46,14 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8R-c1-8pN">
-                                                            <rect key="frame" x="379.5" y="10" width="19.5" height="22"/>
+                                                            <rect key="frame" x="384" y="10" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="B8R-c1-8pN" secondAttribute="height" id="GMf-X9-wt2"/>
+                                                                <constraint firstAttribute="width" constant="15" id="eEb-b6-l3z"/>
+                                                            </constraints>
                                                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" image="arrow.right" catalog="system"/>
+                                                            <state key="normal" image="rightArrow"/>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="샛별배송" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ8-cX-kjh">
                                                             <rect key="frame" x="45" y="46.5" width="42" height="14.5"/>
@@ -109,6 +113,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="51m-1i-aiN" secondAttribute="trailing" id="1jT-Fz-QUD"/>
                                                 <constraint firstAttribute="trailing" secondItem="mBu-ws-aPw" secondAttribute="trailing" id="9Yk-vT-z8b"/>
@@ -119,6 +124,7 @@
                                                 <constraint firstItem="51m-1i-aiN" firstAttribute="leading" secondItem="gah-yN-JId" secondAttribute="leading" id="s52-Cs-aQA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.93688040068655298" green="0.93688040068655298" blue="0.93688040068655298" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartContentCell" rowHeight="173" id="NfX-lj-nW3" customClass="CartContentCell" customModule="MarketKurlyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="155.5" width="414" height="173"/>
@@ -409,9 +415,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="maker" width="512" height="512"/>
         <image name="point" width="136" height="124"/>
+        <image name="rightArrow" width="512" height="512"/>
         <image name="testItem" width="1170" height="1292"/>
         <image name="uncheck" width="512" height="512"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
