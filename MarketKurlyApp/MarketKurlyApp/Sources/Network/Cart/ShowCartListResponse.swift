@@ -26,7 +26,7 @@ struct CartInItemInfo: Decodable {
     let itemId: Int
     let name: String
     let price: Int
-    let discount_rate: String
+    let discount_rate: String?
     let member_discount_price: Int
     let created_at: String
     let items_img_url: String

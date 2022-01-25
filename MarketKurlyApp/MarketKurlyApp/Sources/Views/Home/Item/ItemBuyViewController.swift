@@ -7,11 +7,13 @@
 
 import UIKit
 import GMStepper
+import GSMessages
 
 class ItemBuyViewController: UIViewController {
     
     var itemDocument: ItemContentDocument?
-    let userInfoManater = UserInfoManaer.shared
+    let userInfoManager = UserInfoManaer.shared
+    let cartDataManager = CartDataManager.shared
     var totalPrice: Int = 0
     var pointContent: String = ""
     
@@ -26,12 +28,16 @@ class ItemBuyViewController: UIViewController {
     @IBOutlet weak var buyBtn: UIButton!
     
     @IBAction func buyBtnTapped(_ sender: Any) {
-        presentAlert(title: "장바구니에 상품을 담았습니다.")
+        guard let itemDocument = itemDocument else {
+            return
+        }
         
-        
-        
-        
-        self.dismiss(animated: true, completion: nil)
+        let para: AddCartRequest = AddCartRequest(itemId: itemDocument.itemId, count: Int(stepper.value))
+        cartDataManager.requestAddCart(userId: userInfoManager.getUid(), para: para) { response in
+            if response.isSuccess {
+                self.alertMessage(message: "장바구니에 상품을 담았습니다.")
+            }
+        }
     }
     
     
@@ -83,6 +89,19 @@ class ItemBuyViewController: UIViewController {
         
     }
     
+    func alertMessage(message: String){
+        showMessage(message, type: .success, options: [
+            .margin(.init(top: 0, left: 0, bottom: 0, right: 0)),
+            .cornerRadius(5),
+            .textAlignment(.center),
+            .textColor( #colorLiteral(red: 0.6685361266, green: 0, blue: 0, alpha: 1)  )
+        ])
+        let time = DispatchTime.now() + .seconds(1)
+        DispatchQueue.main.asyncAfter(deadline: time) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     func loadData(){
         guard let itemDocument = itemDocument else {
             return
@@ -100,7 +119,7 @@ class ItemBuyViewController: UIViewController {
     }
     
     func pointTransform(cnt: Int){
-        let levelInfo = userInfoManater.getUserLevelInfo()
+        let levelInfo = userInfoManager.getUserLevelInfo()
         guard let itemDocument = itemDocument else {
             return
         }

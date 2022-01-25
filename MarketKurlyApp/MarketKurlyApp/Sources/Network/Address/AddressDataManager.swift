@@ -80,7 +80,6 @@ class AddressDataManager {
         func requestDeleteWish(addressId:Int ,completion: @escaping (DeleteAddressResponse)->(Void)){
     
             let URL = Constant.BasicURL + "address/kurly/\(addressId)"
-//            let HTTP_HEADERS: HTTPHeaders = ["X-ACCESS-TOKEN":token]
     
             AF.request(URL, method: .delete ).validate().responseDecodable(of:DeleteAddressResponse.self) { response in
                 switch response.result {

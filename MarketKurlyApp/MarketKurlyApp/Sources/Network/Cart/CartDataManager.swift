@@ -42,6 +42,7 @@ class CartDataManager {
     
     // MARK: - 장바구니 삭제
     func requestDeleteCart(basketId:Int, completion: @escaping (DeleteCartResponse)->(Void)){
+        // TODO: - 서버쪽에서 수정해야될 것 같음 - 이 url만 app 부분이 빠져있음
         let URL = "http://3.36.52.30:8081/basket/kurly/\(basketId)"
         
         AF.request(URL, method: .delete ).validate().responseDecodable(of:DeleteCartResponse.self) { response in

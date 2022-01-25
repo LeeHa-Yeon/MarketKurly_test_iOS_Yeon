@@ -15,6 +15,7 @@ struct Constant {
     static let BasicURL: String = "http://3.36.52.30:8081/app/"
     static let BasicURL2: String = "http://3.34.127.98:9000/app/"
     
+    // 13.125.206.82:9000
     // "https://marketkurly.site/app/"
     // http://3.34.127.98:9000/app/more/3
     
