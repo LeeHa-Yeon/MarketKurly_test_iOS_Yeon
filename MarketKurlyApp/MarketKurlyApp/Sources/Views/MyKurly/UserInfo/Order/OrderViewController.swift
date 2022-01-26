@@ -9,13 +9,6 @@ import UIKit
 import ExpyTableView
 
 
-struct DummyOrderItem {
-    let name: String
-    let price: Int
-    let discountPrice: Int?
-    let cnt: Int
-}
-
 protocol testDelegate  {
     func moveToVC()
 }
@@ -31,7 +24,23 @@ extension OrderViewController  : testDelegate {
 class OrderViewController: UIViewController {
     
     var statusCell = [false,false,false,false,false,false,false,false]
-    var dummyOrderItemes: [DummyOrderItem] = []
+    
+    let userInfoManager = UserInfoManaer.shared
+    var basketIds: [Int] = []
+    var myCartList: [ShowCartListDocument] = []
+    var selectAddress: CurrentSelectAddressDocument?
+    
+    var salePrice: Int = 0
+    var originPrice: Int = 0
+    var discountPrice: Int = 0
+    var deliveryPrice: Int = 0
+    var couponDiscountPrice: Int = 0
+    var pointDiscountPrice:Int = 0
+    
+    var totalSalePrice: Int = 0
+    
+    var selectCnt: Int = 0
+    var payIdx:Int = 2
     
     // MARK: - Components
     @IBOutlet weak var tableView: ExpyTableView!
@@ -72,13 +81,21 @@ class OrderViewController: UIViewController {
         self.tableView.register(newCellNib, forCellReuseIdentifier: cellIdentifier)
     }
     
+    func pointTransform(totalPrice: Int, pointLabel: UILabel){
+        let levelInfo = userInfoManager.getUserLevelInfo()
+        
+        guard let levelInfo = levelInfo else {
+            pointLabel.text = "로그인 후, 적립해택 제공"
+            return
+        }
+        
+        let point = levelInfo.pointsRate * 0.01 * Double(totalPrice)
+        let pointUp = round(point*pow(10,0))/pow(10,0)
+        pointLabel.text = "구매시 \(Int(pointUp))원(\(levelInfo.pointsRate)%)"
+    }
+    
     /* API 통신할 부분 */
     func setData(){
-        dummyOrderItemes.append(DummyOrderItem(name: "[KF365] 깐마늘 200g", price: 2800, discountPrice: nil, cnt: 1))
-        dummyOrderItemes.append(DummyOrderItem(name: "친환경 남해초 200g", price: 3000, discountPrice: nil, cnt: 1))
-        dummyOrderItemes.append(DummyOrderItem(name: "[쿠치나 안티카] 선 드라이드 토마토 (투토솔)", price: 41970, discountPrice: 30420, cnt: 3))
-        dummyOrderItemes.append(DummyOrderItem(name: "[한일관 X 백년가게] 등심 불고기", price: 29000, discountPrice: nil, cnt: 1))
-        dummyOrderItemes.append(DummyOrderItem(name: "[뱅앤베이커스] 버터 쿠키 클래식", price: 20000, discountPrice: 1430, cnt: 2))
     }
 }
 
@@ -94,7 +111,7 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if section == 0 {
-            return dummyOrderItemes.count + 1
+            return selectCnt+1
         } else if section == 1 {
             return 2
         } else {
@@ -125,8 +142,18 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
                 
             }else {
                 cell.itemName.isHidden = false
-                cell.itemCnt.isHidden = false
+                
                 cell.arrowImg.image = UIImage(named: "bottomArrow")
+                cell.itemName.text = myCartList[0].getItemRes.name
+                if selectCnt > 1 {
+                    // 2개 이상
+                    cell.itemCnt.isHidden = false
+                    cell.itemCnt.text = "외 \(selectCnt-1)건"
+                }else {
+                    cell.itemCnt.isHidden = true
+                }
+                
+                
             }
             return cell
         case 1 :
@@ -141,12 +168,64 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
             }else {
                 cell.userInfoLabel.isHidden = false
                 cell.arrowImg.image = UIImage(named: "bottomArrow")
+                
+                cell.userInfoLabel.text = "\(userInfoManager.userInfo?.name ?? ""),\(userInfoManager.userInfo?.phoneNumber ?? "")"
             }
             return cell
         case 2 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderSheetThirdCell") as? OrderSheetThirdCell else {
                 return UITableViewCell()
             }
+            if selectAddress?.isFirst == 1 {
+                // 기본배송지
+                cell.standardAddressImg.isHidden = false
+            }else {
+                // 기본배송지 아님
+                cell.standardAddressImg.isHidden = true
+            }
+            
+            cell.mainAddress.text = " \(selectAddress?.address ?? "")"
+            
+            if selectAddress?.detail_address != nil {
+                cell.detailAddress.isHidden = false
+                cell.detailAddress.text = " \(selectAddress?.detail_address ?? "")"
+            }else {
+                cell.detailAddress.isHidden = true
+            }
+            
+            if ((selectAddress?.name) != nil) || ((selectAddress?.phoneNumber) != nil) {
+                // 정보가 있을 때
+                cell.blankView.isHidden = true
+                cell.fullView.isHidden = false
+                
+                if selectAddress?.name == nil {
+                    cell.nameLabel.text =
+                    "\(selectAddress?.phoneNumber ?? "정보없음")"
+                    
+                    
+                } else if selectAddress?.phoneNumber == nil {
+                    cell.nameLabel.text = "\(selectAddress?.name ?? "정보없음")"
+                } else {
+                    cell.nameLabel.text = "\(selectAddress?.name ?? " ") \(selectAddress?.phoneNumber ?? " ")"
+                    
+                }
+                
+                if selectAddress?.detailAddressInfo == nil {
+                    cell.recivePlaceLabel.isHidden = true
+                    cell.doneLabel.isHidden = true
+                }else {
+                    cell.recivePlaceLabel.isHidden = false
+                    cell.doneLabel.isHidden = false
+                    cell.recivePlaceLabel.text = "\(selectAddress?.detailAddressInfo?.receiveSpace ?? " ") "
+                    cell.doneLabel.text = "배송완료 메시지 \(selectAddress?.detailAddressInfo?.deliverCompletedMessage ?? " ")"
+                }
+                
+            }else {
+                // 정보 없을 때
+                cell.blankView.isHidden = false
+                cell.fullView.isHidden = true
+            }
+            
             cell.selectionStyle = .none
             return cell
         case 3 :
@@ -159,18 +238,27 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderSheetFifthCell") as? OrderSheetFifthCell else {
                 return UITableViewCell()
             }
+            cell.couponTextField.placeholder = "사용 가능 쿠폰 0장 / 전체 \(userInfoManager.userCouponInfo?.count ?? 0)장"
             cell.selectionStyle = .none
             return cell
         case 5 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderSheetSixCell") as? OrderSheetSixCell else {
                 return UITableViewCell()
             }
+            payIdx = cell.payIdx
             cell.selectionStyle = .none
             return cell
         case 6 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderSheetSevenCell") as? OrderSheetSevenCell else {
                 return UITableViewCell()
             }
+            cell.salePriceLabel.text = DecimalWon(value: salePrice)
+            cell.originPriceLabel.text = DecimalWon(value: originPrice)
+            cell.discountPriceLabel.text = "-\(DecimalWon(value: discountPrice))"
+            cell.deliveryLabel.text = DecimalWon(value: deliveryPrice)
+            totalSalePrice = salePrice+deliveryPrice-couponDiscountPrice-pointDiscountPrice
+            cell.totalPriceLabel.text = DecimalWon(value: totalSalePrice)
+            pointTransform(totalPrice: totalSalePrice, pointLabel: cell.pointLabel)
             cell.selectionStyle = .none
             return cell
         case 7 :
@@ -178,6 +266,7 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
                 return UITableViewCell()
             }
             cell.delegate = self
+            cell.button.setTitle("\(DecimalWon(value: totalSalePrice)) 결제하기", for: .normal)
             cell.selectionStyle = .none
             return cell
         default :
@@ -193,11 +282,31 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderItemFirstCell", for: indexPath) as? OrderItemFirstCell else {
                 return UITableViewCell()
             }
+            let target = myCartList[indexPath.row-1]
+            
+            urlToImg(urlStr: target.getItemRes.items_img_url, img: cell.itemImg)
+            cell.itemName.text = target.getItemRes.name
+            
+            if target.getItemRes.discount_rate == "0%" {
+                cell.itemOrignPrice.isHidden = true
+                cell.itemPrice.text = DecimalWon(value: target.getItemRes.price)
+                
+            }else {
+                cell.itemOrignPrice.isHidden = false
+                cell.itemPrice.text = DecimalWon(value: target.getItemRes.member_discount_price)
+                cancleLine(text: DecimalWon(value: target.getItemRes.price), targetLabel: cell.itemOrignPrice)
+            }
+            cell.itemCnt.text = "\(target.count)개"
+            
+            
             return cell
         case 1 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderUserInfoSecondCell", for: indexPath) as? OrderUserInfoSecondCell else {
                 return UITableViewCell()
             }
+            cell.userName.text = userInfoManager.getUserName()
+            cell.userPhone.text = userInfoManager.getUserPhone()
+            cell.userEmail.text = userInfoManager.getUserEmail()
             return cell
         default :
             return UITableViewCell()
@@ -212,6 +321,7 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
                 let storyboard = UIStoryboard(name: "Address", bundle: nil)
                 let AddressDetailMoreVC = storyboard.instantiateViewController(identifier: "AddressDetailMoreSB")
                 AddressDetailMoreVC.modalPresentationStyle = .fullScreen
+                
                 self.present(AddressDetailMoreVC, animated: true, completion: nil)
             }
         }
@@ -223,8 +333,13 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
     
     // cell 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-        
+        switch indexPath.section {
+        case 3 :
+            return 80
+        default :
+            return UITableView.automaticDimension
+        }
+  
     }
 }
 

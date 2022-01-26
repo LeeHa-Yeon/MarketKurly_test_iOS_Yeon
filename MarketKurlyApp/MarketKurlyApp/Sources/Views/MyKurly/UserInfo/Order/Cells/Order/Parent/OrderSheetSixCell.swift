@@ -10,7 +10,21 @@ import UIKit
 // 결제 수단
 class OrderSheetSixCell: UITableViewCell {
     
+    var payIdx = 2
+    
     // MARK: - Components
+    @IBAction func kakaoPayBtn(_ sender: Any) {
+        payIdx = 1
+    }
+    @IBAction func naverPayBtn(_ sender: Any) {
+        payIdx = 2
+    }
+    
+    @IBAction func checkBtnTapped(_ sender: UIButton) {
+        sender.isSelected.toggle()
+    }
+    
+    
     
     // MARK: - LifeCycle
     override func awakeFromNib() {

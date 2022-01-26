@@ -11,6 +11,13 @@ import UIKit
 class OrderSheetSevenCell: UITableViewCell {
     
     // MARK: - Components
+    @IBOutlet weak var salePriceLabel: UILabel!
+    @IBOutlet weak var originPriceLabel: UILabel!
+    @IBOutlet weak var discountPriceLabel: UILabel!
+    @IBOutlet weak var deliveryLabel: UILabel!
+    
+    @IBOutlet weak var totalPriceLabel: UILabel!
+    @IBOutlet weak var pointLabel: UILabel!
     
     // MARK: - LifeCycle
     override func awakeFromNib() {

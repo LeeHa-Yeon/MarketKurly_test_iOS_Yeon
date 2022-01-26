@@ -137,6 +137,7 @@
 		9F8DC7CE279EF3DB008D9076 /* ShowCartListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7CD279EF3DB008D9076 /* ShowCartListResponse.swift */; };
 		9F8DC7D0279EF615008D9076 /* DeleteCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7CF279EF615008D9076 /* DeleteCartResponse.swift */; };
 		9F8DC7D227A01B21008D9076 /* CurrentSelectAddressResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7D127A01B21008D9076 /* CurrentSelectAddressResponse.swift */; };
+		9F8DC7D527A03EA2008D9076 /* PointDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8DC7D427A03EA2008D9076 /* PointDataManager.swift */; };
 		9F9C58D9278B3F28005D164C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58D8278B3F28005D164C /* RecommendViewController.swift */; };
 		9F9C58DB278B3F42005D164C /* NewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DA278B3F42005D164C /* NewProductViewController.swift */; };
 		9F9C58DD278B3F48005D164C /* BestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C58DC278B3F48005D164C /* BestViewController.swift */; };
@@ -409,6 +410,7 @@
 		9F8DC7CD279EF3DB008D9076 /* ShowCartListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCartListResponse.swift; sourceTree = "<group>"; };
 		9F8DC7CF279EF615008D9076 /* DeleteCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCartResponse.swift; sourceTree = "<group>"; };
 		9F8DC7D127A01B21008D9076 /* CurrentSelectAddressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSelectAddressResponse.swift; sourceTree = "<group>"; };
+		9F8DC7D427A03EA2008D9076 /* PointDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointDataManager.swift; sourceTree = "<group>"; };
 		9F9C58D8278B3F28005D164C /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		9F9C58DA278B3F42005D164C /* NewProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductViewController.swift; sourceTree = "<group>"; };
 		9F9C58DC278B3F48005D164C /* BestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestViewController.swift; sourceTree = "<group>"; };
@@ -975,6 +977,14 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		9F8DC7D327A03E91008D9076 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				9F8DC7D427A03EA2008D9076 /* PointDataManager.swift */,
+			);
+			path = Point;
+			sourceTree = "<group>";
+		};
 		9F9C58E2278B5333005D164C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1174,6 +1184,7 @@
 		9F9D5DE5278A046600CC63FA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9F8DC7D327A03E91008D9076 /* Point */,
 				9F8DC7C6279EEF34008D9076 /* Cart */,
 				9F6710DC279A301E00BC485A /* Address */,
 				9F6710CF279A16B200BC485A /* Wish */,
@@ -1752,6 +1763,7 @@
 				9F489F632794031700E04879 /* HalfModalPresentationController.swift in Sources */,
 				9F309E0E279290B700EBF5E0 /* FindPwdPhoneRequest.swift in Sources */,
 				9F309DF6279222FD00EBF5E0 /* ItemInfoCell.swift in Sources */,
+				9F8DC7D527A03EA2008D9076 /* PointDataManager.swift in Sources */,
 				9F27219B278FAB7D00F85FA9 /* CategoryParentCell.swift in Sources */,
 				9F9CE9B12798256F0071D454 /* Protocol.swift in Sources */,
 				9F272199278F95C800F85FA9 /* CategoryRecommendCell.swift in Sources */,

@@ -12,9 +12,12 @@ class CartViewController: UIViewController {
     
     var selectCnt: Int = 0
     
+    var salePrice: Int = 0
     var originPrice: Int = 0
     var totalSalePrice: Int = 0
     var discountPrice: Int = 0
+    var deliveryPrice: Int = 0
+    var basketIdxes: [Int] = []
     
     let userInfoManager = UserInfoManaer.shared
     let cartDataManager = CartDataManager.shared
@@ -34,6 +37,15 @@ class CartViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Order", bundle: nil)
         guard let OrderVC = storyboard.instantiateViewController(identifier: "OrderSB") as? OrderViewController else {
             return }
+        OrderVC.basketIds = basketIdxes
+        OrderVC.selectAddress = selectAddress
+        OrderVC.salePrice = salePrice
+        OrderVC.originPrice = originPrice
+        OrderVC.totalSalePrice = totalSalePrice
+        OrderVC.discountPrice = discountPrice
+        OrderVC.deliveryPrice = deliveryPrice
+        OrderVC.selectCnt = selectCnt
+        OrderVC.myCartList = myCartList
         self.navigationController?.pushViewController(OrderVC, animated: true)
     }
     
@@ -106,6 +118,7 @@ class CartViewController: UIViewController {
         self.originPrice = 0
         self.totalSalePrice = 0
         self.discountPrice = 0
+        self.basketIdxes = []
         self.tableView.reloadData()
     }
     
@@ -197,7 +210,12 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
             }
             cell.selectionStyle = .none
             cell.delegate = self
+            
+            
             let target = myCartList[indexPath.row]
+            
+            basketIdxes.append(target.basketId)
+            
             cell.selectBasketIdx = target.basketId
             cell.itemName.text = target.getItemRes.name
             urlToImg(urlStr: target.getItemRes.items_img_url, img: cell.itemImage)
@@ -238,13 +256,18 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
             
             cell.discountTotalPrice.text = "-\(DecimalWon(value: originPrice-totalSalePrice))"
             
+            salePrice = totalSalePrice
+            discountPrice = originPrice-totalSalePrice
+            
             if totalSalePrice >= 30000 {
                 cell.deliveryPrice.text = "0원"
                 cell.saleTotalPrice.text = DecimalWon(value: totalSalePrice)
+                deliveryPrice = 0
             }else {
                 cell.deliveryPrice.text = DecimalWon(value: 3000)
                 totalSalePrice += 3000
                 cell.saleTotalPrice.text = DecimalWon(value: totalSalePrice)
+                deliveryPrice = 3000
             }
             
             pointTransform(totalPrice: totalSalePrice, pointLabel: cell.pointLabel)
@@ -313,6 +336,7 @@ extension CartViewController: CartVCDelegate {
         originPrice = 0
         totalSalePrice = 0
         discountPrice = 0
+        basketIdxes = []
         
         cartDataManager.requestShowCartList(userId: userInfoManager.getUid()) { response in
             self.myCartList = response.result

@@ -203,6 +203,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deliveryLabel" destination="s9D-Bw-99h" id="H73-sa-ALB"/>
+                <outlet property="discountPriceLabel" destination="tNy-bx-J9D" id="cYR-QB-z3U"/>
+                <outlet property="originPriceLabel" destination="HMn-Lz-sA8" id="oWa-hq-8rV"/>
+                <outlet property="pointLabel" destination="XoC-Dh-OWn" id="M3s-bG-xdH"/>
+                <outlet property="salePriceLabel" destination="WtM-rk-e6f" id="mUJ-sR-bbO"/>
+                <outlet property="totalPriceLabel" destination="d45-gI-080" id="sLg-VQ-MBp"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="202.23214285714286"/>
         </tableViewCell>
     </objects>
