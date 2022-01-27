@@ -278,6 +278,8 @@
 		9FEBA8AC27A2AA2900A296B3 /* OrderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8AB27A2AA2900A296B3 /* OrderDataManager.swift */; };
 		9FEBA8AE27A2AA7400A296B3 /* OrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8AD27A2AA7400A296B3 /* OrderRequest.swift */; };
 		9FEBA8B027A2AAF600A296B3 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8AF27A2AAF600A296B3 /* OrderResponse.swift */; };
+		9FEBA8B227A2B85C00A296B3 /* MyOrderListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8B127A2B85C00A296B3 /* MyOrderListResponse.swift */; };
+		9FEBA8B427A2BC8000A296B3 /* MyOrderDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8B327A2BC8000A296B3 /* MyOrderDetailResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -556,6 +558,8 @@
 		9FEBA8AB27A2AA2900A296B3 /* OrderDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDataManager.swift; sourceTree = "<group>"; };
 		9FEBA8AD27A2AA7400A296B3 /* OrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRequest.swift; sourceTree = "<group>"; };
 		9FEBA8AF27A2AAF600A296B3 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
+		9FEBA8B127A2B85C00A296B3 /* MyOrderListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderListResponse.swift; sourceTree = "<group>"; };
+		9FEBA8B327A2BC8000A296B3 /* MyOrderDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderDetailResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1535,6 +1539,8 @@
 				9FEBA8AB27A2AA2900A296B3 /* OrderDataManager.swift */,
 				9FEBA8AD27A2AA7400A296B3 /* OrderRequest.swift */,
 				9FEBA8AF27A2AAF600A296B3 /* OrderResponse.swift */,
+				9FEBA8B127A2B85C00A296B3 /* MyOrderListResponse.swift */,
+				9FEBA8B327A2BC8000A296B3 /* MyOrderDetailResponse.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -1797,6 +1803,7 @@
 				9F786CC927965AA200EEA867 /* AddDetailInfoCell.swift in Sources */,
 				9FA04384278D5E4E00FCD2FE /* MyKurlyViewController.swift in Sources */,
 				9F489F772794E5E300E04879 /* AfterOrderViewController.swift in Sources */,
+				9FEBA8B427A2BC8000A296B3 /* MyOrderDetailResponse.swift in Sources */,
 				9F9CE9A22797F3B50071D454 /* KurlyPurpleBoxViewController.swift in Sources */,
 				9F6710A22798F92F00BC485A /* DownloadCouponResponse.swift in Sources */,
 				9F6710BD2799887E00BC485A /* CategoryDataManger.swift in Sources */,
@@ -1909,6 +1916,7 @@
 				9F6710E8279A362400BC485A /* DeleteAddressResponse.swift in Sources */,
 				9F6710A02798F47900BC485A /* RegisterCouponResponse.swift in Sources */,
 				9F9CE9C02798BA1A0071D454 /* SelectLevelResponse.swift in Sources */,
+				9FEBA8B227A2B85C00A296B3 /* MyOrderListResponse.swift in Sources */,
 				9F9CE98927979C040071D454 /* GiftBoxViewController.swift in Sources */,
 				9F6710CA2799D31700BC485A /* RootReviewViewController.swift in Sources */,
 				9F9C5925278BB126005D164C /* Product2Cell.swift in Sources */,

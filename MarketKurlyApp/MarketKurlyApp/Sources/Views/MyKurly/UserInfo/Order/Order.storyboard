@@ -892,7 +892,13 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.95687562230000001" green="0.95683962109999998" blue="0.95686405900000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
+                                            <outlet property="itemNameLabel" destination="zCz-95-VZJ" id="bgo-a6-KCN"/>
+                                            <outlet property="orderIdLabel" destination="3g6-Fd-eBa" id="do1-yQ-99F"/>
                                             <outlet property="orderNumView" destination="JHQ-vC-BMk" id="UdS-Al-40q"/>
+                                            <outlet property="orderStatusLabel" destination="A3M-1h-JqJ" id="4aq-7q-DZn"/>
+                                            <outlet property="payDateLabel" destination="RSd-9F-c6o" id="MCh-J2-eZd"/>
+                                            <outlet property="payPriceLabel" destination="Ulf-db-2fp" id="hgs-pf-YJC"/>
+                                            <outlet property="payStyleLabel" destination="8a8-qG-2Kf" id="l20-xk-SDs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -20,9 +20,9 @@ struct OrderInfo: Decodable {
     let estimatedTime: String? // ㅇ
     let deliverAt: String? // ㅇ
     let deliverId: Int?
-    let createdAt: String? // ㅇ
-    let paymentType: String? // o
+    let createdAt: String?
+    let paymentType: String?
     let price: Int?
     let status: String
-    let firstItem: Int? // 
+    let firstItem: String?
 }
