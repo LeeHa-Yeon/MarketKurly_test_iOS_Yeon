@@ -764,7 +764,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gk4-CM-SMt">
             <objects>
-                <navigationController storyboardIdentifier="AddressDetailMoreSB" automaticallyAdjustsScrollViewInsets="NO" id="YFp-3f-Ig9" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YFp-3f-Ig9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2LL-Gc-tJV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -782,7 +782,7 @@
         <!--배송정보-->
         <scene sceneID="0EL-rv-rgJ">
             <objects>
-                <viewController id="rwz-EE-Nd3" customClass="AddressDetailMoreViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddressDetailMoreSB" id="rwz-EE-Nd3" customClass="AddressDetailMoreViewController" customModule="MarketKurlyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f2q-2Y-y8e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1128,6 +1128,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
+                                                                            <action selector="doneFirstBtn:" destination="rwz-EE-Nd3" eventType="touchUpInside" id="du9-dq-2eo"/>
                                                                             <outletCollection property="otherButtons" destination="Z52-Ax-eO1" id="tZT-yI-86P"/>
                                                                         </connections>
                                                                     </button>
@@ -1147,6 +1148,7 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
+                                                                            <action selector="doneSecondBtn:" destination="rwz-EE-Nd3" eventType="touchUpInside" id="4zn-V0-Gla"/>
                                                                             <outletCollection property="otherButtons" destination="xEP-ck-RVA" id="osC-eT-y3S"/>
                                                                         </connections>
                                                                     </button>
@@ -1173,6 +1175,9 @@
                                                         <state key="normal" title="저장">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="saveBtnTapped:" destination="rwz-EE-Nd3" eventType="touchUpInside" id="SmB-0R-xQz"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1219,6 +1224,8 @@
                     </navigationItem>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="nameTextField" destination="3xW-4x-aoN" id="mvw-Z0-UNe"/>
+                        <outlet property="phoneTextField" destination="aOZ-Lx-YeD" id="Okt-9O-mo7"/>
                         <outlet property="recievePlace1Content" destination="jbK-hN-T9T" id="Cfx-Ho-J3n"/>
                         <outlet property="recievePlace2Content" destination="rYv-dT-qgp" id="Y5O-zV-zQS"/>
                         <outlet property="recievePlace3Content" destination="GvF-92-ZSe" id="lLn-Ix-iHZ"/>

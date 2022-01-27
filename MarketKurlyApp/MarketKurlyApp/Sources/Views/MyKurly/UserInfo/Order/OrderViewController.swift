@@ -26,6 +26,7 @@ class OrderViewController: UIViewController {
     var statusCell = [false,false,false,false,false,false,false,false]
     
     let userInfoManager = UserInfoManaer.shared
+    let addressDataManager = AddressDataManager.shared
     var basketIds: [Int] = []
     var myCartList: [ShowCartListDocument] = []
     var selectAddress: CurrentSelectAddressDocument?
@@ -52,9 +53,17 @@ class OrderViewController: UIViewController {
         setUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+        setData()
+        setUI()
+    }
+    
     
     // MARK: - Functions
     func setUI(){
+        self.title = "주문서"
         tableView.dataSource = self
         tableView.delegate = self
         customNavigationBarAttribute(.white, .black)
@@ -89,13 +98,18 @@ class OrderViewController: UIViewController {
             return
         }
         
-        let point = levelInfo.pointsRate * 0.01 * Double(totalPrice)
+        let point = levelInfo.pointsRate * 0.1 * Double(totalPrice)
         let pointUp = round(point*pow(10,0))/pow(10,0)
         pointLabel.text = "구매시 \(Int(pointUp))원(\(levelInfo.pointsRate)%)"
     }
     
     /* API 통신할 부분 */
     func setData(){
+        addressDataManager.requestCurrentSelectAddress(userId: userInfoManager.getUid()) { response in
+            self.selectAddress = response.result
+            self.tableView.reloadData()
+        }
+        
     }
 }
 
@@ -121,6 +135,7 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
     
     func tableView(_ tableView: ExpyTableView, expyState state: ExpyState, changeForSection section: Int) {
         print("\(section)섹션")
+        
     }
     
     func tableView(_ tableView: ExpyTableView, canExpandSection section: Int) -> Bool {
@@ -317,16 +332,16 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
     // 선택후 동작하는 거 여기서 하기!
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 2 {
-            if indexPath.row == 0 {
                 let storyboard = UIStoryboard(name: "Address", bundle: nil)
-                let AddressDetailMoreVC = storyboard.instantiateViewController(identifier: "AddressDetailMoreSB")
+                guard let AddressDetailMoreVC = storyboard.instantiateViewController(identifier: "AddressDetailMoreSB") as? AddressDetailMoreViewController else {
+                    return }
+                AddressDetailMoreVC.selectAddress = selectAddress
                 AddressDetailMoreVC.modalPresentationStyle = .fullScreen
-                
-                self.present(AddressDetailMoreVC, animated: true, completion: nil)
-            }
+            self.navigationController?.pushViewController(AddressDetailMoreVC, animated: true)
+//                self.present(AddressDetailMoreVC, animated: true, completion: nil)
         }
         
-        print("\(indexPath.section)섹션 \(indexPath.row)로우 선택됨")
+        
         statusCell[indexPath.section] = !statusCell[indexPath.section]
         tableView.reloadData()
     }

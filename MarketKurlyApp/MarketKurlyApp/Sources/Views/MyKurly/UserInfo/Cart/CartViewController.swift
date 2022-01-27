@@ -86,7 +86,7 @@ class CartViewController: UIViewController {
             return
         }
         
-        let point = levelInfo.pointsRate * 0.01 * Double(totalPrice)
+        let point = levelInfo.pointsRate * 0.1 * Double(totalPrice)
         let pointUp = round(point*pow(10,0))/pow(10,0)
         pointLabel.text = "구매시 \(Int(pointUp))원 적립"
     }
