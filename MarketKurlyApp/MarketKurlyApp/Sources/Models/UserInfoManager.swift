@@ -40,8 +40,17 @@ class UserInfoManaer {
         return userWishListInfo
     }
     
+    // 사용자 적립금
+    var userPointListInfo: PointDocument?
     
+    func setUserPointListInfo(_ info: PointDocument) {
+        self.userPointListInfo = info
+    }
     
+    func getUserPointListInfo() -> PointDocument? {
+        guard let userPointListInfo = self.userPointListInfo else { return nil }
+        return userPointListInfo
+    }
     
     // 사용자 쿠폰 내역
     var userCouponInfo: [UserCouponListDocument]?

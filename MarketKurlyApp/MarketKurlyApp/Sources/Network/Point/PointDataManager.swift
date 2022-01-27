@@ -14,16 +14,16 @@ class PointDataManager {
     static let shared = PointDataManager()
     private init() {}
     
-    // MARK: - 장바구니 생성
-    func requestPoint(userId:Int, para: AddCartRequest, completion: @escaping (AddCartResponse)->(Void)){
-        let URL = Constant.BasicURL + "users/v2/\(userId)/basket/v2"
+    // MARK: - 적립내역
+    func requestPoint(userId:Int,completion: @escaping (PointListResponse)->(Void)){
+        let URL = Constant.BasicURL + "users/v2/\(userId)/points"
         
-        AF.request(URL, method: .post, parameters: para, encoder: JSONParameterEncoder() ).validate().responseDecodable(of:AddCartResponse.self) { response in
+        AF.request(URL, method: .get ).validate().responseDecodable(of:PointListResponse.self) { response in
             switch response.result {
             case .success(let response) :
                 completion(response)
             case .failure(let error) :
-                print(" 1장바구니 네ㅡ워크 실패: ",error.localizedDescription)
+                print(" 1 적립금 네ㅡ워크 실패: ",error.localizedDescription)
             }
         }
     }

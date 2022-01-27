@@ -16,8 +16,9 @@ class LoginViewController: BaseViewController {
     let levelDataManger = LevelDataManager.shared
     let couponDataManger = CouponDataManager.shared
     let wishDataManager = WishDataManager.shared
+    let pointDataManager = PointDataManager.shared
     let userInfoManager = UserInfoManaer.shared
-
+    
     
     // MARK: - UIComponents
     
@@ -138,6 +139,7 @@ class LoginViewController: BaseViewController {
             self.userInfoManager.setUserInfo(response.result)
             self.loadLevelData(levelIdx: self.userInfoManager.getUserLevel())
             self.loadCouponData(token: UserDefaults.standard.string(forKey: Constant.jwtName))
+            self.loadPointData(userIdx: self.userInfoManager.getUid())
             self.loadWishListData(token: self.userInfoManager.tokenString, userIdx: self.userInfoManager.getUid())
         }
     }
@@ -147,6 +149,7 @@ class LoginViewController: BaseViewController {
             
         }
     }
+    
     func loadCouponData(token: String?){
         guard let usertoken = token else {
             print("로그인부분 - 쿠폰데이터 로드 못함")
@@ -156,6 +159,13 @@ class LoginViewController: BaseViewController {
             self.userInfoManager.setUserCouponInfo(response.result!)
         }
     }
+    
+    func loadPointData(userIdx: Int){
+        pointDataManager.requestPoint(userId: userIdx) { response in
+            self.userInfoManager.setUserPointListInfo(response.result)
+        }
+    }
+    
     
     func loadWishListData(token: String?, userIdx: Int){
         guard let usertoken = token else {

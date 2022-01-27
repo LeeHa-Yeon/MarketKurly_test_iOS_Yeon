@@ -86,6 +86,14 @@ class MemberMyKurlyViewController: BaseViewController {
         return levelInfo
     }
     
+    func loadCurrentPoint() -> Int?{
+        guard let pointInfo = userInfoManager.getUserPointListInfo() else {
+            print("MemberMyKurlyViewController API 실패")
+            return nil
+        }
+        return pointInfo.points
+    }
+    
     func loadCouponListCnt() -> Int?{
         guard let userCouponListInfo = userInfoManager.getUserCouponInfo() else {
             print("MemberMyKurlyViewController API 실패")
@@ -93,6 +101,7 @@ class MemberMyKurlyViewController: BaseViewController {
         }
         return userCouponListInfo.count
     }
+    
     
     func loadWishItemCnt() -> Int?{
         guard let userWishListInfo = userInfoManager.getUserWishListInfo() else {
@@ -161,10 +170,10 @@ extension MemberMyKurlyViewController: UITableViewDataSource, UITableViewDelegat
             }
             cell.listNameLable.text = dummyData[indexPath.row]
             if indexPath.row == 0 {
-                cell.subStrLabel.text = "4,168원"
-//                if loadUserData() != nil {
-//                    cell.subStrLabel.text =  DecimalWon(value: loadUserData()?.getUserPoint() ?? 900)
-//                }
+                if loadCurrentPoint() != nil {
+                    cell.subStrLabel.text = "\(DecimalWon(value: loadCurrentPoint() ?? 0))"
+                }
+                
             } else if indexPath.row == 1 {
                 if loadCouponListCnt() != nil {
                     cell.subStrLabel.text = "\(loadCouponListCnt() ?? 0)장"

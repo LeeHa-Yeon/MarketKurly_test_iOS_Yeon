@@ -64,6 +64,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.95687562230000001" green="0.95683962109999998" blue="0.95686405900000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="currentPoint" destination="mhF-ro-6fi" id="fNy-Ej-JNl"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pointContentCell" rowHeight="119" id="3Yy-ZZ-3f8" customClass="PointContentCell" customModule="MarketKurlyApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="173.5" width="414" height="119"/>
@@ -108,6 +111,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.95687562230000001" green="0.95683962109999998" blue="0.95686405900000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="orderPointName" destination="KuX-tv-6QG" id="jYZ-xI-U6q"/>
+                                            <outlet property="point" destination="hWy-2Y-xl1" id="p4A-P9-1Ka"/>
+                                            <outlet property="pointDate" destination="aaO-8T-8fc" id="2AV-Go-0TU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

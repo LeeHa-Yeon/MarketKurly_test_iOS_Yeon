@@ -46,6 +46,7 @@ class MyKurlyViewController: UIViewController {
     
     /* API 통신 부분 */
     func loadUserData(){
+        print("dd-->",userInfoManager.getUserPointListInfo())
 //        print("[[--->\(userInfoManager.getUserWishListInfo())")
 //        print("-kl--> \(userInfoManager.getUserLevelInfo())")
 //        print("-kl222--> \(userInfoManager.getUserCouponInfo())")

@@ -280,6 +280,7 @@
 		9FEBA8B027A2AAF600A296B3 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8AF27A2AAF600A296B3 /* OrderResponse.swift */; };
 		9FEBA8B227A2B85C00A296B3 /* MyOrderListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8B127A2B85C00A296B3 /* MyOrderListResponse.swift */; };
 		9FEBA8B427A2BC8000A296B3 /* MyOrderDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8B327A2BC8000A296B3 /* MyOrderDetailResponse.swift */; };
+		9FEBA8B627A2CDDF00A296B3 /* PointListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8B527A2CDDF00A296B3 /* PointListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -560,6 +561,7 @@
 		9FEBA8AF27A2AAF600A296B3 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
 		9FEBA8B127A2B85C00A296B3 /* MyOrderListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderListResponse.swift; sourceTree = "<group>"; };
 		9FEBA8B327A2BC8000A296B3 /* MyOrderDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderDetailResponse.swift; sourceTree = "<group>"; };
+		9FEBA8B527A2CDDF00A296B3 /* PointListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -991,6 +993,7 @@
 			isa = PBXGroup;
 			children = (
 				9F8DC7D427A03EA2008D9076 /* PointDataManager.swift */,
+				9FEBA8B527A2CDDF00A296B3 /* PointListResponse.swift */,
 			);
 			path = Point;
 			sourceTree = "<group>";
@@ -1813,6 +1816,7 @@
 				9F6710C82799CE7300BC485A /* ItemQuestViewController.swift in Sources */,
 				9FC61BED2792AB63007AC4A7 /* ModifyAddressViewController.swift in Sources */,
 				9F2721BC2790FEEE00F85FA9 /* NewUserReponse.swift in Sources */,
+				9FEBA8B627A2CDDF00A296B3 /* PointListResponse.swift in Sources */,
 				9FC61BF12792AB9D007AC4A7 /* NewDetailAddressViewController.swift in Sources */,
 				9F489F7B2794F13500E04879 /* FrequentPurchasesListViewController.swift in Sources */,
 				9F9CE97F27978EB40071D454 /* FriendViewController.swift in Sources */,

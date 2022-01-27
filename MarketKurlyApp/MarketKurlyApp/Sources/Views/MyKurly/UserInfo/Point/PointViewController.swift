@@ -9,14 +9,18 @@ import UIKit
 
 class PointViewController: UIViewController {
     
+    let userInfoManager = UserInfoManaer.shared
+    var userPointList:[UserPointDocument] = []
+    
     // MARK: - Components
     @IBOutlet weak var tableView: UITableView!
-    
+
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +41,15 @@ class PointViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    /* API 통신 */
+    func setData(){
+        guard let userPointList = userInfoManager.getUserPointListInfo()?.userPoint else {
+            return
+        }
+        self.userPointList = userPointList
+        tableView.reloadData()
+    }
 }
 
 extension PointViewController: UITableViewDelegate, UITableViewDataSource {
@@ -50,7 +63,7 @@ extension PointViewController: UITableViewDelegate, UITableViewDataSource {
             return 1
             
         case 1 :
-            return 4
+            return userPointList.count
         default :
             assert(false,"놉")
         }
@@ -62,11 +75,23 @@ extension PointViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "pointHeaderCell", for: indexPath) as? PointHeaderCell else {
                 return UITableViewCell()
             }
+            cell.currentPoint.text = DecimalWon(value: userInfoManager.getUserPointListInfo()?.points ?? 0)
             return cell
         case 1 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "pointContentCell", for: indexPath) as? PointContentCell else {
                 return UITableViewCell()
             }
+            let target = userPointList[indexPath.row]
+            cell.orderPointName.text = "[구매적립] 주문(\(target.orderId))\n\(userInfoManager.getUserLevelInfo()!.pointsRate*10)% 적립"
+            let targetDate = target.usedDate.substring(from: 0, to: 10)
+            cell.pointDate.text = targetDate
+            
+            if target.is_used == 1 {
+                cell.point.text = "+ \(DecimalWon(value: target.used_points))"
+            }else {
+                cell.point.text = "- \(DecimalWon(value: target.used_points))"
+            }
+            
             return cell
         default :
             return UITableViewCell()
@@ -90,6 +115,7 @@ extension PointViewController: UITableViewDelegate, UITableViewDataSource {
 class PointHeaderCell: UITableViewCell {
     
     // MARK: - Components
+    @IBOutlet weak var currentPoint: UILabel!
     
     // MARK: - LifeCycle
     override func awakeFromNib() {
@@ -117,6 +143,10 @@ class PointHeaderCell: UITableViewCell {
 class PointContentCell: UITableViewCell {
     
     // MARK: - Components
+    
+    @IBOutlet weak var orderPointName: UILabel!
+    @IBOutlet weak var pointDate: UILabel!
+    @IBOutlet weak var point: UILabel!
     
     // MARK: - LifeCycle
     override func awakeFromNib() {
