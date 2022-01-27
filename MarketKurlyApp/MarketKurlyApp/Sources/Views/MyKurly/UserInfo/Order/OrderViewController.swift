@@ -16,8 +16,16 @@ extension OrderViewController  : testDelegate {
     func moveToVC(){
         let storyboard = UIStoryboard(name: "Order", bundle: nil)
         guard let AfterOrderVC = storyboard.instantiateViewController(identifier: "AfterOrderSB") as? AfterOrderViewController else { return }
-        self.present(AfterOrderVC, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(AfterOrderVC, animated: true)
+        AfterOrderVC.name = userInfoManager.getUserName()
+        AfterOrderVC.totalPrice = totalSalePrice
+        
+        let para: OrderRequest = OrderRequest(paymentId: payIdx, deliverAddressId: selectAddress!.id, basketIds: basketIds, price: totalSalePrice, points: nil, couponIdList: nil)
+        orderDataManager.requestOrder(userId: userInfoManager.getUid(), para: para) { response in
+            print("=====>",response)
+            if response.isSuccess {
+                self.present(AfterOrderVC, animated: true, completion: nil)
+            }
+        }
     }
 }
 
@@ -27,6 +35,7 @@ class OrderViewController: UIViewController {
     
     let userInfoManager = UserInfoManaer.shared
     let addressDataManager = AddressDataManager.shared
+    let orderDataManager = OrderDataManager.shared
     var basketIds: [Int] = []
     var myCartList: [ShowCartListDocument] = []
     var selectAddress: CurrentSelectAddressDocument?
@@ -102,6 +111,8 @@ class OrderViewController: UIViewController {
         let pointUp = round(point*pow(10,0))/pow(10,0)
         pointLabel.text = "구매시 \(Int(pointUp))원(\(levelInfo.pointsRate)%)"
     }
+    
+    
     
     /* API 통신할 부분 */
     func setData(){

@@ -275,6 +275,9 @@
 		9FCC9451278A6D97000493AD /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC9450278A6D97000493AD /* SignUp.storyboard */; };
 		9FCC9453278A6DA6000493AD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9452278A6DA6000493AD /* SignUpViewController.swift */; };
 		9FCC9455278AA585000493AD /* MemberMyKurlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC9454278AA585000493AD /* MemberMyKurlyViewController.swift */; };
+		9FEBA8AC27A2AA2900A296B3 /* OrderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8AB27A2AA2900A296B3 /* OrderDataManager.swift */; };
+		9FEBA8AE27A2AA7400A296B3 /* OrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8AD27A2AA7400A296B3 /* OrderRequest.swift */; };
+		9FEBA8B027A2AAF600A296B3 /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBA8AF27A2AAF600A296B3 /* OrderResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -550,6 +553,9 @@
 		9FCC9450278A6D97000493AD /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		9FCC9452278A6DA6000493AD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9FCC9454278AA585000493AD /* MemberMyKurlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberMyKurlyViewController.swift; sourceTree = "<group>"; };
+		9FEBA8AB27A2AA2900A296B3 /* OrderDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDataManager.swift; sourceTree = "<group>"; };
+		9FEBA8AD27A2AA7400A296B3 /* OrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRequest.swift; sourceTree = "<group>"; };
+		9FEBA8AF27A2AAF600A296B3 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1184,6 +1190,7 @@
 		9F9D5DE5278A046600CC63FA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9FEBA8AA27A2AA1C00A296B3 /* Order */,
 				9F8DC7D327A03E91008D9076 /* Point */,
 				9F8DC7C6279EEF34008D9076 /* Cart */,
 				9F6710DC279A301E00BC485A /* Address */,
@@ -1522,6 +1529,16 @@
 			path = FindUser;
 			sourceTree = "<group>";
 		};
+		9FEBA8AA27A2AA1C00A296B3 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				9FEBA8AB27A2AA2900A296B3 /* OrderDataManager.swift */,
+				9FEBA8AD27A2AA7400A296B3 /* OrderRequest.swift */,
+				9FEBA8AF27A2AAF600A296B3 /* OrderResponse.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1702,6 +1719,7 @@
 				9F786CC327965A5D00EEA867 /* DeliveryCell.swift in Sources */,
 				9F9D5E13278A0D5B00CC63FA /* UIViewController.swift in Sources */,
 				9F489F90279592C500E04879 /* ShowOrderListViewController.swift in Sources */,
+				9FEBA8B027A2AAF600A296B3 /* OrderResponse.swift in Sources */,
 				9F9D5DF6278A09B200CC63FA /* BaseViewController.swift in Sources */,
 				9F309DFA2792231300EBF5E0 /* ItemImgUrlCell.swift in Sources */,
 				9F489F652794041E00E04879 /* ModalAddressViewController.swift in Sources */,
@@ -1729,6 +1747,7 @@
 				9F9D5E03278A0A5B00CC63FA /* UIColor.swift in Sources */,
 				9F6710E2279A33F300BC485A /* AddAddressRequest.swift in Sources */,
 				9F9CE9A82797F8740071D454 /* KurlyPassTwoViewController.swift in Sources */,
+				9FEBA8AE27A2AA7400A296B3 /* OrderRequest.swift in Sources */,
 				9F9CE976279715980071D454 /* WishViewController.swift in Sources */,
 				9F2721AA2790045700F85FA9 /* AllUserResponse.swift in Sources */,
 				9F2721BA2790EAFB00F85FA9 /* UserResponse.swift in Sources */,
@@ -1858,6 +1877,7 @@
 				9F309E122792914300EBF5E0 /* ChangePwdRequest.swift in Sources */,
 				9FA0437D278D126200FCD2FE /* BannerCell.swift in Sources */,
 				9F9D5E15278A0F7500CC63FA /* LoginDataManager.swift in Sources */,
+				9FEBA8AC27A2AA2900A296B3 /* OrderDataManager.swift in Sources */,
 				9F786CED2796E71300EEA867 /* EventCRVCell.swift in Sources */,
 				9F309DFF2792658500EBF5E0 /* CALayer.swift in Sources */,
 				9F8DC7D0279EF615008D9076 /* DeleteCartResponse.swift in Sources */,
