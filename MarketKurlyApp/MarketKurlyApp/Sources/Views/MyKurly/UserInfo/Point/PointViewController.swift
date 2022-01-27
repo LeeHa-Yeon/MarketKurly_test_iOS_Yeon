@@ -82,13 +82,15 @@ extension PointViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             let target = userPointList[indexPath.row]
-            cell.orderPointName.text = "[구매적립] 주문(\(target.orderId))\n\(userInfoManager.getUserLevelInfo()!.pointsRate*10)% 적립"
+            
             let targetDate = target.usedDate.substring(from: 0, to: 10)
             cell.pointDate.text = targetDate
             
             if target.is_used == 1 {
+                cell.orderPointName.text = "[구매적립] 주문(\(target.orderId))\n\(userInfoManager.getUserLevelInfo()!.pointsRate*10)% 적립"
                 cell.point.text = "+ \(DecimalWon(value: target.used_points))"
             }else {
+                cell.orderPointName.text = "[구매적립] 주문(\(target.orderId))\n결제 시 사용"
                 cell.point.text = "- \(DecimalWon(value: target.used_points))"
             }
             

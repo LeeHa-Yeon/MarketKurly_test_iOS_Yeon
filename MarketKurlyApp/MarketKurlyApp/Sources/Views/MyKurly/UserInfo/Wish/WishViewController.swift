@@ -102,7 +102,7 @@ extension WishViewController: UITableViewDelegate, UITableViewDataSource {
         cell.itemIdx = target.itemId
         urlToImg(urlStr: target.items_img_url, img: cell.itemImg)
         cell.itemName.text = target.name
-        if target.discount_rate != nil {
+        if target.discount_rate != "0%" {
             // 할인상품
             cell.itemDiscount.isHidden = false
             cell.itemOriginPrice.isHidden = false

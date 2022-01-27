@@ -19,7 +19,7 @@ extension OrderViewController  : testDelegate {
         AfterOrderVC.name = userInfoManager.getUserName()
         AfterOrderVC.totalPrice = totalSalePrice
         
-        let para: OrderRequest = OrderRequest(paymentId: payIdx, deliverAddressId: selectAddress!.id, basketIds: basketIds, price: totalSalePrice, points: nil, couponIdList: nil)
+        let para: OrderRequest = OrderRequest(paymentId: payIdx, deliverAddressId: selectAddress!.id, basketIds: basketIds, price: totalSalePrice, points: pointDiscountPrice , couponIdList: nil)
         orderDataManager.requestOrder(userId: userInfoManager.getUid(), para: para) { response in
             print("=====>",response)
             if response.isSuccess {
@@ -45,7 +45,7 @@ class OrderViewController: UIViewController {
     var discountPrice: Int = 0
     var deliveryPrice: Int = 0
     var couponDiscountPrice: Int = 0
-    var pointDiscountPrice:Int = 0
+    var pointDiscountPrice:Int = 2000
     
     var totalSalePrice: Int = 0
     
@@ -265,6 +265,8 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
                 return UITableViewCell()
             }
             cell.couponTextField.placeholder = "사용 가능 쿠폰 0장 / 전체 \(userInfoManager.userCouponInfo?.count ?? 0)장"
+
+            
             cell.selectionStyle = .none
             return cell
         case 5 :
@@ -282,6 +284,7 @@ extension OrderViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
             cell.originPriceLabel.text = DecimalWon(value: originPrice)
             cell.discountPriceLabel.text = "-\(DecimalWon(value: discountPrice))"
             cell.deliveryLabel.text = DecimalWon(value: deliveryPrice)
+            cell.usePointLabel.text = "-\(DecimalWon(value: pointDiscountPrice))"
             totalSalePrice = salePrice+deliveryPrice-couponDiscountPrice-pointDiscountPrice
             cell.totalPriceLabel.text = DecimalWon(value: totalSalePrice)
             pointTransform(totalPrice: totalSalePrice, pointLabel: cell.pointLabel)

@@ -49,19 +49,6 @@
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYK-Rs-3WF">
-                        <rect key="frame" x="314" y="120" width="80" height="45"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="80" id="W9O-dr-GA9"/>
-                            <constraint firstAttribute="height" constant="45" id="XXC-k7-fDa"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="모두 사용">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </state>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용가능 적립금 0원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFU-wN-GrC">
                         <rect key="frame" x="20" y="175" width="113.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -76,6 +63,22 @@
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYK-Rs-3WF">
+                        <rect key="frame" x="314" y="120" width="80" height="45"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="W9O-dr-GA9"/>
+                            <constraint firstAttribute="height" constant="45" id="XXC-k7-fDa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="모두 사용">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="allUseTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Eqj-Vt-JoD"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="aYK-Rs-3WF" firstAttribute="leading" secondItem="UQq-1h-0cW" secondAttribute="trailing" constant="10" id="0z8-cb-NRF"/>
@@ -98,6 +101,8 @@
             <connections>
                 <outlet property="allUsebtn" destination="aYK-Rs-3WF" id="61i-VH-qMg"/>
                 <outlet property="couponTextField" destination="Qj9-bW-NCD" id="NPh-Ef-ap3"/>
+                <outlet property="currentUsePoint" destination="HFU-wN-GrC" id="zXo-c4-FVh"/>
+                <outlet property="usePointTextField" destination="UQq-1h-0cW" id="zbZ-gI-Fv9"/>
             </connections>
             <point key="canvasLocation" x="139" y="110"/>
         </tableViewCell>

@@ -210,6 +210,7 @@
                 <outlet property="pointLabel" destination="XoC-Dh-OWn" id="M3s-bG-xdH"/>
                 <outlet property="salePriceLabel" destination="WtM-rk-e6f" id="mUJ-sR-bbO"/>
                 <outlet property="totalPriceLabel" destination="d45-gI-080" id="sLg-VQ-MBp"/>
+                <outlet property="usePointLabel" destination="sCj-aq-LGO" id="dA2-G7-JB2"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="202.23214285714286"/>
         </tableViewCell>

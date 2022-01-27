@@ -16,6 +16,8 @@ class OrderSheetSevenCell: UITableViewCell {
     @IBOutlet weak var discountPriceLabel: UILabel!
     @IBOutlet weak var deliveryLabel: UILabel!
     
+    @IBOutlet weak var usePointLabel: UILabel!
+    
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
     
