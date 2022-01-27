@@ -111,6 +111,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="orderIdx" destination="kKY-Bd-FAC" id="XLP-OL-aXr"/>
+                <outlet property="orderName" destination="Ysl-GR-MVD" id="WB5-wL-E9D"/>
+                <outlet property="payDate" destination="FWi-VY-KXk" id="s41-ZE-9nC"/>
+                <outlet property="postName" destination="AlM-a7-0z6" id="hLz-43-tW4"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </tableViewCell>
     </objects>

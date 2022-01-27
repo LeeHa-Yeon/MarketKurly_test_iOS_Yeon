@@ -9,19 +9,17 @@ import UIKit
 import ExpyTableView
 import SafariServices
 
-struct DummyOrderItem1 {
-    let name: String
-    let price: Int
-    let discountPrice: Int?
-    let cnt: Int
-}
 
 class ShowOrderListViewController: UIViewController {
     
-    var statusCell = [true,true,true,true,true,true,true]
-    var dummyOrderItemes: [DummyOrderItem1] = []
+    let userInfoManager = UserInfoManaer.shared
+    let addressDataManager = AddressDataManager.shared
     
-    let dummyListName = ["주문번호 16543534523","","결제정보","주문정보","배송정보","추가정보"]
+    var statusCell = [true,true,true,true,true,true,true]
+    var orderItemes: [ShowCartListDocument] = []
+    var myOrderDetailContent: MyOrderDetailDocument?
+    
+    var dummyListName = ["주문번호 16543534523","","결제정보","주문정보","배송정보","추가정보"]
     let dummyStatus = ["냉장","상온"]
 
     // MARK: - Components
@@ -36,6 +34,7 @@ class ShowOrderListViewController: UIViewController {
         super.viewDidLoad()
         setData()
         setUI()
+        print("--->",myOrderDetailContent)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,11 +73,13 @@ class ShowOrderListViewController: UIViewController {
     
     /* API 통신할 부분 */
     func setData(){
-        dummyOrderItemes.append(DummyOrderItem1(name: "[KF365] 깐마늘 200g", price: 2800, discountPrice: nil, cnt: 1))
-        dummyOrderItemes.append(DummyOrderItem1(name: "친환경 남해초 200g", price: 3000, discountPrice: nil, cnt: 1))
-        dummyOrderItemes.append(DummyOrderItem1(name: "[쿠치나 안티카] 선 드라이드 토마토 (투토솔)", price: 41970, discountPrice: 30420, cnt: 3))
-        dummyOrderItemes.append(DummyOrderItem1(name: "[한일관 X 백년가게] 등심 불고기", price: 29000, discountPrice: nil, cnt: 1))
-        dummyOrderItemes.append(DummyOrderItem1(name: "[뱅앤베이커스] 버터 쿠키 클래식", price: 20000, discountPrice: 1430, cnt: 2))
+        guard let myOrderDetailContent = myOrderDetailContent else {
+            return
+        }
+        orderItemes = myOrderDetailContent.items
+        dummyListName[0] = "주문번호 \(myOrderDetailContent.orderId)"
+        
+        
     }
     
 }
@@ -93,7 +94,7 @@ extension ShowOrderListViewController: ExpyTableViewDelegate, ExpyTableViewDataS
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0 :
-            return dummyOrderItemes.count + 2
+            return orderItemes.count + 2
         case 1 :
             return dummyStatus.count
         case 6 :
@@ -150,7 +151,7 @@ extension ShowOrderListViewController: ExpyTableViewDelegate, ExpyTableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0 :
-            if indexPath.row == dummyOrderItemes.count + 1 {
+            if indexPath.row == orderItemes.count + 1 {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "allReCartCell", for: indexPath) as? AllReCartCell else {
                     return UITableViewCell()
                 }
@@ -160,6 +161,24 @@ extension ShowOrderListViewController: ExpyTableViewDelegate, ExpyTableViewDataS
                     return UITableViewCell()
                 }
                 cell.isOrder = true
+                
+                let target = orderItemes[indexPath.row-1]
+                
+                urlToImg(urlStr: target.getItemRes.items_img_url, img: cell.itemImg)
+                cell.itemName.text =  target.getItemRes.name
+                
+                if target.getItemRes.discount_rate == "0%" {
+                    cell.itemOrignPrice.isHidden = true
+                    cell.itemPrice.text = DecimalWon(value: target.getItemRes.price)
+                    
+                }else {
+                    cell.itemOrignPrice.isHidden = false
+                    cell.itemPrice.text = DecimalWon(value: target.getItemRes.member_discount_price)
+                    cancleLine(text: DecimalWon(value: target.getItemRes.price), targetLabel: cell.itemOrignPrice)
+                }
+                cell.itemCnt.text = "\(target.count)개"
+                
+                
                 if cell.isOrder {
                     cell.itemDoneStatus.isHidden = false
                 }
@@ -169,16 +188,35 @@ extension ShowOrderListViewController: ExpyTableViewDelegate, ExpyTableViewDataS
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "payInfoCell", for: indexPath) as? PayInfoCell else {
                 return UITableViewCell()
             }
+            cell.itemPrice.text = DecimalWon(value: myOrderDetailContent?.payDetail.itemPrice ?? 0)
+            cell.deliveryPrice.text = DecimalWon(value: myOrderDetailContent?.payDetail.deliverPrice ?? 0)
+            cell.usePointPrice.text = DecimalWon(value: myOrderDetailContent?.payDetail.usePoint ?? 0)
+            cell.payPrice.text = DecimalWon(value: myOrderDetailContent?.payDetail.payPrice ?? 0)
+            cell.accumulatePoint.text = DecimalWon(value: myOrderDetailContent?.payDetail.accumulatePoint ?? 0)
+            
             return cell
         case 3 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderInfoCell", for: indexPath) as? OrderInfoCell else {
                 return UITableViewCell()
             }
+            let payDate = myOrderDetailContent?.createdAt
+            let targetDate = payDate!.substring(from: 0, to: 10)
+            let targetTime = payDate!.substring(from: 11, to: 19)
+            
+            cell.orderIdx.text = "\(myOrderDetailContent?.orderId ?? 0)"
+            cell.orderName.text = "\(userInfoManager.getUserName())"
+            cell.postName.text = "\(userInfoManager.getUserName())"
+            cell.payDate.text = "\(targetDate) \(targetTime)"
             return cell
         case 4 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "deliveryCell", for: indexPath) as? DeliveryCell else {
                 return UITableViewCell()
             }
+            
+            cell.receiveName.text = "\(myOrderDetailContent?.deliverAddress.name ?? "")"
+            cell.receivePhone.text = "\(myOrderDetailContent?.deliverAddress.phoneNumber ?? "")"
+            cell.receiveAddress.text = "\(myOrderDetailContent?.deliverAddress.address ?? "") \(myOrderDetailContent?.deliverAddress.detail_address ?? "")"
+            cell.receiveSpace.text = "문 앞"
             return cell
         case 5 :
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "addDetailInfoCell", for: indexPath) as? AddDetailInfoCell else {

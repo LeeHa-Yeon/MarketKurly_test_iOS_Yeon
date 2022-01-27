@@ -71,20 +71,16 @@ extension OrderDetailListViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Order", bundle: nil)
+        guard let ShowOrderListVC = storyboard.instantiateViewController(identifier: "ShowOrderListSB") as? ShowOrderListViewController else { return }
+        
         let target = myOrderList[indexPath.row]
         orderDataManager.requestMyOrderDetail(userId: userInfoManager.getUid(), orderId: target.orderId) { response in
             if response.isSuccess {
-//                response.result
+                ShowOrderListVC.myOrderDetailContent = response.result
+                self.navigationController?.pushViewController(ShowOrderListVC, animated: true)
             }
-            print(response.result)
         }
-        
-        
-        
-        
-//        let storyboard = UIStoryboard(name: "Order", bundle: nil)
-//        guard let ShowOrderListVC = storyboard.instantiateViewController(identifier: "ShowOrderListSB") as? ShowOrderListViewController else { return }
-//        self.navigationController?.pushViewController(ShowOrderListVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

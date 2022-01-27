@@ -171,6 +171,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="receiveAddress" destination="V9r-YY-foF" id="f5U-Jp-6RR"/>
+                <outlet property="receiveName" destination="LuQ-6j-qHt" id="ZTB-P7-FrQ"/>
+                <outlet property="receivePhone" destination="WMt-e3-aah" id="BEG-Vs-TiO"/>
+                <outlet property="receiveSpace" destination="xmr-8y-ZB4" id="qnh-gS-Mim"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="81.361607142857139"/>
         </tableViewCell>
     </objects>

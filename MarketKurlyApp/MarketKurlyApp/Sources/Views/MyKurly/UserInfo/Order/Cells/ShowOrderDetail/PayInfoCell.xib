@@ -116,6 +116,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="accumulatePoint" destination="hCz-GI-nBf" id="wUp-yG-u67"/>
+                <outlet property="deliveryPrice" destination="0yL-Ry-Xvk" id="yMG-T1-qV6"/>
+                <outlet property="itemPrice" destination="39r-df-AWr" id="fKC-1l-Cdp"/>
+                <outlet property="payPrice" destination="XvR-sF-WO1" id="8sK-lF-7gl"/>
+                <outlet property="usePointPrice" destination="WqG-Nx-Dm7" id="MNk-zN-w6l"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="106.13839285714285"/>
         </tableViewCell>
     </objects>

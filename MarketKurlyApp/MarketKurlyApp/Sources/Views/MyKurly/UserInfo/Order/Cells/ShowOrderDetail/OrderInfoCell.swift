@@ -11,6 +11,11 @@ class OrderInfoCell: UITableViewCell {
     
     
     // MARK: - Components
+    @IBOutlet weak var orderIdx: UILabel!
+    @IBOutlet weak var orderName: UILabel!
+    @IBOutlet weak var postName: UILabel!
+    @IBOutlet weak var payDate: UILabel!
+    
     
     // MARK: - LifeCycle
     override func awakeFromNib() {

@@ -10,6 +10,13 @@ import UIKit
 class PayInfoCell: UITableViewCell {
     
     // MARK: - Components
+    @IBOutlet weak var itemPrice: UILabel!
+    @IBOutlet weak var deliveryPrice: UILabel!
+    @IBOutlet weak var usePointPrice: UILabel!
+    @IBOutlet weak var payPrice: UILabel!
+    @IBOutlet weak var accumulatePoint: UILabel!
+    
+    
     
     // MARK: - LifeCycle
     override func awakeFromNib() {
