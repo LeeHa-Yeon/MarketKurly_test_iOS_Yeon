@@ -14,8 +14,9 @@
 
 시연 영상 :
 
-[https://www.youtube.com/watch?v=OWuFydau26I](https://github.com/mock-rc3/MarketKurly_test_iOS_Yeon)
-
+[전체](https://www.youtube.com/watch?v=OWuFydau26I)
+[마이컬리 부분만](https://www.youtube.com/watch?v=OWuFydau26I)
+[홈 화면 부분만](https://www.youtube.com/watch?v=OWuFydau26I)
 
 <details>
 <summary>개발</summary>
