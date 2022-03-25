@@ -12,7 +12,7 @@ struct Constant {
     static let loginStatusName: String = "loginStatus"
     static let addressBackStatusName: String = "addressBackStatusName"
     
-    static let BasicURL: String = "http://3.36.52.30:8081/app/"
+    static let BasicURL: String = "http://13.124.182.10:8081/app/"
     static let BasicURL2: String = "http://13.125.206.82:9000/app/"
     
     //  http://13.125.206.82:9000

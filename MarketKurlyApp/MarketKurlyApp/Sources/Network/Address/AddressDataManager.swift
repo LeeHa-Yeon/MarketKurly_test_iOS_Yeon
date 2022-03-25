@@ -44,7 +44,7 @@ class AddressDataManager {
         }
     }
     
-    // MARK: - 현재 선택된 배송지 조회하기 14
+    // MARK: - 현재 선택된 배송지 조회하기 88
     func requestCurrentSelectAddress(userId:Int,completion: @escaping (CurrentSelectAddressResponse)->(Void)){
         
         let URL = Constant.BasicURL + "address/\(userId)/selected"

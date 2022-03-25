@@ -370,6 +370,7 @@ class CartContentCell: UITableViewCell {
             return
         }
         cartDataManager.requestDeleteCart(basketId: basketIdx) { response in
+            print("gd?")
             if response.isSuccess {
                 self.delegate?.updateVC()
             }

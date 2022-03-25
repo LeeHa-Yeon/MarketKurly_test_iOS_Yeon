@@ -361,7 +361,7 @@
     </scenes>
     <designables>
         <designable name="MFu-U7-Rer">
-            <size key="intrinsicContentSize" width="176" height="19.5"/>
+            <size key="intrinsicContentSize" width="138" height="19.5"/>
         </designable>
         <designable name="quI-ff-Yak">
             <size key="intrinsicContentSize" width="512" height="512"/>
