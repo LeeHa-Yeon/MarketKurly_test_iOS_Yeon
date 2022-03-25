@@ -12,11 +12,14 @@
 
 [https://github.com/mock-rc3/MarketKurly_test_iOS_Yeon](https://github.com/mock-rc3/MarketKurly_test_iOS_Yeon)
 
-시연 영상 :
+# 시연 영상
 
-[전체](https://www.youtube.com/watch?v=OWuFydau26I)
-[마이컬리 부분만](https://www.youtube.com/watch?v=OWuFydau26I)
-[홈 화면 부분만](https://www.youtube.com/watch?v=OWuFydau26I)
+[전체](https://www.youtube.com/watch?v=OWuFydau26I) <br>
+
+[마이컬리 부분](https://www.youtube.com/watch?v=Pnona52WeWY) <br>
+
+[홈 화면 부분만](https://www.youtube.com/watch?v=tdRGB5Y3qYM) <br>
+
 
 <details>
 <summary>개발</summary>
