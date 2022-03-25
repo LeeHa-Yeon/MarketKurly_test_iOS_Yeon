@@ -14,7 +14,12 @@
 
 시연 영상 :
 
+[https://www.youtube.com/watch?v=OWuFydau26I](https://github.com/mock-rc3/MarketKurly_test_iOS_Yeon)
 
+
+<details>
+<summary>개발</summary>
+<div markdown="1">
 
 ## 개발
 
@@ -34,6 +39,14 @@
     - 최대한 코드로 직접 구현하였고, 시간상 오래걸릴 것 같은 부분은 라이브러리를 이용 ( 단, 내 화면에 맞게 커스텀하여 사용 )
     - 서버와 연동하는 부분은 따로 함수로 분리
 
+</div>
+</details>
+
+<details>
+<summary>개발범위</summary>
+<div markdown="2">
+
+    
 ## 개발 범위
 
 - 회원가입
@@ -89,6 +102,14 @@
 - 적립금  내역
 
 ---
+
+</div>
+</details>
+
+
+<details>
+<summary>API</summary>
+<div markdown="3">
 
 ## API
 
@@ -224,6 +245,16 @@
 
 전체 쿠폰 조회 API - 확인용으로 포맨에서 사용
 
+
+</div>
+</details>
+
+
+<details>
+<summary>개발일지</summary>
+<div markdown="5">    
+    
+    
 ## 개발일지
 
 ### 1일차 개발일지
@@ -625,6 +656,14 @@
 
 ---
 
+</div>
+</details>
+
+
+<details>
+<summary>발생이슈 해결</summary>
+<div markdown="6">        
+    
 ---
 
 ### 질문 ( 발생이슈 )
@@ -1150,3 +1189,5 @@
     ```swift
     self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     ```
+</div>
+</details>
