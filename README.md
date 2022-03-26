@@ -20,7 +20,6 @@
 
 [홈 화면 부분만](https://www.youtube.com/watch?v=tdRGB5Y3qYM) <br>
 
-
 <details>
 <summary>개발</summary>
 <div markdown="1">
